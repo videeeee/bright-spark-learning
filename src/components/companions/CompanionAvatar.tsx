@@ -1,95 +1,71 @@
 import React from 'react';
 import { useTheme } from '@/contexts/ThemeContext';
+import { cn } from '@/lib/utils';
 
 interface CompanionAvatarProps {
+  companionId?: string;
   size?: 'sm' | 'md' | 'lg' | 'xl';
   showBubble?: boolean;
   message?: string;
-  className?: string;
 }
 
-const companionData = {
-  monkey: {
-    emoji: '🐵',
-    name: 'Momo',
-    color: 'from-amber-400 to-orange-500',
-    messages: [
-      "You're doing amazing! 🍌",
-      "Let's learn something fun!",
-      "Keep that streak going! 🔥",
-      "You're a superstar! ⭐",
-    ],
-  },
-  fox: {
-    emoji: '🦊',
-    name: 'Felix',
-    color: 'from-orange-400 to-red-500',
-    messages: [
-      "Clever thinking! 🧠",
-      "Ready for an adventure?",
-      "You're so smart! 📚",
-      "Let's outsmart this lesson!",
-    ],
-  },
-  doraemon: {
-    emoji: '🤖',
-    name: 'Dora',
-    color: 'from-blue-400 to-cyan-500',
-    messages: [
-      "I have a gadget for this! 🎒",
-      "Time to learn, friend!",
-      "You can do anything! 💪",
-      "Knowledge is power!",
-    ],
-  },
-};
+// This is the fallback component if an image fails to load.
+const FallbackAvatar = ({ companion, sizeClass }: { companion: any, sizeClass: string }) => (
+  <div 
+    className={cn(
+      `flex items-center justify-center rounded-full font-bold text-white`,
+      sizeClass
+    )}
+    style={{ 
+      backgroundColor: `var(--color-${companion.theme})`,
+      // Adjust font size based on avatar size for the initial
+      fontSize: sizeClass.includes('48') ? '4rem' : sizeClass.includes('32') ? '3rem' : '2rem',
+    }}
+  >
+    {companion.name.charAt(0)}
+  </div>
+);
 
-const sizeClasses = {
-  sm: 'w-12 h-12 text-2xl',
-  md: 'w-16 h-16 text-3xl',
-  lg: 'w-24 h-24 text-5xl',
-  xl: 'w-32 h-32 text-6xl',
-};
+export function CompanionAvatar({ companionId, size = 'md', showBubble = false, message }: CompanionAvatarProps) {
+  const { companions, companion: currentCompanion } = useTheme();
+  const [hasError, setHasError] = React.useState(false);
+  
+  const companion = companionId ? companions.find(c => c.id === companionId) : currentCompanion;
 
-export function CompanionAvatar({ size = 'md', showBubble = false, message, className = '' }: CompanionAvatarProps) {
-  const { companion } = useTheme();
-  const data = companionData[companion];
-  const randomMessage = message || data.messages[Math.floor(Math.random() * data.messages.length)];
+  if (!companion) {
+    return null; // Should not happen with ThemeProvider loading state
+  }
+
+  const sizeClasses = {
+    sm: 'w-12 h-12',
+    md: 'w-20 h-20',
+    lg: 'w-32 h-32',
+    xl: 'w-48 h-48',
+  }[size];
+
+  // This flag will be true if the image loading fails.
+  const useFallback = hasError || !companion.image;
 
   return (
-    <div className={`flex flex-col items-center gap-3 ${className}`}>
-      {showBubble && (
-        <div className="speech-bubble max-w-[200px] text-center text-sm font-semibold text-foreground bounce-in">
-          {randomMessage}
-        </div>
-      )}
-      <div className={`${sizeClasses[size]} rounded-full bg-gradient-to-br ${data.color} flex items-center justify-center shadow-cartoon float`}>
-        <span className="drop-shadow-lg">{data.emoji}</span>
+    <div className="relative flex flex-col items-center">
+      <div className={cn("relative float transform transition-transform duration-500 hover:scale-110", sizeClasses)}>
+        {useFallback ? (
+          <FallbackAvatar companion={companion} sizeClass={sizeClasses} />
+        ) : (
+          <img 
+            src={companion.image} // The path is now correctly pointing to /public/companions/*.png
+            alt={companion.name}
+            className="w-full h-full object-contain"
+            // If the image fails to load, we set the error state to render the fallback.
+            onError={() => setHasError(true)}
+          />
+        )}
       </div>
-      {size !== 'sm' && (
-        <span className="font-bold text-foreground">{data.name}</span>
+      {showBubble && message && (
+        <div className="speech-bubble p-4 mt-4 max-w-xs text-center">
+          <p className="font-bold text-lg text-foreground">{message}</p>
+        </div>
       )}
     </div>
   );
-}
-
-export function getCompanionMessage(companion: 'monkey' | 'fox' | 'doraemon', type: 'motivation' | 'greeting' | 'success' = 'motivation') {
-  const messages = {
-    monkey: {
-      motivation: "Go bananas with learning! 🍌",
-      greeting: "Hey there, superstar! Ready to swing into action?",
-      success: "You're absolutely amazing! High five! 🙌",
-    },
-    fox: {
-      motivation: "Let's be clever together! 🦊",
-      greeting: "Hello, bright mind! What shall we discover today?",
-      success: "Brilliant work! You outsmarted that lesson! 🌟",
-    },
-    doraemon: {
-      motivation: "I believe in you! Let's go! 🚀",
-      greeting: "Hi friend! I've got the perfect gadget for learning!",
-      success: "Wonderful! You're becoming a genius! 🎓",
-    },
-  };
-  return messages[companion][type];
 }
