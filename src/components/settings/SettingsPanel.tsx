@@ -1,105 +1,165 @@
-import React, { useState, useEffect } from 'react';
-import { Palette, Bell, Check } from 'lucide-react';
+import React from 'react';
+import { Palette, Users, Bell, Clock, ChevronRight, Check } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
-import { useTheme, Companion } from '@/contexts/ThemeContext';
-import { Button } from '@/components/ui/button';
-import { cn } from '@/lib/utils';
+import { useTheme } from '@/contexts/ThemeContext';
+import { CompanionAvatar } from '@/components/companions/CompanionAvatar';
+
+
+
+const studySubjects = [
+  { id: 'biology', name: 'Biology', emoji: '🧬' },
+  { id: 'math', name: 'Mathematics', emoji: '📐' },
+  { id: 'history', name: 'History', emoji: '🏛️' },
+  { id: 'english', name: 'English', emoji: '✍️' },
+  { id: 'science', name: 'Science', emoji: '🔬' },
+];
 
 export function SettingsPanel() {
-  // CORRECTED: Destructuring only the properties that actually exist in ThemeContext.
-  const { companions, companion, setCompanion } = useTheme();
+  const { theme, companion, setCompanion, companions: companionsList, getCompanionMeta } = useTheme();
+  const [favorite, setFavorite] = React.useState<string>(studySubjects[1].id);
 
-  // Local state for the selected companion, initialized from the context.
-  const [selectedCompanionId, setSelectedCompanionId] = useState(companion.id);
-
-  useEffect(() => {
-    setSelectedCompanionId(companion.id);
-  }, [companion]);
-
-  const handleSelection = (id: string) => {
-    setCompanion(id); // This calls the context function.
-    setSelectedCompanionId(id); // This updates the local state for the UI.
-  };
+  const companionMeta = getCompanionMeta(companion);
 
   return (
-    <div className="p-6 md:p-8 lg:p-10 max-w-4xl mx-auto space-y-10">
-      <div className="text-center">
-        <h1 className="text-4xl lg:text-5xl font-extrabold text-foreground tracking-tighter">Settings</h1>
-        <p className="text-muted-foreground text-lg lg:text-xl mt-2">Customize your learning experience.</p>
+    <div className="p-6 lg:p-8 max-w-3xl mx-auto space-y-6">
+      <div className="text-center mb-8">
+        <h1 className="text-3xl font-bold text-foreground mb-2">Settings ⚙️</h1>
+        <p className="text-muted-foreground text-lg">Customize your learning experience!</p>
       </div>
 
-      {/* Companion & Theme Selection */}
-      <div className="cartoon-card p-6 md:p-8">
-        <div className="flex items-center gap-4 mb-6">
-          <Palette className="w-8 h-8 text-primary" />
-          <h2 className="text-3xl font-bold text-foreground">Companion & Theme</h2>
+      {/* Companion Theme (merged with Theme) */}
+      <div className="cartoon-card">
+        <div className="flex items-center gap-3 mb-6">
+          <Palette className="w-6 h-6 text-primary" />
+          <h2 className="text-xl font-bold text-foreground">Companion Theme</h2>
         </div>
 
-        {/* CORRECTED: Mapping over the actual companions list from the context. */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {companions.map((c: Companion) => (
+        <div className="flex items-center gap-4">
+          <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl">
+            {companionMeta?.emoji}
+          </div>
+
+          <div className="flex-1">
+            <div className="font-bold text-foreground mb-1">{companionMeta?.name} — {companionMeta?.mood}</div>
+            <div className="text-sm text-muted-foreground mb-3">Theme is automatically chosen based on your companion.</div>
+            <div className="flex gap-2">
+              {companionMeta?.colors.map((color, i) => (
+                <div key={i} className="w-8 h-8 rounded-full shadow-sm" style={{ backgroundColor: color }} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Companion Selection */}
+      <div className="cartoon-card">
+        <div className="flex items-center gap-3 mb-6">
+          <Users className="w-6 h-6 text-secondary" />
+          <h2 className="text-xl font-bold text-foreground">AI Companion</h2>
+        </div>
+
+        <div className="space-y-3">
+          {companionsList.map((c) => (
             <button
               key={c.id}
-              // CORRECTED: Using the correct setter function from the context.
-              onClick={() => handleSelection(c.id)}
-              className={cn(
-                `flex items-center gap-4 p-5 rounded-2xl border-4 text-left transition-all duration-300 transform hover:-translate-y-1`,
-                // CORRECTED: Comparing against the local state, which is synced with the context.
-                selectedCompanionId === c.id
-                  ? 'border-primary/80 ring-4 ring-primary/20 bg-primary/10'
-                  : 'border-border hover:border-primary/50 hover:bg-muted/50'
-              )}
+              onClick={() => setCompanion(c.id)}
+              className={`w-full flex items-center gap-4 p-4 rounded-xl border-2 text-left transition-all ${
+                companion === c.id
+                  ? 'border-primary bg-primary/5'
+                  : 'border-border hover:border-primary/50'
+              }`}
             >
-              <div className={cn(
-                `w-16 h-16 rounded-xl flex items-center justify-center text-4xl transition-transform duration-300 flex-shrink-0`,
-                selectedCompanionId === c.id ? 'rotate-12 scale-110' : ''
-              )}>
-                {/* CORRECTED: Using <img> tag with the 'image' property instead of the non-existent 'emoji'. */}
-                <img src={c.image} alt={c.name} className="w-full h-full object-contain" />
+              <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center text-3xl overflow-hidden">
+                {c.image ? (
+                  <img src={c.image} alt={c.name} className="w-full h-full object-cover" />
+                ) : (
+                  <span>{c.emoji}</span>
+                )}
               </div>
               <div className="flex-1">
-                <div className="font-bold text-xl text-foreground">
-                  {c.name}
-                </div>
-                <div className={`text-sm text-muted-foreground font-semibold`}>
-                  Theme: <span className="font-bold capitalize">{c.theme}</span>
-                </div>
+                <div className="font-bold text-foreground">{c.name}</div>
+                <div className="text-sm text-muted-foreground">{c.description}</div>
               </div>
-              {/* CORRECTED: Checking against local state for the checkmark. */}
-              {selectedCompanionId === c.id && (
-                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center shadow-lg flex-shrink-0">
-                  <Check className="w-6 h-6 text-primary-foreground" />
+              {companion === c.id && (
+                <div className="w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                  <Check className="w-4 h-4 text-primary-foreground" />
                 </div>
               )}
             </button>
           ))}
         </div>
-
-        {/* REMOVED: The dialog for custom companions has been removed as it was based on non-existent context properties and caused multiple errors. */}
       </div>
 
       {/* Notifications */}
-      <div className="cartoon-card p-6 md:p-8">
-        <div className="flex items-center gap-4 mb-6">
-          <Bell className="w-8 h-8 text-accent" />
-          <h2 className="text-3xl font-bold text-foreground">Notifications</h2>
+      <div className="cartoon-card">
+        <div className="flex items-center gap-3 mb-6">
+          <Bell className="w-6 h-6 text-accent" />
+          <h2 className="text-xl font-bold text-foreground">Notifications</h2>
         </div>
 
-        <div className="space-y-5">
+        <div className="space-y-4">
           {[
-            { label: 'Daily Reminders', description: 'A gentle nudge to keep learning.' },
-            { label: 'Streak Alerts', description: 'Don\'t lose your momentum!' },
-            { label: 'Weekly Reports', description: 'See your progress and shine.' },
+            { label: 'Daily Reminders', description: 'Get reminded to study every day', defaultChecked: true },
+            { label: 'Streak Alerts', description: 'Warning when streak is at risk', defaultChecked: true },
+            { label: 'New Content', description: 'Notifications for new lessons', defaultChecked: false },
+            { label: 'Weekly Report', description: 'Summary of your weekly progress', defaultChecked: true },
           ].map((setting) => (
-            <div key={setting.label} className="flex items-center justify-between p-5 bg-background/50 rounded-2xl border-2 border-border">
+            <div key={setting.label} className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
               <div>
-                <div className="font-bold text-lg text-foreground">{setting.label}</div>
-                <div className="text-md text-muted-foreground">{setting.description}</div>
+                <div className="font-semibold text-foreground">{setting.label}</div>
+                <div className="text-sm text-muted-foreground">{setting.description}</div>
               </div>
-              <Switch defaultChecked />
+              <Switch defaultChecked={setting.defaultChecked} />
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Stats Summary */}
+      <div className="cartoon-card">
+        <div className="flex items-center gap-3 mb-6">
+          <Clock className="w-6 h-6 text-primary" />
+          <h2 className="text-xl font-bold text-foreground">Your Stats</h2>
+        </div>
+
+        <div className="space-y-3">
+          <div className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
+            <span className="text-muted-foreground">Member Since</span>
+            <span className="font-semibold text-foreground">January 2024</span>
+          </div>
+
+          <div className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
+            <span className="text-muted-foreground">Total Learning Time</span>
+            <span className="font-semibold text-foreground">18.6 hours</span>
+          </div>
+
+          <div className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
+            <span className="text-muted-foreground">Last Active</span>
+            <span className="font-semibold text-foreground">Today, 2:30 PM</span>
+          </div>
+
+          <div className="p-3 bg-muted/50 rounded-xl">
+            <div className="text-muted-foreground font-medium mb-2">Favorite Subject</div>
+            <div className="flex gap-2 flex-wrap">
+              {studySubjects.map((s) => (
+                <button
+                  key={s.id}
+                  onClick={() => setFavorite(s.id)}
+                  className={`px-3 py-1 rounded-full border-2 text-sm font-medium transition-all ${
+                    favorite === s.id ? 'bg-primary text-primary-foreground border-primary' : 'border-border'
+                  }`}
+                >
+                  <span className="mr-2">{s.emoji}</span>
+                  {s.name}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center">
+        <CompanionAvatar size="md" showBubble message="Settings saved! Let's learn! 🎉" />
       </div>
     </div>
   );

@@ -1,76 +1,83 @@
 import React from 'react';
-import { Flame, Target, Star, Zap, ArrowRight, CheckCircle2, BookOpen, BrainCircuit } from 'lucide-react';
+import { Flame, Target, Star, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
-import { CompanionAvatar } from '@/components/companions/CompanionAvatar';
+import { CompanionAvatar, getCompanionMessage } from '@/components/companions/CompanionAvatar';
+import { getContrastColor } from '@/lib/color';
 import { useTheme } from '@/contexts/ThemeContext';
-import { cn } from '@/lib/utils';
 
 interface HomeDashboardProps {
   onStartLearning: () => void;
 }
 
 const todaysGoals = [
-  { id: 1, title: 'Master Photosynthesis Basics', subject: 'Biology', icon: '🌿', completed: true },
-  { id: 2, title: 'Solve 10 Algebra Problems', subject: 'Math', icon: '🧮', completed: false },
-  { id: 3, title: 'Read Chapter 5: World War II', subject: 'History', icon: '📜', completed: false },
+  { id: 1, title: 'Complete Photosynthesis lesson', subject: 'Biology', completed: true },
+  { id: 2, title: 'Practice 10 Math problems', subject: 'Math', completed: false },
+  { id: 3, title: 'Read Chapter 5: World War II', subject: 'History', completed: false },
+  { id: 4, title: 'Finish Chapter: Grammar Basics', subject: 'English', completed: false },
+  { id: 5, title: 'Complete Lab: States of Matter', subject: 'Science', completed: false },
 ];
 
 const quickStats = [
-  { label: 'Day Streak', value: '12', icon: Flame, colorVar: '--streak-color' },
-  { label: 'XP Gained', value: '150', icon: Zap, colorVar: '--xp-color' },
-  { label: 'Levels Unlocked', value: '47', icon: Star, colorVar: '--level-color' },
+  { label: 'Day Streak', value: '12', icon: Flame, color: 'text-streak' },
+  { label: 'XP Today', value: '150', icon: Zap, color: 'text-xp' },
+  { label: 'Levels Done', value: '47', icon: Star, color: 'text-primary' },
 ];
 
 export function HomeDashboard({ onStartLearning }: HomeDashboardProps) {
-  const { companion } = useTheme();
-  const companionName = companion.name;
-  const welcomeMessage = companion.welcomeMessage;
+  const { companion, getCompanionMeta } = useTheme();
+  const greeting = getCompanionMessage(companion, 'greeting');
+  const companionMeta = getCompanionMeta(companion)!;
+  const completedCount = todaysGoals.filter(g => g.completed).length;
 
   return (
-    <div className="p-4 md:p-6 lg:p-8 max-w-7xl mx-auto space-y-8">
+    <div className="p-6 lg:p-8 max-w-6xl mx-auto space-y-8">
       {/* Welcome Header */}
-      <div className="cartoon-card text-center p-8">
-        {/* CORRECTED: Wrapped CompanionAvatar in a div to apply the margin class. */}
-        <div className="-mb-4">
-            <CompanionAvatar size="xl" showBubble={true} message={welcomeMessage} />
+      <div className="cartoon-card flex flex-col lg:flex-row items-center gap-6 lg:gap-8">
+        <CompanionAvatar size="xl" showBubble message={greeting} />
+        
+        <div className="flex-1 text-center lg:text-left">
+          <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-2">
+            Welcome back, Champion! 🎉
+          </h1>
+          <p className="text-lg text-muted-foreground mb-4">
+            You're on a roll! Keep learning and growing every day.
+          </p>
+          
+          <Button
+            onClick={onStartLearning}
+            className="cartoon-button px-8 py-6 text-lg font-bold"
+            style={{
+              background: `linear-gradient(135deg, ${companionMeta.colors[0]}, ${companionMeta.colors[1]})`,
+              color: getContrastColor(companionMeta.colors[1]),
+            }}
+          >
+            Start Learning <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tighter mt-6">
-          Hey there, Learner!
-        </h1>
-        <p className="text-lg md:text-xl text-muted-foreground mt-2 mb-6">
-          {companionName} is ready to help you. {companion.quotes.encouragement[0]}
-        </p>
-        <Button 
-          onClick={onStartLearning}
-          size="lg"
-          className="cartoon-button bg-gradient-to-br from-primary to-secondary text-primary-foreground text-xl font-bold w-full sm:w-auto shadow-lg text-shadow-cute"
-        >
-          <BookOpen className="mr-3 w-7 h-7" /> Let's Start Learning!
-        </Button>
       </div>
 
       {/* Quick Stats */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div className="grid grid-cols-3 gap-4">
         {quickStats.map((stat) => {
           const Icon = stat.icon;
           return (
-            <div key={stat.label} className="stat-card" style={{ '--stat-color': `hsl(${getComputedStyle(document.documentElement).getPropertyValue(stat.colorVar).trim()})` } as React.CSSProperties}>
-              <Icon className="w-16 h-16 mx-auto mb-2 text-[color:var(--stat-color)] drop-shadow-lg" />
-              <div className="text-6xl font-extrabold text-foreground tracking-tighter drop-shadow-md">{stat.value}</div>
-              <div className="text-md font-bold text-muted-foreground uppercase tracking-wider mt-1">{stat.label}</div>
+            <div key={stat.label} className="cartoon-card text-center">
+              <Icon className={`w-8 h-8 mx-auto mb-2 ${stat.color}`} />
+              <div className="text-3xl font-bold text-foreground">{stat.value}</div>
+              <div className="text-sm text-muted-foreground font-medium">{stat.label}</div>
             </div>
           );
         })}
       </div>
 
       {/* Today's Goals */}
-      <div className="cartoon-card p-6 md:p-8">
-        <div className="flex items-center gap-4 mb-6">
-          <Target className="w-8 h-8 text-secondary" />
-          <h2 className="text-3xl font-bold text-foreground">Today's Fun Goals</h2>
-          <span className="ml-auto bg-primary/20 text-primary-foreground border-2 border-primary/30 px-4 py-1 rounded-full text-md font-bold">
-            1/3 Done
+      <div className="cartoon-card">
+        <div className="flex items-center gap-3 mb-6">
+          <Target className="w-7 h-7 text-secondary" />
+          <h2 className="text-2xl font-bold text-foreground">Today's Goals</h2>
+          <span className="ml-auto bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-bold">
+            {completedCount}/{todaysGoals.length} Done
           </span>
         </div>
 
@@ -78,29 +85,32 @@ export function HomeDashboard({ onStartLearning }: HomeDashboardProps) {
           {todaysGoals.map((goal) => (
             <div
               key={goal.id}
-              className={cn(
-                `flex items-center gap-4 p-4 rounded-2xl border-4 transition-all`,
+              className={`flex items-center gap-4 p-4 rounded-xl border-2 transition-all ${
                 goal.completed
-                  ? 'border-green-500/30 bg-green-500/10'
-                  : 'border-[var(--border-color)] bg-card/80 hover:border-primary/50 hover:bg-muted/60'
-              )}
+                  ? 'bg-success/10 border-success'
+                  : 'bg-muted/50 border-border hover:border-primary'
+              }`}
             >
-              <div className={cn(`w-14 h-14 text-2xl rounded-lg flex items-center justify-center flex-shrink-0`,
-                goal.completed ? 'bg-green-500/20' : 'bg-muted/80'
-              )}>
-                {goal.completed ? <CheckCircle2 className="w-8 h-8 text-green-500" /> : goal.icon}
+              <div className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                goal.completed ? 'bg-success' : 'bg-muted'
+              }`}>
+                {goal.completed ? (
+                  <CheckCircle2 className="w-6 h-6 text-success-foreground" />
+                ) : (
+                  <div className="w-4 h-4 rounded-full border-2 border-muted-foreground" />
+                )}
               </div>
               
               <div className="flex-1">
-                <h3 className={cn('font-bold text-lg', goal.completed ? 'line-through text-muted-foreground' : 'text-foreground')}>
+                <h3 className={`font-semibold ${goal.completed ? 'line-through text-muted-foreground' : 'text-foreground'}`}>
                   {goal.title}
                 </h3>
-                <span className="text-md text-muted-foreground font-medium">{goal.subject}</span>
+                <span className="text-sm text-muted-foreground">{goal.subject}</span>
               </div>
 
               {!goal.completed && (
-                <Button variant="outline" size="sm" className="font-bold cartoon-button border-4 self-start bg-secondary text-secondary-foreground">
-                  Start <ArrowRight className="w-4 h-4 ml-1" />
+                <Button variant="outline" size="sm" className="font-semibold" style={{ borderColor: companionMeta.colors[1], color: companionMeta.colors[1] }}>
+                  Start
                 </Button>
               )}
             </div>
@@ -109,26 +119,41 @@ export function HomeDashboard({ onStartLearning }: HomeDashboardProps) {
       </div>
 
       {/* Weekly Progress */}
-      <div className="cartoon-card p-6 md:p-8">
-        <div className="flex items-center gap-4 mb-6">
-           <BrainCircuit className="w-8 h-8 text-accent" />
-          <h2 className="text-3xl font-bold text-foreground">Brain Power Growth</h2>
-        </div>
+      <div className="cartoon-card">
+        <h2 className="text-2xl font-bold text-foreground mb-4">This Week's Progress</h2>
         
-        <div className="space-y-6">
-          {[ 
-            { subject: 'Math', progress: 75, colorClass: 'bg-primary' },
-            { subject: 'Science', progress: 60, colorClass: 'bg-secondary' },
-            { subject: 'History', progress: 40, colorClass: 'bg-accent' },
-          ].map(item => (
-             <div key={item.subject}>
-              <div className="flex justify-between mb-2">
-                <span className="font-bold text-foreground text-lg">{item.subject}</span>
-                <span className="text-md font-bold text-muted-foreground">{item.progress}% Complete</span>
-              </div>
-              <Progress value={item.progress} className={cn("h-6 rounded-full border-4 border-[var(--border-color)] p-1", item.colorClass)} />
+        <div className="space-y-4">
+          <div>
+            <div className="flex justify-between mb-2">
+              <span className="font-medium text-foreground">Math</span>
+              <span className="text-muted-foreground font-semibold">75%</span>
             </div>
-          ))}
+            <Progress value={75} className="h-3" />
+          </div>
+          
+          <div>
+            <div className="flex justify-between mb-2">
+              <span className="font-medium text-foreground">Science</span>
+              <span className="text-muted-foreground font-semibold">60%</span>
+            </div>
+            <Progress value={60} className="h-3" />
+          </div>
+          
+          <div>
+            <div className="flex justify-between mb-2">
+              <span className="font-medium text-foreground">History</span>
+              <span className="text-muted-foreground font-semibold">40%</span>
+            </div>
+            <Progress value={40} className="h-3" />
+          </div>
+          
+          <div>
+            <div className="flex justify-between mb-2">
+              <span className="font-medium text-foreground">English</span>
+              <span className="text-muted-foreground font-semibold">50%</span>
+            </div>
+            <Progress value={50} className="h-3" />
+          </div>
         </div>
       </div>
     </div>

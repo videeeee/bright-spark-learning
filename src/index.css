@@ -6,148 +6,212 @@
 
 @layer base {
   :root {
-    --radius: 2rem; /* Extra bubbly */
-    --shadow-soft: 0 10px 40px -10px rgba(0, 0, 0, 0.1);
-    --shadow-cute: 0 6px 0 var(--border-color, hsl(var(--border)));
+    /* Yellow Cartoon Theme (Default) */
+    --background: 45 100% 96%;
+    --foreground: 25 30% 20%;
 
-    /* Theme: Cherry Red */
-    --background: 0 100% 98%; --foreground: 0 50% 20%;
-    --card: 0 100% 99%;
-    --primary: 0 95% 68%; /* Red */
-    --secondary: 50 100% 70%; /* Bright Yellow */
-    --accent: 205 100% 75%; /* Baby Blue */
-    --border-color: hsl(0 80% 85%);
-    --streak-color: 15 100% 65%; --xp-color: 260 100% 75%; --level-color: 130 85% 65%;
-    --gradient-bg: radial-gradient(circle, hsl(45 100% 90% / 0.5), hsl(0 100% 95% / 0.5));
-    --gradient-card: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.8));
+    --card: 45 100% 99%;
+    --card-foreground: 25 30% 20%;
+
+    --popover: 45 100% 99%;
+    --popover-foreground: 25 30% 20%;
+
+    --primary: 45 100% 51%;
+    --primary-foreground: 25 30% 15%;
+
+    --secondary: 25 100% 65%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 45 50% 90%;
+    --muted-foreground: 25 20% 45%;
+
+    --accent: 150 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 145 65% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 45 40% 85%;
+    --input: 45 40% 85%;
+    --ring: 45 100% 51%;
+
+    --radius: 1rem;
+
+    /* Custom theme colors */
+    --streak: 25 100% 55%;
+    --xp: 270 70% 60%;
+    --level-locked: 220 10% 75%;
+    --level-completed: 145 65% 45%;
+    --level-current: 45 100% 51%;
+    --companion-bubble: 0 0% 100%;
+    --roadmap-path: 45 40% 80%;
+    
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(45 100% 51%), hsl(35 100% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(25 100% 65%), hsl(15 100% 60%));
+    --gradient-accent: linear-gradient(135deg, hsl(150 60% 50%), hsl(170 60% 45%));
+    --gradient-card: linear-gradient(180deg, hsl(45 100% 99%), hsl(45 80% 96%));
+    
+    /* Shadows */
+    --shadow-cartoon: 0 4px 0 hsl(45 40% 75%);
+    --shadow-soft: 0 8px 24px -8px hsl(25 30% 20% / 0.15);
+    --shadow-glow: 0 0 20px hsl(45 100% 51% / 0.3);
   }
 
-  /* Theme: Pastel Dream (Pippa) */
-  .theme-panda {
-    --background: 250 100% 98%; --foreground: 250 30% 25%;
-    --card: 250 80% 99%;
-    --primary: 255 90% 78%; /* Soft Lilac */
-    --secondary: 160 80% 80%; /* Minty Green */
-    --accent: 20 100% 80%; /* Peachy Pink */
-    --border-color: hsl(255 70% 88%);
-    --streak-color: 330 90% 80%; --xp-color: 280 90% 80%; --level-color: 190 90% 80%;
-    --gradient-bg: radial-gradient(circle, hsl(160 100% 92% / 0.5), hsl(255 100% 95% / 0.5));
-    --gradient-card: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.8));
+  .theme-blue {
+    --background: 210 100% 97%;
+    --foreground: 220 30% 15%;
+
+    --card: 210 100% 99%;
+    --card-foreground: 220 30% 15%;
+
+    --popover: 210 100% 99%;
+    --popover-foreground: 220 30% 15%;
+
+    --primary: 200 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 170 80% 45%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 50% 92%;
+    --muted-foreground: 220 20% 45%;
+
+    --accent: 280 70% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 210 40% 88%;
+    --input: 210 40% 88%;
+    --ring: 200 100% 50%;
+
+    --streak: 25 100% 55%;
+    --xp: 280 70% 60%;
+    --level-locked: 220 15% 78%;
+    --level-completed: 170 80% 45%;
+    --level-current: 200 100% 50%;
+    --companion-bubble: 0 0% 100%;
+    --roadmap-path: 210 40% 85%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(200 100% 50%), hsl(210 100% 55%));
+    --gradient-secondary: linear-gradient(135deg, hsl(170 80% 45%), hsl(180 70% 40%));
+    --gradient-accent: linear-gradient(135deg, hsl(280 70% 60%), hsl(300 60% 55%));
+    --gradient-card: linear-gradient(180deg, hsl(210 100% 99%), hsl(210 80% 96%));
+
+    --shadow-cartoon: 0 4px 0 hsl(210 40% 80%);
+    --shadow-soft: 0 8px 24px -8px hsl(220 30% 15% / 0.12);
+    --shadow-glow: 0 0 20px hsl(200 100% 50% / 0.3);
   }
 
-  /* Theme: Warm & Friendly (Theo) */
-  .theme-teddy {
-    --background: 30 80% 97%; --foreground: 25 30% 20%; --card: 30 70% 98%;
-    --primary: 28 100% 70%; --primary-foreground: 25 40% 15%;
-    --secondary: 40 40% 85%; --secondary-foreground: 40 20% 25%;
-    --accent: 35 45% 65%; --accent-foreground: 35 25% 15%;
-    --border-color: hsl(30 40% 88%);
-    --streak-color: 15 90% 65%; --xp-color: 50 95% 70%; --level-color: 120 50% 65%;
-    --gradient-bg: radial-gradient(circle, hsl(40 80% 92% / 0.5), hsl(28 80% 95% / 0.5));
-    --gradient-card: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.8));
+  .dark {
+    --background: 25 20% 10%;
+    --foreground: 45 50% 95%;
   }
-  
-  /* Theme: Neon Pop (Fizzy) */
-  .theme-fox {
-    --background: 180 100% 97%; --foreground: 180 40% 20%;
-    --card: 180 80% 98%;
-    --primary: 175 100% 55%; /* Electric Cyan */
-    --secondary: 80 100% 60%; /* Lime Green */
-    --accent: 320 100% 65%; /* Bright Magenta */
-    --border-color: hsl(175 70% 80%);
-    --streak-color: 350 100% 75%; --xp-color: 210 100% 70%; --level-color: 50 100% 65%;
-    --gradient-bg: radial-gradient(circle, hsl(80 100% 90% / 0.5), hsl(175 100% 95% / 0.5));
-    --gradient-card: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.8));
+}
+
+@layer base {
+  * {
+    @apply border-border;
   }
 
-  /* Theme: Sweet Dreams (Lila) */
-  .theme-lila {
-    --background: 270 100% 99%; --foreground: 260 30% 30%;
-    --card: 270 100% 99%;
-    --primary: 260 90% 85%; /* Soft Lavender */
-    --secondary: 170 80% 85%; /* Creamy Mint */
-    --accent: 320 100% 90%; /* Gentle Pink */
-    --border-color: hsl(260 70% 90%);
-    --streak-color: 30 100% 85%; --xp-color: 200 90% 85%; --level-color: 340 90% 85%;
-    --gradient-bg: radial-gradient(circle, hsl(170 100% 95% / 0.5), hsl(260 100% 97% / 0.5));
-    --gradient-card: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.8));
-  }
-
-  /* Theme: Custom */
-  .theme-custom {
-    --background: 270 50% 98%; --foreground: 270 20% 20%; --card: 270 40% 99%;
-    --primary: 280 90% 75%; --primary-foreground: 280 40% 15%;
-    --secondary: 220 90% 70%; --secondary-foreground: 220 40% 10%;
-    --accent: 240 30% 80%; --accent-foreground: 240 15% 20%;
-    --border-color: hsl(270 25% 90%);
-    --streak-color: 320 100% 75%; --xp-color: 180 100% 70%; --level-color: 260 90% 70%;
-    --gradient-bg: radial-gradient(circle, hsl(220 100% 92% / 0.5), hsl(280 100% 95% / 0.5));
-    --gradient-card: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--secondary) / 0.8));
+  body {
+    @apply bg-background text-foreground font-nunito antialiased;
   }
 }
 
 @layer components {
   .cartoon-card {
-    @apply border-4 backdrop-blur-xl shadow-soft rounded-[var(--radius)] transition-all duration-300;
-    border-color: var(--border-color);
-    box-shadow: var(--shadow-cute), var(--shadow-soft);
-    background: linear-gradient(160deg, hsl(var(--card) / 0.7), hsl(var(--card) / 0.9));
+    @apply bg-card rounded-2xl border-2 border-border p-5;
+    box-shadow: var(--shadow-cartoon), var(--shadow-soft);
   }
+
   .cartoon-button {
-    @apply transform transition-transform duration-200 hover:scale-110 active:scale-95 rounded-2xl font-bold border-4;
-    border-color: var(--border-color);
-    box-shadow: var(--shadow-cute);
+    @apply rounded-xl font-bold transition-all duration-200 active:translate-y-1;
+    box-shadow: var(--shadow-cartoon);
   }
-  .stat-card {
-    @apply cartoon-card p-6 text-center flex flex-col items-center justify-center transform hover:-translate-y-3 transition-transform duration-300;
+
+  .cartoon-button:active {
+    box-shadow: 0 0 0 transparent;
   }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+
+  .gradient-secondary {
+    background: var(--gradient-secondary);
+  }
+
+  .gradient-accent {
+    background: var(--gradient-accent);
+  }
+
   .speech-bubble {
-    @apply relative bg-card border-4 rounded-xl shadow-soft;
-    border-color: var(--border-color);
-    box-shadow: var(--shadow-cute);
+    @apply relative bg-white rounded-2xl p-4 border-2 border-border;
+    box-shadow: var(--shadow-soft);
   }
+
   .speech-bubble::after {
     content: '';
-    position: absolute;
-    bottom: -18px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 0;
-    height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 20px solid var(--border-color);
+    @apply absolute -bottom-3 left-8 w-6 h-6 bg-white border-b-2 border-r-2 border-border;
+    transform: rotate(45deg);
   }
-}
 
-@layer utilities {
-  .float {
-    animation: float 6s ease-in-out infinite;
+  .level-node {
+    @apply w-16 h-16 rounded-full flex items-center justify-center font-bold text-xl transition-all duration-300;
+    box-shadow: var(--shadow-cartoon);
   }
+
+  .level-node:hover {
+    transform: scale(1.1);
+  }
+
+  .streak-fire {
+    animation: pulse-fire 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse-fire {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+  }
+
+  .bounce-in {
+    animation: bounce-in 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  @keyframes bounce-in {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
   }
-  .text-shadow-cute {
-    text-shadow: 2px 2px 0px var(--border-color);
+
+  .wiggle {
+    animation: wiggle 0.5s ease-in-out;
   }
-  .animate-glow {
-    animation: glow 2s ease-in-out infinite;
+
+  @keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
   }
-  @keyframes glow {
-    0%, 100% {
-      box-shadow: 0 0 10px 0px hsl(var(--primary) / 0.5);
-    }
-    50% {
-      box-shadow: 0 0 25px 5px hsl(var(--primary) / 0.5);
-    }
+
+  .roadmap-line {
+    @apply absolute w-1 bg-[hsl(var(--roadmap-path))];
   }
 }
 
-body {
-  @apply text-foreground antialiased;
-  font-family: 'Nunito', sans-serif;
-  background-image: var(--gradient-bg);
-  background-attachment: fixed;
-  transition: background 0.5s ease, color 0.5s ease;
+@layer utilities {
+  .font-nunito {
+    font-family: 'Nunito', sans-serif;
+  }
 }

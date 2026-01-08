@@ -1,137 +1,107 @@
-import React, { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { toast } from '@/hooks/use-toast';
 
-// The interfaces for Companion and ContextType remain the same.
-export interface Companion {
-  id: string;
+type Theme = 'yellow' | 'orange' | 'green' | 'purple' | 'blue';
+// New companions as requested
+type Companion = 'solin' | 'pyro' | 'aqua' | 'lumi' | 'verdi';
+
+interface CompanionMeta {
+  id: Companion;
   name: string;
-  image: string;
-  theme: string;
-  mood: string;
-  welcomeMessage: string;
-  // The quotes object is kept for type safety, but will be simplified.
-  quotes: {
-    welcome: string[];
-    encouragement: string[];
-    completion: string[];
-  };
+  emoji: string;
+  description?: string;
+  mood: 'motivation' | 'energy' | 'calm' | 'creative' | 'growth';
+  theme: Theme;
+  colors: string[];
+  image?: string; // public path e.g. /companions/solin.png
 }
 
+const companionsData: CompanionMeta[] = [
+  { id: 'solin', name: 'Solin', emoji: '🌞', description: 'Starter buddy / Daily motivation', mood: 'motivation', theme: 'yellow', colors: ['#FDE68A', '#FBBF24', '#F59E0B'], image: '/companions/solin.png' },
+  { id: 'pyro', name: 'Pyro', emoji: '🔥', description: 'Challenge booster', mood: 'energy', theme: 'orange', colors: ['#FFD29C', '#FB923C', '#F97316'], image: '/companions/pyro.png' },
+  { id: 'aqua', name: 'Aqua', emoji: '🌊', description: 'Explainer & listener', mood: 'calm', theme: 'blue', colors: ['#BFDBFE', '#60A5FA', '#0EA5E9'], image: '/companions/aqua.png' },
+  { id: 'lumi', name: 'Lumi', emoji: '✨', description: 'Notes & storytelling', mood: 'creative', theme: 'purple', colors: ['#FDE8FF', '#C4B5FD', '#A78BFA'], image: '/companions/lumi.png' },
+  { id: 'verdi', name: 'Verdi', emoji: '🌿', description: 'Progress tracker & guide', mood: 'growth', theme: 'green', colors: ['#E6F6EA', '#BBF7D0', '#7EE7B5'], image: '/companions/verdi.png' },
+
+];
+
 interface ThemeContextType {
-  theme: string;
-  setTheme: (theme: string) => void;
+  theme: Theme;
+  setTheme: (theme: Theme) => void;
   companion: Companion;
-  setCompanion: (companionId: string) => void;
-  companions: Companion[];
+  setCompanion: (companion: Companion) => void;
+  companions: CompanionMeta[];
+  getCompanionMeta: (id: Companion) => CompanionMeta | undefined;
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
-// DIAGNOSTIC STEP: The companion data is being radically simplified to remove any
-// possibility of a hidden syntax error in the strings.
-const defaultCompanions: Companion[] = [
-    {
-      id: 'solin',
-      name: 'Solin',
-      image: '/companions/solin.png',
-      theme: 'yellow',
-      mood: 'Cheerful',
-      welcomeMessage: 'Hello!',
-      quotes: { welcome: [], encouragement: [], completion: [] },
-    },
-    {
-      id: 'pyro',
-      name: 'Pyro',
-      image: '/companions/pyro.png',
-      theme: 'orange',
-      mood: 'Bold',
-      welcomeMessage: 'Hello!',
-      quotes: { welcome: [], encouragement: [], completion: [] },
-    },
-    {
-      id: 'aqua',
-      name: 'Aqua',
-      image: '/companions/aqua.png',
-      theme: 'blue',
-      mood: 'Chill',
-      welcomeMessage: 'Hello!',
-      quotes: { welcome: [], encouragement: [], completion: [] },
-    },
-    {
-      id: 'lumi',
-      name: 'Lumi',
-      image: '/companions/lumi.png',
-      theme: 'purple',
-      mood: 'Expressive',
-      welcomeMessage: 'Hello!',
-      quotes: { welcome: [], encouragement: [], completion: [] },
-    },
-    {
-      id: 'verdi',
-      name: 'Verdi',
-      image: '/companions/verdi.png',
-      theme: 'green',
-      mood: 'Wise',
-      welcomeMessage: 'Hello!',
-      quotes: { welcome: [], encouragement: [], completion: [] },
-    },
-];
-
-const initialCompanion = defaultCompanions[0];
-
-export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setThemeState] = useState(initialCompanion.theme);
-  const [companion, setCompanionState] = useState<Companion>(initialCompanion);
+export function ThemeProvider({ children }: { children: React.ReactNode }) {
+  const [theme, setTheme] = useState<Theme>('yellow');
+  const [companionState, setCompanionState] = useState<Companion>('solin');
 
   useEffect(() => {
-    try {
-      const savedCompanionId = localStorage.getItem('app-companion') || initialCompanion.id;
-      const savedCompanion = defaultCompanions.find(c => c.id === savedCompanionId) || initialCompanion;
-      
-      document.body.className = `theme-${savedCompanion.theme}`;
-      setCompanionState(savedCompanion);
-      setThemeState(savedCompanion.theme);
-
-    } catch (error) {
-      console.error("Failed to sync theme from localStorage.", error);
+    const root = document.documentElement;
+    if (theme === 'blue') {
+      root.classList.add('theme-blue');
+    } else {
+      root.classList.remove('theme-blue');
     }
-  }, []);
+  }, [theme]);
 
-  const setTheme = (newTheme: string) => {
-    try {
-      localStorage.setItem('app-theme', newTheme);
-      document.body.className = `theme-${newTheme}`;
-      setThemeState(newTheme);
-    } catch (error) {
-      console.error("Failed to set theme.", error);
+  // Ensure CSS vars and theme are set when companionState initializes or changes
+  useEffect(() => {
+    const meta = companionsData.find((c) => c.id === companionState);
+    if (meta) {
+      const root = document.documentElement;
+      root.style.setProperty('--companion-color-1', meta.colors[0]);
+      root.style.setProperty('--companion-color-2', meta.colors[1]);
+      root.style.setProperty('--companion-color-3', meta.colors[2]);
+      // ensure theme matches companion on initial load
+      setTheme(meta.theme);
+    }
+  }, [companionState]);
+
+  // When companion changes, automatically update the theme to the companion's theme
+  const setCompanion = (companion: Companion) => {
+    setCompanionState(companion);
+    const meta = companionsData.find((c) => c.id === companion);
+    if (meta) {
+      setTheme(meta.theme);
+      // Optionally, set CSS variables for companion colors (could be used by UI)
+      const root = document.documentElement;
+      root.style.setProperty('--companion-color-1', meta.colors[0]);
+      root.style.setProperty('--companion-color-2', meta.colors[1]);
+      root.style.setProperty('--companion-color-3', meta.colors[2]);
+
+      // Show a toast notifying user of the change
+      const moodLabelMap: Record<string, string> = {
+        motivation: 'Motivation',
+        energy: 'Energy',
+        calm: 'Calm',
+        creative: 'Creativity',
+        growth: 'Growth',
+      };
+
+      toast({
+        title: `${meta.name} selected`,
+        description: `${moodLabelMap[meta.mood] ?? meta.mood} mood — theme switched`,
+      });
     }
   };
 
-  const setCompanion = useCallback((companionId: string) => {
-    const newCompanion = defaultCompanions.find(c => c.id === companionId);
-    if (newCompanion) {
-      try {
-        localStorage.setItem('app-companion', companionId);
-        setCompanionState(newCompanion);
-        setTheme(newCompanion.theme);
-      } catch (error) {
-        console.error("Failed to set companion.", error);
-      }
-    }
-  }, []);
-
-  const value = { theme, setTheme, companion, setCompanion, companions: defaultCompanions };
-
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeContext.Provider value={{ theme, setTheme, companion: companionState, setCompanion, companions: companionsData, getCompanionMeta: (id) => companionsData.find((c) => c.id === id) }}>
       {children}
     </ThemeContext.Provider>
   );
-};
+}
 
-export const useTheme = () => {
+export function useTheme() {
   const context = useContext(ThemeContext);
-  if (context === undefined) {
+  if (!context) {
     throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
-};
+}
+
