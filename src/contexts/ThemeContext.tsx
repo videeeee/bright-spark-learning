@@ -42,10 +42,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     const root = document.documentElement;
-    if (theme === 'blue') {
-      root.classList.add('theme-blue');
-    } else {
-      root.classList.remove('theme-blue');
+    // Remove any existing theme-* classes, then add the current theme class (skip adding for default 'yellow')
+    root.classList.remove('theme-blue', 'theme-orange', 'theme-purple', 'theme-green', 'theme-yellow');
+    if (theme !== 'yellow') {
+      root.classList.add(`theme-${theme}`);
     }
   }, [theme]);
 
