@@ -24,7 +24,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["node", "d3-color", "d3-ease", "d3-interpolate"]
   },
-  "include": ["src"]
+  "include": ["src", "public/companions"]
 }

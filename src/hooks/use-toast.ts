@@ -3,13 +3,16 @@ import * as React from "react";
 import type { ToastActionElement, ToastProps } from "@/components/ui/toast";
 
 const TOAST_LIMIT = 1;
-const TOAST_REMOVE_DELAY = 1000000;
+// Default removal delay set to 5s so toasts auto-dismiss promptly
+const TOAST_REMOVE_DELAY = 5000;
 
 type ToasterToast = ToastProps & {
   id: string;
   title?: React.ReactNode;
   description?: React.ReactNode;
   action?: ToastActionElement;
+  // optional per-toast duration in ms
+  duration?: number;
 };
 
 const actionTypes = {
@@ -40,6 +43,8 @@ type Action =
   | {
       type: ActionType["DISMISS_TOAST"];
       toastId?: ToasterToast["id"];
+      // allow dispatching a dismiss with a custom delay (ms)
+      delay?: number;
     }
   | {
       type: ActionType["REMOVE_TOAST"];
@@ -52,7 +57,7 @@ interface State {
 
 const toastTimeouts = new Map<string, ReturnType<typeof setTimeout>>();
 
-const addToRemoveQueue = (toastId: string) => {
+const addToRemoveQueue = (toastId: string, delay: number = TOAST_REMOVE_DELAY) => {
   if (toastTimeouts.has(toastId)) {
     return;
   }
@@ -63,7 +68,7 @@ const addToRemoveQueue = (toastId: string) => {
       type: "REMOVE_TOAST",
       toastId: toastId,
     });
-  }, TOAST_REMOVE_DELAY);
+  }, delay);
 
   toastTimeouts.set(toastId, timeout);
 };
@@ -83,15 +88,15 @@ export const reducer = (state: State, action: Action): State => {
       };
 
     case "DISMISS_TOAST": {
-      const { toastId } = action;
+      const { toastId, delay } = action;
 
       // ! Side effects ! - This could be extracted into a dismissToast() action,
       // but I'll keep it here for simplicity
       if (toastId) {
-        addToRemoveQueue(toastId);
+        addToRemoveQueue(toastId, delay);
       } else {
         state.toasts.forEach((toast) => {
-          addToRemoveQueue(toast.id);
+          addToRemoveQueue(toast.id, delay);
         });
       }
 
@@ -155,6 +160,12 @@ function toast({ ...props }: Toast) {
       },
     },
   });
+
+  // auto dismiss after duration (defaults to TOAST_REMOVE_DELAY) to avoid persistent toasts
+  const dismissAfter = props.duration ?? TOAST_REMOVE_DELAY;
+  setTimeout(() => {
+    dispatch({ type: "DISMISS_TOAST", toastId: id, delay: dismissAfter });
+  }, dismissAfter);
 
   return {
     id: id,
