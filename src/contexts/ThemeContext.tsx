@@ -74,7 +74,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       root.style.setProperty('--companion-color-2', meta.colors[1]);
       root.style.setProperty('--companion-color-3', meta.colors[2]);
 
-      // Show a toast notifying user of the change
+      // Show a toast notifying user of the changes
       const moodLabelMap: Record<string, string> = {
         motivation: 'Motivation',
         energy: 'Energy',
