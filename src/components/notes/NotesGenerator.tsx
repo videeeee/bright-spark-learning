@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Search, Wand2, Download, FileText, BookOpen, ArrowLeft, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -23,11 +23,6 @@ const styles: StyleOption[] = [
   { id: 'doraemon', name: 'Doraemon Style', emoji: '🤖', description: 'Fun gadgets & clear steps', color: 'from-blue-400 to-cyan-500', icon: '/notes/icons/doraemon.png' },
   { id: 'shinchan', name: 'Shinchan Style', emoji: '😜', description: 'Silly but memorable', color: 'from-yellow-400 to-orange-500', icon: '/notes/icons/shinchan.png' },
   { id: 'naruto', name: 'Naruto Style', emoji: '🍥', description: 'Action-packed learning', color: 'from-orange-400 to-red-500', icon: '/notes/icons/naruto.png' },
-  { id: 'solin', name: 'Solin Style', emoji: '🌞', description: 'Sunshine motivation & bright tips', color: 'from-yellow-200 to-yellow-500' },
-  { id: 'pyro', name: 'Pyro Style', emoji: '🔥', description: 'High-energy concise notes', color: 'from-yellow-200 to-orange-500' },
-  { id: 'aqua', name: 'Aqua Style', emoji: '🌊', description: 'Calm, clear explanations', color: 'from-blue-200 to-cyan-400' },
-  { id: 'lumi', name: 'Lumi Style', emoji: '✨', description: 'Creative storytelling & notes', color: 'from-pink-200 to-purple-400' },
-  { id: 'verdi', name: 'Verdi Style', emoji: '🌿', description: 'Growth-focused progressive notes', color: 'from-green-200 to-green-400' },
 ];
 
 const sampleNotes = {
@@ -62,75 +57,6 @@ const sampleNotes = {
       {
         heading: 'Gadget #3: The Food Factory!',
         content: 'Here\'s where the magic happens! Sunlight + Water + CO₂ = FOOD! It\'s like my Table Cloth gadget, but for plants! And bonus—they release oxygen for us to breathe!',
-      },
-    ],
-  },
-  solin: {
-    title: '🌞 Solin\'s Bright Notes: Motivational Photosynthesis',
-    sections: [
-      {
-        heading: 'Rise & Shine: What is Photosynthesis?',
-        content: 'Solin says: Start small! Plants use sunlight to turn water and CO₂ into sugar. One small step = big glow!',
-      },
-      {
-        heading: 'Daily Habit: Light & Water',
-        content: 'A little sunlight each day helps plants (and you!). Make practice a daily spark and watch progress grow.',
-      },
-    ],
-  },
-  pyro: {
-    title: '🔥 Pyro\'s Quick-Action Notes: Photosynthesis (Short & Strong)',
-    sections: [
-      {
-        heading: 'Step 1: Catch the Sun',
-        content: 'BOOM! Chloroplasts grab sunlight. Quick fact: chlorophyll captures energy fast.',
-      },
-      {
-        heading: 'Step 2: Move the Water',
-        content: 'Flow it up! Water travels up through vessels to join the reaction.',
-      },
-      {
-        heading: 'Step 3: Create Food',
-        content: 'Mix sun + water + CO₂ = sugar. Speed up by practicing short quick reviews.',
-      },
-    ],
-  },
-  aqua: {
-    title: '🌊 Aqua\'s Calm Guide to Photosynthesis',
-    sections: [
-      {
-        heading: 'Breathe & Observe',
-        content: 'Take a breath and read slowly. Photosynthesis is simply plants using light to make sugar.',
-      },
-      {
-        heading: 'Gentle Steps',
-        content: 'Understand each ingredient: sunlight, water, carbon dioxide — each plays a clear role.',
-      },
-    ],
-  },
-  lumi: {
-    title: '✨ Lumi\'s Creative Notes: Photosynthesis Story',
-    sections: [
-      {
-        heading: 'Once Upon a Leaf',
-        content: 'Lumi whispers: the leaf dreams of sunlight. Each beam helps it weave sugar like a story thread.',
-      },
-      {
-        heading: 'Colorful Steps',
-        content: 'Use drawings and playful examples to remember the process — make it yours!',
-      },
-    ],
-  },
-  verdi: {
-    title: '🌿 Verdi\'s Growth Plan: Step-by-step Photosynthesis',
-    sections: [
-      {
-        heading: 'Small Wins',
-        content: 'Verdi reminds you: small daily practice compounds. Track progress and celebrate small wins.',
-      },
-      {
-        heading: 'Strengthen the Basics',
-        content: 'Review the core ingredients often and practice problems to solidify learning.',
       },
     ],
   },
@@ -174,10 +100,12 @@ interface NoteSection { heading: string; content: string }
 interface SavedNote { id: number; topic: string; style: NoteStyle; title: string; sections: NoteSection[]; createdAt: string }
 
 export function NotesGenerator() {
+  const notesRef = useRef<HTMLDivElement | null>(null);
   const [topic, setTopic] = useState('');
   const [selectedStyle, setSelectedStyle] = useState<NoteStyle | null>(null);
   const [isGenerating, setIsGenerating] = useState(false);
   // saved notes list (persist in localStorage)
+  const [notesReady, setNotesReady] = useState(false);
   const [savedNotes, setSavedNotes] = useState<SavedNote[]>(() => {
     try {
       const raw = localStorage.getItem('myNotes');
@@ -197,25 +125,46 @@ export function NotesGenerator() {
     }
   }, [savedNotes]);
 
-  const handleGenerate = () => {
+  const handleGenerate = async () => {
     if (!topic || !selectedStyle) return;
 
-    setIsGenerating(true);
-    setTimeout(() => {
-      setIsGenerating(false);
-      // generate the notes (use sampleNotes but include the topic)
-      const base = sampleNotes[selectedStyle as NoteStyle];
+    try {
+      setIsGenerating(true);
+
+      const res = await fetch("http://localhost:5000/api/notes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: localStorage.getItem("token") || ""
+        },
+        body: JSON.stringify({
+          topic,
+          style: selectedStyle
+        })
+
+      });
+
+      const data = await res.json();
+
       const generated = {
         id: Date.now(),
         topic,
         style: selectedStyle,
-        title: base.title ? `${base.title} — ${topic}` : topic,
-        sections: base.sections,
+        title: data.title || `${topic} — AI Notes`,
+        sections: data.sections || [
+          { heading: "Generated Notes", content: "No content returned" }
+        ],
         createdAt: new Date().toISOString(),
       };
+
       setSavedNotes((s) => [generated, ...s]);
-      // keep selections so users can generate more; optionally clear topic
-    }, 1200);
+      setNotesReady(true);
+    } catch (err) {
+      console.error("AI generation failed", err);
+      alert("AI failed to generate notes");
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   const removeNote = (id: number) => {
@@ -242,7 +191,7 @@ export function NotesGenerator() {
         y = 20;
       }
     });
-    doc.save(`${note.title.replace(/[^a-z0-9]/gi, '_').slice(0,40)}.pdf`);
+    doc.save(`${note.title.replace(/[^a-z0-9]/gi, '_').slice(0, 40)}.pdf`);
   };
 
   // generate and download PPTX for a saved note
@@ -263,8 +212,34 @@ export function NotesGenerator() {
       s.addText(sec.content, { x: 0.5, y: 1.2, fontSize: 14, color: '363636', w: '90%' });
     });
 
-    pres.writeFile({ fileName: `${note.title.replace(/[^a-z0-9]/gi, '_').slice(0,40)}.pptx` });
+    pres.writeFile({ fileName: `${note.title.replace(/[^a-z0-9]/gi, '_').slice(0, 40)}.pptx` });
   };
+
+
+  function renderContent(content: any) {
+    if (typeof content === "string") {
+      return <p>{content}</p>;
+    }
+
+    if (Array.isArray(content)) {
+      return content.map((item, i) => (
+        <div key={i} className="ml-4">
+          • {renderContent(item)}
+        </div>
+      ));
+    }
+
+    if (typeof content === "object") {
+      return Object.entries(content).map(([key, val], i) => (
+        <div key={i} className="mt-2">
+          <strong className="block capitalize">{key.replace(/_/g, " ")}</strong>
+          <div className="ml-4">{renderContent(val)}</div>
+        </div>
+      ));
+    }
+
+    return null;
+  }
 
   return (
     <div className="p-6 lg:p-8 max-w-4xl mx-auto">
@@ -295,9 +270,8 @@ export function NotesGenerator() {
             <button
               key={style.id}
               onClick={() => setSelectedStyle(style.id)}
-              className={`cartoon-card text-left transition-all hover:scale-105 ${
-                selectedStyle === style.id ? 'ring-4 ring-primary ring-offset-2' : ''
-              }`}
+              className={`cartoon-card text-left transition-all hover:scale-105 ${selectedStyle === style.id ? 'ring-4 ring-primary ring-offset-2' : ''
+                }`}
             >
               <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${style.color} flex items-center justify-center text-3xl mb-3 overflow-hidden`}>
                 {style.icon ? (
@@ -330,6 +304,21 @@ export function NotesGenerator() {
           </Button>
         </div>
       </div>
+      {savedNotes.length > 0 && (
+        <button
+          onClick={() => {
+            notesRef.current?.scrollIntoView({ behavior: "smooth" });
+            setNotesReady(false);
+          }}
+          className={`fixed bottom-6 right-6 px-5 py-3 rounded-full shadow-lg z-50 transition-all 
+      ${notesReady
+              ? "bg-yellow-400 text-black animate-pulse scale-110 ring-4 ring-yellow-300"
+              : "bg-primary text-white hover:scale-105"
+            }`}
+        >
+          📚 View Notes
+        </button>
+      )}
 
       {/* Companion prompt below */}
       <div className="flex justify-center mb-8">
@@ -345,7 +334,7 @@ export function NotesGenerator() {
       </div>
 
       {/* My Notes (saved generated notes) */}
-      <div className="space-y-6">
+      <div className="space-y-6" ref={notesRef}>
         <h2 className="text-2xl font-bold text-foreground">My Notes</h2>
         {savedNotes.length === 0 ? (
           <div className="text-muted-foreground">No notes yet — generate your first note above.</div>
@@ -355,12 +344,12 @@ export function NotesGenerator() {
               <div className="flex items-start justify-between gap-4">
                 <div className="w-28 flex-shrink-0">
                   {/* Thumbnail: gradient swatch + first section heading */}
-                  <div className="w-28 h-20 rounded-md overflow-hidden mb-2" style={{ background: `linear-gradient(135deg, ${styles.find(s=>s.id===note.style)?.icon ? '#fff' : '#eee'}, ${styles.find(s=>s.id===note.style)?.color ? '#ddd' : '#ccc'})` }}>
+                  <div className="w-28 h-20 rounded-md overflow-hidden mb-2" style={{ background: `linear-gradient(135deg, ${styles.find(s => s.id === note.style)?.icon ? '#fff' : '#eee'}, ${styles.find(s => s.id === note.style)?.color ? '#ddd' : '#ccc'})` }}>
                     {/* show style icon if available */}
-                    {styles.find(s=>s.id===note.style)?.icon ? (
-                      <img src={styles.find(s=>s.id===note.style)!.icon} alt={note.style} className="w-full h-full object-cover" />
+                    {styles.find(s => s.id === note.style)?.icon ? (
+                      <img src={styles.find(s => s.id === note.style)!.icon} alt={note.style} className="w-full h-full object-cover" />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-2xl">{styles.find(s=>s.id===note.style)?.emoji}</div>
+                      <div className="w-full h-full flex items-center justify-center text-2xl">{styles.find(s => s.id === note.style)?.emoji}</div>
                     )}
                   </div>
                   <div className="text-sm text-muted-foreground">{new Date(note.createdAt).toLocaleDateString()}</div>
@@ -372,7 +361,9 @@ export function NotesGenerator() {
                     {note.sections.map((section: any, i: number) => (
                       <div key={i} className="bg-muted/50 rounded-xl p-4">
                         <h4 className="font-semibold text-foreground mb-1">{section.heading}</h4>
-                        <p className="text-foreground leading-relaxed">{section.content}</p>
+                        <div className="text-foreground leading-relaxed space-y-2">
+                          {renderContent(section.content)}
+                        </div>
                       </div>
                     ))}
                   </div>

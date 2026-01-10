@@ -6,9 +6,14 @@ import { CompanionAvatar, getCompanionMessage } from '@/components/companions/Co
 import { getContrastColor } from '@/lib/color';
 import { useTheme } from '@/contexts/ThemeContext';
 
-interface HomeDashboardProps {
+export type HomeDashboardProps = {
   onStartLearning: () => void;
-}
+  user?: {
+    username: string;
+    xp: number;
+    streak: number;
+  } | null;
+};
 
 const todaysGoals = [
   { id: 1, title: 'Complete Photosynthesis lesson', subject: 'Biology', completed: true },
@@ -24,7 +29,7 @@ const quickStats = [
   { label: 'Levels Done', value: '47', icon: Star, color: 'text-primary' },
 ];
 
-export function HomeDashboard({ onStartLearning }: HomeDashboardProps) {
+export function HomeDashboard({ onStartLearning, user }: HomeDashboardProps) {
   const { companion, getCompanionMeta } = useTheme();
   const greeting = getCompanionMessage(companion, 'greeting');
   const companionMeta = getCompanionMeta(companion)!;
@@ -38,7 +43,7 @@ export function HomeDashboard({ onStartLearning }: HomeDashboardProps) {
         
         <div className="flex-1 text-center lg:text-left">
           <h1 className="text-3xl lg:text-4xl font-bold text-foreground mb-2">
-            Welcome back, Champion! 🎉
+            Welcome back{user?.username ? `, ${user.username}` : ''}! 🎉
           </h1>
           <p className="text-lg text-muted-foreground mb-4">
             You're on a roll! Keep learning and growing every day.
@@ -109,7 +114,7 @@ export function HomeDashboard({ onStartLearning }: HomeDashboardProps) {
               </div>
 
               {!goal.completed && (
-                <Button variant="outline" size="sm" className="font-semibold" style={{ borderColor: companionMeta.colors[1], color: companionMeta.colors[1] }}>
+                <Button variant="outline" size="sm" className="font-semibold">
                   Start
                 </Button>
               )}
@@ -121,7 +126,7 @@ export function HomeDashboard({ onStartLearning }: HomeDashboardProps) {
       {/* Weekly Progress */}
       <div className="cartoon-card">
         <h2 className="text-2xl font-bold text-foreground mb-4">This Week's Progress</h2>
-        
+
         <div className="space-y-4">
           <div>
             <div className="flex justify-between mb-2">

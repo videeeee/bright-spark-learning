@@ -1,4 +1,13 @@
-import React, { useState } from 'react';
+type HomeDashboardProps = {
+  onStartLearning: () => void;
+  user?: {
+    username: string;
+    xp: number;
+    streak: number;
+  } | null;
+};
+import { useEffect, useState } from "react";
+import React from "react";
 import { Sidebar } from '@/components/layout/Sidebar';
 import { HomeDashboard } from '@/components/dashboard/HomeDashboard';
 import { LevelRoadmap } from '@/components/learn/LevelRoadmap';
@@ -11,11 +20,33 @@ import { ThemeProvider } from '@/contexts/ThemeContext';
 
 function DashboardContent() {
   const [activeTab, setActiveTab] = useState('home');
+  const [user, setUser] = useState<any>(null);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) return;
+
+    fetch("http://localhost:5000/api/dashboard", {
+      headers: {
+        Authorization: token
+      }
+    })
+      .then(res => res.json())
+      .then(data => {
+        console.log("DASHBOARD DATA:", data);
+        setUser(data);
+      })
+      .catch(err => console.error(err));
+  }, []);
+
 
   const renderContent = () => {
     switch (activeTab) {
       case 'home':
-        return <HomeDashboard onStartLearning={() => setActiveTab('learn')} />;
+        return (
+          <HomeDashboard onStartLearning={() => setActiveTab('learn')} />
+        );
       case 'learn':
         return <LevelRoadmap />;
       case 'notes':
@@ -29,7 +60,12 @@ function DashboardContent() {
       case 'settings':
         return <SettingsPanel />;
       default:
-        return <HomeDashboard onStartLearning={() => setActiveTab('learn')} />;
+        return (
+          <HomeDashboard
+            onStartLearning={() => setActiveTab('learn')}
+            user={user}
+          />
+        );
     }
   };
 
@@ -52,3 +88,4 @@ const Index = () => {
 };
 
 export default Index;
+
