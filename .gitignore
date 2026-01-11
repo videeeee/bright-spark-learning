@@ -1,7 +1,3 @@
-# env files
-.env
-backend/.env
-.env.local
 
 # node
 node_modules/
@@ -46,10 +42,3 @@ dist-ssr
 *.sw?
 t e s t - r e s u l t s / 
  
- b a c k e n d / . e n v 
- 
- 
-
-# env files
-.env
-backend/.env
