@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
+# 🚀 Bright Spark Learning
+LearnQuest
 
-## Project info
+An AI-powered personalized learning platform designed to make studying smarter, fun, and effective.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## 🌐 Live Demo
 
-## How can I edit this code?
+👉 Deployed Link: https://learnquest-sdg-4.netlify.app/
+👉Github repository Link : https://github.com/videeeee/bright-spark-learning.git
 
-There are several ways of editing your application.
+## ❓ Problem Statement: SDG 4 – Quality Education
+6.	AI-powered personalized learning dashboard for school students.
 
-**Use Lovable**
+Students struggle with:
+- Lack of personalized learning
+- Low engagement in traditional platforms
+- No clear tracking of strengths and weaknesses
+## 💡 Our Solution
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Bright Spark Learning uses AI to:
+- Generate personalized study content
+- Track learning progress
+- Provide smart quizzes and analytics
+- Gamify learning for better engagement
 
-Changes made via Lovable will be committed automatically to this repo.
+## ✨ Features
 
-**Use your preferred IDE**
+- 🎯 AI-powered personalized learning
+- 📚 Smart notes & quizzes
+- 📊 Learning analytics dashboard
+- 🔥 Gamified progress tracking
+- 🌙 Clean & modern UI
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🛠️ Tech Stack
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
+**Frontend**
 - React
-- shadcn-ui
+- TypeScript
 - Tailwind CSS
 
-## How can I deploy this project?
+**Backend**
+- Node.js
+- Express
+- MongoDB
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+**AI / Tools**
+- OpenAI API
+- Vercel
+- GitHub
 
-## Can I connect a custom domain to my Lovable project?
+## 🚀 Future Enhancements
 
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+- AI tutor chatbot
+- Mobile app version
+- Advanced learning recommendations
+- Multi-language support
