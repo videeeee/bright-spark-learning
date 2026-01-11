@@ -5,7 +5,7 @@ An AI-powered personalized learning platform designed to make studying smarter, 
 
 ## 🌐 Live Demo
 
-👉 Deployed Link: https://learnquest-sdg-4.netlify.app/
+👉 Deployed Link: https://learnquest-mu.vercel.app/
 👉Github repository Link : https://github.com/videeeee/bright-spark-learning.git
 
 ## ❓ Problem Statement: SDG 4 – Quality Education
