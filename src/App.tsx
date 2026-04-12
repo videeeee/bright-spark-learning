@@ -12,7 +12,7 @@ const queryClient = new QueryClient();
 const App = () => {
 
 useEffect(() => {
-  fetch("http://localhost:5000/api/auth/auto")
+  fetch(`${import.meta.env.VITE_API_URL}/api/auth/auto`)
     .then(res => res.json())
     .then(data => {
       if (!data || !data.payload) return;   // 👈 GUARD

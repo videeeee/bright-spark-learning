@@ -262,7 +262,7 @@ export function LevelRoadmap() {
 
   useEffect(() => {
     async function loadProgress() {
-      const res = await fetch("http://localhost:5000/api/progress", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/progress`, {
         headers: {
           Authorization: localStorage.getItem("token") || "",
         },
@@ -317,7 +317,7 @@ export function LevelRoadmap() {
       const token = localStorage.getItem("token");
       if (!token) return;
 
-      const res = await fetch("http://localhost:5000/api/progress/mine", {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/progress/mine`, {
         headers: { Authorization: token }
       });
 
@@ -434,7 +434,7 @@ export function LevelRoadmap() {
       setMessage("🎉 Correct! You’ve unlocked the next level!");
 
 
-      await fetch("http://localhost:5000/api/progress/complete-level", {
+      await fetch(`${import.meta.env.VITE_API_URL}/api/progress/complete-level`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

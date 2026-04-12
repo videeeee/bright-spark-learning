@@ -17,7 +17,7 @@ export default function QuizLevel({
 
     if (finalScore < 80) return;
 
-    await fetch("http://localhost:5000/api/progress/complete-level", {
+    await fetch(`${import.meta.env.VITE_API_URL}/api/progress/complete-level`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
