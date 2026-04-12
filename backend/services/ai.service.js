@@ -23,6 +23,157 @@ const GEMINI_URL =
 // ---------------- PROMPT (KEEP YOUR EXISTING FUNCTION) ----------------
 // KEEP your buildNotebookLMPrompt EXACTLY SAME
 
+// ---------------- NOTEBOOK-LM PROMPT ----------------
+function buildNotebookLMPrompt(topic, style) {
+    if (style === "shinchan") {
+        return `
+Explain "${topic}" in a complete Crayon Shin-chan classroom.
+
+Rules:
+Use Shin-chan, Kazama, Nene, Masao, and Bo-chan as characters.
+Shin-chan should explain the topic in a funny, playful, but still accurate way.
+Kazama should explain the formal definitions and technical terms.
+Nene should break the concept step-by-step like exam-oriented teaching.
+Masao should ask common doubts and confusions students usually have.
+Bo-chan should give calm, simplified summaries and memory tricks.
+Style:
+Light, humorous, but conceptually correct.
+Use short dialogues.
+Maintain learning clarity while keeping the Shin-chan vibe.
+End with:
+A simple recap
+3 exam-focused key points
+1 easy memory trick
+
+Return ONLY JSON:
+{
+ "title": "...",
+ "sections":[
+   {"heading":"...","content":"..."}
+ ]
+}
+`;
+    }
+
+    if (style === "doraemon") {
+        return `
+Explain "${topic}" using Doraemon gadgets.
+
+Rules:
+Use Doraemon, Nobita, Shizuka, Gian, and Suneo as characters.
+Doraemon should explain the main concepts using simple analogies,
+gadgets, and logical reasoning.
+Nobita should ask beginner-level doubts and express confusion.
+Shizuka should explain concepts step-by-step in a clear,
+exam-oriented manner.
+Gian should state common misconceptions or overconfident wrong answers,
+which Doraemon corrects.
+Suneo should share shortcuts, tricks, or smart exam tips.
+
+Style:
+Friendly, educational, and fun.
+Short dialogues.
+Accurate technical explanations.
+Easy to understand, even for beginners.
+
+Structure:
+1. Doraemon introduces the topic
+2. Concept explanation through dialogue
+3. Doubts and corrections
+4. Simplified understanding
+5. Exam-focused clarity
+
+End with:
+A clear recap
+3 key exam points
+1 easy memory trick
+
+Return ONLY JSON:
+{
+ "title":"...",
+ "sections":[{"heading":"...","content":"..."}]
+}
+`;
+    }
+
+    if (style === "ghibli") {
+        return `
+Explain "${topic}" as a peaceful Studio Ghibli story.
+
+Setting:
+A quiet countryside village from an old era
+Slow life, wisdom, simplicity, nature
+Learning happens through stories, daily problems, and conversations 
+Characters:
+A village elder who explains concepts using wisdom and analogies
+A young learner who asks curious and basic questions
+A craftsperson or farmer who explains real-life applications
+A wandering scholar who provides structured, formal explanations
+A gentle narrator who connects everything together
+
+Rules:
+Explain concepts through village problems and old-world scenarios
+Use calm, poetic language
+Keep explanations technically accurate and more focused to the topic.
+Avoid modern references
+Use dialogues and storytelling, not plain notes
+
+Structure:
+1. Introduction of the topic with reference to village and the problem
+2. Explanation through conversation and daily life
+3. Clarification of the core concept
+4. Resolution of the problem using knowledge
+5. Reflection and lesson learned
+End with:
+A gentle recap of the concept
+3 key learning points
+1 intuitive memory analogy
+
+Return ONLY JSON:
+{
+ "title":"...",
+ "sections":[{"heading":"...","content":"..."}]
+}
+`;
+    }
+
+    return `
+Explain "${topic}" as an anime learning journey.
+
+Rules:
+The explanation should feel like an anime story, not plain notes.
+Concepts should be represented as:
+Powers / abilities
+Systems / rules of the world
+Conflicts or challenges
+Characters should learn, train, and overcome confusion while explaining the
+topic.
+
+Style:
+High-energy anime narration
+Clear explanations hidden inside storytelling
+Use dialogues, scenes, and short explanations
+Keep all technical concepts accurate
+
+Structure:
+1. Introduction of the anime world and problem in short
+2. Step-by-step explanation through training or battles if required
+3. Key concept revelation moment in detail
+4. Final summary like an anime episode ending
+
+End with:
+Clear concept summary
+Exam-oriented points
+One “anime-style” memory hook
+
+Return ONLY JSON:
+{
+ "title":"...",
+ "sections":[{"heading":"...","content":"..."}]
+}
+`;
+}
+
 // ---------------- NORMALIZER ----------------
 function normalizeToFrontendFormat(raw) {
     try {
@@ -118,156 +269,6 @@ module.exports = { generateNotes };
 //     "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=" +
 //     process.env.GEMINI_API_KEY;
 
-// // ---------------- NOTEBOOK-LM PROMPT ----------------
-// function buildNotebookLMPrompt(topic, style) {
-//     if (style === "shinchan") {
-//         return `
-// Explain "${topic}" in a complete Crayon Shin-chan classroom.
-
-// Rules:
-// Use Shin-chan, Kazama, Nene, Masao, and Bo-chan as characters.
-// Shin-chan should explain the topic in a funny, playful, but still accurate way.
-// Kazama should explain the formal definitions and technical terms.
-// Nene should break the concept step-by-step like exam-oriented teaching.
-// Masao should ask common doubts and confusions students usually have.
-// Bo-chan should give calm, simplified summaries and memory tricks.
-// Style:
-// Light, humorous, but conceptually correct.
-// Use short dialogues.
-// Maintain learning clarity while keeping the Shin-chan vibe.
-// End with:
-// A simple recap
-// 3 exam-focused key points
-// 1 easy memory trick
-
-// Return ONLY JSON:
-// {
-//  "title": "...",
-//  "sections":[
-//    {"heading":"...","content":"..."}
-//  ]
-// }
-// `;
-//     }
-
-//     if (style === "doraemon") {
-//         return `
-// Explain "${topic}" using Doraemon gadgets.
-
-// Rules:
-// Use Doraemon, Nobita, Shizuka, Gian, and Suneo as characters.
-// Doraemon should explain the main concepts using simple analogies,
-// gadgets, and logical reasoning.
-// Nobita should ask beginner-level doubts and express confusion.
-// Shizuka should explain concepts step-by-step in a clear,
-// exam-oriented manner.
-// Gian should state common misconceptions or overconfident wrong answers,
-// which Doraemon corrects.
-// Suneo should share shortcuts, tricks, or smart exam tips.
-
-// Style:
-// Friendly, educational, and fun.
-// Short dialogues.
-// Accurate technical explanations.
-// Easy to understand, even for beginners.
-
-// Structure:
-// 1. Doraemon introduces the topic
-// 2. Concept explanation through dialogue
-// 3. Doubts and corrections
-// 4. Simplified understanding
-// 5. Exam-focused clarity
-
-// End with:
-// A clear recap
-// 3 key exam points
-// 1 easy memory trick
-
-// Return ONLY JSON:
-// {
-//  "title":"...",
-//  "sections":[{"heading":"...","content":"..."}]
-// }
-// `;
-//     }
-
-//     if (style === "ghibli") {
-//         return `
-// Explain "${topic}" as a peaceful Studio Ghibli story.
-
-// Setting:
-// A quiet countryside village from an old era
-// Slow life, wisdom, simplicity, nature
-// Learning happens through stories, daily problems, and conversations 
-// Characters:
-// A village elder who explains concepts using wisdom and analogies
-// A young learner who asks curious and basic questions
-// A craftsperson or farmer who explains real-life applications
-// A wandering scholar who provides structured, formal explanations
-// A gentle narrator who connects everything together
-
-// Rules:
-// Explain concepts through village problems and old-world scenarios
-// Use calm, poetic language
-// Keep explanations technically accurate and more focused to the topic.
-// Avoid modern references
-// Use dialogues and storytelling, not plain notes
-
-// Structure:
-// 1. Introduction of the topic with reference to village and the problem
-// 2. Explanation through conversation and daily life
-// 3. Clarification of the core concept
-// 4. Resolution of the problem using knowledge
-// 5. Reflection and lesson learned
-// End with:
-// A gentle recap of the concept
-// 3 key learning points
-// 1 intuitive memory analogy
-
-// Return ONLY JSON:
-// {
-//  "title":"...",
-//  "sections":[{"heading":"...","content":"..."}]
-// }
-// `;
-//     }
-
-//     return `
-// Explain "${topic}" as an anime learning journey.
-
-// Rules:
-// The explanation should feel like an anime story, not plain notes.
-// Concepts should be represented as:
-// Powers / abilities
-// Systems / rules of the world
-// Conflicts or challenges
-// Characters should learn, train, and overcome confusion while explaining the
-// topic.
-
-// Style:
-// High-energy anime narration
-// Clear explanations hidden inside storytelling
-// Use dialogues, scenes, and short explanations
-// Keep all technical concepts accurate
-
-// Structure:
-// 1. Introduction of the anime world and problem in short
-// 2. Step-by-step explanation through training or battles if required
-// 3. Key concept revelation moment in detail
-// 4. Final summary like an anime episode ending
-
-// End with:
-// Clear concept summary
-// Exam-oriented points
-// One “anime-style” memory hook
-
-// Return ONLY JSON:
-// {
-//  "title":"...",
-//  "sections":[{"heading":"...","content":"..."}]
-// }
-// `;
-// }
 
 // // ---------------- NORMALIZER ----------------
 // function normalizeToFrontendFormat(raw) {
