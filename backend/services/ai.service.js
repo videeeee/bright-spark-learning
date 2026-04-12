@@ -17,7 +17,7 @@ function cleanStudentText(text) {
 
 // ---------------- GEMINI URL ----------------
 const GEMINI_URL =
-    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-pro:generateContent?key=" +
+    "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=" +
     process.env.GEMINI_API_KEY;
 
 // ---------------- PROMPT (KEEP YOUR EXISTING FUNCTION) ----------------
