@@ -1,28 +1,35 @@
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 
-exports.autoLogin = async (req, res) => {
-  let user = await User.findOne({ email: "demo@hackathon.com" });
+// SIGNUP
+exports.signup = async (req, res) => {
+  const { name, email, password } = req.body;
 
-  if (!user) {
-    user = await User.create({
-      username: "Demo User",
-      email: "demo@hackathon.com",
-      password: "demo"
-    });
-  }
+  const hashed = await bcrypt.hash(password, 10);
 
-  const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-
-  res.json({
-    payload: {
-      token,
-      user: {
-        username: user.username,
-        email: user.email,
-        xp: user.xp,
-        streak: user.streak
-      }
-    }
+  const user = await User.create({
+    name,
+    email,
+    password: hashed,
   });
+
+  res.json({ message: "User created" });
+};
+
+// LOGIN
+exports.login = async (req, res) => {
+  const { email, password } = req.body;
+
+  const user = await User.findOne({ email });
+
+  if (!user) return res.status(400).json({ msg: "User not found" });
+
+  const isMatch = await bcrypt.compare(password, user.password);
+
+  if (!isMatch) return res.status(400).json({ msg: "Wrong password" });
+
+  const token = jwt.sign({ id: user._id }, "SECRET_KEY");
+
+  res.json({ token });
 };
