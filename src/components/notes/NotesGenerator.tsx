@@ -67,7 +67,7 @@ export function NotesGenerator() {
       setIsFetching(true);
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/notes`, {
         headers: {
-          Authorization: token,
+          Authorization: `Bearer ${token}`,
         },
       });
 
@@ -103,7 +103,7 @@ export function NotesGenerator() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          Authorization: localStorage.getItem("token") || ""
+          Authorization: `Bearer ${localStorage.getItem("token")}` || ""
         },
         body: JSON.stringify({
           topic,
@@ -148,7 +148,7 @@ export function NotesGenerator() {
       const res = await fetch(`${import.meta.env.VITE_API_URL}/api/notes/${noteId}`, {
         method: "DELETE",
         headers: {
-          Authorization: token,
+          Authorization: `Bearer ${token}`,
         },
       });
 
