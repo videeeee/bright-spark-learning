@@ -29,7 +29,11 @@ exports.login = async (req, res) => {
 
   if (!isMatch) return res.status(400).json({ msg: "Wrong password" });
 
-  const token = jwt.sign({ id: user._id }, "SECRET_KEY");
+  const token = jwt.sign(
+    { id: user._id },
+    process.env.JWT_SECRET || "SECRET_KEY",
+    { expiresIn: "7d" }
+  );
 
   res.json({ token });
 };
