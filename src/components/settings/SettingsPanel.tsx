@@ -1,24 +1,25 @@
 import React from 'react';
-import { Palette, Users, Bell, Clock, ChevronRight, Check } from 'lucide-react';
+import { Palette, Users, Bell, Clock, Check, LogOut } from 'lucide-react';
 import { Switch } from '@/components/ui/switch';
 import { useTheme } from '@/contexts/ThemeContext';
 import { CompanionAvatar } from '@/components/companions/CompanionAvatar';
-
-
-
-const studySubjects = [
-  { id: 'biology', name: 'Biology', emoji: '🧬' },
-  { id: 'math', name: 'Mathematics', emoji: '📐' },
-  { id: 'history', name: 'History', emoji: '🏛️' },
-  { id: 'english', name: 'English', emoji: '✍️' },
-  { id: 'science', name: 'Science', emoji: '🔬' },
-];
+import { Button } from '@/components/ui/button';
+import { useUser } from '@/contexts/UserContext';
+import { useNavigate } from 'react-router-dom';
 
 export function SettingsPanel() {
-  const { theme, companion, setCompanion, companions: companionsList, getCompanionMeta } = useTheme();
-  const [favorite, setFavorite] = React.useState<string>(studySubjects[1].id);
-
+  const { companion, setCompanion, companions: companionsList, getCompanionMeta } = useTheme();
+  const { user, logout } = useUser();
+  const navigate = useNavigate();
   const companionMeta = getCompanionMeta(companion);
+
+  if (!user) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <div className="text-center text-muted-foreground">Loading profile...</div>
+      </div>
+    );
+  }
 
   return (
     <div className="p-6 lg:p-8 max-w-3xl mx-auto space-y-6">
@@ -27,18 +28,15 @@ export function SettingsPanel() {
         <p className="text-muted-foreground text-lg">Customize your learning experience!</p>
       </div>
 
-      {/* Companion Theme (merged with Theme) */}
       <div className="cartoon-card">
         <div className="flex items-center gap-3 mb-6">
           <Palette className="w-6 h-6 text-primary" />
           <h2 className="text-xl font-bold text-foreground">Companion Theme</h2>
         </div>
-
         <div className="flex items-center gap-4">
           <div className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl">
             {companionMeta?.emoji}
           </div>
-
           <div className="flex-1">
             <div className="font-bold text-foreground mb-1">{companionMeta?.name} — {companionMeta?.mood}</div>
             <div className="text-sm text-muted-foreground mb-3">Theme is automatically chosen based on your companion.</div>
@@ -51,13 +49,11 @@ export function SettingsPanel() {
         </div>
       </div>
 
-      {/* Companion Selection */}
       <div className="cartoon-card">
         <div className="flex items-center gap-3 mb-6">
           <Users className="w-6 h-6 text-secondary" />
           <h2 className="text-xl font-bold text-foreground">AI Companion</h2>
         </div>
-
         <div className="space-y-3">
           {companionsList.map((c) => (
             <button
@@ -90,13 +86,11 @@ export function SettingsPanel() {
         </div>
       </div>
 
-      {/* Notifications */}
       <div className="cartoon-card">
         <div className="flex items-center gap-3 mb-6">
           <Bell className="w-6 h-6 text-accent" />
           <h2 className="text-xl font-bold text-foreground">Notifications</h2>
         </div>
-
         <div className="space-y-4">
           {[
             { label: 'Daily Reminders', description: 'Get reminded to study every day', defaultChecked: true },
@@ -115,50 +109,43 @@ export function SettingsPanel() {
         </div>
       </div>
 
-      {/* Stats Summary */}
       <div className="cartoon-card">
         <div className="flex items-center gap-3 mb-6">
           <Clock className="w-6 h-6 text-primary" />
-          <h2 className="text-xl font-bold text-foreground">Your Stats</h2>
+          <h2 className="text-xl font-bold text-foreground">Your Learning Profile</h2>
         </div>
-
         <div className="space-y-3">
           <div className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
-            <span className="text-muted-foreground">Member Since</span>
-            <span className="font-semibold text-foreground">January 2024</span>
+            <span className="text-muted-foreground">Full Name</span>
+            <span className="font-semibold text-foreground">{user.name}</span>
           </div>
-
           <div className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
-            <span className="text-muted-foreground">Total Learning Time</span>
-            <span className="font-semibold text-foreground">18.6 hours</span>
+            <span className="text-muted-foreground">Email</span>
+            <span className="font-semibold text-foreground break-all">{user.email}</span>
           </div>
-
           <div className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
-            <span className="text-muted-foreground">Last Active</span>
-            <span className="font-semibold text-foreground">Today, 2:30 PM</span>
+            <span className="text-muted-foreground">Class Level</span>
+            <span className="font-semibold text-foreground">{user.classLevel || 'Not set'}</span>
           </div>
-
-          <div className="p-3 bg-muted/50 rounded-xl">
-            <div className="text-muted-foreground font-medium mb-2">Favorite Subject</div>
-            <div className="flex gap-2 flex-wrap">
-              {studySubjects.map((s) => (
-                <button
-                  key={s.id}
-                  onClick={() => setFavorite(s.id)}
-                  className={`px-3 py-1 rounded-full border-2 text-sm font-medium transition-all ${
-                    favorite === s.id ? 'bg-primary text-primary-foreground border-primary' : 'border-border'
-                  }`}
-                >
-                  <span className="mr-2">{s.emoji}</span>
-                  {s.name}
-                </button>
-              ))}
-            </div>
+          <div className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
+            <span className="text-muted-foreground">Curriculum</span>
+            <span className="font-semibold text-foreground">{user.curriculum || 'Not set'}</span>
+          </div>
+          <div className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
+            <span className="text-muted-foreground">Subjects</span>
+            <span className="font-semibold text-foreground">{user.subjects?.length ?? 0}</span>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center gap-3">
+        <Button variant="outline" onClick={() => navigate('/dashboard')}>Dashboard</Button>
+        <Button variant="destructive" onClick={logout}>
+          <LogOut className="w-4 h-4 mr-2" /> Logout
+        </Button>
+      </div>
+
+      <div className="flex justify-center mt-6">
         <CompanionAvatar size="md" showBubble message="Settings saved! Let's learn! 🎉" />
       </div>
     </div>

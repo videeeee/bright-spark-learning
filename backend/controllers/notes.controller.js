@@ -56,7 +56,7 @@ DO NOT include anything outside this JSON.
     const data = extractJSON(raw);
 
     await Notes.create({
-      userId: req.userId,
+      userId: req.user?.id || req.userId,
       topic,
       content: data
     });
@@ -89,7 +89,7 @@ DO NOT include anything outside this JSON.
     const data = extractJSON(raw);
 
     await Notes.create({
-      userId: req.userId,
+      userId: req.user?.id || req.userId,
       topic,
       content: data
     });

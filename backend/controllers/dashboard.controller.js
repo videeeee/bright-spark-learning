@@ -1,7 +1,8 @@
 const User = require("../models/User");
 
 exports.getDashboard = async (req, res) => {
-  let user = await User.findById(req.userId);
+  const userId = req.userId || req.user?.id;
+  let user = await User.findById(userId);
 
   // 🔥 AUTO-RECOVERY
   if (!user) {
@@ -9,7 +10,7 @@ exports.getDashboard = async (req, res) => {
 
     if (!user) {
       user = await User.create({
-        username: "Demo User",
+        name: "Demo User",
         email: "demo@hackathon.com",
         password: "demo"
       });
@@ -17,7 +18,7 @@ exports.getDashboard = async (req, res) => {
   }
 
   res.json({
-    username: user.username,
+    name: user.name,
     xp: user.xp,
     streak: user.streak
   });

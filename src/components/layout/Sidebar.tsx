@@ -2,6 +2,7 @@ import React from 'react';
 import { Home, BookOpen, FileText, Volume2, BarChart3, Trophy, Settings, Flame } from 'lucide-react';
 import { CompanionAvatar } from '@/components/companions/CompanionAvatar';
 import { useTheme } from '@/contexts/ThemeContext';
+import { useUser } from '@/contexts/UserContext';
 
 interface SidebarProps {
   activeTab: string;
@@ -20,6 +21,7 @@ const navItems = [
 
 export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
   const { theme, setTheme, companion, setCompanion, companions, getCompanionMeta } = useTheme();
+  const { user } = useUser();
   const meta = getCompanionMeta(companion)!;
 
   const handleLogoToggle = () => {
@@ -29,6 +31,10 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
     if (next) {
       setCompanion(next.id);
     }
+  };
+
+  const handleNavClick = (itemId: string) => {
+    onTabChange(itemId);
   };
 
   return (
@@ -47,6 +53,13 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
           </button>
           <span className="hidden lg:block font-bold text-xl text-foreground">LearnQuest</span>
         </div>
+
+        {/* User Name */}
+        {user && (
+          <div className="hidden lg:block text-sm font-semibold text-foreground px-2 py-1 bg-muted rounded-lg text-center truncate">
+            Hi, {user.name || 'Learner'}! 👋
+          </div>
+        )}
         
         {/* Streak Counter */}
         <div className="flex items-center gap-2 bg-muted rounded-xl px-3 py-2">
@@ -65,7 +78,7 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
           return (
             <button
               key={item.id}
-              onClick={() => onTabChange(item.id)}
+              onClick={() => handleNavClick(item.id)}
               style={isActive ? { background: `linear-gradient(135deg, ${meta.colors[0]}, ${meta.colors[1]})` } : undefined}
               className={`w-full flex items-center justify-center lg:justify-start gap-3 px-3 py-3 rounded-xl font-semibold transition-all duration-200 ${
                 isActive

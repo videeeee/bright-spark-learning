@@ -3,25 +3,33 @@
     "target": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
-    "allowJs": false,
+
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+
     "strict": true,
     "forceConsistentCasingInFileNames": true,
+
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "bundler",  // ✅ FIXED
+
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
+
     "jsx": "react-jsx",
 
-    // 🔥 THIS IS THE FIX
+    // ✅ Alias (safe to keep)
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+
+    // ✅ silence TS drama
+    "ignoreDeprecations": "6.0"
   },
+
   "include": ["src"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
