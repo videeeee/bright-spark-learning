@@ -1,12 +1,11 @@
 const express = require("express");
 const Notes = require("../models/Notes");
 const auth = require("../middleware/auth");
-const fetch = require("node-fetch");
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const router = express.Router();
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-flash-latest:generateContent";
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 // JSON extractor for AI responses
 const extractJSON = (text) => {
@@ -53,32 +52,20 @@ Create notes for "${topic}" in this EXACT JSON format:
   ]
 }
 
-Use 4–6 sections. Add the style preference: "${style || 'clear'}".
+Use 4–6 sections. Add the style preference: "${style || "clear"}".
 DO NOT include anything outside this JSON.
 `;
 
-    // Try Gemini
     let aiData = null;
 
     try {
-      const response = await fetch(`${GEMINI_URL}?key=${GEMINI_API_KEY}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          contents: [
-            {
-              parts: [{ text: prompt }]
-            }
-          ]
-        })
+      const model = genAI.getGenerativeModel({
+        model: "gemini-1.5-flash"
       });
 
-      if (!response.ok) {
-        throw new Error(`Gemini API error: ${response.status}`);
-      }
-
-      const result = await response.json();
-      const raw = result.candidates?.[0]?.content?.parts?.[0]?.text || "";
+      const result = await model.generateContent(prompt);
+      const response = await result.response;
+      const raw = response.text();
 
       if (!raw) {
         throw new Error("Empty response from Gemini");
@@ -89,7 +76,6 @@ DO NOT include anything outside this JSON.
       } catch (e) {
         console.error("JSON parse failed. Raw response:", raw);
 
-        // fallback: create safe structure
         aiData = {
           title: topic,
           sections: [
@@ -102,7 +88,10 @@ DO NOT include anything outside this JSON.
       }
     } catch (geminiError) {
       console.error("Gemini error:", geminiError);
-      return res.status(500).json({ msg: "AI generation failed", error: geminiError.message });
+      return res.status(500).json({
+        msg: "AI generation failed",
+        error: geminiError.message
+      });
     }
 
     // Save to database
@@ -119,9 +108,13 @@ DO NOT include anything outside this JSON.
       _id: note._id,
       createdAt: note.createdAt
     });
+
   } catch (err) {
     console.error("Generate notes error:", err);
-    res.status(500).json({ msg: "Failed to generate notes", error: err.message });
+    res.status(500).json({
+      msg: "Failed to generate notes",
+      error: err.message
+    });
   }
 });
 
@@ -134,7 +127,6 @@ router.delete("/:id", auth, async (req, res) => {
       return res.status(404).json({ msg: "Note not found" });
     }
 
-    // Verify ownership
     if (note.userId.toString() !== req.user.id.toString()) {
       return res.status(403).json({ msg: "Not authorized" });
     }
