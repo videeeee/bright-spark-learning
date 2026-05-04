@@ -6,8 +6,7 @@ const fetch = require("node-fetch");
 const router = express.Router();
 
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const GEMINI_URL =
-"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
+const GEMINI_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent";
 
 // JSON extractor for AI responses
 const extractJSON = (text) => {
@@ -80,7 +79,27 @@ DO NOT include anything outside this JSON.
 
       const result = await response.json();
       const raw = result.candidates?.[0]?.content?.parts?.[0]?.text || "";
-      aiData = extractJSON(raw);
+
+      if (!raw) {
+        throw new Error("Empty response from Gemini");
+      }
+
+      try {
+        aiData = extractJSON(raw);
+      } catch (e) {
+        console.error("JSON parse failed. Raw response:", raw);
+
+        // fallback: create safe structure
+        aiData = {
+          title: topic,
+          sections: [
+            {
+              heading: "Overview",
+              content: raw.substring(0, 500) || "No content generated"
+            }
+          ]
+        };
+      }
     } catch (geminiError) {
       console.error("Gemini error:", geminiError);
       return res.status(500).json({ msg: "AI generation failed", error: geminiError.message });
