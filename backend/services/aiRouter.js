@@ -3,7 +3,7 @@ import axios from "axios";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_KEY });
-const gemini = new GoogleGenerativeAI(process.env.GEMINI_KEY);
+const gemini = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function openaiNotes(topic, style) {
   const completion = await openai.chat.completions.create({
@@ -19,7 +19,18 @@ async function openaiNotes(topic, style) {
 async function geminiNotes(topic, style) {
   const model = gemini.getGenerativeModel({ model: "gemini-1.5-flash" });
   const result = await model.generateContent(`Write ${style} style school notes about ${topic} in sections with bullet points`);
-  return result.response.text();
+
+  if (result?.response && typeof result.response.text === "function") {
+    return await (await result.response).text();
+  }
+  if (result && typeof result.text === "function") {
+    return await result.text();
+  }
+  if (typeof result === "string") {
+    return result;
+  }
+
+  return JSON.stringify(result);
 }
 
 async function openrouterNotes(topic, style) {

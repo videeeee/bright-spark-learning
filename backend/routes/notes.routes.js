@@ -64,8 +64,20 @@ DO NOT include anything outside this JSON.
       });
 
       const result = await model.generateContent(prompt);
-      const response = await result.response;
-      const raw = await response.text();
+      let raw = "";
+
+      if (result?.response && typeof result.response.text === "function") {
+        const response = await result.response;
+        raw = await response.text();
+      } else if (result && typeof result.text === "function") {
+        raw = await result.text();
+      } else if (typeof result === "string") {
+        raw = result;
+      } else if (result?.content) {
+        raw = result.content;
+      } else {
+        raw = JSON.stringify(result);
+      }
 
       if (!raw) {
         throw new Error("Empty response from Gemini");
