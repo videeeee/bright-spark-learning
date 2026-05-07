@@ -55,6 +55,11 @@ export function Leaderboard() {
   const defaultCompanionMeta = companions[0];
   const currentCompanionMeta = getCompanionMeta(currentCompanion) ?? defaultCompanionMeta;
 
+  const formatXp = (xp: unknown) => {
+    const numberXp = typeof xp === 'number' ? xp : Number(xp ?? 0);
+    return Number.isFinite(numberXp) ? numberXp.toLocaleString() : '0';
+  };
+
   const resolveMetaFor = (companionId: string | 'current', fallbackIndex: number) => {
     if (companionId === 'current') {
       return currentCompanionMeta;
@@ -69,12 +74,13 @@ export function Leaderboard() {
   useEffect(() => {
     const normalizeApiData = (apiData: Array<{ name: string; xp: number }>) => {
       return apiData.map((entry, index) => {
+        const xpValue = typeof entry.xp === 'number' ? entry.xp : Number(entry.xp ?? 0);
         const isUser = entry.name === user?.name;
         return {
           rank: index + 1,
           name: isUser ? currentUserName : entry.name,
-          xp: entry.xp,
-          levels: Math.max(1, Math.round(entry.xp / 140)),
+          xp: xpValue,
+          levels: Math.max(1, Math.round(xpValue / 140)),
           streak: Math.max(1, 20 - index * 2),
           companionId: isUser ? 'current' : companions[index % companions.length].id,
           isUser,
@@ -161,7 +167,7 @@ export function Leaderboard() {
                     {meta.image ? <img src={meta.image} alt={meta.name} className="w-full h-full object-cover rounded-full" /> : <span>{meta.emoji}</span>}
                   </div>
                   <div className={`font-bold ${entry.isUser ? 'text-primary' : 'text-foreground'}`}>{entry.name}</div>
-                  <div className="text-sm text-muted-foreground">{(entry.xp ?? 0).toLocaleString()} XP</div>
+                  <div className="text-sm text-muted-foreground">{formatXp(entry.xp)} XP</div>
                   <div className={`mt-2 rounded-t-xl flex items-center justify-center ${
                     isFirst ? 'w-24 h-28 gradient-primary' : isSecond ? 'w-20 h-20 bg-gray-200' : 'w-20 h-16 bg-amber-200'
                   }`}>
@@ -198,7 +204,7 @@ export function Leaderboard() {
             <div className="space-y-3">
               {leaderboardData.map((entry) => {
                 const meta = resolveMetaFor(entry.companionId, entry.rank - 1);
-                if (!meta || !entry.xp) return null;
+                if (!meta) return null;
                 return (
                   <div
                     key={entry.rank}
@@ -225,7 +231,7 @@ export function Leaderboard() {
                         <span className="font-bold">{entry.streak ?? 0}</span>
                       </div>
                       <div className={`text-sm ${entry.isUser ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
-                        {(entry.xp ?? 0).toLocaleString()} XP
+                        {formatXp(entry.xp)} XP
                       </div>
                     </div>
                   </div>

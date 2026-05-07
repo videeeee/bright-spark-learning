@@ -65,7 +65,7 @@ DO NOT include anything outside this JSON.
 
       const result = await model.generateContent(prompt);
       const response = await result.response;
-      const raw = response.text();
+      const raw = await response.text();
 
       if (!raw) {
         throw new Error("Empty response from Gemini");
