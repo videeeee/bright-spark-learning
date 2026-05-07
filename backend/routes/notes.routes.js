@@ -2,10 +2,12 @@ const express = require("express");
 const Notes = require("../models/Notes");
 const auth = require("../middleware/auth");
 const { GoogleGenerativeAI } = require("@google/generative-ai");
+const OpenAI = require("openai");
 
 const router = express.Router();
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+const openai = new OpenAI({ apiKey: process.env.OPENAI_KEY });
 
 // JSON extractor for AI responses
 const extractJSON = (text) => {
@@ -57,8 +59,11 @@ DO NOT include anything outside this JSON.
 `;
 
     let aiData = null;
+    let source = "unknown";
 
+    // ========== TRY GEMINI FIRST ==========
     try {
+      console.log("🤖 Attempting Gemini...");
       const model = genAI.getGenerativeModel({
         model: "gemini-1.5-flash"
       });
@@ -85,8 +90,10 @@ DO NOT include anything outside this JSON.
 
       try {
         aiData = extractJSON(raw);
+        source = "gemini";
+        console.log("✅ Gemini succeeded");
       } catch (e) {
-        console.error("JSON parse failed. Raw response:", raw);
+        console.error("JSON parse failed from Gemini. Raw response:", raw);
 
         aiData = {
           title: topic,
@@ -97,13 +104,52 @@ DO NOT include anything outside this JSON.
             }
           ]
         };
+        source = "gemini";
       }
     } catch (geminiError) {
-      console.error("Gemini error:", geminiError);
-      return res.status(500).json({
-        msg: "AI generation failed",
-        error: geminiError.message
-      });
+      console.error("⚠️ Gemini failed:", geminiError.message);
+      console.log("🔄 Falling back to OpenAI...");
+
+      // ========== FALLBACK TO OPENAI ==========
+      try {
+        const completion = await openai.chat.completions.create({
+          model: "gpt-4o-mini",
+          messages: [
+            {
+              role: "system",
+              content: "You are a creative school teacher who writes clear, structured notes for students."
+            },
+            { role: "user", content: prompt }
+          ]
+        });
+
+        const raw = completion.choices[0].message.content;
+
+        try {
+          aiData = extractJSON(raw);
+          source = "openai";
+          console.log("✅ OpenAI succeeded");
+        } catch (e) {
+          console.error("JSON parse failed from OpenAI. Raw response:", raw);
+
+          aiData = {
+            title: topic,
+            sections: [
+              {
+                heading: "Overview",
+                content: raw.substring(0, 500) || "No content generated"
+              }
+            ]
+          };
+          source = "openai";
+        }
+      } catch (openaiError) {
+        console.error("❌ Both Gemini and OpenAI failed:", openaiError.message);
+        return res.status(500).json({
+          msg: "AI generation failed - both Gemini and OpenAI unavailable",
+          error: openaiError.message
+        });
+      }
     }
 
     // Save to database
@@ -118,7 +164,8 @@ DO NOT include anything outside this JSON.
     res.json({
       ...aiData,
       _id: note._id,
-      createdAt: note.createdAt
+      createdAt: note.createdAt,
+      source
     });
 
   } catch (err) {
@@ -129,6 +176,7 @@ DO NOT include anything outside this JSON.
     });
   }
 });
+
 
 // DELETE a note (protected)
 router.delete("/:id", auth, async (req, res) => {
