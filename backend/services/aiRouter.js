@@ -2,7 +2,7 @@ import OpenAI from "openai";
 import axios from "axios";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_KEY });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const gemini = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 async function openaiNotes(topic, style) {

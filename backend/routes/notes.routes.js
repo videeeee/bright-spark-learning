@@ -7,7 +7,7 @@ const OpenAI = require("openai");
 const router = express.Router();
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-const openai = new OpenAI({ apiKey: process.env.OPENAI_KEY });
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 // JSON extractor for AI responses
 const extractJSON = (text) => {
