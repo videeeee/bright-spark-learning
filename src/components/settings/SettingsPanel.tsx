@@ -133,8 +133,16 @@ export function SettingsPanel() {
           </div>
           <div className="flex items-center justify-between p-3 bg-muted/50 rounded-xl">
             <span className="text-muted-foreground">Subjects</span>
-            <span className="font-semibold text-foreground">{user.subjects?.length ?? 0}</span>
+            <span className="font-semibold text-foreground">{user.subjects?.length ?? 0} active</span>
           </div>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => navigate('/setup')}
+            className="w-full mt-2 font-semibold border-primary/30 text-primary hover:bg-primary/5"
+          >
+            Change Board, Class or Subjects 📚
+          </Button>
         </div>
       </div>
 

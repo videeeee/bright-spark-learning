@@ -1,0 +1,129 @@
+{
+  "board": "ICSE",
+  "classLevel": "9",
+  "subject": "hindi",
+  "subjectName": "Hindi",
+  "officialSource": "CISCE ICSE Regulations and Syllabuses (Hindi Code 05)",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Sahitya Sagar & Vyakaran",
+      "chapters": [
+        {
+          "chapterNumber": 1,
+          "id": "icse-9-hin-ch1",
+          "title": "Hindi Vyakaran: Vilom, Paryayvachi & Muhavare",
+          "description": "Fundamental grammar concepts: Antonyms (Vilom Shabd), Synonyms (Paryayvachi), Idioms (Muhavare), and One-word substitutions (Anek Shabdon ke liye Ek Shabd).",
+          "levels": [
+            {
+              "id": "icse-9-hin-ch1-l1",
+              "levelNumber": 1,
+              "title": "Vilom & Paryayvachi Shabd",
+              "description": "Standard ICSE opposite words and synonyms.",
+              "subtopics": ["Shuddh Vilom Shabd", "Paryayvachi Shabd pehchan"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-hin-ch1-l2",
+              "levelNumber": 2,
+              "title": "Muhavare aur Vakya Prayog",
+              "description": "Idioms with their figurative meanings and sentence framing.",
+              "subtopics": ["Muhavare ka sahi arth", "Vakyon mein prayog", "Lokoktiyan"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-hin-ch1-l3",
+              "levelNumber": 3,
+              "title": "Bhavvachak Sangya & Visheshan",
+              "description": "Forming abstract nouns and adjectives from root words.",
+              "subtopics": ["Bhavvachak Sangya banana", "Visheshan banana", "Shuddh Vartani"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-hin-ch1-l4",
+              "levelNumber": 4,
+              "title": "Chapter 1 Vyakaran Abhyas",
+              "description": "Mixed grammar drill for ICSE Board paper Section A.",
+              "subtopics": ["Ashuddhi Shodhan", "Vakya Parivartan"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 2,
+          "id": "icse-9-hin-ch2",
+          "title": "Sahitya Sagar: Baat Athanni Ki (Sudarshan)",
+          "description": "Themes of corruption, social inequality, and moral justice through the lives of Rasila and Ramzani.",
+          "levels": [
+            {
+              "id": "icse-9-hin-ch2-l1",
+              "levelNumber": 1,
+              "title": "Katha-Vastu aur Charitra Chitran",
+              "description": "Plot understanding, characters of Rasila, Babu Jagat Singh, and Sheikh Salimbuddin.",
+              "subtopics": ["Rasila ki vivashata", "Babu Jagat Singh ki rishwatkhori", "Samajik bhedbhav"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-hin-ch2-l2",
+              "levelNumber": 2,
+              "title": "Sandarbh Sahit Prashnottar",
+              "description": "Contextual reference questions and thematic analysis.",
+              "subtopics": ["Vyangya aur uddeshya", "Pramukh kathan aur unka arth"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-hin-ch2-l3",
+              "levelNumber": 3,
+              "title": "Chapter 2 Mulyankan & Review",
+              "description": "Review of the story with ICSE board pattern questions.",
+              "subtopics": ["Vichar-pradhan prashna", "Sandarbh kathan"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 3,
+          "id": "icse-9-hin-ch3",
+          "title": "Padyabhag: Sakhi (Kabir Das)",
+          "description": "Kabir's dohas on humility, overcoming ego, guru's guidance, and devotion to truth.",
+          "levels": [
+            {
+              "id": "icse-9-hin-ch3-l1",
+              "levelNumber": 1,
+              "title": "Dohon Ka Bhaavarth (Part 1)",
+              "description": "Analysis of sweet speech, Kasturi deer metaphor, and dispelling inner darkness.",
+              "subtopics": ["Aisi vani boliye doha", "Kasturi kundali basey doha", "Jab main tha tab hari nahi doha"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-hin-ch3-l2",
+              "levelNumber": 2,
+              "title": "Dohon Ka Bhaavarth (Part 2)",
+              "description": "Analysis of worldly attachment, intense longing for the divine, and true detachment.",
+              "subtopics": ["Sukhia sab sansar hai doha", "Virah bhuvangam doha", "Kavya-Saundarya aur bhasha"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-hin-ch3-l3",
+              "levelNumber": 3,
+              "title": "Chapter 3 Sakhi Review & Kavyabodh",
+              "description": "Evaluation of dohas with context-based ICSE questions.",
+              "subtopics": ["Pratikarth aur sandesh", "Kavita sandarbh prashna"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

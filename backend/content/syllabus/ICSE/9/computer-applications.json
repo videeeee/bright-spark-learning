@@ -1,0 +1,138 @@
+{
+  "board": "ICSE",
+  "classLevel": "9",
+  "subject": "computer-applications",
+  "subjectName": "Computer Applications (Java)",
+  "officialSource": "CISCE ICSE Regulations and Syllabuses (Computer Applications Code 86)",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Object-Oriented Programming Concepts",
+      "chapters": [
+        {
+          "chapterNumber": 1,
+          "id": "icse-9-comp-ch1",
+          "title": "Introduction to OOP and Java",
+          "description": "Principles of Object-Oriented Programming: Encapsulation, Abstraction, Inheritance, Polymorphism, Objects and Classes, Java Virtual Machine (JVM).",
+          "levels": [
+            {
+              "id": "icse-9-comp-ch1-l1",
+              "levelNumber": 1,
+              "title": "Core Principles of OOP",
+              "description": "Understanding real-world objects, state and behavior, Encapsulation, Abstraction, Inheritance, and Polymorphism.",
+              "subtopics": ["Objects as software bundles of state and behavior", "Encapsulation and data hiding", "Abstraction vs details", "Inheritance and code reusability", "Polymorphism"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-comp-ch1-l2",
+              "levelNumber": 2,
+              "title": "Java Architecture & Features",
+              "description": "Bytecode, Java Virtual Machine (JVM), Java Runtime Environment (JRE), Java Development Kit (JDK), and Platform Independence.",
+              "subtopics": ["Source code (.java) to Bytecode (.class)", "Role of JVM and Just-In-Time (JIT) compiler", "Write Once Run Anywhere (WORA)"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-comp-ch1-l3",
+              "levelNumber": 3,
+              "title": "Chapter 1 Review & OOP Foundations",
+              "description": "Review of OOP concepts, Java features, and ICSE definitions.",
+              "subtopics": ["Definitions and distinctions", "Real-world object mapping"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 2,
+          "id": "icse-9-comp-ch2",
+          "title": "Values, Data Types & Operators",
+          "description": "Tokens in Java (Keywords, Identifiers, Literals, Operators, Punctuators), Primitive and Non-Primitive data types, and Arithmetic/Relational/Logical operators.",
+          "levels": [
+            {
+              "id": "icse-9-comp-ch2-l1",
+              "levelNumber": 1,
+              "title": "Tokens & Primitive Data Types",
+              "description": "Keywords, Identifiers, 8 primitive data types (byte, short, int, long, float, double, char, boolean), sizes in bytes, and default values.",
+              "subtopics": ["Rules for naming identifiers", "Data types and storage sizes in bits/bytes", "Literals (integer, floating-point, character, string, boolean)"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-comp-ch2-l2",
+              "levelNumber": 2,
+              "title": "Operators & Precedence",
+              "description": "Arithmetic (+, -, *, /, %), Relational (==, !=, <, >, <=, >=), Logical (&&, ||, !), Increment/Decrement (++a, a++), and Ternary (?:) operators.",
+              "subtopics": ["Prefix vs Postfix increment/decrement", "Modulus operator vs Division operator", "Short-circuit logical evaluation", "Ternary operator syntax"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-comp-ch2-l3",
+              "levelNumber": 3,
+              "title": "Type Conversion & Math Functions",
+              "description": "Implicit (widening) and Explicit (narrowing / casting) type conversion, and standard Math class functions.",
+              "subtopics": ["Type promotion rules in expressions", "Explicit typecasting (int)x", "Math.sqrt(), Math.pow(), Math.abs(), Math.round(), Math.floor(), Math.ceil()"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-comp-ch2-l4",
+              "levelNumber": 4,
+              "title": "Chapter 2 Review & Expression Evaluation",
+              "description": "Evaluating complex Java expressions with operator precedence and type conversions.",
+              "subtopics": ["Predicting output of expressions", "Increment/decrement step-by-step tracing"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 3,
+          "id": "icse-9-comp-ch3",
+          "title": "Conditional & Iterative Constructs",
+          "description": "Decision making (if, if-else, switch-case) and looping constructs (for loop, while loop, do-while loop, break, continue).",
+          "levels": [
+            {
+              "id": "icse-9-comp-ch3-l1",
+              "levelNumber": 1,
+              "title": "Conditional Constructs (if-else & switch)",
+              "description": "Flow of control using if, if-else-if ladder, nested if, and switch-case with fall-through and break.",
+              "subtopics": ["if-else construct syntax", "switch-case structure and restrictions", "Fall-through and default statement"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-comp-ch3-l2",
+              "levelNumber": 2,
+              "title": "Iterative Constructs (Loops)",
+              "description": "Entry-controlled (for, while) vs Exit-controlled (do-while) loops, loop initialization, test condition, and update expressions.",
+              "subtopics": ["for loop syntax and execution steps", "while loop vs do-while loop", "Infinite loops and loop count calculations"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-comp-ch3-l3",
+              "levelNumber": 3,
+              "title": "Jump Statements & Number Programs",
+              "description": "break and continue statements, and standard ICSE number checking (Prime, Palindrome, Armstrong numbers).",
+              "subtopics": ["break vs continue", "Digit extraction with % 10 and / 10", "Palindrome and Armstrong number logic"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-comp-ch3-l4",
+              "levelNumber": 4,
+              "title": "Chapter 3 Review & Code Tracing",
+              "description": "Output prediction of nested loops and conditional algorithms.",
+              "subtopics": ["Output prediction dry runs", "Common ICSE algorithmic patterns"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

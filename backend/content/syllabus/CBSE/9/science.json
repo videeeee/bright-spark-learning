@@ -1,0 +1,135 @@
+{
+  "board": "CBSE",
+  "classLevel": "9",
+  "subject": "science",
+  "subjectName": "Science",
+  "officialSource": "CBSE Curriculum 2024-25/2025-26 Secondary Science (Code 086)",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Matter: Nature and Behaviour",
+      "chapters": [
+        {
+          "chapterNumber": 1,
+          "id": "cbse-9-sci-ch1",
+          "title": "Matter in Our Surroundings",
+          "description": "Physical nature of matter, characteristics of particles, states of matter (solid, liquid, gas), change of state (melting, boiling, sublimation, evaporation), and latent heat.",
+          "levels": [
+            {
+              "id": "cbse-9-sci-ch1-l1",
+              "levelNumber": 1,
+              "title": "Physical Nature & States of Matter",
+              "description": "Particles of matter and distinguishing solid, liquid, gas by shape, volume, compressibility.",
+              "subtopics": ["Particulate nature of matter", "Diffusion in liquids and gases", "Rigidity, compressibility, density"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-sci-ch1-l2",
+              "levelNumber": 2,
+              "title": "Interconversion of States & Latent Heat",
+              "description": "Effect of change of temperature and pressure; latent heat of fusion and vaporisation; sublimation.",
+              "subtopics": ["Melting and boiling points", "Latent heat of fusion vs vaporisation", "Sublimation with camphor / NH4Cl"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-sci-ch1-l3",
+              "levelNumber": 3,
+              "title": "Evaporation & Factors Affecting It",
+              "description": "Surface phenomenon of evaporation, cooling effect, and factors: temperature, surface area, humidity, wind speed.",
+              "subtopics": ["Evaporation vs boiling", "Factors affecting rate of evaporation", "Cooling caused by evaporation in earthen pots & sweating"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-sci-ch1-l4",
+              "levelNumber": 4,
+              "title": "Chapter 1 Review & NCERT Activities",
+              "description": "Review of matter concepts and conceptual reasoning.",
+              "subtopics": ["Temperature unit conversions (Celsius to Kelvin)", "Reasoning questions"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 2,
+          "id": "cbse-9-sci-ch2",
+          "title": "Is Matter Around Us Pure?",
+          "description": "Mixtures, solutions, suspensions, colloids, Tyndall effect, physical and chemical changes, elements, and compounds.",
+          "levels": [
+            {
+              "id": "cbse-9-sci-ch2-l1",
+              "levelNumber": 1,
+              "title": "Solutions, Suspensions & Colloids",
+              "description": "True solutions (solute + solvent), concentration of a solution (mass percentage), suspensions, colloids, and Tyndall effect.",
+              "subtopics": ["Homogeneous vs heterogeneous mixtures", "Calculation of concentration of solution", "Tyndall effect and Brownian movement"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-sci-ch2-l2",
+              "levelNumber": 2,
+              "title": "Physical vs Chemical Changes & Compounds",
+              "description": "Distinction between physical and chemical changes; properties of elements vs compounds.",
+              "subtopics": ["Reversibility and energy changes", "Metals, non-metals, metalloids", "Compound characteristics vs mixture characteristics"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-sci-ch2-l3",
+              "levelNumber": 3,
+              "title": "Chapter 2 Review & Purity of Matter",
+              "description": "Review of mixtures and solutions with numerical concentrations.",
+              "subtopics": ["Mass percentage numericals", "Identifying colloid types"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Organization in the Living World",
+      "chapters": [
+        {
+          "chapterNumber": 5,
+          "id": "cbse-9-sci-ch5",
+          "title": "The Fundamental Unit of Life",
+          "description": "Cell as basic unit of life, plasma membrane, diffusion, osmosis, cell wall, nucleus, cytoplasm, and cell organelles.",
+          "levels": [
+            {
+              "id": "cbse-9-sci-ch5-l1",
+              "levelNumber": 1,
+              "title": "Cell Structure, Membrane & Osmosis",
+              "description": "Plasma membrane structure, diffusion of gases, osmosis in hypotonic, isotonic, and hypertonic solutions.",
+              "subtopics": ["Fluid mosaic model concept", "Plasmolysis in plant cells", "Endocytosis and selective permeability"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-sci-ch5-l2",
+              "levelNumber": 2,
+              "title": "Nucleus, Chromosomes & Organelles",
+              "description": "Nuclear membrane, chromatin, DNA & genes; functions of ER, Golgi apparatus, lysosomes, mitochondria, and plastids.",
+              "subtopics": ["Prokaryotic nucleoid vs eukaryotic nucleus", "Lysosomes as suicide bags", "Mitochondria with own DNA and ribosomes"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-sci-ch5-l3",
+              "levelNumber": 3,
+              "title": "Chapter 5 Review & Cytology Diagrams",
+              "description": "Review of cell biology with comparative diagram analysis.",
+              "subtopics": ["Plant vs animal cell differences", "Organelle matching"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ICSE",
+    "name": "ICSE",
+    "fullName": "Indian Certificate of Secondary Education (CISCE)",
+    "description": "Comprehensive, concept-driven curriculum with strong focus on language, arts, sciences and practical application.",
+    "badge": "ICSE / ISC",
+    "classes": ["6", "7", "8", "9", "10", "11", "12"]
+  },
+  {
+    "id": "CBSE",
+    "name": "CBSE",
+    "fullName": "Central Board of Secondary Education",
+    "description": "National board aligned with NCERT, fostering competitive exam foundations, scientific inquiry and holistic skill-based learning.",
+    "badge": "CBSE",
+    "classes": ["6", "7", "8", "9", "10", "11", "12"]
+  },
+  {
+    "id": "State",
+    "name": "State Board",
+    "fullName": "State Board of Secondary & Higher Secondary Education",
+    "description": "Standard state curriculum aligned with regional SCERT and NCERT guidelines.",
+    "badge": "State Board",
+    "classes": ["6", "7", "8", "9", "10", "11", "12"]
+  }
+]

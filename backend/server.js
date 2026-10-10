@@ -9,6 +9,9 @@ const errorHandler = require("./middleware/errorHandler");
 
 const app = express();
 
+// Trust reverse proxy (Render, Heroku, etc.)
+app.set("trust proxy", 1);
+
 // 1. Database Connection
 connectDB();
 
@@ -19,7 +22,7 @@ app.use(
   })
 );
 
-// 3. CORS Configuration
+// 3. CORS Configuration (Strict: exact origins from CLIENT_URL + localhost)
 const allowedOrigins = env.CLIENT_URL.split(",")
   .map((origin) => origin.trim().replace(/\/$/, ""))
   .filter(Boolean);
@@ -40,13 +43,13 @@ defaultLocalOrigins.forEach((orig) => {
 
 const corsOptions = {
   origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps, curl, server-to-server)
+    // Allow requests with no origin (like curl, server-to-server)
     if (!origin) return callback(null, true);
 
     const isAllowed =
       allowedOrigins.includes(origin) ||
-      /\.vercel\.app$/.test(origin) ||
-      /^http:\/\/localhost:\d+$/.test(origin);
+      /^http:\/\/localhost:\d+$/.test(origin) ||
+      /^http:\/\/127\.0\.0\.1:\d+$/.test(origin);
 
     if (isAllowed) {
       callback(null, true);
@@ -89,7 +92,6 @@ const authLimiter = rateLimit({
 });
 app.use("/api/auth/login", authLimiter);
 app.use("/api/auth/signup", authLimiter);
-app.use("/api/auth/register", authLimiter);
 
 // 5. Health Check Endpoint
 app.get("/api/health", (req, res) => {
@@ -99,6 +101,7 @@ app.get("/api/health", (req, res) => {
     timestamp: new Date().toISOString(),
     uptime: Math.floor(process.uptime()),
     database: dbStatus,
+    databaseName: mongoose.connection.name || null,
     environment: env.NODE_ENV,
   });
 });

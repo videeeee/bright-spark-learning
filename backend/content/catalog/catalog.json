@@ -1,0 +1,971 @@
+{
+  "ICSE": {
+    "9": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "live",
+        "description": "Pure Arithmetic, Commercial Mathematics, Algebra, Geometry, Mensuration & Statistics"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "live",
+        "description": "Physics (Measurements, Motion, Laws), Chemistry (Matter, Gas Laws), Biology (Cells, Tissues, Plant Physiology)"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "English Language (Grammar & Composition) and Literature in English (Drama, Prose, Poetry)"
+      },
+      {
+        "id": "hindi",
+        "name": "Hindi",
+        "category": "languages",
+        "icon": "Languages",
+        "color": "#EF4444",
+        "gradient": "from-rose-500 to-red-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Sahitya Sagar (Kavya & Gadya), Vyakaran, Muhavare & Rachnatmak Lekhan"
+      },
+      {
+        "id": "social-studies",
+        "name": "Social Studies",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "History & Civics (Harappan Civilization, Constitution, Elections) and Geography (Earth, Atmosphere, Natural Regions)"
+      },
+      {
+        "id": "computer-applications",
+        "name": "Computer Applications",
+        "category": "computer",
+        "icon": "Code",
+        "color": "#06B6D4",
+        "gradient": "from-cyan-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "live",
+        "description": "Object-Oriented Programming with Java, Elementary Concepts, Primitive Types, Operators & Conditional Statements"
+      }
+    ],
+    "10": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Commercial Math (GST, Banking), Algebra (Quadratic, Matrices), Geometry, Trigonometry, Statistics & Probability"
+      },
+      {
+        "id": "physics",
+        "name": "Physics",
+        "category": "sciences",
+        "icon": "Zap",
+        "color": "#0EA5E9",
+        "gradient": "from-sky-500 to-blue-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Force, Work, Power & Energy, Light (Refraction, Lenses), Sound, Electricity & Magnetism, Modern Physics"
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "category": "sciences",
+        "icon": "FlaskConical",
+        "color": "#14B8A6",
+        "gradient": "from-teal-500 to-emerald-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Periodic Table, Chemical Bonding, Acids Bases & Salts, Mole Concept, Metallurgy & Organic Chemistry"
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "category": "sciences",
+        "icon": "Dna",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-green-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Cell Structure, Genetics, Plant Physiology (Photosynthesis, Transpiration), Human Anatomy & Physiology"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Julius Caesar (Shakespeare), Treasure Chest Stories & Poems, Synthesis, Transformations"
+      },
+      {
+        "id": "hindi",
+        "name": "Hindi",
+        "category": "languages",
+        "icon": "Languages",
+        "color": "#EF4444",
+        "gradient": "from-rose-500 to-red-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Board Course Sahitya Sagar, Vyakaran, Patra Lekhan, Nibandh"
+      },
+      {
+        "id": "history-civics",
+        "name": "History & Civics",
+        "category": "humanities",
+        "icon": "Landmark",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Indian National Movement, World Wars, United Nations & Indian Judiciary/Executive"
+      },
+      {
+        "id": "geography",
+        "name": "Geography",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#D97706",
+        "gradient": "from-amber-600 to-yellow-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Topographical Maps, Climate of India, Soils, Natural Vegetation, Water Resources & Minerals"
+      },
+      {
+        "id": "computer-applications",
+        "name": "Computer Applications",
+        "category": "computer",
+        "icon": "Code",
+        "color": "#06B6D4",
+        "gradient": "from-cyan-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Java OOP, User-Defined Methods, Arrays (Single & Double Dimensional), String Handling"
+      }
+    ],
+    "8": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Rational Numbers, Exponents, Squares & Cubes, Algebraic Expressions, Linear Equations, Mensuration"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Matter, Physical Quantities, Force and Pressure, Reproduction in Plants and Animals, Endocrine System"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Grammar, Comprehension, Creative Writing, Literature Reader"
+      },
+      {
+        "id": "hindi",
+        "name": "Hindi",
+        "category": "languages",
+        "icon": "Languages",
+        "color": "#EF4444",
+        "gradient": "from-rose-500 to-red-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Hindi Bhasha, Vyakaran, Pathya Pustak"
+      },
+      {
+        "id": "social-studies",
+        "name": "Social Studies",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Modern Period in History, Industrial Revolution, The Union Legislature, Resources & Industries"
+      },
+      {
+        "id": "computer-studies",
+        "name": "Computer Studies",
+        "category": "computer",
+        "icon": "Code",
+        "color": "#06B6D4",
+        "gradient": "from-cyan-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Operating Systems, Spreadsheet Formulas, Algorithms & Flowcharts, App Development Concepts"
+      }
+    ],
+    "7": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Integers, Fractions, Decimals, Simple Equations, Lines and Angles, Triangles"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Nutrition in Plants & Animals, Heat, Acids & Bases, Physical & Chemical Changes, Motion and Time"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Grammar, Reading Comprehension, Composition"
+      },
+      {
+        "id": "social-studies",
+        "name": "Social Studies",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Medieval History, Delhi Sultanate, Mughal Empire, Environment & Democracy"
+      }
+    ],
+    "6": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Knowing Our Numbers, Whole Numbers, Playing with Numbers, Basic Geometrical Ideas"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Components of Food, Sorting Materials, Separation of Substances, Getting to Know Plants"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Language Skills, Vocabulary, Story Comprehension"
+      },
+      {
+        "id": "social-studies",
+        "name": "Social Studies",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Early Humans, Harappa, Earth in the Solar System, Panchayati Raj"
+      }
+    ],
+    "11": [
+      {
+        "id": "physics",
+        "name": "Physics",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "Zap",
+        "color": "#0EA5E9",
+        "gradient": "from-sky-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Units & Measurements, Kinematics, Laws of Motion, Work Energy Power, Thermodynamics"
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "FlaskConical",
+        "color": "#14B8A6",
+        "gradient": "from-teal-500 to-emerald-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Structure of Atom, Chemical Bonding, States of Matter, Thermodynamics, Equilibrium"
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "stream": "Science",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Sets and Functions, Complex Numbers, Permutations & Combinations, Calculus Fundamentals"
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "Dna",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-green-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Diversity in Living World, Cell Biology, Plant and Animal Physiology"
+      },
+      {
+        "id": "computer-science",
+        "name": "Computer Science",
+        "category": "computer",
+        "stream": "Science",
+        "icon": "Code",
+        "color": "#06B6D4",
+        "gradient": "from-cyan-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Propositional Logic, Java Advanced Concepts, Recursion, Computational Thinking"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Macbeth, Prism Poetry, Rhapsody Stories, Language Skills"
+      }
+    ],
+    "12": [
+      {
+        "id": "physics",
+        "name": "Physics",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "Zap",
+        "color": "#0EA5E9",
+        "gradient": "from-sky-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Electrostatics, Current Electricity, Optics, Electromagnetic Induction, Modern Physics"
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "FlaskConical",
+        "color": "#14B8A6",
+        "gradient": "from-teal-500 to-emerald-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Solutions, Electrochemistry, Chemical Kinetics, Coordination Compounds, Organic Chemistry"
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "stream": "Science",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Differential Calculus, Integral Calculus, Vectors & 3D Geometry, Linear Programming, Probability"
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "Dna",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-green-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Reproduction, Genetics and Evolution, Biotechnology, Ecology & Environment"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Macbeth Act IV & V, Advanced Comprehension, ISC Language Skills"
+      }
+    ]
+  },
+  "CBSE": {
+    "9": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "live",
+        "description": "Number Systems, Polynomials, Coordinate Geometry, Linear Equations, Triangles, Quadrilaterals, Circles, Statistics"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "live",
+        "description": "Matter in Our Surroundings, Atoms & Molecules, Cell Structure, Tissues, Motion, Force & Laws, Gravitation, Work & Energy"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Beehive (Prose & Poems), Moments Supplementary Reader, Reading Comprehension & Writing Skills"
+      },
+      {
+        "id": "hindi",
+        "name": "Hindi",
+        "category": "languages",
+        "icon": "Languages",
+        "color": "#EF4444",
+        "gradient": "from-rose-500 to-red-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Kshitij, Kritika (Course A / Sparsh & Sanchayan Course B), Vyakaran & Rachnatmak Lekhan"
+      },
+      {
+        "id": "social-science",
+        "name": "Social Science",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "History (French Revolution, Russian Revolution), Geography (India Size & Location), Democratic Politics, Economics"
+      },
+      {
+        "id": "information-technology",
+        "name": "Information Technology",
+        "category": "computer",
+        "icon": "Code",
+        "color": "#06B6D4",
+        "gradient": "from-cyan-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Employability Skills, Digital Documentation, Electronic Spreadsheet, Digital Presentation, Cyber Safety"
+      }
+    ],
+    "10": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Real Numbers, Polynomials, Linear Equations, Quadratic Equations, Arithmetic Progressions, Triangles, Trigonometry"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Chemical Reactions, Acids Bases Salts, Metals & Non-metals, Carbon Compounds, Life Processes, Light, Electricity"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "First Flight (Prose & Poetry), Footprints Without Feet, Analytical Paragraph Writing"
+      },
+      {
+        "id": "hindi",
+        "name": "Hindi",
+        "category": "languages",
+        "icon": "Languages",
+        "color": "#EF4444",
+        "gradient": "from-rose-500 to-red-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Kshitij Bhag 2, Kritika Bhag 2, Vyakaran, Vigyapan Lekhan, Sandesh Lekhan"
+      },
+      {
+        "id": "social-science",
+        "name": "Social Science",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Rise of Nationalism in Europe, Nationalism in India, Resources, Power Sharing, Federalism, Money and Credit"
+      },
+      {
+        "id": "information-technology",
+        "name": "Information Technology",
+        "category": "computer",
+        "icon": "Code",
+        "color": "#06B6D4",
+        "gradient": "from-cyan-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Advanced Digital Documentation, Electronic Spreadsheet, DBMS, Web Applications and Security"
+      }
+    ],
+    "8": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Rational Numbers, Linear Equations, Understanding Quadrilaterals, Data Handling, Squares, Algebraic Identities"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Crop Production, Microorganisms, Coal & Petroleum, Combustion, Cell Structure, Force & Pressure, Sound, Light"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Honeydew, It So Happened, Grammar and Creative Writing"
+      },
+      {
+        "id": "social-science",
+        "name": "Social Science",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Our Pasts III, Resources and Development, Social and Political Life III"
+      }
+    ],
+    "7": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Integers, Fractions and Decimals, Data Handling, Simple Equations, Lines and Angles, The Triangle and Its Properties"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Nutrition in Plants & Animals, Heat, Acids Bases and Salts, Physical and Chemical Changes, Respiration"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Honeycomb, An Alien Hand, English Grammar and Composition"
+      },
+      {
+        "id": "social-science",
+        "name": "Social Science",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Our Pasts II, Our Environment, Social and Political Life II"
+      }
+    ],
+    "6": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Knowing Our Numbers, Whole Numbers, Playing with Numbers, Basic Geometrical Ideas, Integers, Fractions"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Components of Food, Sorting Materials, Separation of Substances, Getting to Know Plants, Body Movements"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Honeysuckle, A Pact with the Sun, Grammar and Writing"
+      },
+      {
+        "id": "social-science",
+        "name": "Social Science",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Our Pasts I, The Earth Our Habitat, Social and Political Life I"
+      }
+    ],
+    "11": [
+      {
+        "id": "physics",
+        "name": "Physics",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "Zap",
+        "color": "#0EA5E9",
+        "gradient": "from-sky-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Units & Measurement, Motion in Straight Line & Plane, Laws of Motion, Work Energy Power, Gravitation, Thermodynamics"
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "FlaskConical",
+        "color": "#14B8A6",
+        "gradient": "from-teal-500 to-emerald-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Some Basic Concepts, Structure of Atom, Classification of Elements, Chemical Bonding, Thermodynamics, Organic Principles"
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "stream": "Science",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Sets, Relations & Functions, Trigonometric Functions, Complex Numbers, Linear Inequalities, Permutations, Limits & Derivatives"
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "Dna",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-green-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Living World, Biological Classification, Plant Kingdom, Animal Kingdom, Morphology, Anatomy, Cell Cycle, Photosynthesis"
+      },
+      {
+        "id": "computer-science",
+        "name": "Computer Science",
+        "category": "computer",
+        "stream": "Science",
+        "icon": "Code",
+        "color": "#06B6D4",
+        "gradient": "from-cyan-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Computer System Overview, Python Programming Basics, Strings, Lists, Tuples, Dictionaries, Society Law and Ethics"
+      },
+      {
+        "id": "english-core",
+        "name": "English Core",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Hornbill, Snapshots, Advanced Reading and Creative Writing Skills"
+      }
+    ],
+    "12": [
+      {
+        "id": "physics",
+        "name": "Physics",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "Zap",
+        "color": "#0EA5E9",
+        "gradient": "from-sky-500 to-blue-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Electrostatics, Current Electricity, Magnetic Effects, EMI, AC, Ray and Wave Optics, Dual Nature, Semiconductor Electronics"
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "FlaskConical",
+        "color": "#14B8A6",
+        "gradient": "from-teal-500 to-emerald-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Solutions, Electrochemistry, Chemical Kinetics, d and f Block, Coordination Compounds, Haloalkanes, Alcohols, Aldehydes"
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "stream": "Science",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": false,
+        "status": "partial",
+        "description": "Relations and Functions, Inverse Trig, Matrices, Determinants, Continuity & Differentiability, Integrals, Differential Eq, Vectors"
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "category": "sciences",
+        "stream": "Science",
+        "icon": "Dna",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-green-600",
+        "isCompulsory": false,
+        "status": "coming-soon",
+        "description": "Sexual Reproduction in Flowering Plants, Human Reproduction, Genetics & Molecular Basis, Biotechnology Principles"
+      },
+      {
+        "id": "english-core",
+        "name": "English Core",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Flamingo, Vistas, Reading Comprehension, Notice, Invitation, Letter & Article Writing"
+      }
+    ]
+  },
+  "State": {
+    "9": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Real Numbers, Polynomials, Linear Equations, Triangles, Coordinate Geometry, Statistics"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Laws of Motion, Work and Energy, Current Electricity, Substances in Common Use, Environmental Management"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "English Language Reader, Grammar, Writing Skills"
+      },
+      {
+        "id": "social-science",
+        "name": "Social Science",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "History and Political Science, Geography and Economics"
+      }
+    ],
+    "10": [
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "category": "mathematics",
+        "icon": "Calculator",
+        "color": "#3B82F6",
+        "gradient": "from-blue-500 to-indigo-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Linear Equations in Two Variables, Quadratic Equations, Arithmetic Progression, Financial Planning, Probability, Statistics"
+      },
+      {
+        "id": "science",
+        "name": "Science",
+        "category": "sciences",
+        "icon": "Atom",
+        "color": "#10B981",
+        "gradient": "from-emerald-500 to-teal-600",
+        "isCompulsory": true,
+        "status": "partial",
+        "description": "Gravitation, Periodic Classification, Chemical Reactions, Effects of Electric Current, Heat, Refraction of Light, Carbon Compounds"
+      },
+      {
+        "id": "english",
+        "name": "English",
+        "category": "languages",
+        "icon": "BookOpen",
+        "color": "#F59E0B",
+        "gradient": "from-amber-500 to-orange-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Textbook Prose and Poetry, Grammar, Letter Writing, Essay Writing"
+      },
+      {
+        "id": "social-science",
+        "name": "Social Science",
+        "category": "humanities",
+        "icon": "Globe",
+        "color": "#8B5CF6",
+        "gradient": "from-purple-500 to-violet-600",
+        "isCompulsory": true,
+        "status": "coming-soon",
+        "description": "Historiography, Applied History, Political Parties, Indian Geography and Environmental Studies"
+      }
+    ]
+  }
+}

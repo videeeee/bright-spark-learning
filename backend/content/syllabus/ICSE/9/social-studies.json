@@ -1,0 +1,150 @@
+{
+  "board": "ICSE",
+  "classLevel": "9",
+  "subject": "social-studies",
+  "subjectName": "Social Studies (History, Civics & Geography)",
+  "officialSource": "CISCE ICSE Regulations and Syllabuses (History & Civics Code 50 / Geography)",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Civics: Our Constitution",
+      "chapters": [
+        {
+          "chapterNumber": 1,
+          "id": "icse-9-sst-ch1",
+          "title": "Our Constitution and Its Salient Features",
+          "description": "Definition of Constitution, date of adoption and enforcement, Preamble (Sovereign, Socialist, Secular, Democratic, Republic, Justice, Liberty, Equality, Fraternity), and fundamental rights.",
+          "levels": [
+            {
+              "id": "icse-9-sst-ch1-l1",
+              "levelNumber": 1,
+              "title": "The Preamble & Key Constitutional Concepts",
+              "description": "Historical background of the Constituent Assembly, Dr. B.R. Ambedkar, and key terms in the Preamble.",
+              "subtopics": ["Role of Constituent Assembly", "Significance of 26th November & 26th January", "Preamble philosophy and basic structure"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sst-ch1-l2",
+              "levelNumber": 2,
+              "title": "Fundamental Rights & Writs",
+              "description": "Six Fundamental Rights (Articles 14 to 32) and the five constitutional writs.",
+              "subtopics": ["Right to Equality and Freedom", "Right against Exploitation & Freedom of Religion", "Habeas Corpus, Mandamus, Prohibition, Quo-Warranto, Certiorari"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sst-ch1-l3",
+              "levelNumber": 3,
+              "title": "Directive Principles & Fundamental Duties",
+              "description": "Socialist, Gandhian, and Liberal principles, and 11 Fundamental Duties under Article 51A.",
+              "subtopics": ["Difference between Fundamental Rights and Directive Principles", "Welfare state concept", "Fundamental duties significance"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sst-ch1-l4",
+              "levelNumber": 4,
+              "title": "Chapter 1 Review & Civics Mastery",
+              "description": "Review of Constitution, Rights, Writs, and Directive Principles.",
+              "subtopics": ["Constitutional case scenarios", "Board exam structured questions"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "History: Ancient Civilizations to Medieval India",
+      "chapters": [
+        {
+          "chapterNumber": 2,
+          "id": "icse-9-sst-ch2",
+          "title": "The Harappan Civilization",
+          "description": "Sources (Great Bath, Citadel, Seals, Bronze Dancing Girl, Dockyard at Lothal), town planning, drainage system, trade, and causes of decline.",
+          "levels": [
+            {
+              "id": "icse-9-sst-ch2-l1",
+              "levelNumber": 1,
+              "title": "Town Planning & Architecture",
+              "description": "Grid system, burnt brick houses, Citadel, Great Granary, and the sanitary drainage system.",
+              "subtopics": ["Town planning grid pattern", "The Great Bath structure and purpose", "Underground drainage and soak pits"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sst-ch2-l2",
+              "levelNumber": 2,
+              "title": "Social, Economic Life & Seals",
+              "description": "Occupations, terracotta craft, Pashupati seal, Unicorn seal, weights and measures, and foreign trade.",
+              "subtopics": ["Pashupati and Mother Goddess worship", "Seals as primary historical evidence", "Trade with Mesopotamia and Lothal dockyard"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sst-ch2-l3",
+              "levelNumber": 3,
+              "title": "Decline of the Harappan Civilization",
+              "description": "Theories of Aryan invasion, floods, tectonic shifts, shifting of river courses, and deforestation.",
+              "subtopics": ["Environmental and ecological factors", "Mortimer Wheeler theory vs modern archaeological consensus"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sst-ch2-l4",
+              "levelNumber": 4,
+              "title": "Chapter 2 Review & Archaeological Evidence",
+              "description": "Picture study and structured questions on the Indus Valley Civilization.",
+              "subtopics": ["Artifact picture identification", "Structured historical analysis"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Geography: Earth, Atmosphere & Landforms",
+      "chapters": [
+        {
+          "chapterNumber": 3,
+          "id": "icse-9-sst-ch3",
+          "title": "Earth as a Planet & Structure of Earth",
+          "description": "Shape of Earth (Oblate Spheroid / Geoid), proofs of earth's shape, internal structure (Crust, Mantle, Core), Mohorovicic and Gutenberg discontinuities.",
+          "levels": [
+            {
+              "id": "icse-9-sst-ch3-l1",
+              "levelNumber": 1,
+              "title": "Shape & Size of the Earth",
+              "description": "Geoid shape, circumnavigation, ship on horizon, Bedford Level experiment, and circular shadow during lunar eclipse.",
+              "subtopics": ["Geoid concept and equatorial vs polar diameter", "Proofs of spherical earth", "Earth as a habitable planet"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sst-ch3-l2",
+              "levelNumber": 2,
+              "title": "Internal Structure: Crust, Mantle, Core",
+              "description": "SIAL and SIMA in the Lithosphere, Asthenosphere, Gutenberg & Moho discontinuities, NIFE core.",
+              "subtopics": ["Chemical composition of Crust (Si + Al, Si + Mg)", "Mantle properties and magma chamber", "Core density, temperature, and magnetic field"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sst-ch3-l3",
+              "levelNumber": 3,
+              "title": "Chapter 3 Review & Earth Science Mastery",
+              "description": "Diagrams of interior of earth and physical geography reasoning.",
+              "subtopics": ["Cross-section diagram labeling", "Geological reasoning questions"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

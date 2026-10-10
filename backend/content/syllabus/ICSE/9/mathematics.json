@@ -1,0 +1,400 @@
+{
+  "board": "ICSE",
+  "classLevel": "9",
+  "subject": "mathematics",
+  "subjectName": "Mathematics",
+  "officialSource": "CISCE ICSE Regulations and Syllabuses (Mathematics Code 51)",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Pure Arithmetic",
+      "chapters": [
+        {
+          "chapterNumber": 1,
+          "id": "icse-9-math-ch1",
+          "title": "Rational and Irrational Numbers",
+          "description": "Classification of real numbers, decimal representation, recurring decimals, surds, and rationalising denominators.",
+          "levels": [
+            {
+              "id": "icse-9-math-ch1-l1",
+              "levelNumber": 1,
+              "title": "Rational Numbers & Decimals",
+              "description": "Understanding terminating and non-terminating recurring decimals in p/q form.",
+              "subtopics": ["Definition of rational numbers", "Converting recurring decimals to p/q", "Properties of rational numbers"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch1-l2",
+              "levelNumber": 2,
+              "title": "Irrational Numbers & Surds",
+              "description": "Proof of irrationality for square roots and identifying surds.",
+              "subtopics": ["Concept of irrational numbers", "Proof that sqrt(2) and sqrt(3) are irrational", "Simplification of surds"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch1-l3",
+              "levelNumber": 3,
+              "title": "Rationalisation of Denominators",
+              "description": "Conjugate surds and rationalising expressions of the form a / (b + sqrt(c)).",
+              "subtopics": ["Conjugate of binomial surds", "Rationalising denominators", "Evaluation of algebraic surd expressions"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch1-l4",
+              "levelNumber": 4,
+              "title": "Chapter 1 Review & Challenge",
+              "description": "Comprehensive review of Real Numbers, surds, and proof techniques.",
+              "subtopics": ["Mixed problem solving", "ICSE past year question patterns"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Commercial Mathematics",
+      "chapters": [
+        {
+          "chapterNumber": 2,
+          "id": "icse-9-math-ch2",
+          "title": "Compound Interest",
+          "description": "Compound interest calculations without formula using successive simple interest, and with standard formulae.",
+          "levels": [
+            {
+              "id": "icse-9-math-ch2-l1",
+              "levelNumber": 1,
+              "title": "Compound Interest without Formula",
+              "description": "Calculating year-by-year simple interest to understand interest accumulation.",
+              "subtopics": ["Year-on-year interest calculation", "Difference between Simple and Compound Interest"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch2-l2",
+              "levelNumber": 2,
+              "title": "Compound Interest Formula & Rates",
+              "description": "Using A = P(1 + r/100)^n for annual, half-yearly compounding and varying rates.",
+              "subtopics": ["Standard CI formula", "Semi-annual compounding", "Different rates for consecutive years"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch2-l3",
+              "levelNumber": 3,
+              "title": "Population & Depreciation",
+              "description": "Applications of growth and decay formulae to population and asset depreciation.",
+              "subtopics": ["Appreciation and growth", "Depreciation of machinery", "Word problems"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch2-l4",
+              "levelNumber": 4,
+              "title": "Chapter 2 Review & Mastery",
+              "description": "Comprehensive review of commercial compounding problems.",
+              "subtopics": ["Inverse problems (finding principal, rate, time)", "Exam-style applications"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Algebra",
+      "chapters": [
+        {
+          "chapterNumber": 3,
+          "id": "icse-9-math-ch3",
+          "title": "Expansions & Factorisation",
+          "description": "Algebraic identities (a+b)^2, (a+b)^3, and factorisation of polynomials.",
+          "levels": [
+            {
+              "id": "icse-9-math-ch3-l1",
+              "levelNumber": 1,
+              "title": "Basic Algebraic Expansions",
+              "description": "Expansions of (a ± b)^2, (a + b + c)^2, and (x + a)(x + b).",
+              "subtopics": ["Quadratic identities", "Three term expansions", "Evaluation without multiplication"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch3-l2",
+              "levelNumber": 2,
+              "title": "Cubic Expansions",
+              "description": "Expansions of (a ± b)^3 and a^3 ± b^3 conditional identities.",
+              "subtopics": ["Cubic binomials", "Conditional identity when a+b+c=0", "Simplification problems"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch3-l3",
+              "levelNumber": 3,
+              "title": "Factorisation by Splitting the Middle Term",
+              "description": "Factoring quadratic trinomials ax^2 + bx + c and grouping terms.",
+              "subtopics": ["Common monomial factors", "Grouping terms", "Middle term splitting"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch3-l4",
+              "levelNumber": 4,
+              "title": "Factorisation of Squares and Cubes",
+              "description": "Factoring difference of squares a^2 - b^2 and sum/difference of cubes a^3 ± b^3.",
+              "subtopics": ["Difference of two squares", "Sum and difference of cubes", "Combined factorisation"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch3-l5",
+              "levelNumber": 5,
+              "title": "Chapter 3 Review & Challenge",
+              "description": "Comprehensive review of expansions and factorisation.",
+              "subtopics": ["Complex multi-step factoring", "ICSE board exam style questions"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 4,
+          "id": "icse-9-math-ch4",
+          "title": "Simultaneous Linear Equations",
+          "description": "Solving pairs of linear equations in two variables by substitution, elimination, and cross-multiplication, with real-world applications.",
+          "levels": [
+            {
+              "id": "icse-9-math-ch4-l1",
+              "levelNumber": 1,
+              "title": "Method of Elimination & Substitution",
+              "description": "Solving simultaneous equations algebraically.",
+              "subtopics": ["Elimination by equating coefficients", "Method of substitution"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch4-l2",
+              "levelNumber": 2,
+              "title": "Equations Reducible to Linear Form",
+              "description": "Solving fractional equations by substituting u = 1/x and v = 1/y.",
+              "subtopics": ["Fractional coefficients", "Substitution variables", "Special symmetric systems"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch4-l3",
+              "levelNumber": 3,
+              "title": "Word Problems & Practical Applications",
+              "description": "Translating number problems, age problems, fraction problems, and speed-time problems into linear equations.",
+              "subtopics": ["Number and digit problems", "Age problems", "Speed, distance and time"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch4-l4",
+              "levelNumber": 4,
+              "title": "Chapter 4 Review & Problem Solving",
+              "description": "Mastery of simultaneous equations and application modeling.",
+              "subtopics": ["Mixed problem set", "Board exam style word problems"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 5,
+          "id": "icse-9-math-ch5",
+          "title": "Indices and Logarithms",
+          "description": "Laws of positive and fractional indices, introduction to logarithms, and logarithmic laws.",
+          "levels": [
+            {
+              "id": "icse-9-math-ch5-l1",
+              "levelNumber": 1,
+              "title": "Laws of Indices & Fractional Exponents",
+              "description": "Product law, quotient law, power of power, negative exponents, and fractional exponents a^(m/n).",
+              "subtopics": ["Laws of indices", "Solving exponential equations a^x = b"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch5-l2",
+              "levelNumber": 2,
+              "title": "Introduction to Logarithms",
+              "description": "Definition of logarithm as inverse of exponent: y = a^x <=> log_a(y) = x.",
+              "subtopics": ["Exponential to logarithmic form", "Fundamental laws of logarithms"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch5-l3",
+              "levelNumber": 3,
+              "title": "Logarithmic Laws & Expansion",
+              "description": "Product rule log(xy) = log x + log y, quotient rule, power rule, and base change formula.",
+              "subtopics": ["Product, quotient, power rules", "Solving logarithmic equations"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch5-l4",
+              "levelNumber": 4,
+              "title": "Chapter 5 Review & Mastery",
+              "description": "Review of exponents and logarithms.",
+              "subtopics": ["Challenging indices equations", "Combined logarithmic simplifications"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 4,
+      "title": "Geometry & Mensuration",
+      "chapters": [
+        {
+          "chapterNumber": 6,
+          "id": "icse-9-math-ch6",
+          "title": "Triangles & Pythagoras Theorem",
+          "description": "Congruency criteria (SSS, SAS, ASA, RHS), Mid-point theorem, intercept theorem, and Pythagoras theorem proofs & applications.",
+          "levels": [
+            {
+              "id": "icse-9-math-ch6-l1",
+              "levelNumber": 1,
+              "title": "Congruency of Triangles",
+              "description": "Understanding and applying SSS, SAS, ASA, and RHS criteria with formal proofs.",
+              "subtopics": ["Congruency conditions", "Corresponding parts of congruent triangles (CPCTC)"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch6-l2",
+              "levelNumber": 2,
+              "title": "Mid-point & Intercept Theorem",
+              "description": "Line segment joining mid-points of two sides is parallel to the third side and half of it.",
+              "subtopics": ["Mid-point theorem statement and proof", "Converse of mid-point theorem", "Equal intercepts theorem"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch6-l3",
+              "levelNumber": 3,
+              "title": "Pythagoras Theorem & Applications",
+              "description": "In a right-angled triangle, hypotenuse^2 = base^2 + perpendicular^2 and its converse.",
+              "subtopics": ["Pythagoras theorem proof", "Converse of Pythagoras theorem", "Calculations in right triangles and geometric figures"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch6-l4",
+              "levelNumber": 4,
+              "title": "Chapter 6 Review & Geometric Proofs",
+              "description": "Review of triangles, mid-point theorem, and Pythagoras applications.",
+              "subtopics": ["Multi-step geometric riders", "ICSE board style proof questions"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 7,
+          "id": "icse-9-math-ch7",
+          "title": "Mensuration (Area & Volume)",
+          "description": "Perimeter and area of triangles (Heron's formula), quadrilaterals, circle, and surface area & volume of cubes and cuboids.",
+          "levels": [
+            {
+              "id": "icse-9-math-ch7-l1",
+              "levelNumber": 1,
+              "title": "Area of Triangles & Heron's Formula",
+              "description": "Calculating area using 1/2 * base * height and Heron's formula sqrt(s(s-a)(s-b)(s-c)).",
+              "subtopics": ["Standard triangle area", "Heron's formula derivation and application", "Equilateral and isosceles triangles"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch7-l2",
+              "levelNumber": 2,
+              "title": "Quadrilaterals & Circles",
+              "description": "Area and perimeter of rectangles, squares, parallelograms, rhombuses, trapeziums, and circles.",
+              "subtopics": ["Area of trapeziums and rhombuses", "Circumference and area of circle", "Area of circular rings"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch7-l3",
+              "levelNumber": 3,
+              "title": "Surface Area & Volume of Cubes & Cuboids",
+              "description": "Total surface area, lateral surface area, volume, and diagonal length of rectangular solids.",
+              "subtopics": ["TSA and LSA of cubes and cuboids", "Volume calculations", "Diagonal length formula sqrt(l^2+b^2+h^2)"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch7-l4",
+              "levelNumber": 4,
+              "title": "Chapter 7 Review & Mensuration Challenges",
+              "description": "Combined real-world mensuration word problems.",
+              "subtopics": ["Cost of painting/flooring", "Melting and reshaping cuboids"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 5,
+      "title": "Trigonometry & Coordinate Geometry",
+      "chapters": [
+        {
+          "chapterNumber": 8,
+          "id": "icse-9-math-ch8",
+          "title": "Trigonometric Ratios",
+          "description": "Sine, Cosine, Tangent, Cosecant, Secant, Cotangent of acute angles in a right triangle, and values at 0°, 30°, 45°, 60°, 90°.",
+          "levels": [
+            {
+              "id": "icse-9-math-ch8-l1",
+              "levelNumber": 1,
+              "title": "Introduction to Trigonometric Ratios",
+              "description": "Definitions of sin, cos, tan, cosec, sec, cot as ratios of sides of a right triangle.",
+              "subtopics": ["Opposite, adjacent, hypotenuse sides", "Six trigonometric ratios", "Reciprocal relations"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch8-l2",
+              "levelNumber": 2,
+              "title": "Values for Standard Angles",
+              "description": "Trigonometric ratio values at 0°, 30°, 45°, 60°, and 90°.",
+              "subtopics": ["Trigonometry table", "Evaluating algebraic trigonometric expressions", "Simple right triangle solving"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch8-l3",
+              "levelNumber": 3,
+              "title": "Coordinate Geometry Basics",
+              "description": "Cartesian coordinate system, quadrants, signs of coordinates, plotting points, and distance from axes.",
+              "subtopics": ["x-axis, y-axis, origin", "Four quadrants", "Plotting points and finding distances"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-math-ch8-l4",
+              "levelNumber": 4,
+              "title": "Chapter 8 Review & Trigonometry Mastery",
+              "description": "Review of trigonometric ratios, standard angles, and coordinate plotting.",
+              "subtopics": ["Mixed trigonometry and coordinate problems", "Board exam review"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

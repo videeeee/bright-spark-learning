@@ -28,10 +28,21 @@ export class ApiError extends Error {
 }
 
 const DEFAULT_PROD_URL = "https://learnquest-xcv9.onrender.com";
-const BASE_URL = (
-  import.meta.env.VITE_API_URL ||
-  (import.meta.env.PROD ? DEFAULT_PROD_URL : "http://localhost:5000")
-).replace(/\/$/, "");
+
+function getBaseUrl(): string {
+  const envUrl = import.meta.env.VITE_API_URL;
+  const target = envUrl || (import.meta.env.PROD ? DEFAULT_PROD_URL : "http://localhost:5000");
+
+  if (!target || target === "undefined" || typeof target !== "string") {
+    throw new ApiError(
+      "Configuration error: VITE_API_URL is not set. Please set VITE_API_URL in your environment.",
+      500
+    );
+  }
+
+  return target.replace(/\/$/, "");
+}
+
 const DEFAULT_TIMEOUT_MS = 15000;
 
 interface RequestOptions extends RequestInit {
@@ -45,7 +56,12 @@ async function request<T = unknown>(
 ): Promise<T> {
   const { timeoutMs = DEFAULT_TIMEOUT_MS, skipAuth = false, headers = {}, ...rest } = options;
 
-  const url = endpoint.startsWith("http") ? endpoint : `${BASE_URL}${endpoint.startsWith("/") ? "" : "/"}${endpoint}`;
+  const base = getBaseUrl();
+  const url = endpoint.startsWith("http") ? endpoint : `${base}${endpoint.startsWith("/") ? "" : "/"}${endpoint}`;
+
+  if (url.includes("undefined")) {
+    throw new ApiError("Configuration error: Invalid API URL detected.", 500);
+  }
 
   const controller = new AbortController();
   const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
@@ -143,5 +159,5 @@ export const api = {
   delete: <T = unknown>(endpoint: string, options?: RequestOptions) =>
     request<T>(endpoint, { ...options, method: "DELETE" }),
 
-  getBaseUrl: () => BASE_URL,
+  getBaseUrl: () => getBaseUrl(),
 };

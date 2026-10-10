@@ -86,7 +86,6 @@ const handleSignup = async (req, res, next) => {
 };
 
 router.post("/signup", validate({ body: signupSchema }), handleSignup);
-router.post("/register", validate({ body: signupSchema }), handleSignup);
 
 /**
  * POST /api/auth/login

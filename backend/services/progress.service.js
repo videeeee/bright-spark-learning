@@ -280,11 +280,33 @@ async function getLeaderboardData(currentUserId, limit = 10) {
     });
   });
 
-  // 2. Fetch all users
-  const allUsers = await User.find().select("name companion totalXp currentStreak");
+  // 2. Fetch users scoped to same board and class level (with cohort fallback)
+  let cohortFilter = {};
+  let cohortBoard = "All Boards";
+  let cohortClass = "All Classes";
+
+  if (currentUserId) {
+    const currentUserDoc = await User.findById(currentUserId).select("curriculum classLevel");
+    if (currentUserDoc?.curriculum && currentUserDoc?.classLevel) {
+      cohortFilter = {
+        curriculum: currentUserDoc.curriculum,
+        classLevel: currentUserDoc.classLevel,
+      };
+      cohortBoard = currentUserDoc.curriculum;
+      cohortClass = currentUserDoc.classLevel;
+    }
+  }
+
+  let users = await User.find(cohortFilter).select("name companion totalXp currentStreak curriculum classLevel");
+  // If fewer than 2 users in specific cohort, fallback to all users for healthy competition display
+  if (users.length < 2) {
+    users = await User.find().select("name companion totalXp currentStreak curriculum classLevel");
+    cohortBoard = "All Boards";
+    cohortClass = "All Classes";
+  }
 
   // 3. Build ranking list
-  const rankedList = allUsers.map((u) => {
+  const rankedList = users.map((u) => {
     const weeklyData = weeklyXpMap.get(u._id.toString()) || { weeklyXp: 0, levelsCompleted: 0 };
     return {
       userId: u._id.toString(),
@@ -294,6 +316,8 @@ async function getLeaderboardData(currentUserId, limit = 10) {
       streak: u.currentStreak || 0,
       levelsCompleted: weeklyData.levelsCompleted,
       companion: u.companion || "solin",
+      curriculum: u.curriculum || "ICSE",
+      classLevel: u.classLevel || "9",
       isCurrentUser: u._id.toString() === currentUserId?.toString(),
     };
   });
@@ -334,6 +358,8 @@ async function getLeaderboardData(currentUserId, limit = 10) {
 
   return {
     weekStartDate: weekStart.toISOString(),
+    cohortBoard,
+    cohortClass,
     totalLearners: rankedList.length,
     leaderboard: topList,
     currentUser: currentUserEntry,

@@ -1,5 +1,13 @@
 const mongoose = require("mongoose");
+const dns = require("dns");
 const env = require("./env");
+
+// Ensure mongodb+srv SRV records resolve reliably across Windows and restrictive local DNS resolvers
+try {
+  dns.setServers(["8.8.8.8", "1.1.1.1"]);
+} catch {
+  // Ignore if restricted
+}
 
 // Utility to mask credentials in connection URI for safe logging
 function maskMongoUri(uri) {
@@ -21,7 +29,7 @@ const connectDB = async (maxRetries = 5, retryDelayMs = 3000) => {
         serverSelectionTimeoutMS: 5000,
       });
 
-      console.log("✅ MongoDB connected successfully");
+      console.log(`✅ MongoDB connected successfully to database: [${mongoose.connection.name}]`);
       return;
     } catch (err) {
       console.error(`❌ MongoDB connection attempt ${attempt} failed:`, err.message);

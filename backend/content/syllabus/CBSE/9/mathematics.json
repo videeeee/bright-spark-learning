@@ -1,0 +1,132 @@
+{
+  "board": "CBSE",
+  "classLevel": "9",
+  "subject": "mathematics",
+  "subjectName": "Mathematics",
+  "officialSource": "CBSE Curriculum 2024-25/2025-26 Secondary Curriculum (Code 041)",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Number Systems",
+      "chapters": [
+        {
+          "chapterNumber": 1,
+          "id": "cbse-9-math-ch1",
+          "title": "Number Systems",
+          "description": "Real numbers, representation of irrational numbers on number line, real numbers and their decimal expansions, operations on real numbers, and laws of exponents for real numbers.",
+          "levels": [
+            {
+              "id": "cbse-9-math-ch1-l1",
+              "levelNumber": 1,
+              "title": "Real Numbers & Decimal Expansions",
+              "description": "Terminating and non-terminating recurring decimal expansions, converting non-terminating recurring decimals into rational p/q form.",
+              "subtopics": ["Rational vs irrational numbers", "Conversion of 0.bar(p) to p/q", "Locating sqrt(2) on number line using spiral"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-math-ch1-l2",
+              "levelNumber": 2,
+              "title": "Operations on Real Numbers & Rationalisation",
+              "description": "Adding, multiplying, and rationalising expressions with square roots.",
+              "subtopics": ["Identities involving square roots", "Rationalising binomial denominators with conjugates", "Laws of real exponents a^p * a^q"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-math-ch1-l3",
+              "levelNumber": 3,
+              "title": "Chapter 1 Review & NCERT Exemplar",
+              "description": "Mixed problem solving on number systems.",
+              "subtopics": ["Exemplar challenge questions", "Exponent simplifications"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Algebra",
+      "chapters": [
+        {
+          "chapterNumber": 2,
+          "id": "cbse-9-math-ch2",
+          "title": "Polynomials",
+          "description": "Definition of a polynomial in one variable, coefficients, terms, degree of polynomial, zero polynomial, Remainder and Factor theorems, and algebraic identities.",
+          "levels": [
+            {
+              "id": "cbse-9-math-ch2-l1",
+              "levelNumber": 1,
+              "title": "Polynomials & Zeroes",
+              "description": "Degrees of polynomials (linear, quadratic, cubic), and finding zeroes of p(x).",
+              "subtopics": ["Degree of polynomial", "Zeroes of linear and quadratic polynomials", "Geometric meaning of zeroes"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-math-ch2-l2",
+              "levelNumber": 2,
+              "title": "Factor Theorem & Splitting Middle Term",
+              "description": "Factor Theorem statement and proof; factorising quadratic trinomials ax^2 + bx + c and cubic polynomials.",
+              "subtopics": ["Factor theorem application", "Splitting middle term", "Factoring cubics using rational roots test"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-math-ch2-l3",
+              "levelNumber": 3,
+              "title": "Algebraic Identities & Factorisation",
+              "description": "Expanding and factoring using (x+y+z)^2, (x±y)^3, and x^3+y^3+z^3-3xyz.",
+              "subtopics": ["Square of trinomials", "Sum and difference of cubes", "Identity with x+y+z=0"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-math-ch2-l4",
+              "levelNumber": 4,
+              "title": "Chapter 2 Review & Polynomial Mastery",
+              "description": "Review of algebraic identities and polynomial factoring.",
+              "subtopics": ["High-order thinking questions", "Case-based questions"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Coordinate Geometry",
+      "chapters": [
+        {
+          "chapterNumber": 3,
+          "id": "cbse-9-math-ch3",
+          "title": "Coordinate Geometry",
+          "description": "The Cartesian plane, coordinates of a point, names and terms associated with coordinate plane, plotting points in the plane.",
+          "levels": [
+            {
+              "id": "cbse-9-math-ch3-l1",
+              "levelNumber": 1,
+              "title": "The Cartesian Plane & Coordinates",
+              "description": "Abscissa, ordinate, origin, four quadrants, and plotting coordinates.",
+              "subtopics": ["Axes and quadrants", "Locating points (x, y)", "Signs of coordinates in each quadrant"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "cbse-9-math-ch3-l2",
+              "levelNumber": 2,
+              "title": "Chapter 3 Review & Graph Plotting",
+              "description": "Graph interpretation and geometric shapes on the Cartesian plane.",
+              "subtopics": ["Connecting points to find area", "Symmetry with axes"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

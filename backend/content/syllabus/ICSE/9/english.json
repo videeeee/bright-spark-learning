@@ -1,0 +1,129 @@
+{
+  "board": "ICSE",
+  "classLevel": "9",
+  "subject": "english",
+  "subjectName": "English (Language & Literature)",
+  "officialSource": "CISCE ICSE Regulations and Syllabuses (English Paper 1 & 2 Code 01)",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "English Language: Functional Grammar & Syntax",
+      "chapters": [
+        {
+          "chapterNumber": 1,
+          "id": "icse-9-eng-ch1",
+          "title": "Tenses and Verb Agreement",
+          "description": "Rules of Simple, Continuous, Perfect, and Perfect Continuous tenses; Subject-Verb Concord across singular and compound subjects.",
+          "levels": [
+            {
+              "id": "icse-9-eng-ch1-l1",
+              "levelNumber": 1,
+              "title": "Tenses in Context",
+              "description": "Identifying and applying appropriate tense forms in continuous passages.",
+              "subtopics": ["Present vs Past Perfect", "Future time reference", "Fill in blanks with correct verb tense forms"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch1-l2",
+              "levelNumber": 2,
+              "title": "Subject-Verb Agreement",
+              "description": "Singular and plural verbs with collective nouns, either...or, neither...nor, as well as, along with.",
+              "subtopics": ["Proximity rule with either/or", "Indefinite pronouns (each, everyone, neither)", "Plural nouns with singular meanings"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch1-l3",
+              "levelNumber": 3,
+              "title": "Chapter 1 Review & Verb Mastery",
+              "description": "Grammar review of tenses and verb agreement in passage format.",
+              "subtopics": ["Passage cloze tests", "Error spotting and corrections"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 2,
+          "id": "icse-9-eng-ch2",
+          "title": "Prepositions and Phrasal Verbs",
+          "description": "Prepositions of time, place, direction; fixed prepositions and idiomatic phrasal verbs.",
+          "levels": [
+            {
+              "id": "icse-9-eng-ch2-l1",
+              "levelNumber": 1,
+              "title": "Prepositions of Time and Place",
+              "description": "Distinctions between in/at/on, since/for, between/among, beside/besides.",
+              "subtopics": ["Time prepositions (since, for, by)", "Spatial prepositions (above, over, through)", "Prepositional collocations"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch2-l2",
+              "levelNumber": 2,
+              "title": "Phrasal Verbs & Fixed Prepositions",
+              "description": "Common phrasal verbs (look after, call off, give in, put up with) and verbs taking fixed prepositions.",
+              "subtopics": ["Fixed prepositions with adjectives and verbs", "Idiomatic phrasal verbs in sentences"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch2-l3",
+              "levelNumber": 3,
+              "title": "Chapter 2 Review & Preposition Drill",
+              "description": "Review of standard ICSE Question 4(b) preposition sets.",
+              "subtopics": ["Eight-blank sentence completion", "Contextual phrasal verb usage"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 3,
+          "id": "icse-9-eng-ch3",
+          "title": "Sentence Transformation and Synthesis",
+          "description": "Transformations using 'No sooner...than', 'Hardly...when', Active/Passive voice, Direct/Indirect speech, and degrees of comparison.",
+          "levels": [
+            {
+              "id": "icse-9-eng-ch3-l1",
+              "levelNumber": 1,
+              "title": "Active and Passive Voice",
+              "description": "Conversion between active and passive forms across assertive, imperative, and interrogative sentences.",
+              "subtopics": ["Tense shifts in passive voice", "Imperative passives with 'Let'", "Sentences with two objects"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch3-l2",
+              "levelNumber": 2,
+              "title": "Direct and Indirect Speech",
+              "description": "Reporting statements, questions, commands, and exclamations with reporting verb and tense shifts.",
+              "subtopics": ["Tense backshifting rules", "Pronoun and adverbial time shifts", "Reporting wh- and yes/no questions"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch3-l3",
+              "levelNumber": 3,
+              "title": "Sentence Synthesis & Conditional Structures",
+              "description": "Joining sentences without using 'and', 'but', or 'so'; 'Unless', 'Though', 'Too...to', 'So...that'.",
+              "subtopics": ["Participle and infinitive synthesis", "No sooner...than and Hardly...when inversions", "Unless vs If not"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch3-l4",
+              "levelNumber": 4,
+              "title": "Chapter 3 Review & Transformation Mastery",
+              "description": "ICSE Question 4(d) rewrite style practice.",
+              "subtopics": ["Rewrite according to instruction without changing meaning", "Advanced synthesis"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

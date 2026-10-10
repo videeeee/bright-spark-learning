@@ -12,13 +12,17 @@ const levelAttemptSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    levelId: {
+      type: String,
+      index: true,
+    },
     chapterNumber: {
       type: Number,
-      required: true,
+      default: 1,
     },
     levelNumber: {
       type: Number,
-      required: true,
+      default: 1,
     },
     score: {
       type: Number,

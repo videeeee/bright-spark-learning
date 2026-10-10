@@ -1,0 +1,308 @@
+{
+  "board": "ICSE",
+  "classLevel": "9",
+  "subject": "science",
+  "subjectName": "Science (Physics, Chemistry, Biology)",
+  "officialSource": "CISCE ICSE Regulations and Syllabuses (Science Code 52)",
+  "units": [
+    {
+      "unitNumber": 1,
+      "title": "Physics: Measurements & Motion",
+      "chapters": [
+        {
+          "chapterNumber": 1,
+          "id": "icse-9-sci-ch1",
+          "title": "Measurements and Experimentation",
+          "description": "International System of Units (SI), Vernier Callipers, Micrometer Screw Gauge, and the Simple Pendulum.",
+          "levels": [
+            {
+              "id": "icse-9-sci-ch1-l1",
+              "levelNumber": 1,
+              "title": "Units & Vernier Callipers",
+              "description": "Fundamental and derived SI units, least count concept, and measuring with Vernier Callipers.",
+              "subtopics": ["SI units and symbols", "Least count formula (L.C. = 1 MSD - 1 VSD)", "Zero errors (positive and negative)"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch1-l2",
+              "levelNumber": 2,
+              "title": "Micrometer Screw Gauge",
+              "description": "Pitch, least count of screw gauge, zero errors and measuring thin wires or sheets.",
+              "subtopics": ["Pitch and head scale divisions", "Least count calculation", "Measurement with zero error correction"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch1-l3",
+              "levelNumber": 3,
+              "title": "The Simple Pendulum",
+              "description": "Time period, effective length, acceleration due to gravity, and factors affecting time period.",
+              "subtopics": ["Definition of oscillation, amplitude, frequency, time period", "T = 2*pi*sqrt(L/g)", "T^2 vs L graph slope"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch1-l4",
+              "levelNumber": 4,
+              "title": "Chapter 1 Review & Experimental Physics",
+              "description": "Review of experimental measurements, instruments, and simple pendulum calculations.",
+              "subtopics": ["Mixed measurement problems", "Graph interpretation"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 2,
+          "id": "icse-9-sci-ch2",
+          "title": "Motion in One Dimension",
+          "description": "Scalars and vectors, distance, displacement, speed, velocity, acceleration, and equations of motion.",
+          "levels": [
+            {
+              "id": "icse-9-sci-ch2-l1",
+              "levelNumber": 1,
+              "title": "Distance, Displacement & Velocity",
+              "description": "Distinguishing scalar from vector quantities, average speed and instantaneous velocity.",
+              "subtopics": ["Scalars vs vectors", "Distance vs displacement", "Speed vs velocity"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch2-l2",
+              "levelNumber": 2,
+              "title": "Acceleration & Graphs of Motion",
+              "description": "Uniform and non-uniform acceleration, displacement-time and velocity-time graphs.",
+              "subtopics": ["Acceleration definition (a = (v-u)/t)", "Slope of s-t and v-t graphs", "Area under v-t graph equals displacement"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch2-l3",
+              "levelNumber": 3,
+              "title": "Equations of Uniformly Accelerated Motion",
+              "description": "Derivation and numerical application of v = u + at, s = ut + 0.5at^2, and v^2 = u^2 + 2as.",
+              "subtopics": ["Three kinematic equations", "Free fall under gravity (g = 9.8 m/s^2)", "Stopping distance problems"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch2-l4",
+              "levelNumber": 4,
+              "title": "Chapter 2 Review & Kinematics Mastery",
+              "description": "Comprehensive motion problem solving and graphical analysis.",
+              "subtopics": ["Complex multi-stage motion numericals", "Board exam questions"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 3,
+          "id": "icse-9-sci-ch3",
+          "title": "Laws of Motion & Gravitation",
+          "description": "Contact and non-contact forces, Newton's three laws of motion, linear momentum, inertia, and universal gravitation.",
+          "levels": [
+            {
+              "id": "icse-9-sci-ch3-l1",
+              "levelNumber": 1,
+              "title": "Newton's First Law & Inertia",
+              "description": "Force definition, qualitative concept of inertia of rest, motion, and direction.",
+              "subtopics": ["Newton's first law statement", "Inertia and mass relationship", "Daily life examples of inertia"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch3-l2",
+              "levelNumber": 2,
+              "title": "Newton's Second Law & Momentum",
+              "description": "Linear momentum p = mv, rate of change of momentum, and F = ma derivation.",
+              "subtopics": ["Momentum definition and SI unit", "Derivation of F = ma", "Impulse and safety cushions"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch3-l3",
+              "levelNumber": 3,
+              "title": "Newton's Third Law & Universal Gravitation",
+              "description": "Action and reaction forces, Universal law of gravitation F = G*m1*m2/r^2, and g vs G.",
+              "subtopics": ["Action-reaction pairs", "Newton's law of gravitation", "Acceleration due to gravity and weight"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch3-l4",
+              "levelNumber": 4,
+              "title": "Chapter 3 Review & Dynamics Challenge",
+              "description": "Review of forces, momentum conservation, and gravitational calculations.",
+              "subtopics": ["Forces numericals", "Gravitational force calculations"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Chemistry: Matter & Atomic Structure",
+      "chapters": [
+        {
+          "chapterNumber": 4,
+          "id": "icse-9-sci-ch4",
+          "title": "Matter and Its Composition",
+          "description": "Particulate nature of matter, states of matter, kinetic molecular theory, physical vs chemical changes, and mixtures.",
+          "levels": [
+            {
+              "id": "icse-9-sci-ch4-l1",
+              "levelNumber": 1,
+              "title": "States of Matter & Kinetic Theory",
+              "description": "Solids, liquids, gases, intermolecular space, intermolecular attraction, and brownian motion.",
+              "subtopics": ["Postulates of kinetic theory", "Comparison of solids, liquids, and gases", "Changes of state"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch4-l2",
+              "levelNumber": 2,
+              "title": "Elements, Compounds & Separation",
+              "description": "Classification of pure substances, characteristics of compounds vs mixtures, and separation techniques.",
+              "subtopics": ["Elements and symbols", "Compounds vs mixtures", "Fractional distillation, sublimation, chromatography"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch4-l3",
+              "levelNumber": 3,
+              "title": "Chapter 4 Review & Composition of Matter",
+              "description": "Comprehensive review of matter, kinetic postulates, and purification.",
+              "subtopics": ["Distinction tables", "Reasoning questions"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 5,
+          "id": "icse-9-sci-ch5",
+          "title": "Atomic Structure and Chemical Bonding",
+          "description": "Subatomic particles, atomic number (Z), mass number (A), electronic configuration, isotopes, electrovalent and covalent bonding.",
+          "levels": [
+            {
+              "id": "icse-9-sci-ch5-l1",
+              "levelNumber": 1,
+              "title": "Subatomic Particles & Atomic Models",
+              "description": "Protons, neutrons, electrons, Thomson and Rutherford atomic models, and Bohr-Bury electronic scheme.",
+              "subtopics": ["Discovery and properties of particles", "Rutherford alpha scattering experiment", "Bohr-Bury rules (2n^2)"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch5-l2",
+              "levelNumber": 2,
+              "title": "Atomic Number, Mass Number & Isotopes",
+              "description": "Calculation of protons, neutrons, and electrons, isotopes and isobars.",
+              "subtopics": ["Z and A notation", "Isotopes of Hydrogen, Carbon, Chlorine", "Isobars and isotones"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch5-l3",
+              "levelNumber": 3,
+              "title": "Electrovalent & Covalent Bonding",
+              "description": "Octet rule, transfer of electrons (ionic bond in NaCl, MgCl2, CaO) and sharing of electrons (covalent in H2, Cl2, O2, N2, H2O, CH4).",
+              "subtopics": ["Electrovalent / ionic bond formation", "Single, double, triple covalent bonds", "Electron dot (Lewis) diagrams"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch5-l4",
+              "levelNumber": 4,
+              "title": "Chapter 5 Review & Bonding Mastery",
+              "description": "Review of atomic structure, electron configurations, and chemical bond representations.",
+              "subtopics": ["Drawing Lewis structures", "Comparing ionic vs covalent compounds"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Biology: Cell, Tissues & Plant Life",
+      "chapters": [
+        {
+          "chapterNumber": 6,
+          "id": "icse-9-sci-ch6",
+          "title": "Cell: The Unit of Life",
+          "description": "Discovery of cell, cell theory, plant vs animal cells, ultrastructure and functions of organelles.",
+          "levels": [
+            {
+              "id": "icse-9-sci-ch6-l1",
+              "levelNumber": 1,
+              "title": "Cell Theory & Structure",
+              "description": "Robert Hooke, Schleiden & Schwann cell theory, prokaryotic vs eukaryotic cells.",
+              "subtopics": ["History and cell theory postulates", "Prokaryotes vs Eukaryotes", "Plant cell vs Animal cell differences"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch6-l2",
+              "levelNumber": 2,
+              "title": "Cell Organelles & Functions",
+              "description": "Nucleus, mitochondria, endoplasmic reticulum, golgi apparatus, ribosomes, lysosomes, plastids, and vacuoles.",
+              "subtopics": ["Mitochondria power house", "Endoplasmic reticulum & ribosomes", "Chloroplasts, chromoplasts, leucoplasts"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch6-l3",
+              "levelNumber": 3,
+              "title": "Chapter 6 Review & Cytology Mastery",
+              "description": "Review of cell biology, diagrams, and organelle functions.",
+              "subtopics": ["Diagram-based questions", "Organelle matching and functions"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 7,
+          "id": "icse-9-sci-ch7",
+          "title": "Plant and Animal Tissues",
+          "description": "Meristematic and permanent plant tissues, epithelial, connective, muscular, and nervous animal tissues.",
+          "levels": [
+            {
+              "id": "icse-9-sci-ch7-l1",
+              "levelNumber": 1,
+              "title": "Plant Tissues (Meristematic & Permanent)",
+              "description": "Apical, lateral, intercalary meristems, parenchyma, collenchyma, sclerenchyma, and vascular tissues (xylem and phloem).",
+              "subtopics": ["Types of meristems", "Simple permanent tissues", "Complex permanent tissues (Xylem & Phloem)"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch7-l2",
+              "levelNumber": 2,
+              "title": "Animal Tissues (Epithelial to Nervous)",
+              "description": "Squamous, cuboidal, columnar epithelial tissues, bone, cartilage, blood, striated, unstriated, cardiac muscles, and neurons.",
+              "subtopics": ["Epithelial tissue types and locations", "Connective tissue (Blood, Bone, Cartilage, Ligament, Tendon)", "Muscular and Nervous tissues"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-sci-ch7-l3",
+              "levelNumber": 3,
+              "title": "Chapter 7 Review & Histology Challenge",
+              "description": "Comprehensive review of tissue classification, functions, and identification.",
+              "subtopics": ["Tissue comparison tables", "Function and location identification"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
