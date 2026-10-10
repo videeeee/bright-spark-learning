@@ -40,9 +40,9 @@ const settingsUpdateSchema = z.object({
 });
 
 /**
- * POST /api/auth/signup
+ * POST /api/auth/signup & /api/auth/register (backward compatibility)
  */
-router.post("/signup", validate({ body: signupSchema }), async (req, res, next) => {
+const handleSignup = async (req, res, next) => {
   try {
     const { name, email, password } = req.body;
 
@@ -83,7 +83,10 @@ router.post("/signup", validate({ body: signupSchema }), async (req, res, next) 
   } catch (err) {
     next(err);
   }
-});
+};
+
+router.post("/signup", validate({ body: signupSchema }), handleSignup);
+router.post("/register", validate({ body: signupSchema }), handleSignup);
 
 /**
  * POST /api/auth/login

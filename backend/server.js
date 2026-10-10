@@ -89,6 +89,7 @@ const authLimiter = rateLimit({
 });
 app.use("/api/auth/login", authLimiter);
 app.use("/api/auth/signup", authLimiter);
+app.use("/api/auth/register", authLimiter);
 
 // 5. Health Check Endpoint
 app.get("/api/health", (req, res) => {
