@@ -3,6 +3,7 @@ import { Home, BookOpen, FileText, Volume2, BarChart3, Trophy, Settings, Flame }
 import { CompanionAvatar } from '@/components/companions/CompanionAvatar';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useUser } from '@/contexts/UserContext';
+import { useProgressSummary } from '@/hooks/useProgress';
 
 interface SidebarProps {
   activeTab: string;
@@ -22,6 +23,8 @@ const navItems = [
 export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
   const { theme, setTheme, companion, setCompanion, companions, getCompanionMeta } = useTheme();
   const { user } = useUser();
+  const { data: summary } = useProgressSummary();
+  const streakCount = summary?.streak?.currentStreak ?? (user?.currentStreak ?? 0);
   const meta = getCompanionMeta(companion)!;
 
   const handleLogoToggle = () => {
@@ -64,8 +67,10 @@ export function Sidebar({ activeTab, onTabChange }: SidebarProps) {
         {/* Streak Counter */}
         <div className="flex items-center gap-2 bg-muted rounded-xl px-3 py-2">
           <Flame className="w-5 h-5 text-streak streak-fire" />
-          <span className="hidden lg:block font-bold text-foreground">12 day streak!</span>
-          <span className="lg:hidden font-bold text-foreground text-sm">12</span>
+          <span className="hidden lg:block font-bold text-foreground">
+            {streakCount} day {streakCount === 1 ? 'streak' : 'streak'}!
+          </span>
+          <span className="lg:hidden font-bold text-foreground text-sm">{streakCount}</span>
         </div>
       </div>
 

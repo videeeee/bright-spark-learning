@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { Flame, Target, Star, Zap, ArrowRight } from 'lucide-react';
+import { Flame, Target, Star, BookOpen, ArrowRight, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { CompanionAvatar, getCompanionMessage } from '@/components/companions/CompanionAvatar';
 import { getContrastColor } from '@/lib/color';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useUser } from '@/contexts/UserContext';
-import { Loader2 } from 'lucide-react';
+import { useProgressSummary } from '@/hooks/useProgress';
+import { api } from '@/lib/api';
 
 interface Note {
   _id: string;
@@ -14,7 +15,7 @@ interface Note {
   createdAt: string;
 }
 
-interface Stats {
+interface StatsResponse {
   totalNotes: number;
   recentNotes: Note[];
 }
@@ -26,42 +27,39 @@ type Props = {
 export function HomeDashboard({ onStartLearning }: Props) {
   const { companion, getCompanionMeta } = useTheme();
   const { user } = useUser();
-  const [stats, setStats] = useState<Stats | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
+  const { data: summary, isLoading: isSummaryLoading } = useProgressSummary();
+  const [recentNotes, setRecentNotes] = useState<Note[]>([]);
+  const [isNotesLoading, setIsNotesLoading] = useState(true);
   const companionMeta = getCompanionMeta(companion)!;
 
   useEffect(() => {
-    fetchStats();
+    async function loadRecentNotes() {
+      try {
+        setIsNotesLoading(true);
+        const data = await api.get<StatsResponse>('/api/stats');
+        setRecentNotes(data?.recentNotes || []);
+      } catch (err) {
+        console.error('Failed to fetch recent notes:', err);
+      } finally {
+        setIsNotesLoading(false);
+      }
+    }
+
+    loadRecentNotes();
   }, []);
 
-  const fetchStats = async () => {
-    try {
-      setIsLoading(true);
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/stats`, {
-        headers: {
-          Authorization: localStorage.getItem("token") || "",
-        },
-      });
-
-      if (res.ok) {
-        const data = await res.json();
-        setStats(data);
-      }
-    } catch (err) {
-      console.error("Failed to fetch stats", err);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   const greeting = getCompanionMessage(companion, 'greeting');
-  const userName = user?.name || 'Learner';
-  const totalNotes = stats?.totalNotes || 0;
+  const userName = summary?.user?.displayName || user?.name || 'Learner';
+  const totalNotes = summary?.stats?.totalNotes ?? 0;
+  const currentStreak = summary?.streak?.currentStreak ?? (user?.currentStreak ?? 0);
+  const totalXp = summary?.xp?.totalXp ?? (user?.totalXp ?? 0);
+  const levelsCompleted = summary?.stats?.levelsCompleted ?? 0;
+
+  const isLoading = isSummaryLoading && isNotesLoading;
 
   return (
     <div className="p-6 lg:p-8 max-w-6xl mx-auto space-y-8">
-
-      {/* Welcome */}
+      {/* Welcome Banner */}
       <div className="cartoon-card flex flex-col lg:flex-row items-center gap-6">
         <CompanionAvatar size="xl" showBubble message={greeting} />
 
@@ -70,7 +68,9 @@ export function HomeDashboard({ onStartLearning }: Props) {
             Welcome back, {userName}! 🎉
           </h1>
           <p className="text-lg text-muted-foreground mb-4">
-            Keep up the awesome learning streak — let's make progress today! 🚀
+            {currentStreak > 0
+              ? `You are on a ${currentStreak}-day learning streak! Let's conquer new levels today! 🚀`
+              : "Start learning today and spark your daily learning streak! 🚀"}
           </p>
 
           <Button
@@ -86,37 +86,42 @@ export function HomeDashboard({ onStartLearning }: Props) {
         </div>
       </div>
 
-      {/* Quick Stats */}
+      {/* Quick Stats Grid with Real Metrics */}
       {isLoading ? (
         <div className="flex justify-center py-8">
-          <Loader2 className="w-6 h-6 animate-spin" />
+          <Loader2 className="w-6 h-6 animate-spin text-primary" />
         </div>
       ) : (
-        <div className="grid grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="cartoon-card text-center">
+            <Flame className="w-6 h-6 mx-auto text-streak mb-2 streak-fire" />
+            <div className="text-3xl font-bold text-foreground">{currentStreak}</div>
+            <div className="text-sm text-muted-foreground">Day Streak</div>
+          </div>
           <div className="cartoon-card text-center">
             <Star className="w-6 h-6 mx-auto text-primary mb-2" />
+            <div className="text-3xl font-bold text-foreground">{totalXp.toLocaleString()}</div>
+            <div className="text-sm text-muted-foreground">Total XP</div>
+          </div>
+          <div className="cartoon-card text-center">
+            <Target className="w-6 h-6 mx-auto text-success mb-2" />
+            <div className="text-3xl font-bold text-foreground">{levelsCompleted}</div>
+            <div className="text-sm text-muted-foreground">Levels Done</div>
+          </div>
+          <div className="cartoon-card text-center">
+            <BookOpen className="w-6 h-6 mx-auto text-accent mb-2" />
             <div className="text-3xl font-bold text-foreground">{totalNotes}</div>
-            <div className="text-sm text-muted-foreground">Notes Created</div>
-          </div>
-          <div className="cartoon-card text-center">
-            <Target className="w-6 h-6 mx-auto text-yellow-500 mb-2" />
-            <div className="text-3xl font-bold text-foreground">{stats?.recentNotes?.length || 0}</div>
-            <div className="text-sm text-muted-foreground">Recent Notes</div>
-          </div>
-          <div className="cartoon-card text-center">
-            <Zap className="w-6 h-6 mx-auto text-orange-500 mb-2" />
-            <div className="text-3xl font-bold text-foreground">Ready!</div>
-            <div className="text-sm text-muted-foreground">All Set</div>
+            <div className="text-sm text-muted-foreground">Notes Saved</div>
           </div>
         </div>
       )}
 
       {/* Recent Notes Preview */}
-      {stats?.recentNotes && stats.recentNotes.length > 0 && (
+      {recentNotes && recentNotes.length > 0 && (
         <div className="cartoon-card">
           <h2 className="text-xl font-bold text-foreground mb-4">📚 Recent Notes</h2>
           <div className="space-y-2">
-            {stats.recentNotes.slice(0, 3).map((note: Note) => (
+            {recentNotes.slice(0, 3).map((note: Note) => (
               <div key={note._id} className="flex items-start gap-3 pb-3 border-b last:border-0">
                 <div className="text-2xl">📝</div>
                 <div className="flex-1">

@@ -12,9 +12,17 @@ const sampleTopics = [
   { id: 3, title: 'Pythagorean Theorem', content: 'The Pythagorean theorem states that in a right-angled triangle, the square of the hypotenuse is equal to the sum of squares of the other two sides. This can be written as a squared plus b squared equals c squared.' },
 ];
 
+interface SpeechNote {
+  id?: string | number;
+  _id?: string;
+  title: string;
+  sections?: Array<{ heading: string; content: string }>;
+  content?: string;
+}
+
 export function TextToSpeech() {
   const audioRef = React.useRef<HTMLAudioElement | null>(null);
-  const progressInterval = React.useRef<any>(null);
+  const progressInterval = React.useRef<ReturnType<typeof setInterval> | null>(null);
   const [text, setText] = useState(() => {
     return localStorage.getItem("listenText") || "";
   });
@@ -25,7 +33,7 @@ export function TextToSpeech() {
   const [progress, setProgress] = useState(0);
   const utteranceRef = useRef<SpeechSynthesisUtterance | null>(null);
 
-  const [myNotes, setMyNotes] = useState<any[]>([]);
+  const [myNotes, setMyNotes] = useState<SpeechNote[]>([]);
 
   React.useEffect(() => {
     const data = localStorage.getItem("listenText");
@@ -33,15 +41,14 @@ export function TextToSpeech() {
   }, []);
 
   React.useEffect(() => {
-    const raw = localStorage.getItem("myNotes");
-    if (raw) {
-      setMyNotes(JSON.parse(raw));
+    try {
+      const raw = localStorage.getItem("myNotes");
+      if (raw) {
+        setMyNotes(JSON.parse(raw));
+      }
+    } catch {
+      setMyNotes([]);
     }
-  }, []);
-
-  React.useEffect(() => {
-    const notes = localStorage.getItem("myNotes");
-    if (notes) setMyNotes(JSON.parse(notes));
   }, []);
 
   React.useEffect(() => {
@@ -103,13 +110,13 @@ export function TextToSpeech() {
           <div className="flex flex-wrap gap-3 max-h-[150px] overflow-y-auto">
             {myNotes.map((note) => (
               <Button
-                key={note.id}
+                key={note.id || note._id || note.title}
                 variant="outline"
                 className="rounded-xl text-left"
                 onClick={() => {
-                  const speech = note.sections
-                    .map(s => `${s.heading}. ${s.content}`)
-                    .join("\n\n");
+                  const speech = (note.sections && note.sections.length > 0)
+                    ? note.sections.map(s => `${s.heading}. ${s.content}`).join("\n\n")
+                    : (note.content || note.title);
 
                   setText(speech);
                 }}

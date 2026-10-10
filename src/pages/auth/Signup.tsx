@@ -43,7 +43,7 @@ const Signup = () => {
 
     try {
       setIsLoading(true);
-      const data = await api.post<{ token: string; user: any }>("/api/auth/signup", {
+      const data = await api.post<{ token: string; user: Record<string, unknown> }>("/api/auth/signup", {
         name,
         email,
         password,

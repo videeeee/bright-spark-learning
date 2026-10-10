@@ -1,24 +1,24 @@
 /**
  * LearnQuest Centralized API Client
- * - Base URL configuration from VITE_API_URL
+ * - Base URL configuration from VITE_API_URL with production fallback
  * - Automatic Authorization: Bearer <token>
  * - Request timeouts with AbortController
  * - Unified typed error handling & 401 token expiration handling
  */
 
-export interface ApiResponse<T = any> {
+export interface ApiResponse<T = unknown> {
   success?: boolean;
   data?: T;
   msg?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export class ApiError extends Error {
   status: number;
-  data: any;
+  data: unknown;
   isColdStart?: boolean;
 
-  constructor(message: string, status: number, data?: any, isColdStart = false) {
+  constructor(message: string, status: number, data?: unknown, isColdStart = false) {
     super(message);
     this.name = "ApiError";
     this.status = status;
@@ -27,7 +27,11 @@ export class ApiError extends Error {
   }
 }
 
-const BASE_URL = (import.meta.env.VITE_API_URL || "http://localhost:5000").replace(/\/$/, "");
+const DEFAULT_PROD_URL = "https://learnquest-xcv9.onrender.com";
+const BASE_URL = (
+  import.meta.env.VITE_API_URL ||
+  (import.meta.env.PROD ? DEFAULT_PROD_URL : "http://localhost:5000")
+).replace(/\/$/, "");
 const DEFAULT_TIMEOUT_MS = 15000;
 
 interface RequestOptions extends RequestInit {
@@ -35,7 +39,7 @@ interface RequestOptions extends RequestInit {
   skipAuth?: boolean;
 }
 
-async function request<T = any>(
+async function request<T = unknown>(
   endpoint: string,
   options: RequestOptions = {}
 ): Promise<T> {
@@ -70,11 +74,10 @@ async function request<T = any>(
     // 401 Unauthorized handling
     if (response.status === 401) {
       localStorage.removeItem("token");
-      // Dispatch an event so contexts/listeners can react without hard window reloads
       window.dispatchEvent(new Event("learnquest:unauthorized"));
     }
 
-    let responseData: any;
+    let responseData: unknown;
     const contentType = response.headers.get("content-type");
     if (contentType && contentType.includes("application/json")) {
       responseData = await response.json();
@@ -83,18 +86,22 @@ async function request<T = any>(
     }
 
     if (!response.ok) {
+      const errorObj = typeof responseData === "object" && responseData !== null ? (responseData as Record<string, unknown>) : null;
       const errorMsg =
-        (typeof responseData === "object" && (responseData?.msg || responseData?.message || responseData?.error)) ||
+        (typeof errorObj?.msg === "string" && errorObj.msg) ||
+        (typeof errorObj?.message === "string" && errorObj.message) ||
+        (typeof errorObj?.error === "string" && errorObj.error) ||
         `Request failed with status ${response.status}`;
 
       throw new ApiError(errorMsg, response.status, responseData);
     }
 
     return responseData as T;
-  } catch (error: any) {
+  } catch (error: unknown) {
     clearTimeout(timeoutId);
 
-    if (error.name === "AbortError") {
+    const err = error as { name?: string; message?: string };
+    if (err?.name === "AbortError") {
       throw new ApiError(
         "Request timed out. The server may be waking up (Render cold-start), please retry.",
         408,
@@ -108,7 +115,7 @@ async function request<T = any>(
     }
 
     throw new ApiError(
-      error.message || "Network error. Please check your connection.",
+      err?.message || "Network error. Please check your connection.",
       0,
       error
     );
@@ -116,26 +123,25 @@ async function request<T = any>(
 }
 
 export const api = {
-  get: <T = any>(endpoint: string, options?: RequestOptions) =>
+  get: <T = unknown>(endpoint: string, options?: RequestOptions) =>
     request<T>(endpoint, { ...options, method: "GET" }),
 
-  post: <T = any>(endpoint: string, body?: any, options?: RequestOptions) =>
+  post: <T = unknown>(endpoint: string, body?: unknown, options?: RequestOptions) =>
     request<T>(endpoint, {
       ...options,
       method: "POST",
       body: body ? JSON.stringify(body) : undefined,
     }),
 
-  put: <T = any>(endpoint: string, body?: any, options?: RequestOptions) =>
+  put: <T = unknown>(endpoint: string, body?: unknown, options?: RequestOptions) =>
     request<T>(endpoint, {
       ...options,
       method: "PUT",
       body: body ? JSON.stringify(body) : undefined,
     }),
 
-  delete: <T = any>(endpoint: string, options?: RequestOptions) =>
+  delete: <T = unknown>(endpoint: string, options?: RequestOptions) =>
     request<T>(endpoint, { ...options, method: "DELETE" }),
 
-  // Base URL helper
   getBaseUrl: () => BASE_URL,
 };

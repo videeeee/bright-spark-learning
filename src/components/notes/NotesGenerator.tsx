@@ -6,6 +6,7 @@ import { CompanionAvatar } from '@/components/companions/CompanionAvatar';
 import { toast } from 'sonner';
 import jsPDF from 'jspdf';
 import PptxGenJS from 'pptxgenjs';
+import { api, ApiError } from '@/lib/api';
 
 type NotesStyle = 'ghibli' | 'doraemon' | 'shinchan' | 'naruto' | 'solin' | 'pyro' | 'aqua' | 'lumi' | 'verdi';
 
@@ -58,26 +59,13 @@ export function NotesGenerator() {
     const token = localStorage.getItem("token") || "";
     if (!token) {
       setIsFetching(false);
-      toast.error("Login required to load notes");
       setSavedNotes([]);
       return;
     }
 
     try {
       setIsFetching(true);
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/notes`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (!res.ok) {
-        const errorBody = await res.text();
-        console.error("Failed to fetch notes", res.status, errorBody);
-        throw new Error(`Failed to fetch notes (${res.status})`);
-      }
-
-      const data = await res.json();
+      const data = await api.get<SavedNote[]>("/api/notes");
       setSavedNotes(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error("Failed to fetch notes", err);
@@ -98,25 +86,11 @@ export function NotesGenerator() {
 
     try {
       setIsGenerating(true);
-
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/notes`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${localStorage.getItem("token")}` || ""
-        },
-        body: JSON.stringify({
-          topic,
-          style: selectedStyle
-        })
+      await api.post<SavedNote>("/api/notes", {
+        topic,
+        style: selectedStyle,
       });
 
-      if (!res.ok) {
-        const err = await res.json();
-        throw new Error(err.msg || "Failed to generate notes");
-      }
-
-      const data = await res.json();
       toast.success("Notes generated successfully! ✨");
       
       // Refetch notes from backend
@@ -131,7 +105,8 @@ export function NotesGenerator() {
       }, 300);
     } catch (err) {
       console.error("AI generation failed", err);
-      toast.error((err as Error).message || "Failed to generate notes");
+      const msg = err instanceof ApiError ? err.message : (err as Error).message || "Failed to generate notes";
+      toast.error(msg);
     } finally {
       setIsGenerating(false);
     }
@@ -145,20 +120,13 @@ export function NotesGenerator() {
     }
 
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/notes/${noteId}`, {
-        method: "DELETE",
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
-
-      if (!res.ok) throw new Error("Failed to delete note");
-
+      await api.delete(`/api/notes/${noteId}`);
       setSavedNotes((s) => s.filter((n) => n._id !== noteId));
       toast.success("Note deleted");
     } catch (err) {
       console.error("Delete error:", err);
-      toast.error("Failed to delete note");
+      const msg = err instanceof ApiError ? err.message : "Failed to delete note";
+      toast.error(msg);
     }
   };
 
@@ -222,7 +190,7 @@ export function NotesGenerator() {
     }
   };
 
-  function renderContent(content: any) {
+  function renderContent(content: unknown) {
     if (typeof content === "string") {
       return <p className="text-sm">{content}</p>;
     }
@@ -236,7 +204,7 @@ export function NotesGenerator() {
     }
 
     if (typeof content === "object" && content !== null) {
-      return Object.entries(content).map(([key, val], i) => (
+      return Object.entries(content as Record<string, unknown>).map(([key, val], i) => (
         <div key={i} className="mt-2 text-sm">
           <strong className="block capitalize">{key.replace(/_/g, " ")}</strong>
           <div className="ml-4">{renderContent(val)}</div>

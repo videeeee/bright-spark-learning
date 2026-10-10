@@ -1,10 +1,16 @@
-const User = require("../models/User");
+const { getLeaderboardData } = require("../services/progress.service");
 
-exports.getLeaderboard = async (req, res) => {
-  const users = await User.find()
-    .sort({ xp: -1 })
-    .limit(10)
-    .select("name xp");
+exports.getLeaderboard = async (req, res, next) => {
+  try {
+    const userId = req.user?.id || req.userId;
+    const data = await getLeaderboardData(userId);
 
-  res.json(users);
+    // Return structured object with array property
+    res.json({
+      success: true,
+      ...data,
+    });
+  } catch (err) {
+    next(err);
+  }
 };

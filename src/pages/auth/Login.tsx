@@ -31,7 +31,7 @@ const Login = () => {
 
     try {
       setIsLoading(true);
-      const data = await api.post<{ token: string; user: any }>("/api/auth/login", {
+      const data = await api.post<{ token: string; user: Record<string, unknown> }>("/api/auth/login", {
         email,
         password,
       });

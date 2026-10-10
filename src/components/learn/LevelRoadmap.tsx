@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { CompanionAvatar } from '@/components/companions/CompanionAvatar';
 import { useTheme } from '@/contexts/ThemeContext';
 import { useUser } from '@/contexts/UserContext';
+import { useQueryClient } from '@tanstack/react-query';
+import { api } from '@/lib/api';
 
 interface Level {
   id: number;
@@ -105,6 +107,7 @@ export function LevelRoadmap() {
   const [weakTopics, setWeakTopics] = useState<Array<{ subject: string; chapter: number; level: number; topic: string }>>([]);
   const { companion } = useTheme();
   const { user } = useUser();
+  const queryClient = useQueryClient();
   const [celebration, setCelebration] = useState<{ levelId: number; show: boolean } | null>(null);
 
   useEffect(() => {
@@ -126,16 +129,9 @@ export function LevelRoadmap() {
       if (!token) return;
 
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/api/progress/mine`, {
-          headers: { Authorization: token },
-        });
-
-        if (!res.ok) {
-          console.error('Failed to load progress', res.statusText);
-          return;
-        }
-
-        const data: Array<{ subject: string; chapterNumber: number; levelNumber: number }> = await res.json();
+        const data = await api.get<Array<{ subject: string; chapterNumber: number; levelNumber: number }>>(
+          '/api/progress/my-progress'
+        );
 
         setSubjects((prev) => {
           const copy = JSON.parse(JSON.stringify(prev)) as Subject[];
@@ -281,20 +277,21 @@ export function LevelRoadmap() {
 
       setMessage("🎉 Correct! You’ve unlocked the next level!");
 
-
-      await fetch(`${import.meta.env.VITE_API_URL}/api/progress/complete-level`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: localStorage.getItem("token") || ""
-        },
-        body: JSON.stringify({
+      try {
+        await api.post("/api/progress/complete-level", {
           subject: selectedSubject.name,
           chapterNumber: selectedChapter.id,
           levelNumber: selectedLevel.id,
-          score: 100
-        })
-      });
+          score: 100,
+        });
+
+        // Instantly invalidate progress and leaderboard caches so sidebar, home, stats update immediately
+        queryClient.invalidateQueries({ queryKey: ["progress"] });
+        queryClient.invalidateQueries({ queryKey: ["leaderboard"] });
+        queryClient.invalidateQueries({ queryKey: ["stats"] });
+      } catch (err) {
+        console.error("Failed to complete level on server:", err);
+      }
       setSubjects((prev) => {
         const copy = JSON.parse(JSON.stringify(prev)) as Subject[];
         const sIdx = copy.findIndex((s) => s.id === subject.id);
