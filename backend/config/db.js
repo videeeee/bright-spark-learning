@@ -2,11 +2,13 @@ const mongoose = require("mongoose");
 const dns = require("dns");
 const env = require("./env");
 
-// Ensure mongodb+srv SRV records resolve reliably across Windows and restrictive local DNS resolvers
-try {
-  dns.setServers(["8.8.8.8", "1.1.1.1"]);
-} catch {
-  // Ignore if restricted
+// Optional local DNS resolver override (off by default; activate locally only if ENABLE_CUSTOM_DNS=true)
+if (process.env.ENABLE_CUSTOM_DNS === "true") {
+  try {
+    dns.setServers(["8.8.8.8", "1.1.1.1"]);
+  } catch {
+    // Ignore fallback error
+  }
 }
 
 // Utility to mask credentials in connection URI for safe logging

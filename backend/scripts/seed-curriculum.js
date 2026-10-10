@@ -4,11 +4,13 @@ const dns = require("dns");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
-// Fix DNS SRV lookup on Windows
-try {
-  dns.setServers(["8.8.8.8", "1.1.1.1"]);
-} catch (e) {
-  // Ignore fallback error
+// Optional local DNS resolver override (off by default; activate locally only if ENABLE_CUSTOM_DNS=true)
+if (process.env.ENABLE_CUSTOM_DNS === "true") {
+  try {
+    dns.setServers(["8.8.8.8", "1.1.1.1"]);
+  } catch {
+    // Ignore fallback error
+  }
 }
 
 dotenv.config({ path: path.resolve(__dirname, "../.env") });
