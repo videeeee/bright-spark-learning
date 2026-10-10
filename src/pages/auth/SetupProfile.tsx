@@ -20,6 +20,7 @@ import {
 } from "@/lib/subjectMapping";
 import { cn } from "@/lib/utils";
 import { useUser } from "@/contexts/UserContext";
+import { api } from "@/lib/api";
 
 export default function SetupProfile() {
   const navigate = useNavigate();
@@ -52,28 +53,12 @@ export default function SetupProfile() {
         return;
       }
 
-      const res = await fetch(
-        `${import.meta.env.VITE_API_URL}/api/auth/profile-setup`,
-        {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: token,
-          },
-          body: JSON.stringify({
-            classLevel,
-            curriculum,
-            subjects,
-          }),
-        }
-      );
+      await api.put("/api/auth/profile-setup", {
+        classLevel,
+        curriculum,
+        subjects,
+      });
 
-      if (!res.ok) {
-        const errorText = await res.text();
-        throw new Error(`Failed to save profile (${res.status}): ${errorText}`);
-      }
-
-      await res.json();
       await fetchUserProfile();
       toast.success("Profile setup complete!");
       navigate("/dashboard", { replace: true });

@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Loader2 } from "lucide-react";
 import { toast } from "sonner";
 import { useUser } from "@/contexts/UserContext";
+import { api, ApiError } from "@/lib/api";
 
 const Signup = () => {
   const [name, setName] = useState("");
@@ -42,20 +43,11 @@ const Signup = () => {
 
     try {
       setIsLoading(true);
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/signup`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ name, email, password }),
+      const data = await api.post<{ token: string; user: any }>("/api/auth/signup", {
+        name,
+        email,
+        password,
       });
-
-      const data = await res.json();
-
-      if (!res.ok) {
-        toast.error(data.msg || "Signup failed");
-        return;
-      }
 
       localStorage.setItem("token", data.token);
       await fetchUserProfile();
@@ -63,7 +55,8 @@ const Signup = () => {
       navigate("/dashboard", { replace: true });
     } catch (err) {
       console.error("Signup error:", err);
-      toast.error("Network error. Please try again.");
+      const msg = err instanceof ApiError ? err.message : "Network error. Please try again.";
+      toast.error(msg);
     } finally {
       setIsLoading(false);
     }
@@ -126,11 +119,7 @@ const Signup = () => {
               />
             </div>
 
-            <Button 
-              type="submit" 
-              className="w-full" 
-              disabled={isLoading}
-            >
+            <Button type="submit" className="w-full" disabled={isLoading}>
               {isLoading ? (
                 <>
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" />
