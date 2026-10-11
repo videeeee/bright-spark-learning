@@ -208,9 +208,9 @@ Return ONLY JSON:
       ...aiResponse
     });
   } catch (err) {
-    console.error("LEVEL AI ERROR:", err);
-    res.status(500).json({
-      error: "Failed to generate level content"
+    console.error("LEVEL AI ERROR:", err.message);
+    res.status(503).json({
+      msg: "Level content generator is temporarily unavailable. Please try again shortly."
     });
   }
 };

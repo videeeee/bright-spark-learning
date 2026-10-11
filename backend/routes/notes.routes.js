@@ -58,6 +58,12 @@ Use 4–6 sections. Add the style preference: "${style || "clear"}".
 DO NOT include anything outside this JSON.
 `;
 
+    if (!process.env.GEMINI_API_KEY && !process.env.OPENAI_API_KEY) {
+      return res.status(503).json({
+        msg: "AI notes generator is temporarily unavailable. Please try again shortly.",
+      });
+    }
+
     let aiData = null;
     let source = "unknown";
 
@@ -145,9 +151,8 @@ DO NOT include anything outside this JSON.
         }
       } catch (openaiError) {
         console.error("❌ Both Gemini and OpenAI failed:", openaiError.message);
-        return res.status(500).json({
-          msg: "AI generation failed - both Gemini and OpenAI unavailable",
-          error: openaiError.message
+        return res.status(503).json({
+          msg: "AI notes generator is temporarily unavailable. Please try again shortly.",
         });
       }
     }
