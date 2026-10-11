@@ -32,7 +32,7 @@
                 "Properties of rational numbers"
               ],
               "isReviewLevel": false,
-              "status": "draft",
+              "status": "published",
               "lesson": {
                 "title": "Mastering Rational Numbers & Decimal Conversions",
                 "intro": "A rational number is any number that can be expressed in the form p/q, where p and q are integers and q != 0. Every rational number has either a terminating decimal expansion or a non-terminating recurring (repeating) decimal expansion.",
@@ -187,6 +187,74 @@
                   "difficulty": "hard",
                   "topicTag": "Mixed Recurring Decimals",
                   "verificationStatus": "rule_checked"
+                },
+                {
+                  "id": "icse-9-math-q1-9",
+                  "type": "mcq",
+                  "prompt": "Express the recurring decimal $0.\\overline{6}$ as a rational number in simplest form $\\frac{p}{q}$.",
+                  "options": [
+                    "$\\frac{2}{3}$",
+                    "$\\frac{7}{10}$",
+                    "$\\frac{3}{5}$",
+                    "$\\frac{6}{99}$"
+                  ],
+                  "correctAnswer": "$\\frac{2}{3}$",
+                  "explanation": "Let $x = 0.666\\dots$ Multiplying by 10 gives $10x = 6.666\\dots$ Subtracting gives $9x = 6 \\implies x = \\frac{6}{9} = \\frac{2}{3}$.",
+                  "hint": "Multiply by 10, subtract the original equation, and reduce the fraction to simplest form.",
+                  "difficulty": "easy",
+                  "topicTag": "Recurring Decimals",
+                  "verificationStatus": "cross_verified"
+                },
+                {
+                  "id": "icse-9-math-q1-10",
+                  "type": "mcq",
+                  "prompt": "Without actual division, which of the following rational numbers has a terminating decimal expansion?",
+                  "options": [
+                    "$\\frac{23}{200}$",
+                    "$\\frac{7}{45}$",
+                    "$\\frac{19}{70}$",
+                    "$\\frac{13}{60}$"
+                  ],
+                  "correctAnswer": "$\\frac{23}{200}$",
+                  "explanation": "The denominator $200 = 2^3 \\times 5^2$. Since its prime factors are exclusively 2 and 5, $\\frac{23}{200}$ terminates.",
+                  "hint": "Factorise 200 into prime factors: $200 = 8 \\times 25 = 2^3 \\times 5^2$.",
+                  "difficulty": "medium",
+                  "topicTag": "Terminating Decimals",
+                  "verificationStatus": "cross_verified"
+                },
+                {
+                  "id": "icse-9-math-q1-11",
+                  "type": "mcq",
+                  "prompt": "Express $0.1\\overline{6}$ as a rational number $\\frac{p}{q}$ in lowest terms.",
+                  "options": [
+                    "$\\frac{1}{6}$",
+                    "$\\frac{16}{99}$",
+                    "$\\frac{8}{45}$",
+                    "$\\frac{1}{5}$"
+                  ],
+                  "correctAnswer": "$\\frac{1}{6}$",
+                  "explanation": "Let $x = 0.1666\\dots$ $10x = 1.666\\dots$ and $100x = 16.666\\dots$ $100x - 10x = 15 \\implies 90x = 15 \\implies x = \\frac{15}{90} = \\frac{1}{6}$.",
+                  "hint": "$100x - 10x = 15$. Divide 15 by 90 and simplify.",
+                  "difficulty": "medium",
+                  "topicTag": "Mixed Recurring Decimals",
+                  "verificationStatus": "cross_verified"
+                },
+                {
+                  "id": "icse-9-math-q1-12",
+                  "type": "mcq",
+                  "prompt": "Convert the recurring decimal $0.\\overline{123}$ into simplest rational form $\\frac{p}{q}$.",
+                  "options": [
+                    "$\\frac{41}{333}$",
+                    "$\\frac{123}{1000}$",
+                    "$\\frac{41}{300}$",
+                    "$\\frac{123}{990}$"
+                  ],
+                  "correctAnswer": "$\\frac{41}{333}$",
+                  "explanation": "Let $x = 0.\\overline{123}$. Since 3 digits repeat, $1000x - x = 123 \\implies 999x = 123 \\implies x = \\frac{123}{999} = \\frac{41}{333}$.",
+                  "hint": "Divide both 123 and 999 by 3.",
+                  "difficulty": "hard",
+                  "topicTag": "Recurring Decimals",
+                  "verificationStatus": "cross_verified"
                 }
               ],
               "verifiedWith": "openai/gpt-oss-120b+qwen/qwen3.8-27b"
