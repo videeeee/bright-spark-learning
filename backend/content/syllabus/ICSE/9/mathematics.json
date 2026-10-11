@@ -26,7 +26,11 @@
               "levelNumber": 1,
               "title": "Rational Numbers & Decimals",
               "description": "Understanding terminating and non-terminating recurring decimals in p/q form.",
-              "subtopics": ["Definition of rational numbers", "Converting recurring decimals to p/q", "Properties of rational numbers"],
+              "subtopics": [
+                "Definition of rational numbers",
+                "Converting recurring decimals to p/q",
+                "Properties of rational numbers"
+              ],
               "isReviewLevel": false,
               "status": "published",
               "lesson": {
@@ -68,11 +72,16 @@
                 {
                   "id": "icse-9-math-q1-1",
                   "type": "mcq",
-                  "prompt": "What is the simplest fractional form p/q of the recurring decimal 0.bar(4)?",
-                  "options": ["4/9", "4/10", "2/5", "4/99"],
-                  "correctAnswer": "4/9",
-                  "explanation": "Let x = 0.444... Multiplying by 10 gives 10x = 4.444... Subtracting gives 9x = 4, so x = 4/9.",
-                  "hint": "Set x = 0.444... and multiply by 10 to shift the decimal by one repeating period.",
+                  "prompt": "What is the simplest fractional form $\\frac{p}{q}$ of the recurring decimal $0.\\overline{4}$?",
+                  "options": [
+                    "$\\frac{4}{9}$",
+                    "$\\frac{2}{5}$",
+                    "$\\frac{4}{99}$",
+                    "$\\frac{5}{9}$"
+                  ],
+                  "correctAnswer": "$\\frac{4}{9}$",
+                  "explanation": "Let $x = 0.444\\dots$ Multiplying by 10 gives $10x = 4.444\\dots$ Subtracting gives $9x = 4$, so $x = \\frac{4}{9}$.",
+                  "hint": "Set $x = 0.\\overline{4}$ and multiply by 10 to shift the decimal by one repeating period.",
                   "difficulty": "easy",
                   "topicTag": "Recurring Decimals"
                 },
@@ -80,9 +89,14 @@
                   "id": "icse-9-math-q1-2",
                   "type": "mcq",
                   "prompt": "Without actual division, which of the following fractions represents a terminating decimal?",
-                  "options": ["7/75", "11/24", "17/125", "13/30"],
-                  "correctAnswer": "17/125",
-                  "explanation": "125 = 5^3. Since the prime factorisation contains only 5 (of the form 2^m * 5^n), 17/125 terminates. 75 has factor 3, 24 has 3, and 30 has 3.",
+                  "options": [
+                    "$\\frac{7}{75}$",
+                    "$\\frac{11}{24}$",
+                    "$\\frac{17}{125}$",
+                    "$\\frac{13}{30}$"
+                  ],
+                  "correctAnswer": "$\\frac{17}{125}$",
+                  "explanation": "$125 = 5^3$. Since the prime factorisation contains only 5 (of the form $2^m \\times 5^n$), $\\frac{17}{125}$ terminates.",
                   "hint": "Check the prime factors of each denominator. A fraction terminates only if the prime factors are strictly 2 and/or 5.",
                   "difficulty": "medium",
                   "topicTag": "Terminating Decimals"
@@ -90,11 +104,16 @@
                 {
                   "id": "icse-9-math-q1-3",
                   "type": "mcq",
-                  "prompt": "Convert the mixed recurring decimal 0.1bar(6) into simplest fractional form p/q.",
-                  "options": ["1/6", "16/99", "16/90", "1/5"],
-                  "correctAnswer": "1/6",
-                  "explanation": "Let x = 0.1666... Then 10x = 1.666... and 100x = 16.666... Subtracting gives 90x = 15 => x = 15/90 = 1/6.",
-                  "hint": "Multiply by 10 to bring the non-repeating digit before the decimal point, then by 100 to shift one repeating digit.",
+                  "prompt": "Convert the mixed recurring decimal $0.1\\overline{6}$ into simplest fractional form $\\frac{p}{q}$.",
+                  "options": [
+                    "$\\frac{1}{6}$",
+                    "$\\frac{16}{99}$",
+                    "$\\frac{1}{5}$",
+                    "$\\frac{5}{36}$"
+                  ],
+                  "correctAnswer": "$\\frac{1}{6}$",
+                  "explanation": "Let $x = 0.1666\\dots$ Then $10x = 1.666\\dots$ and $100x = 16.666\\dots$ Subtracting gives $90x = 15 \\implies x = \\frac{15}{90} = \\frac{1}{6}$.",
+                  "hint": "Multiply by 10 to isolate the non-repeating digit, then by 100 to shift one repeating digit.",
                   "difficulty": "medium",
                   "topicTag": "Mixed Recurring Decimals"
                 },
@@ -102,9 +121,14 @@
                   "id": "icse-9-math-q1-4",
                   "type": "mcq",
                   "prompt": "Which of the following numbers is an irrational number?",
-                  "options": ["sqrt(144)", "0.375", "sqrt(20)", "3.141414... (3.bar(14))"],
-                  "correctAnswer": "sqrt(20)",
-                  "explanation": "sqrt(20) = 2*sqrt(5). Since 5 is not a perfect square, sqrt(5) is non-terminating and non-recurring (irrational). sqrt(144) = 12, 0.375 is terminating, and 3.bar(14) is recurring.",
+                  "options": [
+                    "$\\sqrt{144}$",
+                    "$0.375$",
+                    "$\\sqrt{20}$",
+                    "$3.\\overline{14}$"
+                  ],
+                  "correctAnswer": "$\\sqrt{20}$",
+                  "explanation": "$\\sqrt{20} = 2\\sqrt{5}$. Since 5 is not a perfect square, $\\sqrt{20}$ is non-terminating and non-recurring (irrational).",
                   "hint": "Look for a square root whose radicand is not a perfect square.",
                   "difficulty": "easy",
                   "topicTag": "Classification of Real Numbers"
@@ -112,13 +136,66 @@
                 {
                   "id": "icse-9-math-q1-5",
                   "type": "mcq",
-                  "prompt": "Express 1.bar(27) in the form p/q in lowest terms.",
-                  "options": ["14/11", "127/99", "126/99", "13/11"],
-                  "correctAnswer": "14/11",
-                  "explanation": "Let x = 1.2727... 100x = 127.2727... 100x - x = 127 - 1 = 126 => 99x = 126 => x = 126/99 = 14/11.",
-                  "hint": "100x - x = 126. Then divide 126 and 99 by their common factor 9.",
+                  "prompt": "Express $1.\\overline{27}$ in the form $\\frac{p}{q}$ in lowest terms.",
+                  "options": [
+                    "$\\frac{14}{11}$",
+                    "$\\frac{127}{99}$",
+                    "$\\frac{13}{11}$",
+                    "$\\frac{15}{11}$"
+                  ],
+                  "correctAnswer": "$\\frac{14}{11}$",
+                  "explanation": "Let $x = 1.\\overline{27}$. $100x = 127.\\overline{27}$. $100x - x = 126 \\implies 99x = 126 \\implies x = \\frac{126}{99} = \\frac{14}{11}$.",
+                  "hint": "$100x - x = 126$. Then divide 126 and 99 by their common factor 9.",
                   "difficulty": "hard",
                   "topicTag": "Recurring Decimals"
+                },
+                {
+                  "id": "icse-9-math-q1-6",
+                  "type": "mcq",
+                  "prompt": "Express $0.\\overline{58}$ in simplest rational form $\\frac{p}{q}$.",
+                  "options": [
+                    "$\\frac{58}{99}$",
+                    "$\\frac{29}{50}$",
+                    "$\\frac{58}{100}$",
+                    "$\\frac{19}{33}$"
+                  ],
+                  "correctAnswer": "$\\frac{58}{99}$",
+                  "explanation": "Let $x = 0.\\overline{58}$. Multiplying by 100 gives $100x = 58.\\overline{58}$. Subtracting gives $99x = 58 \\implies x = \\frac{58}{99}$. 58 and 99 have no common factors.",
+                  "hint": "Two repeating digits means multiplying by 100 and dividing by 99.",
+                  "difficulty": "medium",
+                  "topicTag": "Recurring Decimals"
+                },
+                {
+                  "id": "icse-9-math-q1-7",
+                  "type": "mcq",
+                  "prompt": "Which of the following statements about rational and irrational numbers is TRUE?",
+                  "options": [
+                    "The sum of two irrational numbers is always irrational",
+                    "The product of a non-zero rational number and an irrational number is always irrational",
+                    "Every real number is a rational number",
+                    "$\\sqrt{9}$ is an irrational number"
+                  ],
+                  "correctAnswer": "The product of a non-zero rational number and an irrational number is always irrational",
+                  "explanation": "If $r \\neq 0$ is rational and $x$ is irrational, then $r \\times x$ is irrational (if it were rational $s$, then $x = s/r$ would be rational, a contradiction). The sum of $\\sqrt{2}$ and $-\\sqrt{2}$ is 0 (rational).",
+                  "hint": "Consider multiplying a rational fraction by an irrational radical.",
+                  "difficulty": "hard",
+                  "topicTag": "Properties of Real Numbers"
+                },
+                {
+                  "id": "icse-9-math-q1-8",
+                  "type": "mcq",
+                  "prompt": "Convert $0.2\\overline{35}$ into the simplest fractional form $\\frac{p}{q}$.",
+                  "options": [
+                    "$\\frac{233}{990}$",
+                    "$\\frac{235}{990}$",
+                    "$\\frac{233}{999}$",
+                    "$\\frac{116}{495}$"
+                  ],
+                  "correctAnswer": "$\\frac{233}{990}$",
+                  "explanation": "Let $x = 0.23535\\dots$ $10x = 2.\\overline{35}$ and $1000x = 235.\\overline{35}$. $1000x - 10x = 235 - 2 = 233 \\implies 990x = 233 \\implies x = \\frac{233}{990}$.",
+                  "hint": "$1000x - 10x = 235 - 2$. Then solve for $x$.",
+                  "difficulty": "hard",
+                  "topicTag": "Mixed Recurring Decimals"
                 }
               ]
             },
@@ -127,7 +204,11 @@
               "levelNumber": 2,
               "title": "Irrational Numbers & Surds",
               "description": "Proof of irrationality for square roots and identifying surds.",
-              "subtopics": ["Concept of irrational numbers", "Proof that sqrt(2) and sqrt(3) are irrational", "Simplification of surds"],
+              "subtopics": [
+                "Concept of irrational numbers",
+                "Proof that sqrt(2) and sqrt(3) are irrational",
+                "Simplification of surds"
+              ],
               "isReviewLevel": false,
               "status": "published",
               "lesson": {
@@ -164,7 +245,12 @@
                   "id": "icse-9-math-q2-1",
                   "type": "mcq",
                   "prompt": "What is the simplified form of sqrt(180)?",
-                  "options": ["6*sqrt(5)", "5*sqrt(6)", "3*sqrt(20)", "12*sqrt(5)"],
+                  "options": [
+                    "6*sqrt(5)",
+                    "5*sqrt(6)",
+                    "3*sqrt(20)",
+                    "12*sqrt(5)"
+                  ],
                   "correctAnswer": "6*sqrt(5)",
                   "explanation": "180 = 36 * 5. sqrt(180) = sqrt(36) * sqrt(5) = 6*sqrt(5).",
                   "hint": "Find the largest perfect square divisor of 180 (hint: 36 * 5 = 180).",
@@ -175,7 +261,12 @@
                   "id": "icse-9-math-q2-2",
                   "type": "mcq",
                   "prompt": "Which of the following is NOT a surd?",
-                  "options": ["cbrt(27)", "sqrt(24)", "sqrt(45)", "cbrt(16)"],
+                  "options": [
+                    "cbrt(27)",
+                    "sqrt(24)",
+                    "sqrt(45)",
+                    "cbrt(16)"
+                  ],
                   "correctAnswer": "cbrt(27)",
                   "explanation": "cbrt(27) = 3, which is an integer and rational number. Therefore, cbrt(27) is not a surd.",
                   "hint": "Check which radical evaluates to an exact integer/rational value.",
@@ -186,7 +277,12 @@
                   "id": "icse-9-math-q2-3",
                   "type": "mcq",
                   "prompt": "Evaluate: sqrt(48) - sqrt(27) + sqrt(75).",
-                  "options": ["6*sqrt(3)", "4*sqrt(3)", "5*sqrt(3)", "7*sqrt(3)"],
+                  "options": [
+                    "6*sqrt(3)",
+                    "4*sqrt(3)",
+                    "5*sqrt(3)",
+                    "7*sqrt(3)"
+                  ],
                   "correctAnswer": "6*sqrt(3)",
                   "explanation": "sqrt(48) = 4*sqrt(3); sqrt(27) = 3*sqrt(3); sqrt(75) = 5*sqrt(3). Total = (4 - 3 + 5)*sqrt(3) = 6*sqrt(3).",
                   "hint": "Convert each term to a multiple of sqrt(3).",
@@ -200,7 +296,11 @@
               "levelNumber": 3,
               "title": "Rationalisation of Denominators",
               "description": "Conjugate surds and rationalising expressions of the form a / (b + sqrt(c)).",
-              "subtopics": ["Conjugate of binomial surds", "Rationalising denominators", "Evaluation of algebraic surd expressions"],
+              "subtopics": [
+                "Conjugate of binomial surds",
+                "Rationalising denominators",
+                "Evaluation of algebraic surd expressions"
+              ],
               "isReviewLevel": false,
               "status": "published",
               "lesson": {
@@ -233,7 +333,12 @@
                   "id": "icse-9-math-q3-1",
                   "type": "mcq",
                   "prompt": "What is the rationalising factor (conjugate) of (3 - 2*sqrt(2))?",
-                  "options": ["3 + 2*sqrt(2)", "3 - 2*sqrt(2)", "-3 - 2*sqrt(2)", "sqrt(2)"],
+                  "options": [
+                    "3 + 2*sqrt(2)",
+                    "3 - 2*sqrt(2)",
+                    "-3 - 2*sqrt(2)",
+                    "sqrt(2)"
+                  ],
                   "correctAnswer": "3 + 2*sqrt(2)",
                   "explanation": "The conjugate of (a - b*sqrt(c)) is (a + b*sqrt(c)). Multiplying gives 3^2 - (2*sqrt(2))^2 = 9 - 8 = 1, a rational number.",
                   "hint": "Invert the sign between the rational part and the radical part.",
@@ -244,7 +349,12 @@
                   "id": "icse-9-math-q3-2",
                   "type": "mcq",
                   "prompt": "Rationalise the denominator of 1 / (sqrt(7) + sqrt(5)).",
-                  "options": ["(sqrt(7) - sqrt(5)) / 2", "(sqrt(7) + sqrt(5)) / 2", "sqrt(7) - sqrt(5)", "(sqrt(7) - sqrt(5)) / 12"],
+                  "options": [
+                    "(sqrt(7) - sqrt(5)) / 2",
+                    "(sqrt(7) + sqrt(5)) / 2",
+                    "sqrt(7) - sqrt(5)",
+                    "(sqrt(7) - sqrt(5)) / 12"
+                  ],
                   "correctAnswer": "(sqrt(7) - sqrt(5)) / 2",
                   "explanation": "Multiply numerator and denominator by (sqrt(7) - sqrt(5)). Denominator becomes (sqrt(7))^2 - (sqrt(5))^2 = 7 - 5 = 2.",
                   "hint": "Multiply numerator and denominator by (sqrt(7) - sqrt(5)) and use a^2 - b^2 in denominator.",
@@ -255,7 +365,12 @@
                   "id": "icse-9-math-q3-3",
                   "type": "mcq",
                   "prompt": "If x = 3 + 2*sqrt(2), what is the value of x + 1/x?",
-                  "options": ["6", "4*sqrt(2)", "8", "3*sqrt(2)"],
+                  "options": [
+                    "6",
+                    "4*sqrt(2)",
+                    "8",
+                    "3*sqrt(2)"
+                  ],
                   "correctAnswer": "6",
                   "explanation": "1/x = 1 / (3 + 2*sqrt(2)) = 3 - 2*sqrt(2). Therefore, x + 1/x = (3 + 2*sqrt(2)) + (3 - 2*sqrt(2)) = 6.",
                   "hint": "Rationalise 1/x first. Notice that 3^2 - (2*sqrt(2))^2 = 9 - 8 = 1.",
@@ -269,7 +384,10 @@
               "levelNumber": 4,
               "title": "Chapter 1 Review & Challenge",
               "description": "Comprehensive review of Real Numbers, surds, and proof techniques.",
-              "subtopics": ["Mixed problem solving", "ICSE past year question patterns"],
+              "subtopics": [
+                "Mixed problem solving",
+                "ICSE past year question patterns"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -292,7 +410,10 @@
               "levelNumber": 1,
               "title": "Compound Interest without Formula",
               "description": "Calculating year-by-year simple interest to understand interest accumulation.",
-              "subtopics": ["Year-on-year interest calculation", "Difference between Simple and Compound Interest"],
+              "subtopics": [
+                "Year-on-year interest calculation",
+                "Difference between Simple and Compound Interest"
+              ],
               "isReviewLevel": false,
               "status": "published",
               "lesson": {
@@ -325,7 +446,12 @@
                   "id": "icse-9-math-ci-1",
                   "type": "mcq",
                   "prompt": "For a principal P invested for 1 year compounded annually, how does Compound Interest compare to Simple Interest?",
-                  "options": ["CI is equal to SI", "CI is greater than SI", "CI is less than SI", "CI is double the SI"],
+                  "options": [
+                    "CI is equal to SI",
+                    "CI is greater than SI",
+                    "CI is less than SI",
+                    "CI is double the SI"
+                  ],
                   "correctAnswer": "CI is equal to SI",
                   "explanation": "In the first compounding period, no prior interest has accrued to be compounded, so CI = SI = (P * R * 1)/100.",
                   "hint": "Think about what is added to principal at the start of year 1.",
@@ -336,7 +462,12 @@
                   "id": "icse-9-math-ci-2",
                   "type": "mcq",
                   "prompt": "Find the compound interest on Rs 5,000 for 2 years at 8% per annum compounded annually without using formula.",
-                  "options": ["Rs 832", "Rs 800", "Rs 864", "Rs 5,832"],
+                  "options": [
+                    "Rs 832",
+                    "Rs 800",
+                    "Rs 864",
+                    "Rs 5,832"
+                  ],
                   "correctAnswer": "Rs 832",
                   "explanation": "Year 1: I_1 = (5000*8*1)/100 = Rs 400. P_2 = 5400. Year 2: I_2 = (5400*8*1)/100 = Rs 432. Total CI = 400 + 432 = Rs 832.",
                   "hint": "Calculate Year 1 interest (Rs 400), add it to Rs 5000, then find 8% of the new principal.",
@@ -347,7 +478,12 @@
                   "id": "icse-9-math-ci-3",
                   "type": "mcq",
                   "prompt": "What is the difference between CI and SI on Rs 10,000 for 2 years at 5% per annum?",
-                  "options": ["Rs 25", "Rs 50", "Rs 10", "Rs 100"],
+                  "options": [
+                    "Rs 25",
+                    "Rs 50",
+                    "Rs 10",
+                    "Rs 100"
+                  ],
                   "correctAnswer": "Rs 25",
                   "explanation": "SI for 2 years = (10000*5*2)/100 = Rs 1,000. For CI: I_1 = Rs 500. P_2 = 10,500. I_2 = (10500*5)/100 = Rs 525. Total CI = 1025. Difference = 1025 - 1000 = Rs 25.",
                   "hint": "Difference for 2 years is interest on the first year's interest: 5% of Rs 500.",
@@ -361,7 +497,11 @@
               "levelNumber": 2,
               "title": "Compound Interest Formula & Rates",
               "description": "Using A = P(1 + r/100)^n for annual, half-yearly compounding and varying rates.",
-              "subtopics": ["Standard CI formula", "Semi-annual compounding", "Different rates for consecutive years"],
+              "subtopics": [
+                "Standard CI formula",
+                "Semi-annual compounding",
+                "Different rates for consecutive years"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -370,7 +510,11 @@
               "levelNumber": 3,
               "title": "Population & Depreciation",
               "description": "Applications of growth and decay formulae to population and asset depreciation.",
-              "subtopics": ["Appreciation and growth", "Depreciation of machinery", "Word problems"],
+              "subtopics": [
+                "Appreciation and growth",
+                "Depreciation of machinery",
+                "Word problems"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -379,7 +523,10 @@
               "levelNumber": 4,
               "title": "Chapter 2 Review & Mastery",
               "description": "Comprehensive review of commercial compounding problems.",
-              "subtopics": ["Inverse problems (finding principal, rate, time)", "Exam-style applications"],
+              "subtopics": [
+                "Inverse problems (finding principal, rate, time)",
+                "Exam-style applications"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -402,7 +549,11 @@
               "levelNumber": 1,
               "title": "Basic Algebraic Expansions",
               "description": "Expansions of (a ± b)^2, (a + b + c)^2, and (x + a)(x + b).",
-              "subtopics": ["Quadratic identities", "Three term expansions", "Evaluation without multiplication"],
+              "subtopics": [
+                "Quadratic identities",
+                "Three term expansions",
+                "Evaluation without multiplication"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -411,7 +562,11 @@
               "levelNumber": 2,
               "title": "Cubic Expansions",
               "description": "Expansions of (a ± b)^3 and a^3 ± b^3 conditional identities.",
-              "subtopics": ["Cubic binomials", "Conditional identity when a+b+c=0", "Simplification problems"],
+              "subtopics": [
+                "Cubic binomials",
+                "Conditional identity when a+b+c=0",
+                "Simplification problems"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -420,7 +575,11 @@
               "levelNumber": 3,
               "title": "Factorisation by Splitting the Middle Term",
               "description": "Factoring quadratic trinomials ax^2 + bx + c and grouping terms.",
-              "subtopics": ["Common monomial factors", "Grouping terms", "Middle term splitting"],
+              "subtopics": [
+                "Common monomial factors",
+                "Grouping terms",
+                "Middle term splitting"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -429,7 +588,11 @@
               "levelNumber": 4,
               "title": "Factorisation of Squares and Cubes",
               "description": "Factoring difference of squares a^2 - b^2 and sum/difference of cubes a^3 ± b^3.",
-              "subtopics": ["Difference of two squares", "Sum and difference of cubes", "Combined factorisation"],
+              "subtopics": [
+                "Difference of two squares",
+                "Sum and difference of cubes",
+                "Combined factorisation"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -438,7 +601,10 @@
               "levelNumber": 5,
               "title": "Chapter 3 Review & Challenge",
               "description": "Comprehensive review of expansions and factorisation.",
-              "subtopics": ["Complex multi-step factoring", "ICSE board exam style questions"],
+              "subtopics": [
+                "Complex multi-step factoring",
+                "ICSE board exam style questions"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -455,7 +621,10 @@
               "levelNumber": 1,
               "title": "Method of Elimination & Substitution",
               "description": "Solving simultaneous equations algebraically.",
-              "subtopics": ["Elimination by equating coefficients", "Method of substitution"],
+              "subtopics": [
+                "Elimination by equating coefficients",
+                "Method of substitution"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -464,7 +633,11 @@
               "levelNumber": 2,
               "title": "Equations Reducible to Linear Form",
               "description": "Solving fractional equations by substituting u = 1/x and v = 1/y.",
-              "subtopics": ["Fractional coefficients", "Substitution variables", "Special symmetric systems"],
+              "subtopics": [
+                "Fractional coefficients",
+                "Substitution variables",
+                "Special symmetric systems"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -473,7 +646,11 @@
               "levelNumber": 3,
               "title": "Word Problems & Practical Applications",
               "description": "Translating number problems, age problems, fraction problems, and speed-time problems into linear equations.",
-              "subtopics": ["Number and digit problems", "Age problems", "Speed, distance and time"],
+              "subtopics": [
+                "Number and digit problems",
+                "Age problems",
+                "Speed, distance and time"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -482,7 +659,10 @@
               "levelNumber": 4,
               "title": "Chapter 4 Review & Problem Solving",
               "description": "Mastery of simultaneous equations and application modeling.",
-              "subtopics": ["Mixed problem set", "Board exam style word problems"],
+              "subtopics": [
+                "Mixed problem set",
+                "Board exam style word problems"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -499,7 +679,10 @@
               "levelNumber": 1,
               "title": "Laws of Indices & Fractional Exponents",
               "description": "Product law, quotient law, power of power, negative exponents, and fractional exponents a^(m/n).",
-              "subtopics": ["Laws of indices", "Solving exponential equations a^x = b"],
+              "subtopics": [
+                "Laws of indices",
+                "Solving exponential equations a^x = b"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -508,7 +691,10 @@
               "levelNumber": 2,
               "title": "Introduction to Logarithms",
               "description": "Definition of logarithm as inverse of exponent: y = a^x <=> log_a(y) = x.",
-              "subtopics": ["Exponential to logarithmic form", "Fundamental laws of logarithms"],
+              "subtopics": [
+                "Exponential to logarithmic form",
+                "Fundamental laws of logarithms"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -517,7 +703,10 @@
               "levelNumber": 3,
               "title": "Logarithmic Laws & Expansion",
               "description": "Product rule log(xy) = log x + log y, quotient rule, power rule, and base change formula.",
-              "subtopics": ["Product, quotient, power rules", "Solving logarithmic equations"],
+              "subtopics": [
+                "Product, quotient, power rules",
+                "Solving logarithmic equations"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -526,7 +715,10 @@
               "levelNumber": 4,
               "title": "Chapter 5 Review & Mastery",
               "description": "Review of exponents and logarithms.",
-              "subtopics": ["Challenging indices equations", "Combined logarithmic simplifications"],
+              "subtopics": [
+                "Challenging indices equations",
+                "Combined logarithmic simplifications"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -549,7 +741,10 @@
               "levelNumber": 1,
               "title": "Congruency of Triangles",
               "description": "Understanding and applying SSS, SAS, ASA, and RHS criteria with formal proofs.",
-              "subtopics": ["Congruency conditions", "Corresponding parts of congruent triangles (CPCTC)"],
+              "subtopics": [
+                "Congruency conditions",
+                "Corresponding parts of congruent triangles (CPCTC)"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -558,7 +753,11 @@
               "levelNumber": 2,
               "title": "Mid-point & Intercept Theorem",
               "description": "Line segment joining mid-points of two sides is parallel to the third side and half of it.",
-              "subtopics": ["Mid-point theorem statement and proof", "Converse of mid-point theorem", "Equal intercepts theorem"],
+              "subtopics": [
+                "Mid-point theorem statement and proof",
+                "Converse of mid-point theorem",
+                "Equal intercepts theorem"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -567,7 +766,11 @@
               "levelNumber": 3,
               "title": "Pythagoras Theorem & Applications",
               "description": "In a right-angled triangle, hypotenuse^2 = base^2 + perpendicular^2 and its converse.",
-              "subtopics": ["Pythagoras theorem proof", "Converse of Pythagoras theorem", "Calculations in right triangles and geometric figures"],
+              "subtopics": [
+                "Pythagoras theorem proof",
+                "Converse of Pythagoras theorem",
+                "Calculations in right triangles and geometric figures"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -576,7 +779,10 @@
               "levelNumber": 4,
               "title": "Chapter 6 Review & Geometric Proofs",
               "description": "Review of triangles, mid-point theorem, and Pythagoras applications.",
-              "subtopics": ["Multi-step geometric riders", "ICSE board style proof questions"],
+              "subtopics": [
+                "Multi-step geometric riders",
+                "ICSE board style proof questions"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -593,7 +799,11 @@
               "levelNumber": 1,
               "title": "Area of Triangles & Heron's Formula",
               "description": "Calculating area using 1/2 * base * height and Heron's formula sqrt(s(s-a)(s-b)(s-c)).",
-              "subtopics": ["Standard triangle area", "Heron's formula derivation and application", "Equilateral and isosceles triangles"],
+              "subtopics": [
+                "Standard triangle area",
+                "Heron's formula derivation and application",
+                "Equilateral and isosceles triangles"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -602,7 +812,11 @@
               "levelNumber": 2,
               "title": "Quadrilaterals & Circles",
               "description": "Area and perimeter of rectangles, squares, parallelograms, rhombuses, trapeziums, and circles.",
-              "subtopics": ["Area of trapeziums and rhombuses", "Circumference and area of circle", "Area of circular rings"],
+              "subtopics": [
+                "Area of trapeziums and rhombuses",
+                "Circumference and area of circle",
+                "Area of circular rings"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -611,7 +825,11 @@
               "levelNumber": 3,
               "title": "Surface Area & Volume of Cubes & Cuboids",
               "description": "Total surface area, lateral surface area, volume, and diagonal length of rectangular solids.",
-              "subtopics": ["TSA and LSA of cubes and cuboids", "Volume calculations", "Diagonal length formula sqrt(l^2+b^2+h^2)"],
+              "subtopics": [
+                "TSA and LSA of cubes and cuboids",
+                "Volume calculations",
+                "Diagonal length formula sqrt(l^2+b^2+h^2)"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -620,7 +838,10 @@
               "levelNumber": 4,
               "title": "Chapter 7 Review & Mensuration Challenges",
               "description": "Combined real-world mensuration word problems.",
-              "subtopics": ["Cost of painting/flooring", "Melting and reshaping cuboids"],
+              "subtopics": [
+                "Cost of painting/flooring",
+                "Melting and reshaping cuboids"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -643,7 +864,11 @@
               "levelNumber": 1,
               "title": "Introduction to Trigonometric Ratios",
               "description": "Definitions of sin, cos, tan, cosec, sec, cot as ratios of sides of a right triangle.",
-              "subtopics": ["Opposite, adjacent, hypotenuse sides", "Six trigonometric ratios", "Reciprocal relations"],
+              "subtopics": [
+                "Opposite, adjacent, hypotenuse sides",
+                "Six trigonometric ratios",
+                "Reciprocal relations"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -652,7 +877,11 @@
               "levelNumber": 2,
               "title": "Values for Standard Angles",
               "description": "Trigonometric ratio values at 0°, 30°, 45°, 60°, and 90°.",
-              "subtopics": ["Trigonometry table", "Evaluating algebraic trigonometric expressions", "Simple right triangle solving"],
+              "subtopics": [
+                "Trigonometry table",
+                "Evaluating algebraic trigonometric expressions",
+                "Simple right triangle solving"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -661,7 +890,11 @@
               "levelNumber": 3,
               "title": "Coordinate Geometry Basics",
               "description": "Cartesian coordinate system, quadrants, signs of coordinates, plotting points, and distance from axes.",
-              "subtopics": ["x-axis, y-axis, origin", "Four quadrants", "Plotting points and finding distances"],
+              "subtopics": [
+                "x-axis, y-axis, origin",
+                "Four quadrants",
+                "Plotting points and finding distances"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -670,7 +903,10 @@
               "levelNumber": 4,
               "title": "Chapter 8 Review & Trigonometry Mastery",
               "description": "Review of trigonometric ratios, standard angles, and coordinate plotting.",
-              "subtopics": ["Mixed trigonometry and coordinate problems", "Board exam review"],
+              "subtopics": [
+                "Mixed trigonometry and coordinate problems",
+                "Board exam review"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }

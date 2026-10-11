@@ -157,7 +157,8 @@ async function getSubjectRoadmap(board, classLevel, subject, userId) {
         if (isCompleted) completedLevelsCount++;
 
         const isLocked = !previousLevelPassed;
-        const hasPublishedContent = Array.isArray(lvl.questions) && lvl.questions.length > 0;
+        // Strictly require at least 8 questions to be considered playable/published
+        const hasPublishedContent = Array.isArray(lvl.questions) && lvl.questions.length >= 8;
 
         // Next level unlocks only if this level is passed
         previousLevelPassed = isCompleted;

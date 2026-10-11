@@ -24,6 +24,7 @@ import { useUser } from '@/contexts/UserContext';
 import { useQueryClient } from '@tanstack/react-query';
 import { api, ApiError } from '@/lib/api';
 import { toast } from 'sonner';
+import { MathRenderer } from '@/components/ui/MathRenderer';
 
 // --- Type Definitions ---
 
@@ -458,11 +459,22 @@ export function LevelRoadmap() {
                                   {lvl.title}
                                 </div>
 
-                                {lvl.subtopics && lvl.subtopics.length > 0 && (
-                                  <p className="text-[11px] text-muted-foreground line-clamp-1">
-                                    {lvl.subtopics.join(' • ')}
-                                  </p>
-                                )}
+                                <div className="flex items-center justify-between gap-1 mt-1">
+                                  {lvl.subtopics && lvl.subtopics.length > 0 && (
+                                    <p className="text-[11px] text-muted-foreground line-clamp-1 truncate">
+                                      {lvl.subtopics.join(' • ')}
+                                    </p>
+                                  )}
+                                  <span
+                                    className={`text-[9px] font-extrabold uppercase px-1.5 py-0.5 rounded shrink-0 ${
+                                      lvl.hasPublishedContent
+                                        ? 'bg-emerald-100 text-emerald-800'
+                                        : 'bg-amber-100 text-amber-800'
+                                    }`}
+                                  >
+                                    {lvl.hasPublishedContent ? 'Playable' : 'Coming Soon'}
+                                  </span>
+                                </div>
                               </button>
                             );
                           })}
@@ -533,7 +545,7 @@ export function LevelRoadmap() {
             {activeLevelDetails.lesson.intro && (
               <div className="text-sm text-foreground leading-relaxed bg-blue-50/50 p-4 rounded-xl border border-blue-100">
                 <span className="font-bold block mb-1 text-primary">📘 Concept Overview:</span>
-                {activeLevelDetails.lesson.intro}
+                <MathRenderer content={activeLevelDetails.lesson.intro} />
               </div>
             )}
 
@@ -543,7 +555,9 @@ export function LevelRoadmap() {
                 {activeLevelDetails.lesson.keyConcepts.map((kc, idx) => (
                   <div key={idx} className="p-3.5 bg-muted/40 rounded-xl border">
                     <span className="font-bold text-sm text-foreground block mb-0.5">{kc.title}</span>
-                    <span className="text-xs text-muted-foreground leading-relaxed">{kc.explanation}</span>
+                    <div className="text-xs text-muted-foreground leading-relaxed">
+                      <MathRenderer content={kc.explanation} />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -558,13 +572,16 @@ export function LevelRoadmap() {
             {activeLevelDetails.examples.map((ex, idx) => (
               <Card key={idx} className="p-5 space-y-2 border-2 border-indigo-100">
                 <div className="font-semibold text-sm text-foreground">
-                  <span className="text-primary font-bold">Example {idx + 1}:</span> {ex.problem}
+                  <span className="text-primary font-bold mr-1">Example {idx + 1}:</span>
+                  <MathRenderer content={ex.problem} />
                 </div>
-                <div className="text-xs font-mono bg-muted/60 p-3 rounded-lg text-foreground overflow-x-auto whitespace-pre-wrap">
-                  {ex.solution}
+                <div className="text-xs bg-muted/60 p-3 rounded-lg text-foreground overflow-x-auto whitespace-pre-wrap">
+                  <MathRenderer content={ex.solution} />
                 </div>
                 {ex.explanation && (
-                  <p className="text-xs text-muted-foreground italic">{ex.explanation}</p>
+                  <div className="text-xs text-muted-foreground italic">
+                    <MathRenderer content={ex.explanation} />
+                  </div>
                 )}
               </Card>
             ))}
@@ -626,7 +643,9 @@ export function LevelRoadmap() {
                   <span className="text-xs text-muted-foreground">• {currentQ.topicTag}</span>
                 )}
               </div>
-              <h2 className="text-lg font-bold text-foreground leading-snug">{currentQ.prompt}</h2>
+              <div className="text-lg font-bold text-foreground leading-snug">
+                <MathRenderer content={currentQ.prompt} />
+              </div>
             </div>
 
             {/* Answer Options */}
@@ -644,7 +663,9 @@ export function LevelRoadmap() {
                         : 'border-border hover:border-primary/40 bg-card text-foreground'
                     }`}
                   >
-                    <span className="text-sm">{opt}</span>
+                    <span className="text-sm">
+                      <MathRenderer content={opt} />
+                    </span>
                     {isSelected && (
                       <div className="w-5 h-5 rounded-full bg-primary text-primary-foreground flex items-center justify-center shrink-0">
                         <Check className="w-3.5 h-3.5" />
@@ -661,7 +682,10 @@ export function LevelRoadmap() {
                 {revealedHints[currentQ.id] ? (
                   <div className="p-3 bg-amber-50 border border-amber-200 rounded-xl text-xs text-amber-800 flex items-start gap-2">
                     <Lightbulb className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
-                    <span><strong>Hint:</strong> {currentQ.hint}</span>
+                    <div>
+                      <strong>Hint: </strong>
+                      <MathRenderer content={currentQ.hint} />
+                    </div>
                   </div>
                 ) : (
                   <button
@@ -837,25 +861,28 @@ export function LevelRoadmap() {
               }`}
             >
               <div className="flex items-start justify-between gap-3">
-                <span className="text-sm font-bold text-foreground">
-                  Q{i + 1}. {r.prompt}
-                </span>
+                <div className="text-sm font-bold text-foreground">
+                  <span className="mr-1">Q{i + 1}.</span>
+                  <MathRenderer content={r.prompt} />
+                </div>
                 <Badge className={r.isCorrect ? 'bg-emerald-600 text-white' : 'bg-rose-600 text-white'}>
                   {r.isCorrect ? 'Correct' : 'Incorrect'}
                 </Badge>
               </div>
 
               <div className="text-xs space-y-1">
-                <div>
+                <div className="flex items-baseline gap-1">
                   <span className="font-semibold text-muted-foreground">Your Answer: </span>
                   <span className={r.isCorrect ? 'text-emerald-700 font-bold' : 'text-rose-700 font-bold'}>
-                    {String(r.userChoice || 'Not answered')}
+                    <MathRenderer content={String(r.userChoice || 'Not answered')} />
                   </span>
                 </div>
                 {!r.isCorrect && (
-                  <div>
+                  <div className="flex items-baseline gap-1">
                     <span className="font-semibold text-muted-foreground">Correct Answer: </span>
-                    <span className="text-emerald-700 font-bold">{String(r.correctAnswer)}</span>
+                    <span className="text-emerald-700 font-bold">
+                      <MathRenderer content={String(r.correctAnswer)} />
+                    </span>
                   </div>
                 )}
               </div>
@@ -863,7 +890,7 @@ export function LevelRoadmap() {
               {r.explanation && (
                 <div className="p-3 bg-muted/60 rounded-xl text-xs text-muted-foreground leading-relaxed">
                   <span className="font-bold text-foreground block mb-0.5">💡 Explanation:</span>
-                  {r.explanation}
+                  <MathRenderer content={r.explanation} />
                 </div>
               )}
             </Card>
