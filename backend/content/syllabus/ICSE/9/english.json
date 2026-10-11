@@ -34,243 +34,247 @@
               "isReviewLevel": false,
               "status": "published",
               "lesson": {
-                "title": "Tenses and Verb Agreement - Level 1: Tenses in Context",
-                "intro": "In this chapter, we will explore the concept of tenses in the English language. Tenses are used to express when an action takes place, whether it is in the past, present, or future. We will learn how to identify and use the correct tense forms in continuous passages.",
+                "title": "Tenses and Verb Agreement – Level 1: Tenses in Context",
+                "intro": "This lesson helps Class 9 ICSE learners recognise and use the correct tense forms while reading continuous passages, strengthening both comprehension and writing accuracy.",
                 "keyConcepts": [
                   {
-                    "title": "Present vs Past Perfect",
-                    "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment. For example, 'I have studied English for three years.' The past perfect tense is used to express an action that happened before another action in the past. For example, 'I had studied English for three years when I moved to another country.'"
+                    "title": "Present Perfect vs Past Perfect",
+                    "explanation": "Present perfect links past actions to the present, while past perfect shows an action completed before another past event."
                   },
                   {
-                    "title": "Future time reference",
-                    "explanation": "The future tense is used to express an action that will happen in the future. For example, 'I will study English for three years.' The future perfect tense is used to express an action that will be completed before another action in the future. For example, 'I will have studied English for three years when I graduate.'"
+                    "title": "Future Time Reference",
+                    "explanation": "Future tenses express actions that will happen, often using will, going to, or future perfect for actions completed before a later future point."
                   },
                   {
-                    "title": "Fill in blanks with correct verb tense forms",
-                    "explanation": "We will learn how to fill in the blanks with the correct verb tense forms in a given passage. This will help us to understand how to use the correct tense forms in different contexts."
+                    "title": "Verb Agreement in Continuous Passages",
+                    "explanation": "Verb forms must agree with the subject and the time reference throughout a passage, ensuring logical flow and grammatical consistency."
                   }
                 ],
                 "tips": [
-                  {
-                    "tip": "Read the passage carefully to understand the context and the tense used.",
-                    "explanation": "This will help you to identify the correct tense form to use in the blank."
-                  },
-                  {
-                    "tip": "Use the present perfect tense when describing an action that started in the past and continues up to the present moment.",
-                    "explanation": "For example, 'I have studied English for three years.'"
-                  },
-                  {
-                    "tip": "Use the past perfect tense when describing an action that happened before another action in the past.",
-                    "explanation": "For example, 'I had studied English for three years when I moved to another country.'"
-                  }
+                  "Read the whole sentence before deciding the tense; look for time markers like yesterday, by tomorrow, already.",
+                  "Underline the subject and check its number; singular subjects need singular verbs, plural subjects need plural verbs.",
+                  "Practice converting sentences from one tense to another to internalise the pattern and avoid common errors."
                 ]
               },
               "examples": [
                 {
-                  "problem": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
-                  "solution": "The correct answer is 'have studied.' The reason is that the sentence is describing an action that started in the past and continues up to the present moment.",
-                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment."
+                  "problem": "She ______ (write) the letter when the phone rang.",
+                  "solution": "She was writing the letter when the phone rang.\nStep 1: Identify the past continuous action (was writing).\nStep 2: Use the past simple for the interrupting action (rang).",
+                  "explanation": "The main action was ongoing in the past, so the past continuous (was writing) is appropriate, while the sudden interruption uses past simple (rang)."
                 },
                 {
-                  "problem": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
-                  "solution": "The correct answer is 'had studied.' The reason is that the sentence is describing an action that happened before another action in the past.",
-                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past."
+                  "problem": "By the time the train arrives, we ______ (finish) our project.",
+                  "solution": "By the time the train arrives, we will have finished our project.\nStep 1: Recognise a future point (the train arrives).\nStep 2: Use future perfect (will have finished) to show completion before that point.",
+                  "explanation": "Future perfect expresses an action that will be completed before another future event, matching the time relationship in the sentence."
                 }
               ],
               "questions": [
                 {
                   "id": "icse-9-eng-ch1-l1-q1",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
+                  "prompt": "She ____ (finish) her homework before dinner yesterday.",
                   "options": [
-                    "$\frac{1}{2}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "had finished",
+                    "has finished",
+                    "finished",
+                    "was finishing"
                   ],
-                  "correctAnswer": "$\frac{3}{4}$",
-                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment.",
-                  "hint": "Read the passage carefully to understand the context and the tense used.",
+                  "correctAnswer": "had finished",
+                  "explanation": "The action was completed prior to another past event (dinner), so past perfect 'had finished' correctly shows that sequence.",
+                  "hint": "Look for a past action that happened before another past event.",
                   "difficulty": "easy",
-                  "topicTag": "tenses"
+                  "topicTag": "Present vs Past Perfect",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q2",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
+                  "prompt": "By next year, they ____ (complete) the new library.",
                   "options": [
-                    "$\frac{1}{2}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "will have completed",
+                    "have completed",
+                    "completed",
+                    "will complete"
                   ],
-                  "correctAnswer": "$\frac{5}{6}$",
-                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past.",
-                  "hint": "Use the past perfect tense when describing an action that happened before another action in the past.",
+                  "correctAnswer": "will have completed",
+                  "explanation": "The sentence refers to a future point (next year) and an action that will be finished before that point, requiring future perfect.",
+                  "hint": "Think of an action finished before a future deadline.",
                   "difficulty": "medium",
-                  "topicTag": "tenses"
+                  "topicTag": "Future time reference",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q3",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I graduate.'",
+                  "prompt": "If he ____ (be) more careful, he wouldn't have broken the vase.",
                   "options": [
-                    "$\frac{1}{2}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "were",
+                    "was",
+                    "is",
+                    "be"
                   ],
-                  "correctAnswer": "$\frac{3}{4}$",
-                  "explanation": "The future perfect tense is used to express an action that will be completed before another action in the future.",
-                  "hint": "Use the future perfect tense when describing an action that will be completed before another action in the future.",
+                  "correctAnswer": "were",
+                  "explanation": "The conditional clause uses the subjunctive form 'were' to express an unreal situation in the present, matching the structure of a second conditional.",
+                  "hint": "Unreal present condition uses 'were' for all subjects.",
                   "difficulty": "hard",
-                  "topicTag": "tenses"
+                  "topicTag": "Fill in blanks with correct verb tense forms",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q4",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
+                  "prompt": "They ____ (travel) to Paris last summer.",
                   "options": [
-                    "$\frac{2}{3}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "traveled",
+                    "have traveled",
+                    "were traveling",
+                    "had traveled"
                   ],
-                  "correctAnswer": "$\frac{2}{3}$",
-                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment.",
-                  "hint": "Read the passage carefully to understand the context and the tense used.",
+                  "correctAnswer": "traveled",
+                  "explanation": "The sentence states a completed action at a specific past time (last summer), so simple past 'traveled' is appropriate.",
+                  "hint": "Look for a definite past time expression.",
                   "difficulty": "easy",
-                  "topicTag": "tenses"
+                  "topicTag": "Present vs Past Perfect",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q5",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
+                  "prompt": "When the bell rings, the students ____ (leave) the classroom.",
                   "options": [
-                    "$\frac{1}{2}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "will leave",
+                    "leave",
+                    "are leaving",
+                    "have left"
                   ],
-                  "correctAnswer": "$\frac{5}{6}$",
-                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past.",
-                  "hint": "Use the past perfect tense when describing an action that happened before another action in the past.",
+                  "correctAnswer": "will leave",
+                  "explanation": "The future event is triggered by the bell; the simple future 'will leave' correctly predicts the action after the bell rings.",
+                  "hint": "Future action following a present trigger.",
                   "difficulty": "medium",
-                  "topicTag": "tenses"
+                  "topicTag": "Future time reference",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q6",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I graduate.'",
+                  "prompt": "She ____ (study) English for three years before moving abroad.",
                   "options": [
-                    "$\frac{1}{2}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "had studied",
+                    "has studied",
+                    "studied",
+                    "was studying"
                   ],
-                  "correctAnswer": "$\frac{3}{4}$",
-                  "explanation": "The future perfect tense is used to express an action that will be completed before another action in the future.",
-                  "hint": "Use the future perfect tense when describing an action that will be completed before another action in the future.",
+                  "correctAnswer": "had studied",
+                  "explanation": "The study period finished before another past event (moving abroad), requiring past perfect 'had studied' to show the earlier completion.",
+                  "hint": "Two past actions; one occurred earlier.",
                   "difficulty": "hard",
-                  "topicTag": "tenses"
+                  "topicTag": "Present vs Past Perfect",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q7",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
+                  "prompt": "_____ you ____ (finish) the report by tomorrow?",
                   "options": [
-                    "$\frac{2}{3}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "Will, finish",
+                    "Will, have finished",
+                    "Would, finish",
+                    "Will, be finishing"
                   ],
-                  "correctAnswer": "$\frac{2}{3}$",
-                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment.",
-                  "hint": "Read the passage carefully to understand the context and the tense used.",
-                  "difficulty": "easy",
-                  "topicTag": "tenses"
+                  "correctAnswer": "Will, have finished",
+                  "explanation": "The question asks about completion before a future deadline, so future perfect 'will have finished' correctly conveys that meaning.",
+                  "hint": "Future completion before a set time.",
+                  "difficulty": "medium",
+                  "topicTag": "Future time reference",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q8",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
+                  "prompt": "The teacher ____ (explain) the lesson when the fire alarm sounded.",
                   "options": [
-                    "$\frac{1}{2}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "was explaining",
+                    "explained",
+                    "had explained",
+                    "has explained"
                   ],
-                  "correctAnswer": "$\frac{5}{6}$",
-                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past.",
-                  "hint": "Use the past perfect tense when describing an action that happened before another action in the past.",
-                  "difficulty": "medium",
-                  "topicTag": "tenses"
+                  "correctAnswer": "was explaining",
+                  "explanation": "An ongoing past action interrupted by another past event uses past continuous 'was explaining' for the longer action.",
+                  "hint": "Ongoing action interrupted by a sudden event.",
+                  "difficulty": "easy",
+                  "topicTag": "Fill in blanks with correct verb tense forms",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q9",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I graduate.'",
+                  "prompt": "By the time she arrives, we ____ (eat) dinner.",
                   "options": [
-                    "$\frac{1}{2}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "will have eaten",
+                    "have eaten",
+                    "ate",
+                    "will eat"
                   ],
-                  "correctAnswer": "$\frac{3}{4}$",
-                  "explanation": "The future perfect tense is used to express an action that will be completed before another action in the future.",
-                  "hint": "Use the future perfect tense when describing an action that will be completed before another action in the future.",
-                  "difficulty": "hard",
-                  "topicTag": "tenses"
+                  "correctAnswer": "will have eaten",
+                  "explanation": "The eating will be completed before her arrival, a future point, so future perfect 'will have eaten' is required.",
+                  "hint": "Action finished before another future event.",
+                  "difficulty": "medium",
+                  "topicTag": "Future time reference",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q10",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
+                  "prompt": "He ____ (not/finish) his assignment yet.",
                   "options": [
-                    "$\frac{2}{3}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "has not finished",
+                    "did not finish",
+                    "had not finished",
+                    "does not finish"
                   ],
-                  "correctAnswer": "$\frac{2}{3}$",
-                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment.",
-                  "hint": "Read the passage carefully to understand the context and the tense used.",
+                  "correctAnswer": "has not finished",
+                  "explanation": "The sentence refers to a present situation with an action not yet completed, demanding present perfect negative 'has not finished'.",
+                  "hint": "Present relevance of an unfinished task.",
                   "difficulty": "easy",
-                  "topicTag": "tenses"
+                  "topicTag": "Present vs Past Perfect",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q11",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
+                  "prompt": "If they ____ (arrive) early, they could see the opening ceremony.",
                   "options": [
-                    "$\frac{1}{2}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "arrive",
+                    "arrived",
+                    "will arrive",
+                    "had arrived"
                   ],
-                  "correctAnswer": "$\frac{5}{6}$",
-                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past.",
-                  "hint": "Use the past perfect tense when describing an action that happened before another action in the past.",
-                  "difficulty": "medium",
-                  "topicTag": "tenses"
+                  "correctAnswer": "arrived",
+                  "explanation": "A past unreal condition uses simple past 'arrived' to express a situation that did not happen, fitting the second conditional pattern.",
+                  "hint": "Unreal past condition uses past simple.",
+                  "difficulty": "hard",
+                  "topicTag": "Fill in blanks with correct verb tense forms",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-eng-ch1-l1-q12",
                   "type": "mcq",
-                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I graduate.'",
+                  "prompt": "She ____ (write) a letter when I called her last night.",
                   "options": [
-                    "$\frac{1}{2}$",
-                    "$\frac{3}{4}$",
-                    "$\frac{5}{6}$",
-                    "$\frac{7}{8}$"
+                    "was writing",
+                    "wrote",
+                    "had written",
+                    "has written"
                   ],
-                  "correctAnswer": "$\frac{3}{4}$",
-                  "explanation": "The future perfect tense is used to express an action that will be completed before another action in the future.",
-                  "hint": "Use the future perfect tense when describing an action that will be completed before another action in the future.",
-                  "difficulty": "hard",
-                  "topicTag": "tenses"
+                  "correctAnswer": "was writing",
+                  "explanation": "The continuous action in the past (writing) was interrupted by a short past action (called), so past continuous is appropriate.",
+                  "hint": "Ongoing past action interrupted by another past action.",
+                  "difficulty": "easy",
+                  "topicTag": "Fill in blanks with correct verb tense forms",
+                  "verificationStatus": "rule_checked"
                 }
-              ]
+              ],
+              "verifiedWith": "groq+gemini"
             },
             {
               "id": "icse-9-eng-ch1-l2",
@@ -524,7 +528,8 @@
                 "Error spotting and corrections"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -545,7 +550,8 @@
                 "Prepositional collocations"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch2-l2",
@@ -557,7 +563,8 @@
                 "Idiomatic phrasal verbs in sentences"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch2-l3",
@@ -569,7 +576,8 @@
                 "Contextual phrasal verb usage"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -590,7 +598,8 @@
                 "Sentences with two objects"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch3-l2",
@@ -603,7 +612,8 @@
                 "Reporting wh- and yes/no questions"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch3-l3",
@@ -616,7 +626,8 @@
                 "Unless vs If not"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch3-l4",
@@ -628,7 +639,8 @@
                 "Advanced synthesis"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -655,7 +667,8 @@
                 "Symbolism of stripping the statues"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch4-l2",
@@ -668,7 +681,8 @@
                 "Brutus's inner conflict between honor and friendship"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch4-l3",
@@ -680,7 +694,8 @@
                 "Literary devices and dramatic irony"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -707,7 +722,8 @@
                 "Transformation and newfound dignity of Bonku Babu"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch5-l2",
@@ -720,7 +736,8 @@
                 "Mr. Bumble's outrage at Oliver's request"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch5-l3",
@@ -733,7 +750,8 @@
                 "Baron Hausberg's rewarding generosity"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -754,7 +772,8 @@
                 "Imagery of Scottish landscapes and sleeping cities"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch6-l2",
@@ -767,7 +786,8 @@
                 "Poetic rhythm and rhyme scheme"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-eng-ch6-l3",
@@ -780,7 +800,8 @@
                 "Tone and melancholy contrast"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }

@@ -35,233 +35,246 @@
               "status": "published",
               "lesson": {
                 "title": "The Preamble & Key Constitutional Concepts",
-                "intro": "This lesson introduces learners to the historic backdrop of the Indian Constitution, focusing on the Constituent Assembly, the visionary role of Dr. B.R. Ambedkar, and the philosophical essence of the Preamble. Students will explore why 26 November 1949 and 26 January 1950 are pivotal dates, analyse the meaning of key terms such as Sovereign, Socialist, Secular and Democratic, and understand how the Preamble reflects the basic structure doctrine. Pedagogically, the session blends narrative storytelling, chronological timelines, and simple quantitative exercises to reinforce retention and critical thinking.",
+                "intro": "This lesson introduces Class 9 students to the historical backdrop of the Constituent Assembly, the visionary role of Dr B.R. Ambedkar, and the meaning of the key terms in the Preamble of the Indian Constitution. Understanding these foundations helps learners appreciate why the Constitution is called the ‘Supreme Law of the Land’.",
                 "keyConcepts": [
                   {
                     "title": "Role of the Constituent Assembly",
-                    "explanation": "The Constituent Assembly, elected in $1946$, was responsible for drafting the Constitution, debating each article, and finally adopting the document on $\\text{26 November 1949}$. It functioned like a large parliamentary committee, ensuring representation from diverse regions and communities."
+                    "explanation": "The Constituent Assembly, elected in 1946, was responsible for drafting the Constitution, debating its provisions, and adopting the final document on 26 January 1950, thereby shaping India’s democratic framework."
                   },
                   {
                     "title": "Significance of 26th November & 26th January",
-                    "explanation": "On $\\text{26 November 1949}$ the Assembly passed the final draft. After ratification by the states, the Constitution came into force on $\\text{26 January 1950}$, celebrated as Republic Day, marking India's transition to a sovereign republic."
+                    "explanation": "26 November 1949 marks the day the Constitution was adopted by the Assembly; 26 January 1950 is celebrated as Republic Day, the day the Constitution came into force, establishing India as a Republic."
                   },
                   {
-                    "title": "Preamble Philosophy and Basic Structure",
-                    "explanation": "The Preamble encapsulates the ideals of $\\text{Justice}$, $\\text{Liberty}$, $\\text{Equality}$ and $\\text{Fraternity}$. These form part of the \"basic structure\" that cannot be altered by any amendment, as affirmed by the Supreme Court in the Kesavananda Bharati case."
+                    "title": "Preamble philosophy and basic structure",
+                    "explanation": "The Preamble outlines the core values – Sovereignty, Socialism, Secularism, Democracy, Republic – and the basic structure doctrine ensures these principles cannot be altered by amendment."
                   }
                 ],
                 "tips": [
-                  "Use a timeline chart to visualise the key dates (1946‑1950) for better chronological understanding.",
-                  "Encourage students to paraphrase each word of the Preamble in their own language to internalise its meaning.",
-                  "Link the basic structure doctrine to contemporary news articles to show its relevance today."
+                  "Create a timeline of key dates (1946‑1950) to visualise the Constitution’s birth.",
+                  "Write the Preamble in your own words to internalise each term’s meaning.",
+                  "Practice answering past‑paper MCQs on the Constituent Assembly to build exam confidence."
                 ]
               },
               "examples": [
                 {
-                  "problem": "Calculate the number of years, months and days between the formation of the Constituent Assembly on $9\\,\\text{December}\\,1946$ and the adoption of the Constitution on $26\\,\\text{January}\\,1950$.",
-                  "solution": "Step 1: From $9\\,\\text{Dec}\\,1946$ to $9\\,\\text{Dec}\\,1949$ is $3$ years.\\nStep 2: From $9\\,\\text{Dec}\\,1949$ to $26\\,\\text{Jan}\\,1950$ is $1$ month and $17$ days.\\nTherefore the total interval is $3$ years, $1$ month and $17$ days.",
-                  "explanation": "The calculation uses simple date subtraction. First count full years, then handle the remaining months and days, ensuring correct handling of month lengths."
+                  "problem": "Identify the three main objectives mentioned in the Preamble’s phrase ‘Justice, Liberty, Equality’.",
+                  "solution": "1. Justice – ensures fairness in social, economic and political spheres.\n2. Liberty – guarantees freedom of thought, speech and movement.\n3. Equality – promotes equal opportunity and prohibits discrimination.\nEach objective reflects a fundamental goal of the Constitution.",
+                  "explanation": "The Preamble explicitly lists these objectives to guide legislation and policy, ensuring that every law aligns with these overarching goals."
                 },
                 {
-                  "problem": "If the Preamble mentions four core values – Justice, Liberty, Equality and Fraternity – in how many different sequences can these values be arranged?",
-                  "solution": "The number of permutations of $4$ distinct items is $4! = 4\\times3\\times2\\times1 = 24$.\\nThus there are $24$ possible arrangements.",
-                  "explanation": "A permutation of $n$ distinct objects is given by $n!$. Here $n=4$, so $4! = 24$."
+                  "problem": "Calculate the interval in days between the adoption of the Constitution (26 Nov 1949) and its commencement (26 Jan 1950).",
+                  "solution": "From 26 Nov 1949 to 26 Dec 1949 = 30 days (November has 30 days, so full month). From 26 Dec 1949 to 26 Jan 1950 = 31 days. Total = 30 + 31 = 61 days.",
+                  "explanation": "Counting full months between the two dates gives a total of 61 days, showing the brief period used for final preparations before the Constitution became operative."
                 }
               ],
               "questions": [
                 {
                   "id": "icse-9-sst-ch1-l1-q1",
                   "type": "mcq",
-                  "prompt": "In which year was the Constitution of India adopted by the Constituent Assembly? $\\boxed{\\;}$",
+                  "prompt": "Who was the Chairman of the Drafting Committee of the Indian Constitution?",
                   "options": [
-                    "$1947$",
-                    "$1948$",
-                    "$1949$",
-                    "$1950$"
+                    "Dr B.R. Ambedkar",
+                    "Jawaharlal Nehru",
+                    "Sardar Vallabhbhai Patel",
+                    "Mahatma Gandhi"
                   ],
-                  "correctAnswer": "$1949$",
-                  "explanation": "The Constituent Assembly passed the final draft on $\\text{26 November 1949}$. Hence the correct year is $1949$.",
-                  "hint": "Think of the date just before Republic Day 1950.",
+                  "correctAnswer": "Dr B.R. Ambedkar",
+                  "explanation": "Dr B.R. Ambedkar was appointed Chairman of the Drafting Committee in August 1947, leading the effort to frame the Constitution.",
+                  "hint": "Think of the chief architect of the Constitution.",
                   "difficulty": "easy",
-                  "topicTag": "Adoption Year"
+                  "topicTag": "Constituent Assembly",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q2",
                   "type": "mcq",
-                  "prompt": "The Constitution of India came into effect on which date? $\\boxed{\\;}$",
+                  "prompt": "What does the term ‘Sovereign’ in the Preamble signify?",
                   "options": [
-                    "$\\text{15 August 1947}$",
-                    "$\\text{26 January 1950}$",
-                    "$\\text{26 November 1949}$",
-                    "$\\text{1 January 1950}$"
+                    "India is ruled by a monarch",
+                    "India has supreme authority within its territory",
+                    "India follows the British legal system",
+                    "India is a federation of states"
                   ],
-                  "correctAnswer": "$\\text{26 January 1950}$",
-                  "explanation": "After ratification, the Constitution was enforced on $\\text{26 January 1950}$, celebrated as Republic Day.",
-                  "hint": "It coincides with the day India became a republic.",
-                  "difficulty": "easy",
-                  "topicTag": "Effective Date"
+                  "correctAnswer": "India has supreme authority within its territory",
+                  "explanation": "‘Sovereign’ means that the nation possesses full authority over its internal and external affairs without any external control.",
+                  "hint": "Consider who makes the final decisions for the country.",
+                  "difficulty": "medium",
+                  "topicTag": "Preamble philosophy",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q3",
                   "type": "mcq",
-                  "prompt": "Who is popularly known as the chief architect of the Indian Constitution? $\\boxed{\\;}$",
+                  "prompt": "Why is 26 January 1950 celebrated as Republic Day?",
                   "options": [
-                    "$\\text{Mahatma Gandhi}$",
-                    "$\\text{Jawaharlal Nehru}$",
-                    "$\\text{Dr. B.R. Ambedkar}$",
-                    "$\\text{Sardar Vallabhbhai Patel}$"
+                    "It is the day India gained independence",
+                    "It is the day the Constitution was adopted by the Constituent Assembly",
+                    "It is the day the Constitution came into force",
+                    "It marks the birth of Dr B.R. Ambedkar"
                   ],
-                  "correctAnswer": "$\\text{Dr. B.R. Ambedkar}$",
-                  "explanation": "Dr. B.R. Ambedkar chaired the Drafting Committee and is revered as the chief architect.",
-                  "hint": "He was the Chairman of the Drafting Committee.",
+                  "correctAnswer": "It is the day the Constitution came into force",
+                  "explanation": "Republic Day commemorates 26 January 1950, when the Constitution became operational, turning India into a Republic.",
+                  "hint": "Think of the date when the Constitution started governing the country.",
                   "difficulty": "easy",
-                  "topicTag": "Key Person"
+                  "topicTag": "Significance Dates",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q4",
                   "type": "mcq",
-                  "prompt": "How many members were originally elected to the Constituent Assembly in 1946? $\\boxed{\\;}$",
+                  "prompt": "Which article of the Constitution declares India as a ‘Secular’ state?",
                   "options": [
-                    "$225$",
-                    "$300$",
-                    "$389$",
-                    "$456$"
+                    "Article 1",
+                    "Article 48",
+                    "Article 51A",
+                    "Article 368"
                   ],
-                  "correctAnswer": "$389$",
-                  "explanation": "The first meeting of the Constituent Assembly on $9\\,\\text{December}\\,1946$ had $389$ elected members.",
-                  "hint": "The number is just under four hundred.",
-                  "difficulty": "medium",
-                  "topicTag": "Assembly Size"
+                  "correctAnswer": "Article 1",
+                  "explanation": "Article 1 defines India as a ‘Sovereign, Socialist, Secular, Democratic Republic’, establishing secularism as a core principle.",
+                  "hint": "Look at the opening article that defines the Union of India.",
+                  "difficulty": "hard",
+                  "topicTag": "Preamble philosophy",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q5",
                   "type": "mcq",
-                  "prompt": "Why is $26$ $\\text{November}$ considered significant in the constitutional history of India? $\\boxed{\\;}$",
+                  "prompt": "The Constituent Assembly first met on:",
                   "options": [
-                    "$\\text{Date of Independence}$",
-                    "$\\text{Date the Draft was adopted}$",
-                    "$\\text{Date of Republic Day}$",
-                    "$\\text{Date the Draft was first proposed}$"
+                    "9 December 1946",
+                    "15 August 1947",
+                    "26 January 1950",
+                    "30 July 1947"
                   ],
-                  "correctAnswer": "$\\text{Date the Draft was adopted}$",
-                  "explanation": "On $\\text{26 November 1949}$ the Constituent Assembly adopted the final draft of the Constitution.",
-                  "hint": "It precedes Republic Day by a few weeks.",
-                  "difficulty": "medium",
-                  "topicTag": "Significant Dates"
+                  "correctAnswer": "9 December 1946",
+                  "explanation": "The inaugural session of the Constituent Assembly was held on 9 December 1946 at the Parliament House, New Delhi.",
+                  "hint": "It was before India’s independence in August 1947.",
+                  "difficulty": "easy",
+                  "topicTag": "Constituent Assembly",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q6",
                   "type": "mcq",
-                  "prompt": "Which of the following words does NOT appear in the Preamble? $\\boxed{\\;}$",
+                  "prompt": "Which of the following is NOT a part of the basic structure doctrine?",
                   "options": [
-                    "$\\text{Justice}$",
-                    "$\\text{Liberty}$",
-                    "$\\text{Equality}$",
-                    "$\\text{Prosperity}$"
+                    "Rule of law",
+                    "Parliamentary supremacy",
+                    "Secularism",
+                    "Democracy"
                   ],
-                  "correctAnswer": "$\\text{Prosperity}$",
-                  "explanation": "The Preamble mentions Justice, Liberty, Equality and Fraternity, but not Prosperity.",
-                  "hint": "Look for the four core values listed.",
-                  "difficulty": "easy",
-                  "topicTag": "Preamble Content"
+                  "correctAnswer": "Parliamentary supremacy",
+                  "explanation": "The basic structure doctrine includes rule of law, secularism, democracy, but not parliamentary supremacy, which can be limited by the Constitution.",
+                  "hint": "Think of a principle that can be altered by amendment.",
+                  "difficulty": "hard",
+                  "topicTag": "Preamble philosophy",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q7",
                   "type": "mcq",
-                  "prompt": "Which principle is part of the \"basic structure\" doctrine as derived from the Preamble? $\\boxed{\\;}$",
+                  "prompt": "What was the primary purpose of the ‘Committee on Fundamental Rights’ in the Constituent Assembly?",
                   "options": [
-                    "$\\text{Secularism}$",
-                    "$\\text{Federalism}$",
-                    "$\\text{Parliamentary Democracy}$",
-                    "$\\text{All of the above}$"
+                    "To draft the Preamble",
+                    "To ensure basic human rights are protected",
+                    "To decide the official language",
+                    "To allocate seats to states"
                   ],
-                  "correctAnswer": "$\\text{All of the above}$",
-                  "explanation": "Secularism, Federalism and Parliamentary Democracy are all recognised as components of the basic structure.",
-                  "hint": "All three are mentioned in the Constitution’s preamble and later judicial interpretations.",
-                  "difficulty": "hard",
-                  "topicTag": "Basic Structure"
+                  "correctAnswer": "To ensure basic human rights are protected",
+                  "explanation": "The Committee on Fundamental Rights, chaired by Dr Ambedkar, focused on incorporating civil liberties and fundamental rights into the Constitution.",
+                  "hint": "Consider the rights guaranteed to every citizen.",
+                  "difficulty": "medium",
+                  "topicTag": "Constituent Assembly",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q8",
                   "type": "mcq",
-                  "prompt": "How many words are there in the original Preamble of the Indian Constitution? $\\boxed{\\;}$",
+                  "prompt": "Which date marks the adoption of the Constitution by the Constituent Assembly?",
                   "options": [
-                    "$48$",
-                    "$52$",
-                    "$56$",
-                    "$60$"
+                    "26 November 1949",
+                    "15 August 1947",
+                    "26 January 1950",
+                    "30 January 1949"
                   ],
-                  "correctAnswer": "$52$",
-                  "explanation": "Counting the words in the official text yields $52$ words.",
-                  "hint": "It is slightly more than fifty.",
-                  "difficulty": "hard",
-                  "topicTag": "Preamble Length"
+                  "correctAnswer": "26 November 1949",
+                  "explanation": "The Constitution was formally adopted on 26 November 1949 after extensive debates and revisions.",
+                  "hint": "It is the day before Republic Day but in the previous year.",
+                  "difficulty": "easy",
+                  "topicTag": "Significance Dates",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q9",
                   "type": "mcq",
-                  "prompt": "The Preamble begins with which phrase? $\\boxed{\\;}$",
+                  "prompt": "The phrase ‘Justice – social, economic and political’ in the Preamble aims to:",
                   "options": [
-                    "$\\text{We, the People of India}$",
-                    "$\\text{We, the Citizens of India}$",
-                    "$\\text{We, the People of the Republic}$",
-                    "$\\text{We, the Nation of India}$"
+                    "Promote equality before law only",
+                    "Ensure fairness in all spheres of life",
+                    "Establish a single legal system",
+                    "Limit state intervention"
                   ],
-                  "correctAnswer": "$\\text{We, the People of India}$",
-                  "explanation": "The opening words are \"We, the People of India...\"",
-                  "hint": "It emphasizes popular sovereignty.",
-                  "difficulty": "easy",
-                  "topicTag": "Opening Words"
+                  "correctAnswer": "Ensure fairness in all spheres of life",
+                  "explanation": "The Preamble’s mention of social, economic and political justice reflects the intention to create an equitable society across all dimensions.",
+                  "hint": "Think beyond legal justice alone.",
+                  "difficulty": "medium",
+                  "topicTag": "Preamble philosophy",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q10",
                   "type": "mcq",
-                  "prompt": "Under which Act was the Constituent Assembly formed? $\\boxed{\\;}$",
+                  "prompt": "Which member of the Constituent Assembly later became the first President of India?",
                   "options": [
-                    "$\\text{Indian Independence Act 1947}$",
-                    "$\\text{Cabinet Mission Plan 1946}$",
-                    "$\\text{Government of India Act 1935}$",
-                    "$\\text{Constituent Assembly Act 1946}$"
+                    "Dr B.R. Ambedkar",
+                    "Rajendra Prasad",
+                    "Sardar Patel",
+                    "Jawaharlal Nehru"
                   ],
-                  "correctAnswer": "$\\text{Cabinet Mission Plan 1946}$",
-                  "explanation": "The Cabinet Mission Plan of 1946 laid down the framework for the Constituent Assembly.",
-                  "hint": "It was a mission sent by the British government.",
-                  "difficulty": "medium",
-                  "topicTag": "Formation Basis"
+                  "correctAnswer": "Rajendra Prasad",
+                  "explanation": "Dr Rajendra Prasad, a senior member of the Assembly, was elected as the first President of India in 1950.",
+                  "hint": "He was a senior leader from Bihar.",
+                  "difficulty": "easy",
+                  "topicTag": "Constituent Assembly",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q11",
                   "type": "mcq",
-                  "prompt": "The philosophical foundation of the Preamble draws heavily from which doctrine? $\\boxed{\\;}$",
+                  "prompt": "The term ‘Democratic’ in the Preamble indicates that:",
                   "options": [
-                    "$\\text{Utilitarianism}$",
-                    "$\\text{Socialism}$",
-                    "$\\text{Liberalism}$",
-                    "$\\text{Marxism}$"
+                    "India is ruled by a king",
+                    "Power is exercised by elected representatives of the people",
+                    "Only the judiciary makes laws",
+                    "The military controls the government"
                   ],
-                  "correctAnswer": "$\\text{Socialism}$",
-                  "explanation": "The Preamble declares India to be a \"Socialist\" republic, reflecting socialist ideals.",
-                  "hint": "Look for the term that appears directly in the Preamble.",
-                  "difficulty": "medium",
-                  "topicTag": "Philosophical Basis"
+                  "correctAnswer": "Power is exercised by elected representatives of the people",
+                  "explanation": "‘Democratic’ signifies that the authority of the state is derived from the people through elected representatives, not hereditary or military rule.",
+                  "hint": "Think of voting and representation.",
+                  "difficulty": "easy",
+                  "topicTag": "Preamble philosophy",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q12",
                   "type": "mcq",
-                  "prompt": "On which date did the Constituent Assembly formally adopt the final draft of the Constitution? $\\boxed{\\;}$",
+                  "prompt": "Which article of the Constitution deals with the amendment procedure?",
                   "options": [
-                    "$\\text{26 November 1949}$",
-                    "$\\text{15 August 1947}$",
-                    "$\\text{26 January 1950}$",
-                    "$\\text{30 January 1949}$"
+                    "Article 13",
+                    "Article 368",
+                    "Article 21",
+                    "Article 32"
                   ],
-                  "correctAnswer": "$\\text{26 November 1949}$",
-                  "explanation": "The final draft was adopted on $\\text{26 November 1949}$ after extensive debates.",
-                  "hint": "It is the same date celebrated as Constitution Day.",
-                  "difficulty": "easy",
-                  "topicTag": "Adoption Date"
+                  "correctAnswer": "Article 368",
+                  "explanation": "Article 368 outlines the process for amending the Constitution, requiring special majority in Parliament and, in some cases, ratification by states.",
+                  "hint": "It is the article that mentions ‘procedure for amendment’.",
+                  "difficulty": "medium",
+                  "topicTag": "Constitutional provisions",
+                  "verificationStatus": "rule_checked"
                 }
-              ]
+              ],
+              "verifiedWith": "groq+gemini"
             },
             {
               "id": "icse-9-sst-ch1-l2",
@@ -274,7 +287,7 @@
                 "Habeas Corpus, Mandamus, Prohibition, Quo-Warranto, Certiorari"
               ],
               "isReviewLevel": false,
-              "status": "published",
+              "status": "draft",
               "lesson": {
                 "title": "Fundamental Rights & Constitutional Writs",
                 "intro": "This lesson introduces learners to the six Fundamental Rights enshrined in Articles 14‑32 of the Indian Constitution and the five constitutional writs—Habeas Corpus, Mandamus, Prohibition, Quo‑Warranto and Certiorari. It links constitutional provisions to everyday citizenship, encourages analytical thinking through simple quantitative exercises, and equips teachers with strategies to foster discussion, case‑study analysis and reflective writing.",
@@ -310,200 +323,7 @@
                   "explanation": "Since the decisions are independent, we multiply the number of choices: $2\\times2\\times2\\times2=2^{4}=16$. This illustrates exponential growth with binary options."
                 }
               ],
-              "questions": [
-                {
-                  "id": "icse-9-sst-ch1-l2-q1",
-                  "type": "mcq",
-                  "prompt": "Which article of the Constitution explicitly guarantees equality before the law?",
-                  "options": [
-                    "$14$",
-                    "$15$",
-                    "$16$",
-                    "$17$"
-                  ],
-                  "correctAnswer": "$14$",
-                  "explanation": "Article $14$ states that the State shall not deny to any person equality before the law or equal protection of the laws, making it the correct choice.",
-                  "hint": "Think of the first article in the Equality series.",
-                  "difficulty": "easy",
-                  "topicTag": "Fundamental Rights"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q2",
-                  "type": "mcq",
-                  "prompt": "The prohibition of child labour is covered under which article?",
-                  "options": [
-                    "$23$",
-                    "$24$",
-                    "$25$",
-                    "$26$"
-                  ],
-                  "correctAnswer": "$23$",
-                  "explanation": "Article $23$ prohibits traffic in human beings and forced labour, including child labour, whereas Articles $24$–$26$ deal with other aspects of exploitation and religious freedom.",
-                  "hint": "Early article in the Exploitation chapter.",
-                  "difficulty": "medium",
-                  "topicTag": "Fundamental Rights"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q3",
-                  "type": "mcq",
-                  "prompt": "A citizen wishes to challenge the legality of a public office holder. Which writ is appropriate?",
-                  "options": [
-                    "$\\text{Quo‑Warranto}$",
-                    "$\\text{Mandamus}$",
-                    "$\\text{Certiorari}$",
-                    "$\\text{Prohibition}$"
-                  ],
-                  "correctAnswer": "$\\text{Quo‑Warranto}$",
-                  "explanation": "Quo‑Warranto asks a court to determine whether a person is legally entitled to hold a public office, matching the scenario described.",
-                  "hint": "It questions the \"who\" of an office.",
-                  "difficulty": "hard",
-                  "topicTag": "Writs"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q4",
-                  "type": "mcq",
-                  "prompt": "If a student can claim any of the six Fundamental Rights, in how many ways can they select exactly three distinct rights?",
-                  "options": [
-                    "$\\binom{6}{3}=20$",
-                    "$\\binom{6}{3}=15$",
-                    "$\\binom{6}{3}=10$",
-                    "$\\binom{6}{3}=12$"
-                  ],
-                  "correctAnswer": "$\\binom{6}{3}=20$",
-                  "explanation": "Using the combination formula $\\binom{6}{3}=\\frac{6\\times5\\times4}{3\\times2\\times1}=20$. The other numeric values are incorrect.",
-                  "hint": "Apply $\\binom{n}{k}=\\frac{n!}{k!(n-k)!}$ with $n=6$, $k=3$.",
-                  "difficulty": "medium",
-                  "topicTag": "Fundamental Rights"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q5",
-                  "type": "mcq",
-                  "prompt": "Which writ is issued to compel a public authority to perform a duty it has failed to fulfill?",
-                  "options": [
-                    "$\\text{Mandamus}$",
-                    "$\\text{Habeas Corpus}$",
-                    "$\\text{Certiorari}$",
-                    "$\\text{Prohibition}$"
-                  ],
-                  "correctAnswer": "$\\text{Mandamus}$",
-                  "explanation": "Mandamus orders a public authority to perform a specific duty; the other writs serve different purposes.",
-                  "hint": "Think of a command to \"do\" something.",
-                  "difficulty": "easy",
-                  "topicTag": "Writs"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q6",
-                  "type": "mcq",
-                  "prompt": "Article $19$ guarantees freedom of speech, but it is subject to reasonable restrictions. Which of the following is NOT a permissible restriction?",
-                  "options": [
-                    "$\\text{Defamation}$",
-                    "$\\text{Public order}$",
-                    "$\\text{Security of the State}$",
-                    "$\\text{Morality}$"
-                  ],
-                  "correctAnswer": "$\\text{Defamation}$",
-                  "explanation": "Defamation is not listed among the reasonable restrictions under Article $19$; the other three are permissible.",
-                  "hint": "Recall the five grounds listed in the Constitution.",
-                  "difficulty": "hard",
-                  "topicTag": "Fundamental Rights"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q7",
-                  "type": "mcq",
-                  "prompt": "How many distinct pairs can be formed from the five constitutional writs?",
-                  "options": [
-                    "$\\binom{5}{2}=10$",
-                    "$\\binom{5}{2}=8$",
-                    "$\\binom{5}{2}=12$",
-                    "$\\binom{5}{2}=6$"
-                  ],
-                  "correctAnswer": "$\\binom{5}{2}=10$",
-                  "explanation": "Number of unordered pairs from $5$ items is $\\binom{5}{2}=\\frac{5\\times4}{2}=10$. The other options miscalculate the combination.",
-                  "hint": "Use the combination formula with $n=5$, $k=2$.",
-                  "difficulty": "easy",
-                  "topicTag": "Writs"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q8",
-                  "type": "mcq",
-                  "prompt": "Which article provides the right to move freely throughout India?",
-                  "options": [
-                    "$19$",
-                    "$20$",
-                    "$21$",
-                    "$22$"
-                  ],
-                  "correctAnswer": "$19$",
-                  "explanation": "Article $19$ includes the freedom of movement throughout the territory of India as one of its six freedoms.",
-                  "hint": "It is the first freedom listed under Article $19$.",
-                  "difficulty": "easy",
-                  "topicTag": "Fundamental Rights"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q9",
-                  "type": "mcq",
-                  "prompt": "A court issues a writ to prevent a lower court from exceeding its jurisdiction. Which writ is this?",
-                  "options": [
-                    "$\\text{Prohibition}$",
-                    "$\\text{Mandamus}$",
-                    "$\\text{Certiorari}$",
-                    "$\\text{Habeas Corpus}$"
-                  ],
-                  "correctAnswer": "$\\text{Prohibition}$",
-                  "explanation": "Prohibition is specifically designed to stop a lower court from acting beyond its jurisdiction.",
-                  "hint": "Think of stopping an action before it happens.",
-                  "difficulty": "medium",
-                  "topicTag": "Writs"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q10",
-                  "type": "mcq",
-                  "prompt": "If a citizen files a writ of Habeas Corpus in $3$ courts and each court can either grant or deny, how many total outcome combinations are possible?",
-                  "options": [
-                    "$2^{3}=8$",
-                    "$2^{3}=6$",
-                    "$2^{3}=9$",
-                    "$2^{3}=12$"
-                  ],
-                  "correctAnswer": "$2^{3}=8$",
-                  "explanation": "Each court has $2$ choices; for $3$ courts the total is $2^{3}=8$. The other numeric results are incorrect.",
-                  "hint": "Apply the rule $2^{n}$ for $n$ independent binary decisions.",
-                  "difficulty": "easy",
-                  "topicTag": "Writs"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q11",
-                  "type": "mcq",
-                  "prompt": "Article $21$ guarantees the right to life and personal liberty. Which of the following best illustrates this right?",
-                  "options": [
-                    "$\\text{Protection against arbitrary arrest}$",
-                    "$\\text{Right to education}$",
-                    "$\\text{Freedom of religion}$",
-                    "$\\text{Equality of opportunity}$"
-                  ],
-                  "correctAnswer": "$\\text{Protection against arbitrary arrest}$",
-                  "explanation": "Article $21$ is interpreted to include protection from arbitrary arrest and detention, whereas the other options pertain to different articles.",
-                  "hint": "Think of personal liberty in the context of state action.",
-                  "difficulty": "medium",
-                  "topicTag": "Fundamental Rights"
-                },
-                {
-                  "id": "icse-9-sst-ch1-l2-q12",
-                  "type": "mcq",
-                  "prompt": "Which article abolishes 'untouchability' and makes its practice an offence?",
-                  "options": [
-                    "$17$",
-                    "$18$",
-                    "$19$",
-                    "$20$"
-                  ],
-                  "correctAnswer": "$17$",
-                  "explanation": "Article $17$ specifically abolishes untouchability and makes its practice punishable by law.",
-                  "hint": "It follows the Equality articles $14$–$16$.",
-                  "difficulty": "easy",
-                  "topicTag": "Fundamental Rights"
-                }
-              ]
+              "questions": []
             },
             {
               "id": "icse-9-sst-ch1-l3",
@@ -516,7 +336,8 @@
                 "Fundamental duties significance"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-sst-ch1-l4",
@@ -528,7 +349,8 @@
                 "Board exam structured questions"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -555,7 +377,8 @@
                 "Underground drainage and soak pits"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-sst-ch2-l2",
@@ -568,7 +391,8 @@
                 "Trade with Mesopotamia and Lothal dockyard"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-sst-ch2-l3",
@@ -580,7 +404,8 @@
                 "Mortimer Wheeler theory vs modern archaeological consensus"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-sst-ch2-l4",
@@ -592,7 +417,8 @@
                 "Structured historical analysis"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -619,7 +445,8 @@
                 "Earth as a habitable planet"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-sst-ch3-l2",
@@ -632,7 +459,8 @@
                 "Core density, temperature, and magnetic field"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-sst-ch3-l3",
@@ -644,7 +472,8 @@
                 "Geological reasoning questions"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }

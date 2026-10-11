@@ -86,6 +86,12 @@ router.post("/level/:levelId/grade", auth, async (req, res, next) => {
       ...gradingResult,
     });
   } catch (err) {
+    console.error(`[Curriculum Grade Error] levelId=${req.params?.levelId} user=${req.user?.id}:`, err.message);
+    if (!err.isOperational) {
+      err.statusCode = err.statusCode || 500;
+      err.message = err.message || "Unable to complete grading for this level. Please try again.";
+      err.isOperational = true;
+    }
     next(err);
   }
 });

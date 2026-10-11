@@ -5,10 +5,11 @@ const Curriculum = require("../models/Curriculum");
 const LevelAttempt = require("../models/LevelAttempt");
 const ActivityLog = require("../models/ActivityLog");
 const User = require("../models/User");
+const Progress = require("../models/Progress");
 const Report = require("../models/Report");
 const MistakeReview = require("../models/MistakeReview");
 const { calculateLevelXp } = require("../config/xpRules");
-const { recordUserActivity, recomputeUserStreakAndXp } = require("./progress.service");
+const { logActivity, recomputeUserStats } = require("./progress.service");
 
 const CATALOG_DIR = path.join(__dirname, "../content/catalog");
 const SYLLABUS_DIR = path.join(__dirname, "../content/syllabus");
@@ -313,15 +314,20 @@ async function gradeLevelAttempt(levelId, userId, answers = {}, timeSpentSeconds
   }).lean();
 
   if (!doc) {
-    throw new Error("Level not found");
+    const err = new Error(`Level "${levelId}" not found`);
+    err.statusCode = 404;
+    err.isOperational = true;
+    throw err;
   }
 
   let targetLevel = null;
+  let targetChapter = null;
   for (const unit of doc.units || []) {
     for (const ch of unit.chapters || []) {
       for (const lvl of ch.levels || []) {
         if (lvl.id === levelId) {
           targetLevel = lvl;
+          targetChapter = ch;
           break;
         }
       }
@@ -335,6 +341,7 @@ async function gradeLevelAttempt(levelId, userId, answers = {}, timeSpentSeconds
       for (const lvl of ch.levels || []) {
         if (lvl.id === levelId) {
           targetLevel = lvl;
+          targetChapter = ch;
           break;
         }
       }
@@ -343,7 +350,10 @@ async function gradeLevelAttempt(levelId, userId, answers = {}, timeSpentSeconds
   }
 
   if (!targetLevel || !targetLevel.questions || targetLevel.questions.length === 0) {
-    throw new Error("No questions available for grading in this level");
+    const err = new Error(`No questions available for grading in level "${levelId}"`);
+    err.statusCode = 400;
+    err.isOperational = true;
+    throw err;
   }
 
   const questionsMap = new Map();
@@ -393,21 +403,40 @@ async function gradeLevelAttempt(levelId, userId, answers = {}, timeSpentSeconds
   else if (score >= 80) stars = 2;
   else if (score >= 70) stars = 1;
 
-  // Check previous best attempt for XP calculation
+  const chapterNumber = targetChapter?.chapterNumber || 1;
+  const levelNumber = targetLevel.levelNumber || 1;
+
+  // Check previous best attempt for XP calculation (both LevelAttempt and legacy Progress)
   const priorBest = await LevelAttempt.findOne({
     user: userId,
-    levelId,
+    $or: [
+      { levelId },
+      { subject: doc.subject, chapterNumber, levelNumber, passed: true },
+    ],
     passed: true,
   }).sort({ stars: -1, score: -1 });
 
-  const isFirstCompletion = !priorBest && passed;
-  const previousStars = priorBest ? priorBest.stars : 0;
+  let priorLegacyPassed = false;
+  if (!priorBest) {
+    try {
+      const leg = await Progress.findOne({
+        user: userId,
+        subject: doc.subject,
+        chapterNumber,
+        levelNumber,
+        isCompleted: true,
+      });
+      if (leg) priorLegacyPassed = true;
+    } catch (_) {}
+  }
+
+  const isFirstCompletion = !priorBest && !priorLegacyPassed && passed;
+  const previousBestStars = priorBest ? priorBest.stars : (priorLegacyPassed ? 1 : 0);
 
   const xpAwarded = calculateLevelXp({
     score,
-    stars,
     isFirstCompletion,
-    previousStars,
+    previousBestStars,
   });
 
   // Save attempt
@@ -415,6 +444,8 @@ async function gradeLevelAttempt(levelId, userId, answers = {}, timeSpentSeconds
     user: userId,
     levelId,
     subject: doc.subject,
+    chapterNumber,
+    levelNumber,
     score,
     stars,
     passed,
@@ -422,42 +453,82 @@ async function gradeLevelAttempt(levelId, userId, answers = {}, timeSpentSeconds
     xpEarned: xpAwarded,
   });
 
-  // Update ActivityLog & streak
-  await recordUserActivity(userId, "lesson_complete", {
-    xpEarned: xpAwarded,
-    levelId,
-  });
-
-  // Update cached user streak & total XP
-  await recomputeUserStreakAndXp(userId);
-
-  // Manage Spaced Repetition for mistakes
-  if (mistakesToTrack.length > 0) {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 1);
-
-    for (const m of mistakesToTrack) {
-      await MistakeReview.findOneAndUpdate(
-        { userId, questionId: m.id },
+  // Defensively sync legacy Progress collection for backward compatibility
+  if (passed) {
+    try {
+      await Progress.findOneAndUpdate(
         {
-          userId,
-          questionId: m.id,
-          levelId,
+          user: userId,
           subject: doc.subject,
-          questionData: {
-            prompt: m.prompt,
-            type: m.type,
-            options: m.options,
-            explanation: m.explanation,
-            hint: m.hint,
-            topicTag: m.topicTag,
-          },
-          stage: 1,
-          nextReviewDate: tomorrow,
-          isMastered: false,
+          chapterNumber,
+          levelNumber,
+        },
+        {
+          isCompleted: true,
+          xpEarned: xpAwarded,
         },
         { upsert: true }
       );
+    } catch (progressErr) {
+      console.error("Warning: could not sync legacy Progress record:", progressErr.message);
+    }
+  }
+
+  // Defensively update ActivityLog & streak
+  if (passed) {
+    try {
+      await logActivity(userId, "level_complete", {
+        xpEarned: xpAwarded,
+        levelId,
+        subject: doc.subject,
+        chapterNumber,
+        levelNumber,
+        stars,
+        score,
+      });
+    } catch (activityErr) {
+      console.error("Warning: could not log activity:", activityErr.message);
+    }
+  }
+
+  // Defensively update cached user streak & total XP
+  try {
+    await recomputeUserStats(userId);
+  } catch (statsErr) {
+    console.error("Warning: could not recompute user stats:", statsErr.message);
+  }
+
+  // Defensively manage Spaced Repetition for mistakes
+  if (mistakesToTrack.length > 0) {
+    try {
+      const tomorrow = new Date();
+      tomorrow.setDate(tomorrow.getDate() + 1);
+
+      for (const m of mistakesToTrack) {
+        await MistakeReview.findOneAndUpdate(
+          { userId, questionId: m.id },
+          {
+            userId,
+            questionId: m.id,
+            levelId,
+            subject: doc.subject,
+            questionData: {
+              prompt: m.prompt,
+              type: m.type,
+              options: m.options,
+              explanation: m.explanation,
+              hint: m.hint,
+              topicTag: m.topicTag,
+            },
+            stage: 1,
+            nextReviewDate: tomorrow,
+            isMastered: false,
+          },
+          { upsert: true }
+        );
+      }
+    } catch (mistakeErr) {
+      console.error("Warning: could not track mistakes for review:", mistakeErr.message);
     }
   }
 

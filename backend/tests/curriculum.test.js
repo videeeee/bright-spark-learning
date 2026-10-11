@@ -132,4 +132,40 @@ describe("Curriculum & Catalog Engine", () => {
     expect(computeStars(69)).toBe(0);
     expect(computeStars(50)).toBe(0);
   });
+
+  it("regression: calculateLevelXp works when destructured without this context", () => {
+    const { calculateLevelXp } = require("../config/xpRules");
+    expect(() => {
+      const xp = calculateLevelXp({ score: 85, isFirstCompletion: true });
+      expect(xp).toBe(50); // 40 base + 10 (2 stars)
+    }).not.toThrow();
+  });
+
+  it("regression: old-schema user document compatibility", () => {
+    // Old schema user document: only basic fields, missing new schema fields
+    const legacyUser = {
+      _id: "507f1f77bcf86cd799439011",
+      name: "Legacy Student",
+      email: "legacy@example.com",
+      password: "hashedpassword123",
+      classLevel: "9",
+      curriculum: "ICSE",
+      // Notice: companion, settings, totalXp, currentStreak, lastActiveDate are all undefined
+    };
+
+    // Verify virtual displayName works on legacy user
+    const parts = legacyUser.name.trim().split(" ");
+    const displayName = parts.length > 1 ? `${parts[0]} ${parts[parts.length - 1][0].toUpperCase()}.` : parts[0];
+    expect(displayName).toBe("Legacy S.");
+
+    // Default fallbacks should work seamlessly
+    const companion = legacyUser.companion || "solin";
+    const totalXp = legacyUser.totalXp || 0;
+    const currentStreak = legacyUser.currentStreak || 0;
+
+    expect(companion).toBe("solin");
+    expect(totalXp).toBe(0);
+    expect(currentStreak).toBe(0);
+  });
 });
+

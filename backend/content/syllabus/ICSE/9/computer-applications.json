@@ -36,234 +36,247 @@
               "isReviewLevel": false,
               "status": "published",
               "lesson": {
-                "title": "Core Principles of Object-Oriented Programming (OOP)",
-                "intro": "Object-Oriented Programming (OOP) is a software design paradigm that models real-world entities as software objects. In the ICSE Class 9 Computer Applications curriculum, understanding OOP principles is foundational for mastering Java. An object represents an identifiable entity possessing a defined state (attributes or characteristics) and behavior (actions or methods). OOP rests on four fundamental pillars: Encapsulation, Abstraction, Inheritance, and Polymorphism. These principles provide modularity, software reusability, enhanced security, and maintainability in software engineering.",
+                "title": "Core Principles of OOP",
+                "intro": "This lesson introduces Class 9 ICSE learners to the fundamental ideas of Object‑Oriented Programming in Java, focusing on how real‑world objects are modelled as software bundles of state and behaviour.",
                 "keyConcepts": [
                   {
-                    "title": "Objects, State, and Behavior",
-                    "explanation": "A real-world object has characteristics and functions. In software, characteristics correspond to variables or attributes (representing the 'state'), while functions or operations correspond to methods (representing the 'behavior'). A class serves as a blueprint or template, denoted mathematically as a mapping $C: S \\to B$, where a set of state variables $S = \\{s_1, s_2, \\dots, s_n\\}$ determines the attributes, and a set of methods $B = \\{b_1, b_2, \\dots, b_m\\}$ defines the valid operations executable on an instance $O_k \\in C$."
+                    "title": "Encapsulation",
+                    "explanation": "Encapsulation bundles data (fields) and methods that operate on the data inside a class, and restricts direct access from outside using access modifiers."
                   },
                   {
-                    "title": "Encapsulation and Data Hiding",
-                    "explanation": "Encapsulation is the mechanism of wrapping code (methods) and data (variables) together into a single unit called a class. It implements data hiding by restricting direct access to the internal components of an object using access specifiers like `private`. If an object's internal variable is $x$, external access is strictly mediated via accessor (getter) and mutator (setter) functions: $x_{\\text{val}} = \\text{get}X()$ and $\\text{set}X(x_{\\text{new}})$, shielding data from unauthorized corruption."
+                    "title": "Inheritance",
+                    "explanation": "Inheritance allows a new class (subclass) to acquire properties and methods of an existing class (superclass), promoting code reuse and hierarchical relationships."
                   },
                   {
-                    "title": "Abstraction, Inheritance, and Polymorphism",
-                    "explanation": "Abstraction represents the essential features of an entity without including background implementation details. Inheritance is the mechanism by which a subclass acquires properties and behaviors from a superclass, enabling reuse of code: $\\text{Subclass} \\subseteq \\text{Superclass}$. Polymorphism, meaning 'many forms' (poly = many, morph = form), allows an entity to take different forms at runtime or compile-time (e.g., method overloading: $\\text{area}(r)$ vs. $\\text{area}(l, w)$)."
+                    "title": "Polymorphism",
+                    "explanation": "Polymorphism lets a single method name behave differently based on the object that invokes it, achieved through method overriding or overloading."
                   }
                 ],
                 "tips": [
-                  "Remember: 'A class is an object factory or blueprint, whereas an object is an instance of a class.'",
-                  "Differentiate Encapsulation from Abstraction: Encapsulation is about binding and containment (data hiding), while Abstraction is about representation and hiding complexity.",
-                  "In examinations, always specify examples using real-world analogies first, followed by technical Java keywords."
+                  "Write clear getter and setter methods to demonstrate encapsulation in exam answers.",
+                  "Draw inheritance hierarchies before coding to visualise relationships and avoid missing super‑class members.",
+                  "Practice writing overridden methods; remember the @Override annotation helps catch signature errors."
                 ]
               },
               "examples": [
                 {
-                  "problem": "Identify the state and behavior of an entity `BankAccount` in an OOP system. Write down how encapsulation is preserved if the balance is updated via a deposit of amount $d$.",
-                  "solution": "1. Identify Attributes (State): Let account number be $A_{\\text{num}}$, holder name be $H$, and balance be $B$.\n2. Identify Methods (Behavior): Methods include $\\text{deposit}(d)$, $\\text{withdraw}(w)$, and $\\text{checkBalance}()$.\n3. Preserving Encapsulation:\n   - Set balance $B$ to `private` access so that $B$ cannot be modified directly from outside the class.\n   - Define the deposit method: $$B_{\\text{new}} = B_{\\text{old}} + d \\quad (\\text{where } d > 0)$$\n   - Direct assignment like `account.balance = 5000` is rejected; modification is strictly controlled through the method `deposit(d)`.",
-                  "explanation": "Encapsulation groups the state ($B$) and behavior ($\text{deposit}$) together while enforcing validation rules ($d > 0$) through access modifiers."
+                  "problem": "Create a class `Student` with private fields `name` and `age`. Provide public getter and setter methods for each field.",
+                  "solution": "public class Student {\n    private String name;\n    private int age;\n    public String getName() { return name; }\n    public void setName(String name) { this.name = name; }\n    public int getAge() { return age; }\n    public void setAge(int age) { this.age = age; }\n}",
+                  "explanation": "The fields are declared private to hide internal state. Public getters return the current values, while setters allow controlled modification, illustrating encapsulation."
                 },
                 {
-                  "problem": "A geometric shape class hierarchy defines a base class `Shape` with a method $\\text{area}()$. Describe how inheritance and polymorphism are applied when calculating areas of a circle with radius $r$ and a rectangle with dimensions $l \\times w$.",
-                  "solution": "1. Inheritance:\n   - Define base class `Shape`.\n   - Subclass `Circle` extends `Shape`.\n   - Subclass `Rectangle` extends `Shape`.\n2. Polymorphism (Dynamic Method Dispatch):\n   - Both subclasses override the method $\\text{area}()$.\n   - For `Circle`: $$\\text{area} = \\pi r^2$$\n   - For `Rectangle`: $$\\text{area} = l \\times w$$\n   - A reference variable of type `Shape` can refer to either instance: $S_1 = \\text{new Circle}(r)$ or $S_2 = \\text{new Rectangle}(l, w)$, invoking the specific $\\text{area}()$ implementation.",
-                  "explanation": "Inheritance allows both subclasses to share the generic interface of `Shape`, while polymorphism enables each shape to define its own mathematical computation for area."
+                  "problem": "Demonstrate runtime polymorphism by creating a superclass `Animal` with method `sound()` and subclasses `Dog` and `Cat` that override `sound()`. Show the output when calling `sound()` on an `Animal` reference to each subclass.",
+                  "solution": "class Animal {\n    void sound() { System.out.println(\"Some sound\"); }\n}\nclass Dog extends Animal {\n    @Override\n    void sound() { System.out.println(\"Bark\"); }\n}\nclass Cat extends Animal {\n    @Override\n    void sound() { System.out.println(\"Meow\"); }\n}\npublic class Test {\n    public static void main(String[] args) {\n        Animal a1 = new Dog();\n        Animal a2 = new Cat();\n        a1.sound(); // prints Bark\n        a2.sound(); // prints Meow\n    }\n}",
+                  "explanation": "`Dog` and `Cat` provide their own implementations of `sound()`. At runtime, the JVM selects the appropriate method based on the actual object type, demonstrating polymorphism."
                 }
               ],
               "questions": [
                 {
                   "id": "icse-9-comp-ch1-l1-q1",
                   "type": "mcq",
-                  "prompt": "What are the two core constituents of a real-world object modeled in Java?",
+                  "prompt": "Which access modifier best supports encapsulation by restricting field access to within the same class?",
                   "options": [
-                    "State and Behavior",
-                    "Compiler and Interpreter",
-                    "Keywords and Literals",
-                    "Bytes and Bits"
+                    "private",
+                    "protected",
+                    "public",
+                    "default"
                   ],
-                  "correctAnswer": "State and Behavior",
-                  "explanation": "Every object in Object-Oriented Programming is characterized by its state (attributes/variables) and its behavior (methods/actions).",
-                  "hint": "Think about what an object 'has' and what an object 'does'.",
+                  "correctAnswer": "private",
+                  "explanation": "The `private` modifier hides the field from all other classes, ensuring that only methods inside the same class can access or modify it, which is the core of encapsulation.",
+                  "hint": "Think of the most restrictive visibility level.",
                   "difficulty": "easy",
-                  "topicTag": "Objects as software bundles of state and behavior"
+                  "topicTag": "Encapsulation",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q2",
                   "type": "mcq",
-                  "prompt": "The mechanism of wrapping data and methods into a single protective unit is known as:",
+                  "prompt": "In Java, which keyword is used to inherit properties and methods from a superclass?",
                   "options": [
-                    "Encapsulation",
-                    "Polymorphism",
-                    "Inheritance",
-                    "Compilation"
+                    "extends",
+                    "implements",
+                    "super",
+                    "this"
                   ],
-                  "correctAnswer": "Encapsulation",
-                  "explanation": "Encapsulation is the fundamental OOP principle that binds together data and the functions that manipulate them, safeguarding against unauthorized external access.",
-                  "hint": "Consider the term 'capsule' which encloses medicines.",
+                  "correctAnswer": "extends",
+                  "explanation": "The `extends` keyword creates an inheritance relationship, allowing the subclass to acquire fields and methods defined in the superclass.",
+                  "hint": "Look for the word that defines a subclass relationship.",
                   "difficulty": "easy",
-                  "topicTag": "Encapsulation and data hiding"
+                  "topicTag": "Inheritance",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q3",
                   "type": "mcq",
-                  "prompt": "Which principle of OOP focuses on presenting only essential features while hiding the complex background details?",
+                  "prompt": "What will be the output of the following code?\n\nclass A { void show(){ System.out.print(\"A\"); } }\nclass B extends A { void show(){ System.out.print(\"B\"); } }\npublic class Test{ public static void main(String[] args){ A obj = new B(); obj.show(); } }\n",
                   "options": [
-                    "Abstraction",
-                    "Inheritance",
-                    "Dynamic Binding",
-                    "Garbage Collection"
+                    "A",
+                    "B",
+                    "AB",
+                    "Compilation error"
                   ],
-                  "correctAnswer": "Abstraction",
-                  "explanation": "Abstraction is the act of representing essential features without including the background implementation details.",
-                  "hint": "Think about driving a car: you step on the accelerator without knowing the exact chemical mechanics inside the engine.",
-                  "difficulty": "easy",
-                  "topicTag": "Abstraction vs details"
+                  "correctAnswer": "B",
+                  "explanation": "Even though the reference type is `A`, the actual object is of type `B`. At runtime, the overridden `show()` in `B` is executed, printing `B`.",
+                  "hint": "Method overriding decides the method at runtime.",
+                  "difficulty": "medium",
+                  "topicTag": "Polymorphism",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q4",
                   "type": "mcq",
-                  "prompt": "Which feature of OOP promotes code reusability by allowing a new class to acquire properties of an existing class?",
+                  "prompt": "Which of the following best describes abstraction in OOP?",
                   "options": [
-                    "Inheritance",
-                    "Abstraction",
-                    "Data Hiding",
-                    "Bytecode Generation"
+                    "Hiding internal data using private fields",
+                    "Providing a simple interface while hiding complex implementation",
+                    "Creating a subclass from a superclass",
+                    "Overloading a method with different parameters"
                   ],
-                  "correctAnswer": "Inheritance",
-                  "explanation": "Inheritance is the mechanism by which one class derives the fields and methods of another class, directly enabling code reusability.",
-                  "hint": "It mirrors genetic inheritance from parent to child.",
-                  "difficulty": "easy",
-                  "topicTag": "Inheritance and code reusability"
+                  "correctAnswer": "Providing a simple interface while hiding complex implementation",
+                  "explanation": "Abstraction focuses on exposing only essential features through methods or interfaces, while the underlying complex details remain hidden from the user.",
+                  "hint": "Think of what a user sees versus what happens behind the scenes.",
+                  "difficulty": "medium",
+                  "topicTag": "Abstraction",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q5",
                   "type": "mcq",
-                  "prompt": "The term 'Polymorphism' is derived from Greek words meaning:",
+                  "prompt": "Which statement is true about method overloading?",
                   "options": [
-                    "Many forms",
-                    "Single identity",
-                    "Hidden structure",
-                    "Reusable code"
+                    "Methods have the same name and same parameter list",
+                    "Methods have different names but same parameter list",
+                    "Methods have same name but different parameter lists",
+                    "Methods must be in different classes"
                   ],
-                  "correctAnswer": "Many forms",
-                  "explanation": "Polymorphism comes from 'poly' (meaning many) and 'morph' (meaning form or shape), describing the ability of an entity to take multiple forms.",
-                  "hint": "'Poly' signifies multiple or many.",
+                  "correctAnswer": "Methods have same name but different parameter lists",
+                  "explanation": "Method overloading allows multiple methods with the same name in the same class, provided they differ in number, type, or order of parameters.",
+                  "hint": "Look for variation in parameters, not names.",
                   "difficulty": "easy",
-                  "topicTag": "Polymorphism"
+                  "topicTag": "Abstraction",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q6",
                   "type": "mcq",
-                  "prompt": "If a class `Circle` has attribute $r$ (radius) and calculates area using $A = \\pi r^2$, what does the variable $r$ represent?",
+                  "prompt": "Consider the class `Car` with a method `void start(){ System.out.println(\"Car started\"); }`. If another class `ElectricCar` extends `Car` and does not override `start()`, what will `new ElectricCar().start();` print?",
                   "options": [
-                    "The state of the object",
-                    "The behavior of the object",
-                    "The polymorphism of the object",
-                    "The abstraction level of the method"
+                    "Car started",
+                    "ElectricCar started",
+                    "Compilation error",
+                    "Runtime error"
                   ],
-                  "correctAnswer": "The state of the object",
-                  "explanation": "Variables hold the properties or attributes of an object, which constitute its internal state. Here, $r$ defines the current dimensions/state of `Circle`.",
-                  "hint": "Variables denote attributes or properties.",
-                  "difficulty": "medium",
-                  "topicTag": "Objects as software bundles of state and behavior"
+                  "correctAnswer": "Car started",
+                  "explanation": "Since `ElectricCar` inherits `start()` unchanged, calling it on an `ElectricCar` object executes the superclass method, printing `Car started`.",
+                  "hint": "No overriding means the original method runs.",
+                  "difficulty": "easy",
+                  "topicTag": "Inheritance",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q7",
                   "type": "mcq",
-                  "prompt": "In Java, data hiding within an encapsulated class is typically implemented by declaring variables as:",
+                  "prompt": "Which of the following is NOT a benefit of using encapsulation?",
                   "options": [
-                    "`private`",
-                    "`public`",
-                    "`abstract`",
-                    "`void`"
+                    "Improved code maintainability",
+                    "Data hiding",
+                    "Multiple inheritance support",
+                    "Controlled access to fields"
                   ],
-                  "correctAnswer": "`private`",
-                  "explanation": "Declaring member variables with the `private` access specifier prevents direct manipulation from outside the class, achieving effective data hiding.",
-                  "hint": "This access modifier restricts visibility strictly to within the same class.",
+                  "correctAnswer": "Multiple inheritance support",
+                  "explanation": "Encapsulation deals with data hiding and controlled access; it does not provide multiple inheritance, which Java does not support for classes.",
+                  "hint": "Think about what encapsulation directly influences.",
                   "difficulty": "medium",
-                  "topicTag": "Encapsulation and data hiding"
+                  "topicTag": "Encapsulation",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q8",
                   "type": "mcq",
-                  "prompt": "Consider two methods in the same class: $\\text{compute}(int\\; x)$ and $\\text{compute}(double\\; x)$. This is an example of:",
+                  "prompt": "What is the output of the following code?\n\nclass Parent { void display(){ System.out.print(\"Parent\"); } }\nclass Child extends Parent { void display(){ System.out.print(\"Child\"); } }\npublic class Demo{ public static void main(String[] args){ Parent p = new Parent(); p.display(); } }\n",
                   "options": [
-                    "Compile-time Polymorphism (Method Overloading)",
-                    "Data Encapsulation only",
-                    "Multiple Inheritance",
-                    "Dynamic Class Abstraction"
+                    "Parent",
+                    "Child",
+                    "ParentChild",
+                    "Compilation error"
                   ],
-                  "correctAnswer": "Compile-time Polymorphism (Method Overloading)",
-                  "explanation": "Method overloading occurs when multiple methods share the same name but differ in their parameter signatures, which is a form of compile-time polymorphism.",
-                  "hint": "Two methods share the same name with different arguments.",
-                  "difficulty": "medium",
-                  "topicTag": "Polymorphism"
+                  "correctAnswer": "Parent",
+                  "explanation": "The reference and object are both of type `Parent`; therefore the `display()` method of `Parent` is invoked, printing `Parent`.",
+                  "hint": "No overriding occurs because the object is not a `Child`.",
+                  "difficulty": "easy",
+                  "topicTag": "Polymorphism",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q9",
                   "type": "mcq",
-                  "prompt": "How does Abstraction differ fundamentally from Encapsulation?",
+                  "prompt": "Which keyword is used inside a subclass to refer to the superclass constructor?",
                   "options": [
-                    "Abstraction hides internal complexity; Encapsulation binds data and methods together to hide data",
-                    "Abstraction binds methods and variables; Encapsulation hides all code logic entirely",
-                    "Abstraction allows code inheritance; Encapsulation creates new objects at runtime",
-                    "Abstraction is only used in procedural programming; Encapsulation belongs to OOP"
+                    "super",
+                    "this",
+                    "base",
+                    "parent"
                   ],
-                  "correctAnswer": "Abstraction hides internal complexity; Encapsulation binds data and methods together to hide data",
-                  "explanation": "Abstraction deals with 'what' an object does by presenting essential functionality while hiding internal workings. Encapsulation deals with 'how' the internal state is bundled and protected from direct external tampering.",
-                  "hint": "Think about interface design versus data shielding.",
+                  "correctAnswer": "super",
+                  "explanation": "The `super` keyword calls the immediate superclass constructor or accesses its members, enabling proper initialization in inheritance hierarchies.",
+                  "hint": "It shares the same name as the method used for method overriding calls.",
                   "difficulty": "medium",
-                  "topicTag": "Abstraction vs details"
+                  "topicTag": "Inheritance",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q10",
                   "type": "mcq",
-                  "prompt": "Let class $B$ inherit from class $A$. In ICSE terminology, class $A$ is termed the _______ and class $B$ is termed the _______.",
+                  "prompt": "In the context of OOP, which term best describes a real‑world entity modeled as a class with attributes and behaviours?",
                   "options": [
-                    "Superclass (Base class); Subclass (Derived class)",
-                    "Subclass; Superclass",
-                    "Encapsulated class; Abstract class",
-                    "Polymorphic class; Monomorphic class"
+                    "Object",
+                    "Variable",
+                    "Method",
+                    "Interface"
                   ],
-                  "correctAnswer": "Superclass (Base class); Subclass (Derived class)",
-                  "explanation": "The class being inherited from is the superclass (or parent/base class), and the class that inherits is the subclass (or child/derived class).",
-                  "hint": "The parent is 'super' to the child.",
+                  "correctAnswer": "Object",
+                  "explanation": "An object is an instance of a class that encapsulates state (attributes) and behaviour (methods), mirroring a real‑world entity in software.",
+                  "hint": "Think of the concrete instance created from a class blueprint.",
                   "difficulty": "easy",
-                  "topicTag": "Inheritance and code reusability"
+                  "topicTag": "Objects",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q11",
                   "type": "mcq",
-                  "prompt": "An abstract mathematical model defines class $C$ with $k$ private state variables. Which method pattern should be provided to maintain encapsulation while allowing external components to read variable $x_i$?",
+                  "prompt": "Which of the following statements about abstract classes is correct?",
                   "options": [
-                    "Getter / Accessor method: `getX()`",
-                    "Direct assignment: `obj.x = value`",
-                    "Destructor method: `finalize()`",
-                    "Static initializer block: `static { }`"
+                    "An abstract class can be instantiated directly",
+                    "All methods in an abstract class must be abstract",
+                    "An abstract class can contain both abstract and concrete methods",
+                    "Abstract classes cannot have constructors"
                   ],
-                  "correctAnswer": "Getter / Accessor method: `getX()`",
-                  "explanation": "Accessor methods (getters) return the value of a private variable without exposing the variable for direct unauthorized modification, thereby preserving encapsulation.",
-                  "hint": "These methods typically start with 'get'.",
+                  "correctAnswer": "An abstract class can contain both abstract and concrete methods",
+                  "explanation": "Java allows abstract classes to define abstract methods (without body) and concrete methods (with implementation), providing a mix of behaviours for subclasses.",
+                  "hint": "Consider flexibility of code reuse versus mandatory implementation.",
                   "difficulty": "hard",
-                  "topicTag": "Encapsulation and data hiding"
+                  "topicTag": "Abstraction",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-comp-ch1-l1-q12",
                   "type": "mcq",
-                  "prompt": "Consider a base class `Vehicle` with derived classes `Car`, `Boat`, and `Aeroplane`. Each implements `move()`. When `v.move()` behaves differently depending on the specific object reference assigned to `v`, this demonstrates:",
+                  "prompt": "What will be the result of compiling and running this code?\n\ninterface Drawable { void draw(); }\nclass Shape implements Drawable { public void draw(){ System.out.println(\"Shape\"); } }\npublic class Test{ public static void main(String[] args){ Drawable d = new Shape(); d.draw(); } }\n",
                   "options": [
-                    "Runtime Polymorphism (Dynamic Method Dispatch)",
-                    "Strict Encapsulation",
-                    "Pure Abstraction without Implementation",
-                    "Procedural Decomposition"
+                    "Shape",
+                    "Drawable",
+                    "Compilation error",
+                    "Runtime error"
                   ],
-                  "correctAnswer": "Runtime Polymorphism (Dynamic Method Dispatch)",
-                  "explanation": "When an overridden method is resolved at runtime based on the actual object referenced by a superclass variable $v$, it is known as dynamic method dispatch or runtime polymorphism.",
-                  "hint": "The exact version of `move()` is selected dynamically at execution time.",
-                  "difficulty": "hard",
-                  "topicTag": "Polymorphism"
+                  "correctAnswer": "Shape",
+                  "explanation": "`Shape` implements `Drawable` and provides a concrete `draw()` method. The interface reference `d` points to a `Shape` object, so calling `draw()` prints `Shape`.",
+                  "hint": "Interfaces can hold references to implementing objects.",
+                  "difficulty": "medium",
+                  "topicTag": "Polymorphism",
+                  "verificationStatus": "rule_checked"
                 }
-              ]
+              ],
+              "verifiedWith": "groq+gemini"
             },
             {
               "id": "icse-9-comp-ch1-l2",
@@ -517,7 +530,8 @@
                 "Real-world object mapping"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -538,7 +552,8 @@
                 "Literals (integer, floating-point, character, string, boolean)"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-comp-ch2-l2",
@@ -552,7 +567,8 @@
                 "Ternary operator syntax"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-comp-ch2-l3",
@@ -565,7 +581,8 @@
                 "Math.sqrt(), Math.pow(), Math.abs(), Math.round(), Math.floor(), Math.ceil()"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-comp-ch2-l4",
@@ -577,7 +594,8 @@
                 "Increment/decrement step-by-step tracing"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -598,7 +616,8 @@
                 "Fall-through and default statement"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-comp-ch3-l2",
@@ -611,7 +630,8 @@
                 "Infinite loops and loop count calculations"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-comp-ch3-l3",
@@ -624,7 +644,8 @@
                 "Palindrome and Armstrong number logic"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-comp-ch3-l4",
@@ -636,7 +657,8 @@
                 "Common ICSE algorithmic patterns"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }

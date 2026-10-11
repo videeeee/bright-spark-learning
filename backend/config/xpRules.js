@@ -17,11 +17,11 @@ const XP_RULES = {
 
   // Calculate XP awarded for a level attempt
   calculateLevelXp({ score, isFirstCompletion, previousBestStars = 0 }) {
-    if (score < this.PASS_THRESHOLD) {
+    if (score < XP_RULES.PASS_THRESHOLD) {
       return 0;
     }
 
-    const stars = this.calculateStars(score);
+    const stars = XP_RULES.calculateStars(score);
 
     if (isFirstCompletion) {
       const base = 40;

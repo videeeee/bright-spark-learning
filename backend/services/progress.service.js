@@ -3,6 +3,7 @@ const LevelAttempt = require("../models/LevelAttempt");
 const LeaderboardSnapshot = require("../models/LeaderboardSnapshot");
 const User = require("../models/User");
 const Notes = require("../models/Notes");
+const Progress = require("../models/Progress");
 const XP_RULES = require("../config/xpRules");
 
 const TIMEZONE = "Asia/Kolkata";
@@ -139,6 +140,26 @@ async function recomputeUserStats(userId) {
   const attempts = await LevelAttempt.find({ user: userId, passed: true }).select("xpEarned");
   const totalLevelXp = attempts.reduce((acc, curr) => acc + (curr.xpEarned || 0), 0);
 
+  // 1b. Legacy compatibility: count legacy Progress records that don't have matching LevelAttempt
+  let legacyXp = 0;
+  try {
+    const legacyRecords = await Progress.find({ user: userId, isCompleted: true }).select("subject chapterNumber levelNumber xpEarned");
+    if (legacyRecords && legacyRecords.length > 0) {
+      const attemptList = await LevelAttempt.find({ user: userId, passed: true }).select("subject chapterNumber levelNumber");
+      const attemptKeys = new Set(
+        attemptList.map((a) => `${a.subject}_${a.chapterNumber}_${a.levelNumber}`)
+      );
+      for (const leg of legacyRecords) {
+        const key = `${leg.subject}_${leg.chapterNumber}_${leg.levelNumber}`;
+        if (!attemptKeys.has(key)) {
+          legacyXp += leg.xpEarned || 0;
+        }
+      }
+    }
+  } catch (legErr) {
+    console.error("Warning: error checking legacy progress in recomputeUserStats:", legErr.message);
+  }
+
   // 2. XP from note generation activities
   const noteActivities = await ActivityLog.countDocuments({ user: userId, type: "note_create" });
   const totalNoteXp = noteActivities * XP_RULES.NOTE_CREATION_XP;
@@ -147,7 +168,7 @@ async function recomputeUserStats(userId) {
   const listenActivities = await ActivityLog.countDocuments({ user: userId, type: "listen" });
   const totalListenXp = listenActivities * XP_RULES.LISTEN_SESSION_XP;
 
-  const totalXp = totalLevelXp + totalNoteXp + totalListenXp;
+  const totalXp = totalLevelXp + legacyXp + totalNoteXp + totalListenXp;
 
   // 4. Calculate streak
   const { streak, lastActiveDate } = await calculateStreak(userId);
@@ -438,8 +459,10 @@ module.exports = {
   getWeekStartKolkata,
   getWeekId,
   logActivity,
+  recordUserActivity: logActivity,
   calculateStreak,
   recomputeUserStats,
+  recomputeUserStreakAndXp: recomputeUserStats,
   getWeeklyXp,
   recordLevelCompletion,
   getLeaderboardData,

@@ -26,18 +26,28 @@
               "levelNumber": 1,
               "title": "States of Matter & Particle Theory",
               "description": "Characteristics of particles of matter, diffusion, and kinetic energy across solids, liquids, and gases.",
-              "subtopics": ["Intermolecular spaces and attraction", "States of matter properties", "Diffusion rates"],
+              "subtopics": [
+                "Intermolecular spaces and attraction",
+                "States of matter properties",
+                "Diffusion rates"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "cbse-9-sci-ch1-l2",
               "levelNumber": 2,
               "title": "Interconversion of States & Evaporation",
               "description": "Latent heat of fusion, latent heat of vaporization, sublimation, and factors affecting evaporation.",
-              "subtopics": ["Latent heat concepts", "Sublimation with camphor/ammonium chloride", "Evaporation causes cooling"],
+              "subtopics": [
+                "Latent heat concepts",
+                "Sublimation with camphor/ammonium chloride",
+                "Evaporation causes cooling"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -52,9 +62,14 @@
               "levelNumber": 1,
               "title": "Mixtures, Solutions, Colloids & Suspensions",
               "description": "Concentration of solutions (mass percentage), Tyndall effect, and Brownian motion.",
-              "subtopics": ["True solution vs colloid vs suspension", "Tyndall effect demonstration", "Mass percentage calculations"],
+              "subtopics": [
+                "True solution vs colloid vs suspension",
+                "Tyndall effect demonstration",
+                "Mass percentage calculations"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -69,9 +84,14 @@
               "levelNumber": 1,
               "title": "Laws of Chemical Combination & Chemical Formulae",
               "description": "Law of conservation of mass, law of constant proportions, Dalton's atomic theory, writing chemical formulae using valency criss-cross.",
-              "subtopics": ["Law of conservation of mass", "Law of constant proportions", "Writing chemical formulae"],
+              "subtopics": [
+                "Law of conservation of mass",
+                "Law of constant proportions",
+                "Writing chemical formulae"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -86,9 +106,14 @@
               "levelNumber": 1,
               "title": "Subatomic Particles & Atomic Models",
               "description": "Thomson model, Rutherford alpha scattering experiment, Bohr model of atom, Bohr-Bury electronic configuration.",
-              "subtopics": ["Rutherford experiment conclusions", "Bohr-Bury rules (2n^2)", "Valency, isotopes, and isobars"],
+              "subtopics": [
+                "Rutherford experiment conclusions",
+                "Bohr-Bury rules (2n^2)",
+                "Valency, isotopes, and isobars"
+              ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -109,9 +134,14 @@
               "levelNumber": 1,
               "title": "Cell Structure, Osmosis & Organelles",
               "description": "Plasma membrane, osmosis in hypotonic/hypertonic solutions, mitochondria (powerhouse), and plastids.",
-              "subtopics": ["Endosmosis and exosmosis", "Mitochondria and ATP", "Endoplasmic reticulum and Golgi apparatus"],
+              "subtopics": [
+                "Endosmosis and exosmosis",
+                "Mitochondria and ATP",
+                "Endoplasmic reticulum and Golgi apparatus"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -126,9 +156,14 @@
               "levelNumber": 1,
               "title": "Plant & Animal Tissues",
               "description": "Meristematic, parenchyma, collenchyma, sclerenchyma, xylem, phloem; epithelial, connective, muscular, and nervous tissues.",
-              "subtopics": ["Meristematic vs permanent plant tissues", "Complex tissues: Xylem and Phloem", "Connective tissue (Blood, Bone, Cartilage)"],
+              "subtopics": [
+                "Meristematic vs permanent plant tissues",
+                "Complex tissues: Xylem and Phloem",
+                "Connective tissue (Blood, Bone, Cartilage)"
+              ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -149,9 +184,14 @@
               "levelNumber": 1,
               "title": "Equations of Motion & Graphical Analysis",
               "description": "Deriving v = u + at, s = ut + 1/2*at^2, v^2 = u^2 + 2as using velocity-time graphs.",
-              "subtopics": ["Distance vs displacement", "Slope and area of v-t graphs", "Derivation of motion equations"],
+              "subtopics": [
+                "Distance vs displacement",
+                "Slope and area of v-t graphs",
+                "Derivation of motion equations"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -166,9 +206,14 @@
               "levelNumber": 1,
               "title": "Newton's Three Laws of Motion & Momentum",
               "description": "First law (Inertia), Second law (F = ma), Third law (action and reaction pairs), and conservation of linear momentum.",
-              "subtopics": ["Inertia and types of inertia", "Mathematical formulation of F = ma", "Action-reaction pairs"],
+              "subtopics": [
+                "Inertia and types of inertia",
+                "Mathematical formulation of F = ma",
+                "Action-reaction pairs"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -183,9 +228,14 @@
               "levelNumber": 1,
               "title": "Universal Law of Gravitation & Free Fall",
               "description": "F = G*m1*m2/d^2, acceleration due to gravity g = GM/R^2, and difference between mass and weight.",
-              "subtopics": ["Universal law formula and significance", "Calculation of g on Earth and Moon", "Weightlessness in free fall"],
+              "subtopics": [
+                "Universal law formula and significance",
+                "Calculation of g on Earth and Moon",
+                "Weightlessness in free fall"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -200,9 +250,14 @@
               "levelNumber": 1,
               "title": "Work, Kinetic Energy, Potential Energy & Sound",
               "description": "Work W = F*s*cos(theta), KE = 1/2*m*v^2, PE = mgh, conservation of mechanical energy; sound waves, echo calculation, ultrasound applications.",
-              "subtopics": ["Work definition and SI unit Joule", "Kinetic vs Potential energy", "Echo minimum distance (17.2m) and SONAR"],
+              "subtopics": [
+                "Work definition and SI unit Joule",
+                "Kinetic vs Potential energy",
+                "Echo minimum distance (17.2m) and SONAR"
+              ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -223,9 +278,14 @@
               "levelNumber": 1,
               "title": "Crop Variety Improvement & Animal Husbandry",
               "description": "Nutrient management (manure vs fertilizer), cropping patterns (intercropping, crop rotation), cattle farming, poultry, and apiculture.",
-              "subtopics": ["Macro and micronutrients for plants", "Intercropping vs mixed cropping", "Cattle farming and bee keeping"],
+              "subtopics": [
+                "Macro and micronutrients for plants",
+                "Intercropping vs mixed cropping",
+                "Cattle farming and bee keeping"
+              ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }

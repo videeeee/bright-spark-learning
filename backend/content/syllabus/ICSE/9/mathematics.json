@@ -156,7 +156,7 @@
                   "options": [
                     "$\\frac{58}{99}$",
                     "$\\frac{29}{50}$",
-                    "$\\frac{58}{100}$",
+                    "$\\frac{58}{90}$",
                     "$\\frac{19}{33}$"
                   ],
                   "correctAnswer": "$\\frac{58}{99}$",
@@ -948,7 +948,7 @@
                 "Difference between Simple and Compound Interest"
               ],
               "isReviewLevel": false,
-              "status": "published",
+              "status": "draft",
               "lesson": {
                 "title": "Year-by-Year Compound Interest Calculation",
                 "intro": "In simple interest, the principal remains constant throughout the loan or deposit period. In compound interest (CI), the interest earned at the end of each year is added to the principal to form the new principal for the subsequent year.",
@@ -974,56 +974,7 @@
                   "explanation": "The Year 2 interest is Rs 80 greater than Year 1 interest because 10% interest was charged on the first year's Rs 800 interest."
                 }
               ],
-              "questions": [
-                {
-                  "id": "icse-9-math-ci-1",
-                  "type": "mcq",
-                  "prompt": "For a principal P invested for 1 year compounded annually, how does Compound Interest compare to Simple Interest?",
-                  "options": [
-                    "CI is equal to SI",
-                    "CI is greater than SI",
-                    "CI is less than SI",
-                    "CI is double the SI"
-                  ],
-                  "correctAnswer": "CI is equal to SI",
-                  "explanation": "In the first compounding period, no prior interest has accrued to be compounded, so CI = SI = (P * R * 1)/100.",
-                  "hint": "Think about what is added to principal at the start of year 1.",
-                  "difficulty": "easy",
-                  "topicTag": "CI Concept"
-                },
-                {
-                  "id": "icse-9-math-ci-2",
-                  "type": "mcq",
-                  "prompt": "Find the compound interest on Rs 5,000 for 2 years at 8% per annum compounded annually without using formula.",
-                  "options": [
-                    "Rs 832",
-                    "Rs 800",
-                    "Rs 864",
-                    "Rs 5,832"
-                  ],
-                  "correctAnswer": "Rs 832",
-                  "explanation": "Year 1: I_1 = (5000*8*1)/100 = Rs 400. P_2 = 5400. Year 2: I_2 = (5400*8*1)/100 = Rs 432. Total CI = 400 + 432 = Rs 832.",
-                  "hint": "Calculate Year 1 interest (Rs 400), add it to Rs 5000, then find 8% of the new principal.",
-                  "difficulty": "medium",
-                  "topicTag": "Year-by-Year CI"
-                },
-                {
-                  "id": "icse-9-math-ci-3",
-                  "type": "mcq",
-                  "prompt": "What is the difference between CI and SI on Rs 10,000 for 2 years at 5% per annum?",
-                  "options": [
-                    "Rs 25",
-                    "Rs 50",
-                    "Rs 10",
-                    "Rs 100"
-                  ],
-                  "correctAnswer": "Rs 25",
-                  "explanation": "SI for 2 years = (10000*5*2)/100 = Rs 1,000. For CI: I_1 = Rs 500. P_2 = 10,500. I_2 = (10500*5)/100 = Rs 525. Total CI = 1025. Difference = 1025 - 1000 = Rs 25.",
-                  "hint": "Difference for 2 years is interest on the first year's interest: 5% of Rs 500.",
-                  "difficulty": "medium",
-                  "topicTag": "Difference between CI and SI"
-                }
-              ]
+              "questions": []
             },
             {
               "id": "icse-9-math-ch2-l2",
@@ -1036,7 +987,8 @@
                 "Different rates for consecutive years"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch2-l3",
@@ -1049,7 +1001,8 @@
                 "Word problems"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch2-l4",
@@ -1061,7 +1014,8 @@
                 "Exam-style applications"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -1088,7 +1042,7 @@
                 "Evaluation without multiplication"
               ],
               "isReviewLevel": false,
-              "status": "published",
+              "status": "draft",
               "lesson": {
                 "title": "Basic Algebraic Expansions: Identities and Applications",
                 "intro": "This lesson introduces the fundamental algebraic identities used for expanding binomials and trinomials. Mastering these identities allows students to simplify complex expressions and evaluate numerical problems efficiently without performing tedious multiplications. We will focus on the square of a binomial $(a \\pm b)^2$, the square of a trinomial $(a + b + c)^2$, and the product of two binomials with a common variable $(x + a)(x + b)$. These tools are essential for higher-level algebra and problem-solving in ICSE Class 9 Mathematics.",
@@ -1124,72 +1078,7 @@
                   "explanation": "This problem illustrates the utility of identities in simplifying arithmetic. By choosing a base number close to a power of 10, the calculation becomes a simple addition of squares and products."
                 }
               ],
-              "questions": [
-                {
-                  "id": "icse-9-math-ch3-l1-q1",
-                  "type": "mcq",
-                  "prompt": "Expand $(x + 5)^2$.",
-                  "options": [
-                    "$x^2 + 25$",
-                    "$x^2 + 10x + 25$",
-                    "$x^2 - 10x + 25$",
-                    "$x^2 + 5x + 25$"
-                  ],
-                  "correctAnswer": "$x^2 + 10x + 25$",
-                  "explanation": "Using $(a+b)^2 = a^2 + 2ab + b^2$, with $a=x$ and $b=5$: $x^2 + 2(x)(5) + 5^2 = x^2 + 10x + 25$.",
-                  "hint": "Remember the middle term is twice the product of the two terms.",
-                  "difficulty": "easy",
-                  "topicTag": "Quadratic identities"
-                },
-                {
-                  "id": "icse-9-math-ch3-l1-q2",
-                  "type": "mcq",
-                  "prompt": "Which identity is used to expand $(a - b)^2$?",
-                  "options": [
-                    "$a^2 + 2ab + b^2$",
-                    "$a^2 - 2ab + b^2$",
-                    "$a^2 - b^2$",
-                    "$a^2 + b^2$"
-                  ],
-                  "correctAnswer": "$a^2 - 2ab + b^2$",
-                  "explanation": "The square of a difference is given by $(a-b)^2 = a^2 - 2ab + b^2$. The cross term is negative.",
-                  "hint": "Check the sign of the middle term.",
-                  "difficulty": "easy",
-                  "topicTag": "Quadratic identities"
-                },
-                {
-                  "id": "icse-9-math-ch3-l1-q3",
-                  "type": "mcq",
-                  "prompt": "Expand $(2x + 3y)^2$.",
-                  "options": [
-                    "$4x^2 + 12xy + 9y^2$",
-                    "$4x^2 + 6xy + 9y^2$",
-                    "$2x^2 + 12xy + 3y^2$",
-                    "$4x^2 - 12xy + 9y^2$"
-                  ],
-                  "correctAnswer": "$4x^2 + 12xy + 9y^2$",
-                  "explanation": "Using $(a+b)^2 = a^2 + 2ab + b^2$ with $a=2x$ and $b=3y$: $(2x)^2 + 2(2x)(3y) + (3y)^2 = 4x^2 + 12xy + 9y^2$.",
-                  "hint": "Square the coefficients as well as the variables.",
-                  "difficulty": "medium",
-                  "topicTag": "Quadratic identities"
-                },
-                {
-                  "id": "icse-9-math-ch3-l1-q4",
-                  "type": "mcq",
-                  "prompt": "Evaluate $98^2$ using identities.",
-                  "options": [
-                    "$9604$",
-                    "$9800$",
-                    "$9600$",
-                    "$9704$"
-                  ],
-                  "correctAnswer": "$9604$",
-                  "explanation": "Write $98$ as $(100 - 2)$. Using $(a-b)^2 = a^2 - 2ab + b^2$: $100^2 - 2(100)(2) + 2^2 = 10000 - 400 + 4 = 9604$.",
-                  "hint": "Express 98 as a difference from 100.",
-                  "difficulty": "medium",
-                  "topicTag": "Evaluation without multiplication"
-                }
-              ]
+              "questions": []
             },
             {
               "id": "icse-9-math-ch3-l2",
@@ -1202,7 +1091,7 @@
                 "Simplification problems"
               ],
               "isReviewLevel": false,
-              "status": "published",
+              "status": "draft",
               "lesson": {
                 "title": "Cubic Expansions and Conditional Identities",
                 "intro": "This lesson delves into the algebraic expansions of cubic binomials and the powerful conditional identities that simplify complex expressions. Students will learn to expand $(a \\pm b)^3$ and $a^3 \\pm b^3$, and crucially, how to apply the identity $a^3 + b^3 + c^3 - 3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)$ when $a+b+c=0$. These tools are essential for simplifying high-degree polynomial expressions and solving algebraic problems efficiently in ICSE Class 9 Mathematics.",
@@ -1238,40 +1127,7 @@
                   "explanation": "This problem tests the understanding of the conditional identity. Recognizing that $x+y+z=0$ allows for immediate simplification of the cubic sum, making the division straightforward."
                 }
               ],
-              "questions": [
-                {
-                  "id": "icse-9-math-ch3-l2-q1",
-                  "type": "mcq",
-                  "prompt": "What is the expansion of $(a+b)^3$?",
-                  "options": [
-                    "$a^3 + b^3$",
-                    "$a^3 + 3a^2b + 3ab^2 + b^3$",
-                    "$a^3 - 3a^2b + 3ab^2 - b^3$",
-                    "$a^3 + 3ab + b^3$"
-                  ],
-                  "correctAnswer": "$a^3 + 3a^2b + 3ab^2 + b^3$",
-                  "explanation": "The standard binomial expansion for $(a+b)^3$ is $a^3 + 3a^2b + 3ab^2 + b^3$. This is derived from the binomial theorem or by multiplying $(a+b)(a+b)(a+b)$.",
-                  "hint": "Remember the coefficients 1, 3, 3, 1 from Pascal's triangle for the third power.",
-                  "difficulty": "easy",
-                  "topicTag": "Cubic binomials"
-                },
-                {
-                  "id": "icse-9-math-ch3-l2-q2",
-                  "type": "mcq",
-                  "prompt": "If $a+b+c=0$, what is the value of $a^3+b^3+c^3$?",
-                  "options": [
-                    "$0$",
-                    "$3abc$",
-                    "$abc$",
-                    "$a^2+b^2+c^2$"
-                  ],
-                  "correctAnswer": "$3abc$",
-                  "explanation": "Using the identity $a^3+b^3+c^3-3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)$, if $a+b+c=0$, then $a^3+b^3+c^3-3abc=0$, which implies $a^3+b^3+c^3=3abc$.",
-                  "hint": "Apply the conditional identity for the sum of three cubes.",
-                  "difficulty": "medium",
-                  "topicTag": "Conditional identity when a+b+c=0"
-                }
-              ]
+              "questions": []
             },
             {
               "id": "icse-9-math-ch3-l3",
@@ -1284,7 +1140,8 @@
                 "Middle term splitting"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch3-l4",
@@ -1297,7 +1154,8 @@
                 "Combined factorisation"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch3-l5",
@@ -1309,7 +1167,8 @@
                 "ICSE board exam style questions"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -1329,7 +1188,8 @@
                 "Method of substitution"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch4-l2",
@@ -1342,7 +1202,8 @@
                 "Special symmetric systems"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch4-l3",
@@ -1355,7 +1216,8 @@
                 "Speed, distance and time"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch4-l4",
@@ -1367,7 +1229,8 @@
                 "Board exam style word problems"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -1387,7 +1250,8 @@
                 "Solving exponential equations a^x = b"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch5-l2",
@@ -1399,7 +1263,8 @@
                 "Fundamental laws of logarithms"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch5-l3",
@@ -1411,7 +1276,8 @@
                 "Solving logarithmic equations"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch5-l4",
@@ -1423,7 +1289,8 @@
                 "Combined logarithmic simplifications"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -1449,7 +1316,8 @@
                 "Corresponding parts of congruent triangles (CPCTC)"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch6-l2",
@@ -1462,7 +1330,8 @@
                 "Equal intercepts theorem"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch6-l3",
@@ -1475,7 +1344,8 @@
                 "Calculations in right triangles and geometric figures"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch6-l4",
@@ -1487,7 +1357,8 @@
                 "ICSE board style proof questions"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         },
@@ -1508,7 +1379,8 @@
                 "Equilateral and isosceles triangles"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch7-l2",
@@ -1521,7 +1393,8 @@
                 "Area of circular rings"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch7-l3",
@@ -1534,7 +1407,8 @@
                 "Diagonal length formula sqrt(l^2+b^2+h^2)"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch7-l4",
@@ -1546,7 +1420,8 @@
                 "Melting and reshaping cuboids"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
@@ -1573,7 +1448,8 @@
                 "Reciprocal relations"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch8-l2",
@@ -1586,7 +1462,8 @@
                 "Simple right triangle solving"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch8-l3",
@@ -1599,7 +1476,8 @@
                 "Plotting points and finding distances"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             },
             {
               "id": "icse-9-math-ch8-l4",
@@ -1611,7 +1489,8 @@
                 "Board exam review"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "draft",
+              "questions": []
             }
           ]
         }
