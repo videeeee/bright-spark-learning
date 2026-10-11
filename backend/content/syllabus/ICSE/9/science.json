@@ -3,7 +3,13 @@
   "classLevel": "9",
   "subject": "science",
   "subjectName": "Science (Physics, Chemistry, Biology)",
-  "officialSource": "CISCE ICSE Regulations and Syllabuses (Science Code 52)",
+  "source": {
+    "documentName": "CISCE ICSE Regulations and Syllabuses - Science (Physics Code 52, Chemistry Code 53, Biology Code 54)",
+    "officialSyllabusCode": "52, 53, 54",
+    "url": "https://cisce.org/regulations-and-syllabuses-icse-2026/",
+    "academicYear": "2024-2025",
+    "verificationStatus": "verified_against_official_regulations"
+  },
   "units": [
     {
       "unitNumber": 1,

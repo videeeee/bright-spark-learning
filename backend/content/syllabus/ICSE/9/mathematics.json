@@ -3,7 +3,13 @@
   "classLevel": "9",
   "subject": "mathematics",
   "subjectName": "Mathematics",
-  "officialSource": "CISCE ICSE Regulations and Syllabuses (Mathematics Code 51)",
+  "source": {
+    "documentName": "CISCE ICSE Regulations and Syllabuses - Mathematics (Subject Code 51)",
+    "officialSyllabusCode": "51",
+    "url": "https://cisce.org/regulations-and-syllabuses-icse-2026/",
+    "academicYear": "2024-2025",
+    "verificationStatus": "verified_against_official_regulations"
+  },
   "units": [
     {
       "unitNumber": 1,
@@ -22,7 +28,99 @@
               "description": "Understanding terminating and non-terminating recurring decimals in p/q form.",
               "subtopics": ["Definition of rational numbers", "Converting recurring decimals to p/q", "Properties of rational numbers"],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Mastering Rational Numbers & Decimal Conversions",
+                "intro": "A rational number is any number that can be expressed in the form p/q, where p and q are integers and q != 0. Every rational number has either a terminating decimal expansion or a non-terminating recurring (repeating) decimal expansion.",
+                "keyConcepts": [
+                  {
+                    "title": "Terminating vs Non-Terminating Recurring Decimals",
+                    "explanation": "If the prime factorisation of the denominator q (in simplest form) has ONLY 2s and/or 5s (i.e. 2^m * 5^n), the decimal terminates. If any other prime factor (such as 3, 7, 11) is present, the decimal is non-terminating and recurring."
+                  },
+                  {
+                    "title": "Converting Pure Recurring Decimals to p/q Form",
+                    "explanation": "Let x = 0.777... (0.bar(7)). Since 1 digit repeats, multiply by 10: 10x = 7.777... Subtracting the equations gives: 10x - x = 7 => 9x = 7 => x = 7/9."
+                  },
+                  {
+                    "title": "Converting Mixed Recurring Decimals to p/q Form",
+                    "explanation": "For mixed recurring decimals like 0.2333... (0.2bar(3)): First multiply by 10 to isolate the non-repeating part: 10x = 2.333... Multiply by 100 to shift one repeating cycle: 100x = 23.333... Subtract: 100x - 10x = 23.333... - 2.333... => 90x = 21 => x = 21/90 = 7/30."
+                  }
+                ],
+                "tips": [
+                  "Always simplify your final fraction p/q to lowest terms by dividing by the HCF.",
+                  "Count the number of repeating digits (periodicity): 1 repeating digit -> multiply by 10; 2 repeating digits -> multiply by 100.",
+                  "Zero is a rational number because it can be written as 0/1."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "Express 0.bar(54) as a rational number in simplest form p/q.",
+                  "solution": "Let x = 0.545454... (1)\nSince two digits repeat (54), multiply both sides by 100:\n100x = 54.545454... (2)\nSubtracting (1) from (2):\n100x - x = 54.545454... - 0.545454...\n99x = 54\nx = 54 / 99\nDividing numerator and denominator by 9:\nx = 6 / 11",
+                  "explanation": "The period is 2 (digits 5 and 4 repeat), so multiplying by 10^2 = 100 clears the infinite recurring fractional part upon subtraction."
+                },
+                {
+                  "problem": "Without actual division, determine whether 13/80 is terminating or non-terminating recurring.",
+                  "solution": "Look at the denominator: 80.\nPrime factorisation of 80 = 2^4 * 5^1.\nSince the prime factors are exclusively 2 and 5 (form 2^m * 5^n), the fraction 13/80 has a terminating decimal expansion.",
+                  "explanation": "Any denominator whose only prime factors are 2 and 5 will divide cleanly into a power of 10, resulting in a finite terminating decimal."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-math-q1-1",
+                  "type": "mcq",
+                  "prompt": "What is the simplest fractional form p/q of the recurring decimal 0.bar(4)?",
+                  "options": ["4/9", "4/10", "2/5", "4/99"],
+                  "correctAnswer": "4/9",
+                  "explanation": "Let x = 0.444... Multiplying by 10 gives 10x = 4.444... Subtracting gives 9x = 4, so x = 4/9.",
+                  "hint": "Set x = 0.444... and multiply by 10 to shift the decimal by one repeating period.",
+                  "difficulty": "easy",
+                  "topicTag": "Recurring Decimals"
+                },
+                {
+                  "id": "icse-9-math-q1-2",
+                  "type": "mcq",
+                  "prompt": "Without actual division, which of the following fractions represents a terminating decimal?",
+                  "options": ["7/75", "11/24", "17/125", "13/30"],
+                  "correctAnswer": "17/125",
+                  "explanation": "125 = 5^3. Since the prime factorisation contains only 5 (of the form 2^m * 5^n), 17/125 terminates. 75 has factor 3, 24 has 3, and 30 has 3.",
+                  "hint": "Check the prime factors of each denominator. A fraction terminates only if the prime factors are strictly 2 and/or 5.",
+                  "difficulty": "medium",
+                  "topicTag": "Terminating Decimals"
+                },
+                {
+                  "id": "icse-9-math-q1-3",
+                  "type": "mcq",
+                  "prompt": "Convert the mixed recurring decimal 0.1bar(6) into simplest fractional form p/q.",
+                  "options": ["1/6", "16/99", "16/90", "1/5"],
+                  "correctAnswer": "1/6",
+                  "explanation": "Let x = 0.1666... Then 10x = 1.666... and 100x = 16.666... Subtracting gives 90x = 15 => x = 15/90 = 1/6.",
+                  "hint": "Multiply by 10 to bring the non-repeating digit before the decimal point, then by 100 to shift one repeating digit.",
+                  "difficulty": "medium",
+                  "topicTag": "Mixed Recurring Decimals"
+                },
+                {
+                  "id": "icse-9-math-q1-4",
+                  "type": "mcq",
+                  "prompt": "Which of the following numbers is an irrational number?",
+                  "options": ["sqrt(144)", "0.375", "sqrt(20)", "3.141414... (3.bar(14))"],
+                  "correctAnswer": "sqrt(20)",
+                  "explanation": "sqrt(20) = 2*sqrt(5). Since 5 is not a perfect square, sqrt(5) is non-terminating and non-recurring (irrational). sqrt(144) = 12, 0.375 is terminating, and 3.bar(14) is recurring.",
+                  "hint": "Look for a square root whose radicand is not a perfect square.",
+                  "difficulty": "easy",
+                  "topicTag": "Classification of Real Numbers"
+                },
+                {
+                  "id": "icse-9-math-q1-5",
+                  "type": "mcq",
+                  "prompt": "Express 1.bar(27) in the form p/q in lowest terms.",
+                  "options": ["14/11", "127/99", "126/99", "13/11"],
+                  "correctAnswer": "14/11",
+                  "explanation": "Let x = 1.2727... 100x = 127.2727... 100x - x = 127 - 1 = 126 => 99x = 126 => x = 126/99 = 14/11.",
+                  "hint": "100x - x = 126. Then divide 126 and 99 by their common factor 9.",
+                  "difficulty": "hard",
+                  "topicTag": "Recurring Decimals"
+                }
+              ]
             },
             {
               "id": "icse-9-math-ch1-l2",
@@ -31,7 +129,71 @@
               "description": "Proof of irrationality for square roots and identifying surds.",
               "subtopics": ["Concept of irrational numbers", "Proof that sqrt(2) and sqrt(3) are irrational", "Simplification of surds"],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Properties of Surds and Proofs of Irrationality",
+                "intro": "A surd is an irrational root of a rational number. For instance, sqrt(2), cbrt(5), and sqrt(7) are surds, while sqrt(9) = 3 is not a surd because 3 is rational.",
+                "keyConcepts": [
+                  {
+                    "title": "Definition of a Surd",
+                    "explanation": "If 'a' is a positive rational number and n is a positive integer > 1 such that n-th root of a cannot be expressed as a rational number, then n-th root of a is called a surd of order n."
+                  },
+                  {
+                    "title": "Laws of Radical Simplification",
+                    "explanation": "sqrt(a * b) = sqrt(a) * sqrt(b). To simplify a surd, extract the largest perfect square factor: sqrt(72) = sqrt(36 * 2) = 6*sqrt(2)."
+                  },
+                  {
+                    "title": "Proof by Contradiction (e.g. sqrt(2) is Irrational)",
+                    "explanation": "Assume sqrt(2) = p/q in lowest terms with p, q coprime. Then 2 = p^2/q^2 => p^2 = 2q^2. Thus p^2 is even, so p is even (p = 2k). Then 4k^2 = 2q^2 => q^2 = 2k^2, so q is also even. This contradicts that p and q are coprime."
+                  }
+                ],
+                "tips": [
+                  "Similar (like) surds can be added or subtracted: 5*sqrt(3) + 2*sqrt(3) = 7*sqrt(3).",
+                  "Dissimilar surds cannot be combined into a single radical: sqrt(2) + sqrt(3) != sqrt(5)."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "Simplify the surd expression: 2*sqrt(50) - 3*sqrt(18) + sqrt(72).",
+                  "solution": "Factorise each radicand to find perfect square factors:\n2*sqrt(50) = 2*sqrt(25 * 2) = 2 * 5 * sqrt(2) = 10*sqrt(2)\n3*sqrt(18) = 3*sqrt(9 * 2) = 3 * 3 * sqrt(2) = 9*sqrt(2)\nsqrt(72) = sqrt(36 * 2) = 6*sqrt(2)\nCombining the like surds:\n10*sqrt(2) - 9*sqrt(2) + 6*sqrt(2) = (10 - 9 + 6)*sqrt(2) = 7*sqrt(2).",
+                  "explanation": "Express each term as a multiple of sqrt(2) before combining coefficients."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-math-q2-1",
+                  "type": "mcq",
+                  "prompt": "What is the simplified form of sqrt(180)?",
+                  "options": ["6*sqrt(5)", "5*sqrt(6)", "3*sqrt(20)", "12*sqrt(5)"],
+                  "correctAnswer": "6*sqrt(5)",
+                  "explanation": "180 = 36 * 5. sqrt(180) = sqrt(36) * sqrt(5) = 6*sqrt(5).",
+                  "hint": "Find the largest perfect square divisor of 180 (hint: 36 * 5 = 180).",
+                  "difficulty": "easy",
+                  "topicTag": "Simplification of Surds"
+                },
+                {
+                  "id": "icse-9-math-q2-2",
+                  "type": "mcq",
+                  "prompt": "Which of the following is NOT a surd?",
+                  "options": ["cbrt(27)", "sqrt(24)", "sqrt(45)", "cbrt(16)"],
+                  "correctAnswer": "cbrt(27)",
+                  "explanation": "cbrt(27) = 3, which is an integer and rational number. Therefore, cbrt(27) is not a surd.",
+                  "hint": "Check which radical evaluates to an exact integer/rational value.",
+                  "difficulty": "easy",
+                  "topicTag": "Definition of Surds"
+                },
+                {
+                  "id": "icse-9-math-q2-3",
+                  "type": "mcq",
+                  "prompt": "Evaluate: sqrt(48) - sqrt(27) + sqrt(75).",
+                  "options": ["6*sqrt(3)", "4*sqrt(3)", "5*sqrt(3)", "7*sqrt(3)"],
+                  "correctAnswer": "6*sqrt(3)",
+                  "explanation": "sqrt(48) = 4*sqrt(3); sqrt(27) = 3*sqrt(3); sqrt(75) = 5*sqrt(3). Total = (4 - 3 + 5)*sqrt(3) = 6*sqrt(3).",
+                  "hint": "Convert each term to a multiple of sqrt(3).",
+                  "difficulty": "medium",
+                  "topicTag": "Addition of Surds"
+                }
+              ]
             },
             {
               "id": "icse-9-math-ch1-l3",
@@ -40,7 +202,67 @@
               "description": "Conjugate surds and rationalising expressions of the form a / (b + sqrt(c)).",
               "subtopics": ["Conjugate of binomial surds", "Rationalising denominators", "Evaluation of algebraic surd expressions"],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Rationalising Denominators Using Conjugates",
+                "intro": "When a fraction contains a surd in its denominator, we convert the denominator into a rational number without changing the value of the fraction. This process is called rationalisation.",
+                "keyConcepts": [
+                  {
+                    "title": "Conjugate Binomial Surds",
+                    "explanation": "The conjugate of (a + sqrt(b)) is (a - sqrt(b)). The product of a conjugate pair is always rational: (a + sqrt(b))(a - sqrt(b)) = a^2 - (sqrt(b))^2 = a^2 - b."
+                  },
+                  {
+                    "title": "Rationalising Procedure",
+                    "explanation": "Multiply both numerator and denominator by the conjugate of the denominator: [1 / (sqrt(5) + sqrt(2))] * [(sqrt(5) - sqrt(2)) / (sqrt(5) - sqrt(2))] = (sqrt(5) - sqrt(2)) / (5 - 2) = (sqrt(5) - sqrt(2)) / 3."
+                  }
+                ],
+                "tips": [
+                  "Always simplify the denominator using identity (x + y)(x - y) = x^2 - y^2.",
+                  "If evaluating when given x = 2 + sqrt(3), compute 1/x = 2 - sqrt(3) directly, so x + 1/x = 4."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "Rationalise the denominator of 6 / (sqrt(5) - sqrt(2)).",
+                  "solution": "Multiply numerator and denominator by conjugate (sqrt(5) + sqrt(2)):\n6 * (sqrt(5) + sqrt(2)) / [(sqrt(5) - sqrt(2))(sqrt(5) + sqrt(2))]\n= 6 * (sqrt(5) + sqrt(2)) / (5 - 2)\n= 6 * (sqrt(5) + sqrt(2)) / 3\n= 2*(sqrt(5) + sqrt(2)).",
+                  "explanation": "(sqrt(5))^2 - (sqrt(2))^2 = 5 - 2 = 3. Dividing 6 by 3 gives 2."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-math-q3-1",
+                  "type": "mcq",
+                  "prompt": "What is the rationalising factor (conjugate) of (3 - 2*sqrt(2))?",
+                  "options": ["3 + 2*sqrt(2)", "3 - 2*sqrt(2)", "-3 - 2*sqrt(2)", "sqrt(2)"],
+                  "correctAnswer": "3 + 2*sqrt(2)",
+                  "explanation": "The conjugate of (a - b*sqrt(c)) is (a + b*sqrt(c)). Multiplying gives 3^2 - (2*sqrt(2))^2 = 9 - 8 = 1, a rational number.",
+                  "hint": "Invert the sign between the rational part and the radical part.",
+                  "difficulty": "easy",
+                  "topicTag": "Conjugates"
+                },
+                {
+                  "id": "icse-9-math-q3-2",
+                  "type": "mcq",
+                  "prompt": "Rationalise the denominator of 1 / (sqrt(7) + sqrt(5)).",
+                  "options": ["(sqrt(7) - sqrt(5)) / 2", "(sqrt(7) + sqrt(5)) / 2", "sqrt(7) - sqrt(5)", "(sqrt(7) - sqrt(5)) / 12"],
+                  "correctAnswer": "(sqrt(7) - sqrt(5)) / 2",
+                  "explanation": "Multiply numerator and denominator by (sqrt(7) - sqrt(5)). Denominator becomes (sqrt(7))^2 - (sqrt(5))^2 = 7 - 5 = 2.",
+                  "hint": "Multiply numerator and denominator by (sqrt(7) - sqrt(5)) and use a^2 - b^2 in denominator.",
+                  "difficulty": "medium",
+                  "topicTag": "Rationalisation"
+                },
+                {
+                  "id": "icse-9-math-q3-3",
+                  "type": "mcq",
+                  "prompt": "If x = 3 + 2*sqrt(2), what is the value of x + 1/x?",
+                  "options": ["6", "4*sqrt(2)", "8", "3*sqrt(2)"],
+                  "correctAnswer": "6",
+                  "explanation": "1/x = 1 / (3 + 2*sqrt(2)) = 3 - 2*sqrt(2). Therefore, x + 1/x = (3 + 2*sqrt(2)) + (3 - 2*sqrt(2)) = 6.",
+                  "hint": "Rationalise 1/x first. Notice that 3^2 - (2*sqrt(2))^2 = 9 - 8 = 1.",
+                  "difficulty": "hard",
+                  "topicTag": "Algebraic Evaluation of Surds"
+                }
+              ]
             },
             {
               "id": "icse-9-math-ch1-l4",
@@ -72,7 +294,67 @@
               "description": "Calculating year-by-year simple interest to understand interest accumulation.",
               "subtopics": ["Year-on-year interest calculation", "Difference between Simple and Compound Interest"],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Year-by-Year Compound Interest Calculation",
+                "intro": "In simple interest, the principal remains constant throughout the loan or deposit period. In compound interest (CI), the interest earned at the end of each year is added to the principal to form the new principal for the subsequent year.",
+                "keyConcepts": [
+                  {
+                    "title": "Annual Compounding Process",
+                    "explanation": "Year 1: Interest I_1 = (P * R * 1) / 100. Amount at end of Year 1: A_1 = P + I_1. Year 2: Principal becomes P_2 = A_1. Interest I_2 = (P_2 * R * 1) / 100. Total CI = I_1 + I_2."
+                  },
+                  {
+                    "title": "Why CI is Higher than SI",
+                    "explanation": "Because in Year 2, interest is earned not only on original principal P, but also on the interest I_1 earned in Year 1. The difference for 2 years is exactly: CI - SI = (P * R^2) / 10000."
+                  }
+                ],
+                "tips": [
+                  "For the 1st year, Simple Interest and Compound Interest are identical.",
+                  "Always compute the new principal P_2 before calculating Year 2 interest."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "Calculate the compound interest on Rs 8,000 for 2 years at 10% per annum, calculated year by year.",
+                  "solution": "Year 1:\nP_1 = Rs 8,000, R = 10%, T = 1 year.\nI_1 = (8000 * 10 * 1) / 100 = Rs 800.\nAmount A_1 = 8000 + 800 = Rs 8,800.\n\nYear 2:\nP_2 = Rs 8,800.\nI_2 = (8800 * 10 * 1) / 100 = Rs 880.\n\nTotal Compound Interest for 2 years = I_1 + I_2 = 800 + 880 = Rs 1,680.",
+                  "explanation": "The Year 2 interest is Rs 80 greater than Year 1 interest because 10% interest was charged on the first year's Rs 800 interest."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-math-ci-1",
+                  "type": "mcq",
+                  "prompt": "For a principal P invested for 1 year compounded annually, how does Compound Interest compare to Simple Interest?",
+                  "options": ["CI is equal to SI", "CI is greater than SI", "CI is less than SI", "CI is double the SI"],
+                  "correctAnswer": "CI is equal to SI",
+                  "explanation": "In the first compounding period, no prior interest has accrued to be compounded, so CI = SI = (P * R * 1)/100.",
+                  "hint": "Think about what is added to principal at the start of year 1.",
+                  "difficulty": "easy",
+                  "topicTag": "CI Concept"
+                },
+                {
+                  "id": "icse-9-math-ci-2",
+                  "type": "mcq",
+                  "prompt": "Find the compound interest on Rs 5,000 for 2 years at 8% per annum compounded annually without using formula.",
+                  "options": ["Rs 832", "Rs 800", "Rs 864", "Rs 5,832"],
+                  "correctAnswer": "Rs 832",
+                  "explanation": "Year 1: I_1 = (5000*8*1)/100 = Rs 400. P_2 = 5400. Year 2: I_2 = (5400*8*1)/100 = Rs 432. Total CI = 400 + 432 = Rs 832.",
+                  "hint": "Calculate Year 1 interest (Rs 400), add it to Rs 5000, then find 8% of the new principal.",
+                  "difficulty": "medium",
+                  "topicTag": "Year-by-Year CI"
+                },
+                {
+                  "id": "icse-9-math-ci-3",
+                  "type": "mcq",
+                  "prompt": "What is the difference between CI and SI on Rs 10,000 for 2 years at 5% per annum?",
+                  "options": ["Rs 25", "Rs 50", "Rs 10", "Rs 100"],
+                  "correctAnswer": "Rs 25",
+                  "explanation": "SI for 2 years = (10000*5*2)/100 = Rs 1,000. For CI: I_1 = Rs 500. P_2 = 10,500. I_2 = (10500*5)/100 = Rs 525. Total CI = 1025. Difference = 1025 - 1000 = Rs 25.",
+                  "hint": "Difference for 2 years is interest on the first year's interest: 5% of Rs 500.",
+                  "difficulty": "medium",
+                  "topicTag": "Difference between CI and SI"
+                }
+              ]
             },
             {
               "id": "icse-9-math-ch2-l2",

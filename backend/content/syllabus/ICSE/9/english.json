@@ -3,11 +3,17 @@
   "classLevel": "9",
   "subject": "english",
   "subjectName": "English (Language & Literature)",
-  "officialSource": "CISCE ICSE Regulations and Syllabuses (English Paper 1 & 2 Code 01)",
+  "source": {
+    "documentName": "CISCE ICSE Regulations and Syllabuses - English (Paper 1 Language & Paper 2 Literature in English)",
+    "officialSyllabusCode": "01",
+    "url": "https://cisce.org/regulations-and-syllabuses-icse-2026/",
+    "academicYear": "2024-2025",
+    "verificationStatus": "verified_against_official_regulations"
+  },
   "units": [
     {
       "unitNumber": 1,
-      "title": "English Language: Functional Grammar & Syntax",
+      "title": "English Language (Paper 1): Grammar, Syntax & Composition",
       "chapters": [
         {
           "chapterNumber": 1,
@@ -118,6 +124,123 @@
               "title": "Chapter 3 Review & Transformation Mastery",
               "description": "ICSE Question 4(d) rewrite style practice.",
               "subtopics": ["Rewrite according to instruction without changing meaning", "Advanced synthesis"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 2,
+      "title": "Literature in English (Paper 2): Drama - Julius Caesar",
+      "chapters": [
+        {
+          "chapterNumber": 4,
+          "id": "icse-9-eng-ch4",
+          "title": "Julius Caesar: Act 1 Scene 1 & 2",
+          "description": "Tribunes Flavius and Marullus chastising the plebeians; the Feast of Lupercal, the Soothsayer's warning, and Cassius tempting Brutus.",
+          "levels": [
+            {
+              "id": "icse-9-eng-ch4-l1",
+              "levelNumber": 1,
+              "title": "Act 1 Scene 1: Tribunes and the Roman Mob",
+              "description": "Opening conflict between supporters of Pompey and the rising power of Caesar.",
+              "subtopics": ["Marullus's monologue 'You blocks, you stones'", "Significance of the Feast of Lupercal", "Symbolism of stripping the statues"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch4-l2",
+              "levelNumber": 2,
+              "title": "Act 1 Scene 2: The Temptation of Brutus",
+              "description": "Cassius's psychological manipulation of Brutus, recounting Caesar's physical weaknesses in the Tiber river.",
+              "subtopics": ["Cassius's philosophy 'The fault, dear Brutus, is not in our stars'", "Caesar offering the crown thrice by Antony", "Brutus's inner conflict between honor and friendship"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch4-l3",
+              "levelNumber": 3,
+              "title": "Act 1 Contextual Extract Practice",
+              "description": "ICSE board pattern contextual questions on Act 1.",
+              "subtopics": ["Character motivations", "Literary devices and dramatic irony"],
+              "isReviewLevel": true,
+              "status": "published"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "unitNumber": 3,
+      "title": "Literature in English (Paper 2): Treasure Chest - Prose & Poetry",
+      "chapters": [
+        {
+          "chapterNumber": 5,
+          "id": "icse-9-eng-ch5",
+          "title": "Treasure Chest: Short Stories",
+          "description": "Prescribed stories for Class 9: Bonku Babu's Friend, Oliver Asks for More, and The Model Millionaire.",
+          "levels": [
+            {
+              "id": "icse-9-eng-ch5-l1",
+              "levelNumber": 1,
+              "title": "Bonku Babu's Friend (Satyajit Ray)",
+              "description": "Themes of timidness, bullying, and self-confidence gained through the alien Ang.",
+              "subtopics": ["Bonku Babu's meek nature at Sripati Majumdar's gathering", "Ang's superior spaceship and wisdom", "Transformation and newfound dignity of Bonku Babu"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch5-l2",
+              "levelNumber": 2,
+              "title": "Oliver Asks for More (Charles Dickens)",
+              "description": "Victorian workhouse conditions, hunger, and societal cruelty toward pauper orphans.",
+              "subtopics": ["The board's hypocritical decisions", "The casting of lots among starving boys", "Mr. Bumble's outrage at Oliver's request"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch5-l3",
+              "levelNumber": 3,
+              "title": "The Model Millionaire (Oscar Wilde)",
+              "description": "Romantic generosity vs practical materialism, featuring Hughie Erskine and Baron Hausberg.",
+              "subtopics": ["Hughie's charm versus lack of wealth", "The sovereign given to the beggar model", "Baron Hausberg's rewarding generosity"],
+              "isReviewLevel": false,
+              "status": "published"
+            }
+          ]
+        },
+        {
+          "chapterNumber": 6,
+          "id": "icse-9-eng-ch6",
+          "title": "Treasure Chest: Poems",
+          "description": "Prescribed poems for Class 9: The Night Mail, Skimbleshanks: The Railway Cat, and I Remember, I Remember.",
+          "levels": [
+            {
+              "id": "icse-9-eng-ch6-l1",
+              "levelNumber": 1,
+              "title": "The Night Mail (W. H. Auden)",
+              "description": "Rhythm of the postal train travelling through Scotland, carrying letters for all social classes.",
+              "subtopics": ["Rhythm reflecting train acceleration", "Equality of correspondence", "Imagery of Scottish landscapes and sleeping cities"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch6-l2",
+              "levelNumber": 2,
+              "title": "Skimbleshanks: The Railway Cat (T. S. Eliot)",
+              "description": "The indispensable railway cat maintaining order and peace on the Night Mail train.",
+              "subtopics": ["Whimsical characterisation of Skimbleshanks", "Duties and supervision on the train", "Poetic rhythm and rhyme scheme"],
+              "isReviewLevel": false,
+              "status": "published"
+            },
+            {
+              "id": "icse-9-eng-ch6-l3",
+              "levelNumber": 3,
+              "title": "I Remember, I Remember (Thomas Hood)",
+              "description": "Contrast between childhood innocence, wonder, and the disillusionment and heavy heart of adulthood.",
+              "subtopics": ["Nostalgia for the sun peeping at the window", "The fir trees and innocence closer to heaven", "Tone and melancholy contrast"],
               "isReviewLevel": true,
               "status": "published"
             }

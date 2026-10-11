@@ -18,7 +18,7 @@ describe("Curriculum & Catalog Engine", () => {
     const icseBoard = data.boards.find((b) => b.id === "ICSE");
     expect(icseBoard).toBeDefined();
     expect(icseBoard.classes).toContain("9");
-    expect(icseBoard.classes).toContain("10");
+    expect(icseBoard.comingSoonClasses).toContain("10");
 
     expect(data.catalog).toBeDefined();
     expect(data.catalog.ICSE).toBeDefined();

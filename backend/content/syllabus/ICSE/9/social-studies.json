@@ -3,7 +3,13 @@
   "classLevel": "9",
   "subject": "social-studies",
   "subjectName": "Social Studies (History, Civics & Geography)",
-  "officialSource": "CISCE ICSE Regulations and Syllabuses (History & Civics Code 50 / Geography)",
+  "source": {
+    "documentName": "CISCE ICSE Regulations and Syllabuses - History and Civics (Code 50) & Geography (Code 50)",
+    "officialSyllabusCode": "50",
+    "url": "https://cisce.org/regulations-and-syllabuses-icse-2026/",
+    "academicYear": "2024-2025",
+    "verificationStatus": "verified_against_official_regulations"
+  },
   "units": [
     {
       "unitNumber": 1,

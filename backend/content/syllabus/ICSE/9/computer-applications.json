@@ -3,7 +3,13 @@
   "classLevel": "9",
   "subject": "computer-applications",
   "subjectName": "Computer Applications (Java)",
-  "officialSource": "CISCE ICSE Regulations and Syllabuses (Computer Applications Code 86)",
+  "source": {
+    "documentName": "CISCE ICSE Regulations and Syllabuses - Computer Applications (Subject Code 86)",
+    "officialSyllabusCode": "86",
+    "url": "https://cisce.org/regulations-and-syllabuses-icse-2026/",
+    "academicYear": "2024-2025",
+    "verificationStatus": "verified_against_official_regulations"
+  },
   "units": [
     {
       "unitNumber": 1,

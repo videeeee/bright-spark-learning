@@ -23,6 +23,7 @@ interface CatalogBoard {
   description: string;
   badge: string;
   classes: string[];
+  comingSoonClasses?: string[];
 }
 
 interface CatalogSubject {
@@ -67,9 +68,9 @@ export default function SetupProfile() {
         console.error("Failed to load catalog from API:", err);
         // Fallback default boards if API is slow
         setBoards([
-          { id: "ICSE", name: "ICSE", fullName: "CISCE Board", description: "Comprehensive syllabus", badge: "ICSE", classes: ["6", "7", "8", "9", "10", "11", "12"] },
-          { id: "CBSE", name: "CBSE", fullName: "Central Board", description: "NCERT aligned", badge: "CBSE", classes: ["6", "7", "8", "9", "10", "11", "12"] },
-          { id: "State", name: "State Board", fullName: "State Board", description: "Standard state syllabus", badge: "State", classes: ["6", "7", "8", "9", "10", "11", "12"] },
+          { id: "ICSE", name: "ICSE", fullName: "CISCE Board", description: "Comprehensive syllabus", badge: "ICSE", classes: ["9"], comingSoonClasses: ["6", "7", "8", "10", "11", "12"] },
+          { id: "CBSE", name: "CBSE", fullName: "Central Board", description: "NCERT aligned", badge: "CBSE", classes: ["9"], comingSoonClasses: ["6", "7", "8", "10", "11", "12"] },
+          { id: "State", name: "State Board", fullName: "State Board", description: "Standard state syllabus", badge: "State", classes: [], comingSoonClasses: ["6", "7", "8", "9", "10", "11", "12"] },
         ]);
       } finally {
         setIsCatalogLoading(false);
@@ -220,13 +221,35 @@ export default function SetupProfile() {
                     <SelectValue placeholder="Select class" />
                   </SelectTrigger>
                   <SelectContent>
+                    {/* Live Classes with real content */}
                     {availableClasses.map((cls) => (
                       <SelectItem key={cls} value={cls}>
-                        Class {cls}
+                        <div className="flex items-center gap-2">
+                          <span className="font-medium text-foreground">Class {cls}</span>
+                          <span className="text-[10px] bg-emerald-100 text-emerald-800 font-bold px-1.5 py-0.5 rounded">
+                            Active
+                          </span>
+                        </div>
+                      </SelectItem>
+                    ))}
+                    {/* Coming Soon Classes */}
+                    {(currentBoardObj?.comingSoonClasses || []).map((cls) => (
+                      <SelectItem key={`cs-${cls}`} value={cls} disabled className="opacity-60 cursor-not-allowed">
+                        <div className="flex items-center gap-2">
+                          <span className="text-muted-foreground">Class {cls}</span>
+                          <span className="text-[10px] bg-gray-100 text-gray-600 font-medium px-1.5 py-0.5 rounded">
+                            Coming Soon
+                          </span>
+                        </div>
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
+                {selectedClass !== "9" && (
+                  <p className="text-xs text-amber-700 mt-1.5 bg-amber-50 p-2 rounded-lg border border-amber-200">
+                    ℹ️ Only Class 9 currently has active curriculums. Other classes are queued.
+                  </p>
+                )}
               </div>
 
               {/* Subjects Selection */}

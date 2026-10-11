@@ -3,7 +3,13 @@
   "classLevel": "9",
   "subject": "hindi",
   "subjectName": "Hindi",
-  "officialSource": "CISCE ICSE Regulations and Syllabuses (Hindi Code 05)",
+  "source": {
+    "documentName": "CISCE ICSE Regulations and Syllabuses - Indian Languages (Hindi Subject Code 05)",
+    "officialSyllabusCode": "05",
+    "url": "https://cisce.org/regulations-and-syllabuses-icse-2026/",
+    "academicYear": "2024-2025",
+    "verificationStatus": "verified_against_official_regulations"
+  },
   "units": [
     {
       "unitNumber": 1,
