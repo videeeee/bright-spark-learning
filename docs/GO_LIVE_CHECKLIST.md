@@ -66,40 +66,62 @@ Every check has passed before release:
 
 ---
 
-## 4. Production Release Execution (Order of Operations)
+## 4. Production Release Execution (Exact Order of Operations)
 
 Do NOT execute until explicit confirmation (`"GO LIVE 1"`) is given.
 
-### Step 1: Create a Safety Rollback Tag on Production Main
-```bash
-git checkout main
-git pull origin main
-git tag prod-backup-before-go-live-1
-git push origin prod-backup-before-go-live-1
+### Phase A: Pre-Merge Dashboard Configuration (No user impact)
+1. **Render Environment Variables**:
+   - Check Render dashboard: verify `MONGO_URI` points to production `test`.
+   - Verify `CLIENT_URL` contains `https://learnquest-mu.vercel.app`.
+   - Verify `NODE_ENV` is `production`.
+2. **Vercel Environment Variables**:
+   - Verify `VITE_API_URL` is set to your Render URL (e.g. `https://learnquest-xcv9.onrender.com`).
+
+---
+
+### Phase B: Seed Production Database `test` (Additive & Zero-Downtime)
+Run the seeder locally against production before deploying the code. Because the seeder only inserts/updates the `curriculums` collection and never touches `users`, `notes`, or `progress`, running this first guarantees data is already waiting in the database when the new backend wakes up:
+
+```powershell
+# In your local PowerShell terminal (scoped inline, does NOT touch .env):
+& { $env:MONGO_URI="<YOUR_PRODUCTION_ATLAS_URI_FOR_TEST_DB>"; node backend/scripts/seed-curriculum.js }
 ```
+*(On macOS/Linux: `MONGO_URI="<PROD_URI>" node backend/scripts/seed-curriculum.js`)*
 
-### Step 2: Merge `release/dynamic-content` into `main`
-```bash
-git checkout main
-git merge release/dynamic-content
-git push origin main
-```
-*Vercel and Render will automatically detect the push to `main` and trigger production builds.*
+> **User Experience During Phase B**:
+> Current live users notice zero difference. The existing production backend ignores `curriculums` until the new version boots.
 
-### Step 3: Run Additive & Idempotent Production Seeder
-Once the Render backend deployment succeeds, run the seeder pointing to the production database **`test`**:
+---
 
-```bash
-# In your local PowerShell terminal with MONGO_URI set to production "test":
-$env:MONGO_URI="<YOUR_PRODUCTION_ATLAS_URI_FOR_TEST_DB>"
-node backend/scripts/seed-curriculum.js
-```
+### Phase C: Tag Main & Deploy Backend First
+1. **Create safety backup tag**:
+   ```bash
+   git checkout main
+   git pull origin main
+   git tag prod-backup-before-go-live-1
+   git push origin prod-backup-before-go-live-1
+   ```
+2. **Merge `release/dynamic-content` into `main`**:
+   ```bash
+   git checkout main
+   git merge release/dynamic-content
+   git push origin main
+   ```
+3. **Verify Render Backend Deployment First**:
+   - Watch the Render deploy logs. Wait until it displays:
+     `✅ MongoDB connected successfully to database: [test]`
+     `🚀 LearnQuest Server running on port 5000 [production]`
+   - Verify health check in browser: `https://<render-url>/api/health` -> `{"status":"ok","databaseName":"test"}`.
 
-> **Safety Guarantee**:
-> `seed-curriculum.js` uses Mongoose `findOneAndUpdate` with `{ upsert: true }` keyed strictly on `{ board, classLevel, subject }`.
-> - **Only** touches the `curriculums` collection.
-> - **Never** drops or alters `users`, `notes`, `progresses`, `userstats`, `activitylogs`, `levelattempts`, or `leaderboardsnapshots`.
-> - Safe to re-run at any time.
+---
+
+### Phase D: Verify Frontend Deployment (Vercel)
+- Vercel automatically deploys within 30-45 seconds.
+- **What users see in between**:
+  - The API endpoints are 100% additive and backward-compatible.
+  - If a user refreshes their browser right as Vercel updates but before Render finishes, `src/lib/api.ts` and `LevelRoadmap.tsx` gracefully fall back to local bundled curriculum definitions, preventing any 404 or white-screen crash.
+  - As soon as Render signals healthy, live server grading, Beta level quizzes, and real syllabi are immediately active.
 
 ---
 
