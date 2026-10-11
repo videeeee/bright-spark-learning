@@ -84,7 +84,7 @@
                   "hint": "Think of the chief architect of the Constitution.",
                   "difficulty": "easy",
                   "topicTag": "Constituent Assembly",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q2",
@@ -118,7 +118,7 @@
                   "hint": "Think of the date when the Constitution started governing the country.",
                   "difficulty": "easy",
                   "topicTag": "Significance Dates",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-sst-ch1-l1-q4",
@@ -274,7 +274,7 @@
                   "verificationStatus": "rule_checked"
                 }
               ],
-              "verifiedWith": "groq+gemini"
+              "verifiedWith": "openai/gpt-oss-120b+qwen/qwen3.8-27b"
             },
             {
               "id": "icse-9-sst-ch1-l2",

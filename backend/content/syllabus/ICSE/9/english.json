@@ -70,23 +70,6 @@
               ],
               "questions": [
                 {
-                  "id": "icse-9-eng-ch1-l1-q1",
-                  "type": "mcq",
-                  "prompt": "She ____ (finish) her homework before dinner yesterday.",
-                  "options": [
-                    "had finished",
-                    "has finished",
-                    "finished",
-                    "was finishing"
-                  ],
-                  "correctAnswer": "had finished",
-                  "explanation": "The action was completed prior to another past event (dinner), so past perfect 'had finished' correctly shows that sequence.",
-                  "hint": "Look for a past action that happened before another past event.",
-                  "difficulty": "easy",
-                  "topicTag": "Present vs Past Perfect",
-                  "verificationStatus": "rule_checked"
-                },
-                {
                   "id": "icse-9-eng-ch1-l1-q2",
                   "type": "mcq",
                   "prompt": "By next year, they ____ (complete) the new library.",
@@ -169,23 +152,6 @@
                   "hint": "Two past actions; one occurred earlier.",
                   "difficulty": "hard",
                   "topicTag": "Present vs Past Perfect",
-                  "verificationStatus": "rule_checked"
-                },
-                {
-                  "id": "icse-9-eng-ch1-l1-q7",
-                  "type": "mcq",
-                  "prompt": "_____ you ____ (finish) the report by tomorrow?",
-                  "options": [
-                    "Will, finish",
-                    "Will, have finished",
-                    "Would, finish",
-                    "Will, be finishing"
-                  ],
-                  "correctAnswer": "Will, have finished",
-                  "explanation": "The question asks about completion before a future deadline, so future perfect 'will have finished' correctly conveys that meaning.",
-                  "hint": "Future completion before a set time.",
-                  "difficulty": "medium",
-                  "topicTag": "Future time reference",
                   "verificationStatus": "rule_checked"
                 },
                 {
@@ -274,7 +240,7 @@
                   "verificationStatus": "rule_checked"
                 }
               ],
-              "verifiedWith": "groq+gemini"
+              "verifiedWith": "openai/gpt-oss-120b+qwen/qwen3.8-27b"
             },
             {
               "id": "icse-9-eng-ch1-l2",

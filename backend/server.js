@@ -133,10 +133,13 @@ app.use("/api/*", (req, res) => {
 app.use(errorHandler);
 
 // 10. Start Server
-const PORT = env.PORT || 5000;
-const server = app.listen(PORT, () => {
-  console.log(`🚀 LearnQuest Server running on port ${PORT} [${env.NODE_ENV}]`);
-  console.log(`🔒 Allowed CORS origins: ${allowedOrigins.join(", ")}`);
-});
+let server;
+if (process.env.NODE_ENV !== "test" || require.main === module) {
+  const PORT = env.PORT || 5000;
+  server = app.listen(PORT, () => {
+    console.log(`🚀 LearnQuest Server running on port ${PORT} [${env.NODE_ENV}]`);
+    console.log(`🔒 Allowed CORS origins: ${allowedOrigins.join(", ")}`);
+  });
+}
 
 module.exports = { app, server };

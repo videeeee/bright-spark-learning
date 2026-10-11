@@ -261,22 +261,22 @@
                 {
                   "id": "icse-9-comp-ch1-l1-q12",
                   "type": "mcq",
-                  "prompt": "What will be the result of compiling and running this code?\n\ninterface Drawable { void draw(); }\nclass Shape implements Drawable { public void draw(){ System.out.println(\"Shape\"); } }\npublic class Test{ public static void main(String[] args){ Drawable d = new Shape(); d.draw(); } }\n",
+                  "prompt": "Which principle of Object-Oriented Programming is defined as the mechanism of wrapping data (variables) and methods together into a single unit?",
                   "options": [
-                    "Shape",
-                    "Drawable",
-                    "Compilation error",
-                    "Runtime error"
+                    "Encapsulation",
+                    "Polymorphism",
+                    "Inheritance",
+                    "Abstraction"
                   ],
-                  "correctAnswer": "Shape",
-                  "explanation": "`Shape` implements `Drawable` and provides a concrete `draw()` method. The interface reference `d` points to a `Shape` object, so calling `draw()` prints `Shape`.",
-                  "hint": "Interfaces can hold references to implementing objects.",
-                  "difficulty": "medium",
-                  "topicTag": "Polymorphism",
+                  "correctAnswer": "Encapsulation",
+                  "explanation": "Encapsulation is the fundamental OOP principle that binds data members and member methods together into a class, preventing unauthorized external access.",
+                  "hint": "Think of a protective capsule around data and code.",
+                  "difficulty": "easy",
+                  "topicTag": "Encapsulation",
                   "verificationStatus": "rule_checked"
                 }
               ],
-              "verifiedWith": "groq+gemini"
+              "verifiedWith": "openai/gpt-oss-120b+qwen/qwen3.8-27b"
             },
             {
               "id": "icse-9-comp-ch1-l2",

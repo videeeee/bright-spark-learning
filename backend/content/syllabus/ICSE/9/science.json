@@ -83,7 +83,8 @@
                   "explanation": "Density is defined as mass per unit volume: $\\rho = \\frac{\\text{Mass}}{\\text{Volume}}$. The SI unit of mass is $\\text{kg}$ and volume is $\\text{m}^3$. Hence, the derived SI unit is $\\frac{\\text{kg}}{\\text{m}^3} = \\text{kg}\\cdot\\text{m}^{-3}$. While $\\text{g}\\cdot\\text{cm}^{-3}$ is a unit of density, it is in the C.G.S. system, not SI.",
                   "hint": "Recall the standard SI units for mass and length.",
                   "difficulty": "easy",
-                  "topicTag": "SI units and symbols"
+                  "topicTag": "SI units and symbols",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q2",
@@ -99,7 +100,8 @@
                   "explanation": "The least count is calculated as $\\text{L.C.} = \\frac{1\\text{ MSD}}{n} = \\frac{1\\text{ mm}}{10} = 0.1\\text{ mm}$.",
                   "hint": "Divide the value of one main scale division by the total number of vernier divisions.",
                   "difficulty": "easy",
-                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q3",
@@ -115,7 +117,8 @@
                   "explanation": "When the vernier zero lies to the right of the main scale zero, the instrument reads a value greater than zero initially; hence, the error is positive. The true reading is obtained by subtracting the zero error: $\\text{True Reading} = \\text{Observed Reading} - (+\\text{Zero Error})$.",
                   "hint": "A reading that already shows a positive value before measurement must be corrected by taking that extra value away.",
                   "difficulty": "easy",
-                  "topicTag": "Zero errors (positive and negative)"
+                  "topicTag": "Zero errors (positive and negative)",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q4",
@@ -131,7 +134,8 @@
                   "explanation": "$$\\text{L.C.} = \\frac{1\\text{ MSD}}{n} = \\frac{0.5\\text{ mm}}{50} = 0.01\\text{ mm}$$\nConverting to centimetres:\n$$0.01\\text{ mm} = \\frac{0.01}{10}\\text{ cm} = 0.001\\text{ cm}$$",
                   "hint": "Calculate the least count in millimetres first, then divide by 10 to convert to centimetres.",
                   "difficulty": "medium",
-                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q5",
@@ -147,7 +151,8 @@
                   "explanation": "The seven fundamental SI quantities are length, mass, time, electric current, thermodynamic temperature, amount of substance, and luminous intensity (measured in candela, $\\text{cd}$). Electric charge (coulomb), force (newton), and pressure (pascal) are derived quantities.",
                   "hint": "Identify the base quantity whose unit is the candela (cd).",
                   "difficulty": "easy",
-                  "topicTag": "SI units and symbols"
+                  "topicTag": "SI units and symbols",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q6",
@@ -163,7 +168,8 @@
                   "explanation": "Since the vernier zero lies to the left of the main scale zero, the error is negative. For a negative zero error, when the $p^{\\text{th}}$ division coincides, the formula is:\n$$\\text{Zero Error} = -(n - p) \\times \\text{L.C.} = -(10 - 7) \\times 0.01\\text{ cm} = -3 \\times 0.01\\text{ cm} = -0.03\\text{ cm}$$",
                   "hint": "For negative zero error, subtract the coinciding division index from the total number of divisions.",
                   "difficulty": "medium",
-                  "topicTag": "Zero errors (positive and negative)"
+                  "topicTag": "Zero errors (positive and negative)",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q7",
@@ -179,7 +185,8 @@
                   "explanation": "$$\\text{Observed Reading} = 3.2\\text{ cm} + (4 \\times 0.01\\text{ cm}) = 3.24\\text{ cm}$$\n$$\\text{Correct Reading} = \\text{Observed Reading} - (\\text{Zero Error})$$\n$$\\text{Correct Reading} = 3.24\\text{ cm} - (-0.03\\text{ cm}) = 3.24\\text{ cm} + 0.03\\text{ cm} = 3.27\\text{ cm}$$",
                   "hint": "Subtracting a negative zero error is equivalent to adding its magnitude.",
                   "difficulty": "medium",
-                  "topicTag": "Zero errors (positive and negative)"
+                  "topicTag": "Zero errors (positive and negative)",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q8",
@@ -195,7 +202,8 @@
                   "explanation": "We are given $n\\text{ VSD} = (n - 1)\\text{ MSD}$. Substituting $1\\text{ MSD} = a$ gives $n\\text{ VSD} = (n - 1)a$, which simplifies to $1\\text{ VSD} = \\frac{n-1}{n}a$.",
                   "hint": "Equate $n\\text{ VSD}$ to $(n-1)\\text{ MSD}$ and solve for $1\\text{ VSD}$.",
                   "difficulty": "medium",
-                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q9",
@@ -211,7 +219,8 @@
                   "explanation": "$$\\text{L.C.} = \\frac{1\\text{ mm}}{20} = 0.05\\text{ mm} = 0.005\\text{ cm}$$\n$$\\text{Observed Reading} = 1.5\\text{ cm} + (8 \\times 0.005\\text{ cm}) = 1.5\\text{ cm} + 0.040\\text{ cm} = 1.540\\text{ cm}$$\n$$\\text{True Reading} = 1.540\\text{ cm} - (+0.015\\text{ cm}) = 1.525\\text{ cm}$$",
                   "hint": "First compute the least count for 20 divisions: $\\frac{1\\text{ mm}}{20} = 0.005\\text{ cm}$.",
                   "difficulty": "hard",
-                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q10",
@@ -227,7 +236,8 @@
                   "explanation": "The inside jaws (upper jaws) of a Vernier Calliper are designed specifically to measure the internal diameters of hollow cylinders, pipes, or test tubes.",
                   "hint": "Consider which pair of jaws projects upwards to fit inside an opening.",
                   "difficulty": "easy",
-                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q11",
@@ -243,12 +253,13 @@
                   "explanation": "In standard SI prefixes: $\\text{micro} = 10^{-6}$, $\\text{nano} = 10^{-9}$, $\\text{pico} = 10^{-12}$, and $\\text{femto} = 10^{-15}$.",
                   "hint": "One nanometre is $10^{-9}\\text{ m}$.",
                   "difficulty": "easy",
-                  "topicTag": "SI units and symbols"
+                  "topicTag": "SI units and symbols",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-sci-ch1-l1-q12",
                   "type": "mcq",
-                  "prompt": "A Vernier Calliper has $1\\text{ MSD} = 1\\text{ mm}$. When the jaws are closed, the zero of the Vernier scale lies to the right of the main scale zero, and the $3^{\\text{rd}}$ vernier division coincides with a main scale mark. The zero error is:",
+                  "prompt": "A Vernier Calliper has $1\\text{ MSD} = 1\\text{ mm}$ and $10$ vernier scale divisions (Least Count $= 0.01\\text{ cm}$). When the jaws are closed, the zero of the Vernier scale lies to the right of the main scale zero, and the $3^{\\text{rd}}$ vernier division coincides with a main scale mark. The zero error is:",
                   "options": [
                     "$+0.03\\text{ cm}$",
                     "$-0.03\\text{ cm}$",
@@ -259,9 +270,11 @@
                   "explanation": "For a standard 10-division vernier, $\\text{L.C.} = \\frac{1\\text{ mm}}{10} = 0.1\\text{ mm} = 0.01\\text{ cm}$. Since the vernier zero is to the right of the main scale zero, the error is positive:\n$$\\text{Zero Error} = +p \\times \\text{L.C.} = +3 \\times 0.01\\text{ cm} = +0.03\\text{ cm}$$",
                   "hint": "Zero to the right indicates positive error: $+p \\times \\text{L.C.}$.",
                   "difficulty": "medium",
-                  "topicTag": "Zero errors (positive and negative)"
+                  "topicTag": "Zero errors (positive and negative)",
+                  "verificationStatus": "rule_checked"
                 }
-              ]
+              ],
+              "verifiedWith": "openai/gpt-oss-120b+qwen/qwen3.8-27b"
             },
             {
               "id": "icse-9-sci-ch1-l2",

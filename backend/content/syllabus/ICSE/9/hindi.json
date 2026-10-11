@@ -83,7 +83,7 @@
                   "hint": "रोशनी से संबंधित शब्द",
                   "difficulty": "easy",
                   "topicTag": "विलोम शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q2",
@@ -100,7 +100,7 @@
                   "hint": "खुशी से जुड़ा शब्द",
                   "difficulty": "easy",
                   "topicTag": "पर्यायवाची शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q3",
@@ -117,7 +117,7 @@
                   "hint": "आम",
                   "difficulty": "medium",
                   "topicTag": "विलोम शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q4",
@@ -134,7 +134,7 @@
                   "hint": "सोच से संबंधित शब्द",
                   "difficulty": "medium",
                   "topicTag": "पर्यायवाची शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q5",
@@ -151,7 +151,7 @@
                   "hint": "दुःख का भाव",
                   "difficulty": "easy",
                   "topicTag": "विलोम शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q6",
@@ -168,24 +168,24 @@
                   "hint": "बहादुरी से जुड़ा शब्द",
                   "difficulty": "easy",
                   "topicTag": "पर्यायवाची शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q7",
                   "type": "mcq",
-                  "prompt": "‘अविचल’ शब्द का विलोम क्या है?",
+                  "prompt": "‘उन्नति’ शब्द का सही विलोम शब्द क्या है?",
                   "options": [
-                    "स्थिर",
-                    "परिवर्तित",
-                    "स्थायी",
-                    "अडिग"
+                    "अवनति",
+                    "प्रगति",
+                    "विकास",
+                    "उत्थान"
                   ],
-                  "correctAnswer": "परिवर्तित",
-                  "explanation": "‘अविचल’ का अर्थ अडिग या न बदलने वाला है, इसलिए इसका विपरीत ‘परिवर्तित’ है, जो बदलने वाले अर्थ को दर्शाता है।",
-                  "hint": "बदलने वाला शब्द",
-                  "difficulty": "medium",
+                  "correctAnswer": "अवनति",
+                  "explanation": "‘उन्नति’ का अर्थ उत्कर्ष या आगे बढ़ना है, और इसका मानक विलोम शब्द ‘अवनति’ (पतन या ह्रास) होता है।",
+                  "hint": "पतन या नीचे गिरने का भाव",
+                  "difficulty": "easy",
                   "topicTag": "विलोम शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q8",
@@ -202,7 +202,7 @@
                   "hint": "प्यार से संबंधित शब्द",
                   "difficulty": "easy",
                   "topicTag": "पर्यायवाची शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q9",
@@ -219,7 +219,7 @@
                   "hint": "ठंड से संबंधित शब्द",
                   "difficulty": "easy",
                   "topicTag": "विलोम शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q10",
@@ -236,44 +236,27 @@
                   "hint": "बिना सोच के शब्द",
                   "difficulty": "medium",
                   "topicTag": "विलोम शब्द",
-                  "verificationStatus": "rule_checked"
-                },
-                {
-                  "id": "icse-9-hin-ch1-l1-q11",
-                  "type": "mcq",
-                  "prompt": "‘संतोष’ शब्द के समानार्थी शब्द में से कौन सा नहीं है?",
-                  "options": [
-                    "आनंद",
-                    "उत्सव",
-                    "खुशी",
-                    "उत्साह"
-                  ],
-                  "correctAnswer": "उत्साह",
-                  "explanation": "‘संतोष’ का अर्थ मन की शांति और संतुष्टि है, जबकि ‘उत्साह’ ऊर्जा और जोश दर्शाता है, इसलिए वह समानार्थी नहीं है।",
-                  "hint": "ऊर्जा से संबंधित शब्द नहीं",
-                  "difficulty": "hard",
-                  "topicTag": "पर्यायवाची शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-hin-ch1-l1-q12",
                   "type": "mcq",
-                  "prompt": "‘शांत’ शब्द का विलोम शब्द कौन सा है?",
+                  "prompt": "‘शांत’ शब्द का सही विलोम शब्द क्या है?",
                   "options": [
-                    "शांत",
-                    "उत्साहित",
-                    "शोरगुल",
-                    "ध्यान"
+                    "अशांत",
+                    "मौन",
+                    "स्थिर",
+                    "गंभीर"
                   ],
-                  "correctAnswer": "शोरगुल",
-                  "explanation": "‘शांत’ का अर्थ शांति या मौन है, इसलिए इसका विपरीत ‘शोरगुल’ है, जो शोर और हलचल को दर्शाता है।",
-                  "hint": "शोर से संबंधित शब्द",
-                  "difficulty": "medium",
+                  "correctAnswer": "अशांत",
+                  "explanation": "‘शांत’ का अर्थ स्थिरता और शांति है, जिसका मानक और सटीक विलोम शब्द ‘अशांत’ होता है।",
+                  "hint": "उपसर्ग ‘अ-’ जोड़कर बना विलोम शब्द",
+                  "difficulty": "easy",
                   "topicTag": "विलोम शब्द",
-                  "verificationStatus": "rule_checked"
+                  "verificationStatus": "cross_verified"
                 }
               ],
-              "verifiedWith": "groq+gemini"
+              "verifiedWith": "qwen/qwen3.8-27b+openai/gpt-oss-20b"
             },
             {
               "id": "icse-9-hin-ch1-l2",

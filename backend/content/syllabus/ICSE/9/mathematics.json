@@ -32,7 +32,7 @@
                 "Properties of rational numbers"
               ],
               "isReviewLevel": false,
-              "status": "published",
+              "status": "draft",
               "lesson": {
                 "title": "Mastering Rational Numbers & Decimal Conversions",
                 "intro": "A rational number is any number that can be expressed in the form p/q, where p and q are integers and q != 0. Every rational number has either a terminating decimal expansion or a non-terminating recurring (repeating) decimal expansion.",
@@ -83,7 +83,8 @@
                   "explanation": "Let $x = 0.444\\dots$ Multiplying by 10 gives $10x = 4.444\\dots$ Subtracting gives $9x = 4$, so $x = \\frac{4}{9}$.",
                   "hint": "Set $x = 0.\\overline{4}$ and multiply by 10 to shift the decimal by one repeating period.",
                   "difficulty": "easy",
-                  "topicTag": "Recurring Decimals"
+                  "topicTag": "Recurring Decimals",
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-math-q1-2",
@@ -99,23 +100,8 @@
                   "explanation": "$125 = 5^3$. Since the prime factorisation contains only 5 (of the form $2^m \\times 5^n$), $\\frac{17}{125}$ terminates.",
                   "hint": "Check the prime factors of each denominator. A fraction terminates only if the prime factors are strictly 2 and/or 5.",
                   "difficulty": "medium",
-                  "topicTag": "Terminating Decimals"
-                },
-                {
-                  "id": "icse-9-math-q1-3",
-                  "type": "mcq",
-                  "prompt": "Convert the mixed recurring decimal $0.1\\overline{6}$ into simplest fractional form $\\frac{p}{q}$.",
-                  "options": [
-                    "$\\frac{1}{6}$",
-                    "$\\frac{16}{99}$",
-                    "$\\frac{1}{5}$",
-                    "$\\frac{5}{36}$"
-                  ],
-                  "correctAnswer": "$\\frac{1}{6}$",
-                  "explanation": "Let $x = 0.1666\\dots$ Then $10x = 1.666\\dots$ and $100x = 16.666\\dots$ Subtracting gives $90x = 15 \\implies x = \\frac{15}{90} = \\frac{1}{6}$.",
-                  "hint": "Multiply by 10 to isolate the non-repeating digit, then by 100 to shift one repeating digit.",
-                  "difficulty": "medium",
-                  "topicTag": "Mixed Recurring Decimals"
+                  "topicTag": "Terminating Decimals",
+                  "verificationStatus": "cross_verified"
                 },
                 {
                   "id": "icse-9-math-q1-4",
@@ -131,7 +117,8 @@
                   "explanation": "$\\sqrt{20} = 2\\sqrt{5}$. Since 5 is not a perfect square, $\\sqrt{20}$ is non-terminating and non-recurring (irrational).",
                   "hint": "Look for a square root whose radicand is not a perfect square.",
                   "difficulty": "easy",
-                  "topicTag": "Classification of Real Numbers"
+                  "topicTag": "Classification of Real Numbers",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-math-q1-5",
@@ -147,7 +134,8 @@
                   "explanation": "Let $x = 1.\\overline{27}$. $100x = 127.\\overline{27}$. $100x - x = 126 \\implies 99x = 126 \\implies x = \\frac{126}{99} = \\frac{14}{11}$.",
                   "hint": "$100x - x = 126$. Then divide 126 and 99 by their common factor 9.",
                   "difficulty": "hard",
-                  "topicTag": "Recurring Decimals"
+                  "topicTag": "Recurring Decimals",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-math-q1-6",
@@ -163,7 +151,8 @@
                   "explanation": "Let $x = 0.\\overline{58}$. Multiplying by 100 gives $100x = 58.\\overline{58}$. Subtracting gives $99x = 58 \\implies x = \\frac{58}{99}$. 58 and 99 have no common factors.",
                   "hint": "Two repeating digits means multiplying by 100 and dividing by 99.",
                   "difficulty": "medium",
-                  "topicTag": "Recurring Decimals"
+                  "topicTag": "Recurring Decimals",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-math-q1-7",
@@ -179,7 +168,8 @@
                   "explanation": "If $r \\neq 0$ is rational and $x$ is irrational, then $r \\times x$ is irrational (if it were rational $s$, then $x = s/r$ would be rational, a contradiction). The sum of $\\sqrt{2}$ and $-\\sqrt{2}$ is 0 (rational).",
                   "hint": "Consider multiplying a rational fraction by an irrational radical.",
                   "difficulty": "hard",
-                  "topicTag": "Properties of Real Numbers"
+                  "topicTag": "Properties of Real Numbers",
+                  "verificationStatus": "rule_checked"
                 },
                 {
                   "id": "icse-9-math-q1-8",
@@ -195,9 +185,11 @@
                   "explanation": "Let $x = 0.23535\\dots$ $10x = 2.\\overline{35}$ and $1000x = 235.\\overline{35}$. $1000x - 10x = 235 - 2 = 233 \\implies 990x = 233 \\implies x = \\frac{233}{990}$.",
                   "hint": "$1000x - 10x = 235 - 2$. Then solve for $x$.",
                   "difficulty": "hard",
-                  "topicTag": "Mixed Recurring Decimals"
+                  "topicTag": "Mixed Recurring Decimals",
+                  "verificationStatus": "rule_checked"
                 }
-              ]
+              ],
+              "verifiedWith": "openai/gpt-oss-120b+qwen/qwen3.8-27b"
             },
             {
               "id": "icse-9-math-ch1-l2",
