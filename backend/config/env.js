@@ -1,5 +1,7 @@
 const { z } = require("zod");
-require("dotenv").config();
+const path = require("path");
+require("dotenv").config({ path: path.resolve(__dirname, "../.env") });
+require("dotenv").config(); // Also fallback to CWD if present
 
 const envSchema = z.object({
   PORT: z.string().default("5000").transform((val) => parseInt(val, 10)),
@@ -21,8 +23,9 @@ try {
 } catch (error) {
   if (error instanceof z.ZodError) {
     console.error("❌ Environment variable validation failed:");
-    error.errors.forEach((err) => {
-      console.error(`   - ${err.path.join(".")}: ${err.message}`);
+    const issues = error.errors || error.issues || [];
+    issues.forEach((err) => {
+      console.error(`   - ${err.path?.join(".") || "unknown"}: ${err.message}`);
     });
     process.exit(1);
   }
