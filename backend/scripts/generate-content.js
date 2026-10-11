@@ -16,8 +16,8 @@ const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
 async function callLLM(prompt, systemInstruction = "You are an expert ICSE and CBSE school curriculum educator and question bank author. Output valid JSON only.") {
   const providers = [];
 
-  if (GEMINI_API_KEY) providers.push("gemini");
   if (GROQ_API_KEY) providers.push("groq");
+  if (GEMINI_API_KEY) providers.push("gemini");
   if (OPENROUTER_API_KEY) providers.push("openrouter");
 
   if (providers.length === 0) {
@@ -28,35 +28,48 @@ async function callLLM(prompt, systemInstruction = "You are an expert ICSE and C
 
   for (const provider of providers) {
     try {
+      if (provider === "groq") {
+        let retries = 3;
+        while (retries > 0) {
+          try {
+            const response = await axios.post(
+              "https://api.groq.com/openai/v1/chat/completions",
+              {
+                model: "qwen/qwen3.8-27b",
+                messages: [
+                  { role: "system", content: systemInstruction },
+                  { role: "user", content: prompt },
+                ],
+                temperature: 0.3,
+                response_format: { type: "json_object" },
+              },
+              {
+                headers: {
+                  Authorization: `Bearer ${GROQ_API_KEY}`,
+                  "Content-Type": "application/json",
+                },
+                timeout: 45000,
+              }
+            );
+            return response.data.choices[0].message.content;
+          } catch (groqErr) {
+            if (groqErr.response?.status === 429 && retries > 1) {
+              console.log("⏳ Groq rate limit hit (429). Backing off for 15 seconds...");
+              await new Promise((r) => setTimeout(r, 15000));
+              retries--;
+            } else {
+              throw groqErr;
+            }
+          }
+        }
+      }
+
       if (provider === "gemini") {
         const genAI = new GoogleGenerativeAI(GEMINI_API_KEY);
         const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
         const result = await model.generateContent(`${systemInstruction}\n\n${prompt}`);
         const text = result.response.text();
         return text;
-      }
-
-      if (provider === "groq") {
-        const response = await axios.post(
-          "https://api.groq.com/openai/v1/chat/completions",
-          {
-            model: "llama-3.3-70b-versatile",
-            messages: [
-              { role: "system", content: systemInstruction },
-              { role: "user", content: prompt },
-            ],
-            temperature: 0.3,
-            response_format: { type: "json_object" },
-          },
-          {
-            headers: {
-              Authorization: `Bearer ${GROQ_API_KEY}`,
-              "Content-Type": "application/json",
-            },
-            timeout: 30000,
-          }
-        );
-        return response.data.choices[0].message.content;
       }
 
       if (provider === "openrouter") {
@@ -125,7 +138,7 @@ CRITICAL CONSTRAINTS:
    - problem: String (with LaTeX)
    - solution: String (step-by-step with LaTeX)
    - explanation: String
-4. Generate 10-12 verified multiple-choice questions (MCQs):
+4. Generate exactly 10-12 verified multiple-choice questions (MCQs) in the "questions" array (minimum 10 required):
    - id: "${level.id}-q" + index
    - type: "mcq"
    - prompt: String (with LaTeX)

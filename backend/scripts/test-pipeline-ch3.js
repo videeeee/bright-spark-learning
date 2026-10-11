@@ -50,6 +50,10 @@ async function runPipelineOnChapter3() {
       level.lesson = result.refinedLevel.lesson;
       level.examples = result.refinedLevel.examples;
       level.questions = result.refinedLevel.questions;
+
+      // Rate limit pacing
+      console.log("Pacing pause (5s)...");
+      await new Promise((r) => setTimeout(r, 5000));
     } catch (err) {
       console.error(`❌ Error processing Level ${level.id}:`, err.message);
     }
