@@ -212,82 +212,232 @@
               "isReviewLevel": false,
               "status": "published",
               "lesson": {
-                "title": "Properties of Surds and Proofs of Irrationality",
-                "intro": "A surd is an irrational root of a rational number. For instance, sqrt(2), cbrt(5), and sqrt(7) are surds, while sqrt(9) = 3 is not a surd because 3 is rational.",
+                "title": "Irrational Numbers and Surds",
+                "intro": "In this level, we expand our understanding of real numbers beyond rational numbers to explore irrational numbers and surds. An irrational number cannot be expressed in the form $\\frac{p}{q}$, where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$. In decimal form, irrational numbers are non-terminating and non-recurring. A special and frequently encountered subclass of irrational numbers is surds—irrational roots of positive rational numbers. Mastering the proof of irrationality by contradiction and the techniques for simplifying surds is fundamental to the ICSE Class 9 curriculum.",
                 "keyConcepts": [
                   {
-                    "title": "Definition of a Surd",
-                    "explanation": "If 'a' is a positive rational number and n is a positive integer > 1 such that n-th root of a cannot be expressed as a rational number, then n-th root of a is called a surd of order n."
+                    "title": "Concept of Irrational Numbers",
+                    "explanation": "A real number is called irrational if it cannot be written in the form $\\frac{p}{q}$, where $p$ and $q$ are integers and $q \\neq 0$. Its decimal representation is non-terminating and non-repeating (non-periodic). Examples include $\\sqrt{2}$, $\\sqrt{3}$, $\\pi$, and numbers like $0.1010010001\\ldots$."
                   },
                   {
-                    "title": "Laws of Radical Simplification",
-                    "explanation": "sqrt(a * b) = sqrt(a) * sqrt(b). To simplify a surd, extract the largest perfect square factor: sqrt(72) = sqrt(36 * 2) = 6*sqrt(2)."
+                    "title": "Proof of Irrationality by Contradiction",
+                    "explanation": "To prove that numbers like $\\sqrt{2}$ or $\\sqrt{3}$ are irrational, we use the method of contradiction (*reductio ad absurdum*). We assume $\\sqrt{n} = \\frac{a}{b}$, where $a, b \\in \\mathbb{Z}$, $b \\neq 0$, and $\\gcd(a, b) = 1$. Squaring gives $n b^2 = a^2$. If a prime $n$ divides $a^2$, it must divide $a$. Substituting $a = n k$ leads to $n$ also dividing $b$, contradicting the coprimality of $a$ and $b$."
                   },
                   {
-                    "title": "Proof by Contradiction (e.g. sqrt(2) is Irrational)",
-                    "explanation": "Assume sqrt(2) = p/q in lowest terms with p, q coprime. Then 2 = p^2/q^2 => p^2 = 2q^2. Thus p^2 is even, so p is even (p = 2k). Then 4k^2 = 2q^2 => q^2 = 2k^2, so q is also even. This contradicts that p and q are coprime."
+                    "title": "Definition and Simplification of Surds",
+                    "explanation": "An expression $\\sqrt[n]{a}$ is called a surd of order $n$ if $a$ is a positive rational number and $\\sqrt[n]{a}$ is irrational. A surd is in its simplest form when the radicand has no factor which is a perfect $n^{\\text{th}}$ power. Surds are simplified using laws such as $\\sqrt{a \\cdot b} = \\sqrt{a} \\cdot \\sqrt{b}$ and $\\sqrt{\\frac{a}{b}} = \\frac{\\sqrt{a}}{\\sqrt{b}}$."
                   }
                 ],
                 "tips": [
-                  "Similar (like) surds can be added or subtracted: 5*sqrt(3) + 2*sqrt(3) = 7*sqrt(3).",
-                  "Dissimilar surds cannot be combined into a single radical: sqrt(2) + sqrt(3) != sqrt(5)."
+                  "Always state clearly that $\\gcd(a, b) = 1$ (coprime integers) when setting up a proof of irrationality by contradiction.",
+                  "Check whether the radicand is a perfect square or power before classifying an expression as a surd; e.g., $\\sqrt{9} = 3$ is a rational number, not a surd.",
+                  "To simplify a square root surd, extract the largest perfect square factor from under the radical sign."
                 ]
               },
               "examples": [
                 {
-                  "problem": "Simplify the surd expression: 2*sqrt(50) - 3*sqrt(18) + sqrt(72).",
-                  "solution": "Factorise each radicand to find perfect square factors:\n2*sqrt(50) = 2*sqrt(25 * 2) = 2 * 5 * sqrt(2) = 10*sqrt(2)\n3*sqrt(18) = 3*sqrt(9 * 2) = 3 * 3 * sqrt(2) = 9*sqrt(2)\nsqrt(72) = sqrt(36 * 2) = 6*sqrt(2)\nCombining the like surds:\n10*sqrt(2) - 9*sqrt(2) + 6*sqrt(2) = (10 - 9 + 6)*sqrt(2) = 7*sqrt(2).",
-                  "explanation": "Express each term as a multiple of sqrt(2) before combining coefficients."
+                  "problem": "Prove that $\\sqrt{2}$ is an irrational number.",
+                  "solution": "1. Assume the contrary: let $\\sqrt{2}$ be a rational number.\n2. Therefore, $\\sqrt{2} = \\frac{a}{b}$, where $a, b \\in \\mathbb{Z}$, $b \\neq 0$, and $\\gcd(a, b) = 1$ (they share no common factors other than $1$).\n3. Squaring both sides: $2 = \\frac{a^2}{b^2} \\implies a^2 = 2b^2$.\n4. This implies that $2$ divides $a^2$. Since $2$ is prime, $2$ must also divide $a$.\n5. Let $a = 2k$ for some integer $k$. Substituting this into $a^2 = 2b^2$:\n$$(2k)^2 = 2b^2 \\implies 4k^2 = 2b^2 \\implies b^2 = 2k^2$$\n6. This implies that $2$ divides $b^2$, which means $2$ must also divide $b$.\n7. Thus, $2$ divides both $a$ and $b$, contradicting the assumption that $\\gcd(a, b) = 1$.\n8. Hence, our initial assumption was false, and $\\sqrt{2}$ is irrational.",
+                  "explanation": "This is the classic proof by contradiction. Showing that both $a$ and $b$ are even contradicts the initial condition that $\\frac{a}{b}$ is in simplest form."
+                },
+                {
+                  "problem": "Simplify the expression: $3\\sqrt{48} - 2\\sqrt{75} + \\sqrt{108}$.",
+                  "solution": "1. Factor each radicand to identify perfect square factors:\n- $\\sqrt{48} = \\sqrt{16 \\times 3} = \\sqrt{16} \\times \\sqrt{3} = 4\\sqrt{3}$\n- $\\sqrt{75} = \\sqrt{25 \\times 3} = \\sqrt{25} \\times \\sqrt{3} = 5\\sqrt{3}$\n- $\\sqrt{108} = \\sqrt{36 \\times 3} = \\sqrt{36} \\times \\sqrt{3} = 6\\sqrt{3}$\n\n2. Substitute the simplified radicals back into the expression:\n$$3(4\\sqrt{3}) - 2(5\\sqrt{3}) + 6\\sqrt{3}$$\n$$= 12\\sqrt{3} - 10\\sqrt{3} + 6\\sqrt{3}$$\n\n3. Combine like terms:\n$$= (12 - 10 + 6)\\sqrt{3} = 8\\sqrt{3}$$",
+                  "explanation": "Expressing each surd as a product of a whole number and the like surd $\\sqrt{3}$ allows them to be combined algebraically."
                 }
               ],
               "questions": [
                 {
-                  "id": "icse-9-math-q2-1",
+                  "id": "icse-9-math-ch1-l2-q1",
                   "type": "mcq",
-                  "prompt": "What is the simplified form of sqrt(180)?",
+                  "prompt": "Which of the following numbers is an irrational number?",
                   "options": [
-                    "6*sqrt(5)",
-                    "5*sqrt(6)",
-                    "3*sqrt(20)",
-                    "12*sqrt(5)"
+                    "$\\sqrt{16}$",
+                    "$\\sqrt{\\frac{25}{4}}$",
+                    "$\\sqrt{12}$",
+                    "$0.\\overline{3}$"
                   ],
-                  "correctAnswer": "6*sqrt(5)",
-                  "explanation": "180 = 36 * 5. sqrt(180) = sqrt(36) * sqrt(5) = 6*sqrt(5).",
-                  "hint": "Find the largest perfect square divisor of 180 (hint: 36 * 5 = 180).",
+                  "correctAnswer": "$\\sqrt{12}$",
+                  "explanation": "$\\sqrt{16} = 4$, $\\sqrt{\\frac{25}{4}} = \\frac{5}{2}$, and $0.\\overline{3} = \\frac{1}{3}$ are all rational numbers. $\\sqrt{12} = 2\\sqrt{3}$ is an irrational number because $12$ is not a perfect square.",
+                  "hint": "Check whether the number inside the square root is a perfect square or if the decimal terminates/repeats.",
                   "difficulty": "easy",
-                  "topicTag": "Simplification of Surds"
+                  "topicTag": "Concept of irrational numbers"
                 },
                 {
-                  "id": "icse-9-math-q2-2",
+                  "id": "icse-9-math-ch1-l2-q2",
                   "type": "mcq",
-                  "prompt": "Which of the following is NOT a surd?",
+                  "prompt": "What is the simplest form of the surd $\\sqrt{72}$?",
                   "options": [
-                    "cbrt(27)",
-                    "sqrt(24)",
-                    "sqrt(45)",
-                    "cbrt(16)"
+                    "$3\\sqrt{8}$",
+                    "$6\\sqrt{2}$",
+                    "$2\\sqrt{18}$",
+                    "$12\\sqrt{2}$"
                   ],
-                  "correctAnswer": "cbrt(27)",
-                  "explanation": "cbrt(27) = 3, which is an integer and rational number. Therefore, cbrt(27) is not a surd.",
-                  "hint": "Check which radical evaluates to an exact integer/rational value.",
+                  "correctAnswer": "$6\\sqrt{2}$",
+                  "explanation": "To write $\\sqrt{72}$ in simplest form, find the largest perfect square factor of $72$, which is $36$. Therefore, $\\sqrt{72} = \\sqrt{36 \\times 2} = 6\\sqrt{2}$. While $3\\sqrt{8}$ and $2\\sqrt{18}$ are equal in value, only $6\\sqrt{2}$ has no square factors remaining under the radical.",
+                  "hint": "Factor out the largest perfect square divisor of $72$.",
                   "difficulty": "easy",
-                  "topicTag": "Definition of Surds"
+                  "topicTag": "Simplification of surds"
                 },
                 {
-                  "id": "icse-9-math-q2-3",
+                  "id": "icse-9-math-ch1-l2-q3",
                   "type": "mcq",
-                  "prompt": "Evaluate: sqrt(48) - sqrt(27) + sqrt(75).",
+                  "prompt": "In the proof that $\\sqrt{3}$ is irrational by contradiction, if we assume $\\sqrt{3} = \\frac{a}{b}$ where $\\gcd(a, b) = 1$, which conclusion directly leads to a contradiction?",
                   "options": [
-                    "6*sqrt(3)",
-                    "4*sqrt(3)",
-                    "5*sqrt(3)",
-                    "7*sqrt(3)"
+                    "Both $a$ and $b$ are odd integers",
+                    "Both $a$ and $b$ are divisible by $3$",
+                    "$a^2 + b^2 = 3$",
+                    "$a$ is divisible by $3$ but $b$ is not"
                   ],
-                  "correctAnswer": "6*sqrt(3)",
-                  "explanation": "sqrt(48) = 4*sqrt(3); sqrt(27) = 3*sqrt(3); sqrt(75) = 5*sqrt(3). Total = (4 - 3 + 5)*sqrt(3) = 6*sqrt(3).",
-                  "hint": "Convert each term to a multiple of sqrt(3).",
+                  "correctAnswer": "Both $a$ and $b$ are divisible by $3$",
+                  "explanation": "Squaring yields $a^2 = 3b^2$, showing $3 \\mid a^2 \\implies 3 \\mid a$. Substituting $a = 3k$ yields $9k^2 = 3b^2 \\implies b^2 = 3k^2$, showing $3 \\mid b$. Thus both $a$ and $b$ have a common factor $3$, which contradicts $\\gcd(a, b) = 1$.",
+                  "hint": "Recall the fundamental condition that $a$ and $b$ are coprime.",
                   "difficulty": "medium",
-                  "topicTag": "Addition of Surds"
+                  "topicTag": "Proof that sqrt(2) and sqrt(3) are irrational"
+                },
+                {
+                  "id": "icse-9-math-ch1-l2-q4",
+                  "type": "mcq",
+                  "prompt": "Simplify the expression: $\\sqrt{50} + \\sqrt{18} - \\sqrt{8}$.",
+                  "options": [
+                    "$6\\sqrt{2}$",
+                    "$10\\sqrt{2}$",
+                    "$4\\sqrt{2}$",
+                    "$8\\sqrt{2}$"
+                  ],
+                  "correctAnswer": "$6\\sqrt{2}$",
+                  "explanation": "Simplifying each radical:\n$\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}$\n$\\sqrt{18} = \\sqrt{9 \\times 2} = 3\\sqrt{2}$\n$\\sqrt{8} = \\sqrt{4 \\times 2} = 2\\sqrt{2}$\nCombining: $5\\sqrt{2} + 3\\sqrt{2} - 2\\sqrt{2} = (5 + 3 - 2)\\sqrt{2} = 6\\sqrt{2}$.",
+                  "hint": "Express each term as a multiple of $\\sqrt{2}$.",
+                  "difficulty": "easy",
+                  "topicTag": "Simplification of surds"
+                },
+                {
+                  "id": "icse-9-math-ch1-l2-q5",
+                  "type": "mcq",
+                  "prompt": "Which of the following expressions is NOT a surd?",
+                  "options": [
+                    "$\\sqrt{27}$",
+                    "$\\sqrt[3]{16}$",
+                    "$\\sqrt{125}$",
+                    "$\\sqrt[3]{64}$"
+                  ],
+                  "correctAnswer": "$\\sqrt[3]{64}$",
+                  "explanation": "A surd must be an irrational root of a rational number. $\\sqrt[3]{64} = 4$, which is a rational number. Therefore, $\\sqrt[3]{64}$ is not a surd.",
+                  "hint": "A surd must be irrational. Check if any root evaluates to an integer.",
+                  "difficulty": "easy",
+                  "topicTag": "Concept of irrational numbers"
+                },
+                {
+                  "id": "icse-9-math-ch1-l2-q6",
+                  "type": "mcq",
+                  "prompt": "Evaluate the product: $(\\sqrt{7} - \\sqrt{3})(\\sqrt{7} + \\sqrt{3})$.",
+                  "options": [
+                    "$4$",
+                    "$10$",
+                    "$4 - 2\\sqrt{21}$",
+                    "$10 - 2\\sqrt{21}$"
+                  ],
+                  "correctAnswer": "$4$",
+                  "explanation": "Using the algebraic identity $(a - b)(a + b) = a^2 - b^2$:\n$$(\\sqrt{7} - \\sqrt{3})(\\sqrt{7} + \\sqrt{3}) = (\\sqrt{7})^2 - (\\sqrt{3})^2 = 7 - 3 = 4$$",
+                  "hint": "Use the difference of squares identity: $(a - b)(a + b) = a^2 - b^2$.",
+                  "difficulty": "medium",
+                  "topicTag": "Simplification of surds"
+                },
+                {
+                  "id": "icse-9-math-ch1-l2-q7",
+                  "type": "mcq",
+                  "prompt": "If $p$ is a prime number, then $\\sqrt{p}$ is always:",
+                  "options": [
+                    "A rational number",
+                    "An integer",
+                    "An irrational number",
+                    "A non-real complex number"
+                  ],
+                  "correctAnswer": "An irrational number",
+                  "explanation": "For any prime number $p$, there exists no integer $k$ such that $k^2 = p$. By the proof of irrationality for roots of primes, $\\sqrt{p}$ is always an irrational number.",
+                  "hint": "Can a prime number ever be a perfect square?",
+                  "difficulty": "easy",
+                  "topicTag": "Concept of irrational numbers"
+                },
+                {
+                  "id": "icse-9-math-ch1-l2-q8",
+                  "type": "mcq",
+                  "prompt": "Simplify: $2\\sqrt{27} - 3\\sqrt{12} + 5\\sqrt{48}$.",
+                  "options": [
+                    "$14\\sqrt{3}$",
+                    "$20\\sqrt{3}$",
+                    "$18\\sqrt{3}$",
+                    "$26\\sqrt{3}$"
+                  ],
+                  "correctAnswer": "$20\\sqrt{3}$",
+                  "explanation": "Simplify each surd:\n$2\\sqrt{27} = 2(3\\sqrt{3}) = 6\\sqrt{3}$\n$3\\sqrt{12} = 3(2\\sqrt{3}) = 6\\sqrt{3}$\n$5\\sqrt{48} = 5(4\\sqrt{3}) = 20\\sqrt{3}$\nNow combine: $6\\sqrt{3} - 6\\sqrt{3} + 20\\sqrt{3} = 20\\sqrt{3}$.",
+                  "hint": "Rewrite $\\sqrt{27}$, $\\sqrt{12}$, and $\\sqrt{48}$ in terms of $\\sqrt{3}$.",
+                  "difficulty": "medium",
+                  "topicTag": "Simplification of surds"
+                },
+                {
+                  "id": "icse-9-math-ch1-l2-q9",
+                  "type": "mcq",
+                  "prompt": "What is the order of the surd $\\sqrt[5]{11}$?",
+                  "options": [
+                    "$1$",
+                    "$2$",
+                    "$5$",
+                    "$11$"
+                  ],
+                  "correctAnswer": "$5$",
+                  "explanation": "In the surd $\\sqrt[n]{a}$, the index $n$ represents the order of the surd. Here $n = 5$, so the order is $5$.",
+                  "hint": "The order of a surd $\\sqrt[n]{a}$ is given by the index of the root.",
+                  "difficulty": "easy",
+                  "topicTag": "Concept of irrational numbers"
+                },
+                {
+                  "id": "icse-9-math-ch1-l2-q10",
+                  "type": "mcq",
+                  "prompt": "Given that $\\sqrt{2}$ is irrational, which of the following is true regarding $3 + 2\\sqrt{2}$?",
+                  "options": [
+                    "It is rational because the product of $2$ and $3$ is $6$",
+                    "It is rational because $3$ and $2$ are integers",
+                    "It is irrational because the sum of a rational and an irrational is irrational",
+                    "It can be either rational or irrational depending on the value of $\\sqrt{2}$"
+                  ],
+                  "correctAnswer": "It is irrational because the sum of a rational and an irrational is irrational",
+                  "explanation": "Let $x = 3 + 2\\sqrt{2}$. If $x$ were rational, then $\\sqrt{2} = \\frac{x - 3}{2}$ would also be rational (since rationals are closed under subtraction and division by a non-zero rational). But $\\sqrt{2}$ is irrational, so $x$ must be irrational.",
+                  "hint": "Consider what happens if you solve for $\\sqrt{2}$ assuming the expression is rational.",
+                  "difficulty": "medium",
+                  "topicTag": "Proof that sqrt(2) and sqrt(3) are irrational"
+                },
+                {
+                  "id": "icse-9-math-ch1-l2-q11",
+                  "type": "mcq",
+                  "prompt": "Simplify: $\\sqrt{80} - 2\\sqrt{45} + \\sqrt{20}$.",
+                  "options": [
+                    "$0$",
+                    "$\\sqrt{5}$",
+                    "$2\\sqrt{5}$",
+                    "$-2\\sqrt{5}$"
+                  ],
+                  "correctAnswer": "$0$",
+                  "explanation": "Simplify each surd:\n$\\sqrt{80} = \\sqrt{16 \\times 5} = 4\\sqrt{5}$\n$2\\sqrt{45} = 2\\sqrt{9 \\times 5} = 2(3\\sqrt{5}) = 6\\sqrt{5}$\n$\\sqrt{20} = \\sqrt{4 \\times 5} = 2\\sqrt{5}$\nCombine: $4\\sqrt{5} - 6\\sqrt{5} + 2\\sqrt{5} = (4 - 6 + 2)\\sqrt{5} = 0$.",
+                  "hint": "Extract perfect squares to write each radical in terms of $\\sqrt{5}$.",
+                  "difficulty": "medium",
+                  "topicTag": "Simplification of surds"
+                },
+                {
+                  "id": "icse-9-math-ch1-l2-q12",
+                  "type": "mcq",
+                  "prompt": "If $\\sqrt{32} + \\sqrt{50} = k\\sqrt{2}$, find the value of $k$.",
+                  "options": [
+                    "$9$",
+                    "$\\sqrt{82}$",
+                    "$7$",
+                    "$11$"
+                  ],
+                  "correctAnswer": "$9$",
+                  "explanation": "Simplify both terms on the left side:\n$$\\sqrt{32} = \\sqrt{16 \\times 2} = 4\\sqrt{2}$$\n$$\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}$$\n$$\\sqrt{32} + \\sqrt{50} = 4\\sqrt{2} + 5\\sqrt{2} = 9\\sqrt{2}$$\nComparing with $k\\sqrt{2}$, we get $k = 9$.",
+                  "hint": "Write $\\sqrt{32}$ and $\\sqrt{50}$ in terms of $\\sqrt{2}$ and add their coefficients.",
+                  "difficulty": "hard",
+                  "topicTag": "Simplification of surds"
                 }
               ]
             },
@@ -304,78 +454,232 @@
               "isReviewLevel": false,
               "status": "published",
               "lesson": {
-                "title": "Rationalising Denominators Using Conjugates",
-                "intro": "When a fraction contains a surd in its denominator, we convert the denominator into a rational number without changing the value of the fraction. This process is called rationalisation.",
+                "title": "Rationalisation of Denominators",
+                "intro": "In algebra, an expression is generally considered to be in its simplest form when its denominator contains no irrational numbers (surds). The process of converting an irrational denominator into a rational number by multiplying both the numerator and denominator by an appropriate non-zero factor is known as rationalisation. For binomial surds, this process relies heavily on the difference-of-two-squares identity $(a+b)(a-b) = a^2 - b^2$, using the conjugate surd as the rationalising factor (RF). Mastering rationalisation is fundamental for evaluating algebraic expressions and solving complex surd equations in ICSE Class 9 Mathematics.",
                 "keyConcepts": [
                   {
-                    "title": "Conjugate Binomial Surds",
-                    "explanation": "The conjugate of (a + sqrt(b)) is (a - sqrt(b)). The product of a conjugate pair is always rational: (a + sqrt(b))(a - sqrt(b)) = a^2 - (sqrt(b))^2 = a^2 - b."
+                    "title": "Conjugate of Binomial Surds",
+                    "explanation": "Two binomial quadratic surds are called conjugate to each other if their sum and product are both rational numbers. For instance, the conjugate of $a + \\sqrt{b}$ is $a - \\sqrt{b}$ (or $-a + \\sqrt{b}$). Their product is $(a + \\sqrt{b})(a - \\sqrt{b}) = a^2 - (\\sqrt{b})^2 = a^2 - b$, which is strictly rational. Similarly, the conjugate of $\\sqrt{a} + \\sqrt{b}$ is $\\sqrt{a} - \\sqrt{b}$, and their product is $(\\sqrt{a})^2 - (\\sqrt{b})^2 = a - b$."
                   },
                   {
-                    "title": "Rationalising Procedure",
-                    "explanation": "Multiply both numerator and denominator by the conjugate of the denominator: [1 / (sqrt(5) + sqrt(2))] * [(sqrt(5) - sqrt(2)) / (sqrt(5) - sqrt(2))] = (sqrt(5) - sqrt(2)) / (5 - 2) = (sqrt(5) - sqrt(2)) / 3."
+                    "title": "Rationalising Denominators",
+                    "explanation": "To rationalise a fraction of the form $\\frac{k}{a + \\sqrt{b}}$, we multiply both the numerator and the denominator by the conjugate of the denominator, namely $(a - \\sqrt{b})$: $$\\frac{k}{a + \\sqrt{b}} = \\frac{k(a - \\sqrt{b})}{(a + \\sqrt{b})(a - \\sqrt{b})} = \\frac{k(a - \\sqrt{b})}{a^2 - b}$$ This eliminates the radical from the denominator without changing the value of the fraction."
+                  },
+                  {
+                    "title": "Evaluation of Algebraic Surd Expressions",
+                    "explanation": "Often, problems require evaluating expressions like $x^2 + \\frac{1}{x^2}$ or $x^3 + \\frac{1}{x^3}$ given $x = a + \\sqrt{b}$. The standard method is to first find $\\frac{1}{x}$ by rationalising $\\frac{1}{a + \\sqrt{b}}$, calculate $(x + \\frac{1}{x})$ or $(x - \\frac{1}{x})$, and then apply algebraic identities such as $x^2 + \\frac{1}{x^2} = \\left(x + \\frac{1}{x}\\right)^2 - 2$."
                   }
                 ],
                 "tips": [
-                  "Always simplify the denominator using identity (x + y)(x - y) = x^2 - y^2.",
-                  "If evaluating when given x = 2 + sqrt(3), compute 1/x = 2 - sqrt(3) directly, so x + 1/x = 4."
+                  "Always simplify any radicals inside the expression before finding the conjugate (e.g., write $\\sqrt{18}$ as $3\\sqrt{2}$).",
+                  "Pay careful attention to the signs when expanding terms like $(a - \\sqrt{b})^2 = a^2 - 2a\\sqrt{b} + b$.",
+                  "Remember that the product of conjugates uses the identity $(u+v)(u-v) = u^2 - v^2$, eliminating middle terms completely."
                 ]
               },
               "examples": [
                 {
-                  "problem": "Rationalise the denominator of 6 / (sqrt(5) - sqrt(2)).",
-                  "solution": "Multiply numerator and denominator by conjugate (sqrt(5) + sqrt(2)):\n6 * (sqrt(5) + sqrt(2)) / [(sqrt(5) - sqrt(2))(sqrt(5) + sqrt(2))]\n= 6 * (sqrt(5) + sqrt(2)) / (5 - 2)\n= 6 * (sqrt(5) + sqrt(2)) / 3\n= 2*(sqrt(5) + sqrt(2)).",
-                  "explanation": "(sqrt(5))^2 - (sqrt(2))^2 = 5 - 2 = 3. Dividing 6 by 3 gives 2."
+                  "problem": "Rationalise the denominator of $\\frac{4}{\\sqrt{7} - \\sqrt{3}}$ and express it in simplest form.",
+                  "solution": "Multiply both the numerator and the denominator by the conjugate of the denominator, which is $(\\sqrt{7} + \\sqrt{3})$: $$\\frac{4}{\\sqrt{7} - \\sqrt{3}} = \\frac{4(\\sqrt{7} + \\sqrt{3})}{(\\sqrt{7} - \\sqrt{3})(\\sqrt{7} + \\sqrt{3})}$$ Using the identity $(a-b)(a+b) = a^2 - b^2$ in the denominator: $$(\\sqrt{7})^2 - (\\sqrt{3})^2 = 7 - 3 = 4$$ Substituting this back: $$\\frac{4(\\sqrt{7} + \\sqrt{3})}{4} = \\sqrt{7} + \\sqrt{3}$$",
+                  "explanation": "By multiplying both terms by the conjugate $(\\sqrt{7} + \\sqrt{3})$, the denominator simplifies to $7 - 3 = 4$, which cancels out with the $4$ in the numerator, leaving $\\sqrt{7} + \\sqrt{3}$."
+                },
+                {
+                  "problem": "If $x = 3 + 2\\sqrt{2}$, find the value of $x^2 + \\frac{1}{x^2}$.",
+                  "solution": "First, find $\\frac{1}{x}$ by rationalising the denominator: $$\\frac{1}{x} = \\frac{1}{3 + 2\\sqrt{2}} = \\frac{3 - 2\\sqrt{2}}{(3 + 2\\sqrt{2})(3 - 2\\sqrt{2})} = \\frac{3 - 2\\sqrt{2}}{3^2 - (2\\sqrt{2})^2} = \\frac{3 - 2\\sqrt{2}}{9 - 8} = 3 - 2\\sqrt{2}$$ Now, compute $x + \\frac{1}{x}$: $$x + \\frac{1}{x} = (3 + 2\\sqrt{2}) + (3 - 2\\sqrt{2}) = 6$$ Using the identity $x^2 + \\frac{1}{x^2} = \\left(x + \\frac{1}{x}\\right)^2 - 2$: $$x^2 + \\frac{1}{x^2} = 6^2 - 2 = 36 - 2 = 34$$",
+                  "explanation": "Rationalising $\\frac{1}{x}$ reveals that it is the conjugate $3 - 2\\sqrt{2}$. Summing $x$ and $\\frac{1}{x}$ gives $6$, and squaring yields $x^2 + \\frac{1}{x^2} = 6^2 - 2 = 34$."
                 }
               ],
               "questions": [
                 {
-                  "id": "icse-9-math-q3-1",
+                  "id": "icse-9-math-ch1-l3-q1",
                   "type": "mcq",
-                  "prompt": "What is the rationalising factor (conjugate) of (3 - 2*sqrt(2))?",
+                  "prompt": "What is the conjugate of the binomial surd $5 - 2\\sqrt{6}$?",
                   "options": [
-                    "3 + 2*sqrt(2)",
-                    "3 - 2*sqrt(2)",
-                    "-3 - 2*sqrt(2)",
-                    "sqrt(2)"
+                    "$5 + 2\\sqrt{6}$",
+                    "$-5 - 2\\sqrt{6}$",
+                    "$2\\sqrt{6} - 5$",
+                    "$\\sqrt{6} - 5$"
                   ],
-                  "correctAnswer": "3 + 2*sqrt(2)",
-                  "explanation": "The conjugate of (a - b*sqrt(c)) is (a + b*sqrt(c)). Multiplying gives 3^2 - (2*sqrt(2))^2 = 9 - 8 = 1, a rational number.",
-                  "hint": "Invert the sign between the rational part and the radical part.",
+                  "correctAnswer": "$5 + 2\\sqrt{6}$",
+                  "explanation": "The conjugate of a binomial surd of the form $a - \\sqrt{b}$ is obtained by reversing the sign between the two terms, giving $a + \\sqrt{b}$. Hence, the conjugate of $5 - 2\\sqrt{6}$ is $5 + 2\\sqrt{6}$.",
+                  "hint": "Change the sign between the rational part and the radical part.",
                   "difficulty": "easy",
-                  "topicTag": "Conjugates"
+                  "topicTag": "Conjugate of binomial surds"
                 },
                 {
-                  "id": "icse-9-math-q3-2",
+                  "id": "icse-9-math-ch1-l3-q2",
                   "type": "mcq",
-                  "prompt": "Rationalise the denominator of 1 / (sqrt(7) + sqrt(5)).",
+                  "prompt": "Find the product of $(3 + \\sqrt{5})$ and its conjugate $(3 - \\sqrt{5})$.",
                   "options": [
-                    "(sqrt(7) - sqrt(5)) / 2",
-                    "(sqrt(7) + sqrt(5)) / 2",
-                    "sqrt(7) - sqrt(5)",
-                    "(sqrt(7) - sqrt(5)) / 12"
+                    "$4$",
+                    "$14$",
+                    "$2$",
+                    "$9$"
                   ],
-                  "correctAnswer": "(sqrt(7) - sqrt(5)) / 2",
-                  "explanation": "Multiply numerator and denominator by (sqrt(7) - sqrt(5)). Denominator becomes (sqrt(7))^2 - (sqrt(5))^2 = 7 - 5 = 2.",
-                  "hint": "Multiply numerator and denominator by (sqrt(7) - sqrt(5)) and use a^2 - b^2 in denominator.",
+                  "correctAnswer": "$4$",
+                  "explanation": "Using the difference of squares identity $(a+b)(a-b) = a^2 - b^2$: $$(3+\\sqrt{5})(3-\\sqrt{5}) = 3^2 - (\\sqrt{5})^2 = 9 - 5 = 4$$",
+                  "hint": "Apply the identity $(a+b)(a-b) = a^2 - b^2$.",
+                  "difficulty": "easy",
+                  "topicTag": "Conjugate of binomial surds"
+                },
+                {
+                  "id": "icse-9-math-ch1-l3-q3",
+                  "type": "mcq",
+                  "prompt": "Rationalise the denominator of $\\frac{1}{3 + \\sqrt{7}}$.",
+                  "options": [
+                    "$\\frac{3 - \\sqrt{7}}{2}$",
+                    "$\\frac{3 + \\sqrt{7}}{2}$",
+                    "$3 - \\sqrt{7}$",
+                    "$\\frac{3 - \\sqrt{7}}{16}$"
+                  ],
+                  "correctAnswer": "$\\frac{3 - \\sqrt{7}}{2}$",
+                  "explanation": "Multiply numerator and denominator by $(3 - \\sqrt{7})$: $$\\frac{1}{3 + \\sqrt{7}} = \\frac{3 - \\sqrt{7}}{3^2 - (\\sqrt{7})^2} = \\frac{3 - \\sqrt{7}}{9 - 7} = \\frac{3 - \\sqrt{7}}{2}$$",
+                  "hint": "Multiply both terms by the conjugate of $3 + \\sqrt{7}$.",
+                  "difficulty": "easy",
+                  "topicTag": "Rationalising denominators"
+                },
+                {
+                  "id": "icse-9-math-ch1-l3-q4",
+                  "type": "mcq",
+                  "prompt": "Rationalise the denominator of $\\frac{6}{\\sqrt{5} - \\sqrt{2}}$.",
+                  "options": [
+                    "$2(\\sqrt{5} + \\sqrt{2})$",
+                    "$3(\\sqrt{5} + \\sqrt{2})$",
+                    "$\\frac{2(\\sqrt{5} + \\sqrt{2})}{3}$",
+                    "$6(\\sqrt{5} + \\sqrt{2})$"
+                  ],
+                  "correctAnswer": "$2(\\sqrt{5} + \\sqrt{2})$",
+                  "explanation": "Multiply numerator and denominator by $(\\sqrt{5} + \\sqrt{2})$: $$\\frac{6}{\\sqrt{5} - \\sqrt{2}} = \\frac{6(\\sqrt{5} + \\sqrt{2})}{(\\sqrt{5})^2 - (\\sqrt{2})^2} = \\frac{6(\\sqrt{5} + \\sqrt{2})}{5 - 2} = \\frac{6(\\sqrt{5} + \\sqrt{2})}{3} = 2(\\sqrt{5} + \\sqrt{2})$$",
+                  "hint": "The denominator becomes $5 - 2 = 3$. Then divide 6 by 3.",
+                  "difficulty": "easy",
+                  "topicTag": "Rationalising denominators"
+                },
+                {
+                  "id": "icse-9-math-ch1-l3-q5",
+                  "type": "mcq",
+                  "prompt": "If $\\frac{\\sqrt{3} + 1}{\\sqrt{3} - 1} = a + b\\sqrt{3}$, find the values of $a$ and $b$.",
+                  "options": [
+                    "$a = 2,\\ b = 1$",
+                    "$a = 1,\\ b = 2$",
+                    "$a = 2,\\ b = -1$",
+                    "$a = 4,\\ b = 2$"
+                  ],
+                  "correctAnswer": "$a = 2,\\ b = 1$",
+                  "explanation": "Rationalise the left-hand side: $$\\frac{(\\sqrt{3} + 1)(\\sqrt{3} + 1)}{(\\sqrt{3} - 1)(\\sqrt{3} + 1)} = \\frac{(\\sqrt{3} + 1)^2}{3 - 1} = \\frac{3 + 2\\sqrt{3} + 1}{2} = \\frac{4 + 2\\sqrt{3}}{2} = 2 + \\sqrt{3}$$ Comparing with $a + b\\sqrt{3}$, we obtain $a = 2$ and $b = 1$.",
+                  "hint": "Multiply numerator and denominator by $\\sqrt{3} + 1$ and expand.",
                   "difficulty": "medium",
-                  "topicTag": "Rationalisation"
+                  "topicTag": "Rationalising denominators"
                 },
                 {
-                  "id": "icse-9-math-q3-3",
+                  "id": "icse-9-math-ch1-l3-q6",
                   "type": "mcq",
-                  "prompt": "If x = 3 + 2*sqrt(2), what is the value of x + 1/x?",
+                  "prompt": "If $x = 2 + \\sqrt{3}$, find the value of $x + \\frac{1}{x}$.",
                   "options": [
-                    "6",
-                    "4*sqrt(2)",
-                    "8",
-                    "3*sqrt(2)"
+                    "$4$",
+                    "$2\\sqrt{3}$",
+                    "$1$",
+                    "$7$"
                   ],
-                  "correctAnswer": "6",
-                  "explanation": "1/x = 1 / (3 + 2*sqrt(2)) = 3 - 2*sqrt(2). Therefore, x + 1/x = (3 + 2*sqrt(2)) + (3 - 2*sqrt(2)) = 6.",
-                  "hint": "Rationalise 1/x first. Notice that 3^2 - (2*sqrt(2))^2 = 9 - 8 = 1.",
+                  "correctAnswer": "$4$",
+                  "explanation": "First find $\\frac{1}{x}$: $$\\frac{1}{x} = \\frac{1}{2 + \\sqrt{3}} = \\frac{2 - \\sqrt{3}}{4 - 3} = 2 - \\sqrt{3}$$ Thus: $$x + \\frac{1}{x} = (2 + \\sqrt{3}) + (2 - \\sqrt{3}) = 4$$",
+                  "hint": "Rationalise $\\frac{1}{2 + \\sqrt{3}}$ to find $\\frac{1}{x}$.",
+                  "difficulty": "easy",
+                  "topicTag": "Evaluation of algebraic surd expressions"
+                },
+                {
+                  "id": "icse-9-math-ch1-l3-q7",
+                  "type": "mcq",
+                  "prompt": "If $x = 2 + \\sqrt{3}$, find the value of $x^2 + \\frac{1}{x^2}$.",
+                  "options": [
+                    "$14$",
+                    "$16$",
+                    "$12$",
+                    "$18$"
+                  ],
+                  "correctAnswer": "$14$",
+                  "explanation": "Since $\\frac{1}{x} = 2 - \\sqrt{3}$, we have $x + \\frac{1}{x} = 4$. Using the identity $x^2 + \\frac{1}{x^2} = \\left(x + \\frac{1}{x}\\right)^2 - 2$: $$x^2 + \\frac{1}{x^2} = 4^2 - 2 = 16 - 2 = 14$$",
+                  "hint": "Use the identity $x^2 + \\frac{1}{x^2} = (x + \\frac{1}{x})^2 - 2$.",
+                  "difficulty": "medium",
+                  "topicTag": "Evaluation of algebraic surd expressions"
+                },
+                {
+                  "id": "icse-9-math-ch1-l3-q8",
+                  "type": "mcq",
+                  "prompt": "Simplify the expression $\\frac{1}{\\sqrt{3} + \\sqrt{2}} + \\frac{1}{\\sqrt{3} - \\sqrt{2}}$.",
+                  "options": [
+                    "$2\\sqrt{3}$",
+                    "$2\\sqrt{2}$",
+                    "$\\sqrt{3}$",
+                    "$5$"
+                  ],
+                  "correctAnswer": "$2\\sqrt{3}$",
+                  "explanation": "Rationalise each fraction separately: $$\\frac{1}{\\sqrt{3} + \\sqrt{2}} = \\frac{\\sqrt{3} - \\sqrt{2}}{3 - 2} = \\sqrt{3} - \\sqrt{2}$$ $$\\frac{1}{\\sqrt{3} - \\sqrt{2}} = \\frac{\\sqrt{3} + \\sqrt{2}}{3 - 2} = \\sqrt{3} + \\sqrt{2}$$ Adding them together: $$(\\sqrt{3} - \\sqrt{2}) + (\\sqrt{3} + \\sqrt{2}) = 2\\sqrt{3}$$",
+                  "hint": "Notice that the denominators are conjugates of each other.",
+                  "difficulty": "medium",
+                  "topicTag": "Rationalising denominators"
+                },
+                {
+                  "id": "icse-9-math-ch1-l3-q9",
+                  "type": "mcq",
+                  "prompt": "Find the value of $a$ and $b$ if $\\frac{3 - \\sqrt{5}}{3 + 2\\sqrt{5}} = a\\sqrt{5} - b$, where $a$ and $b$ are rational numbers.",
+                  "options": [
+                    "$a = \\frac{9}{11},\\ b = \\frac{19}{11}$",
+                    "$a = \\frac{9}{11},\\ b = -\\frac{19}{11}$",
+                    "$a = -\\frac{9}{11},\\ b = \\frac{19}{11}$",
+                    "$a = \\frac{7}{11},\\ b = \\frac{13}{11}$"
+                  ],
+                  "correctAnswer": "$a = \\frac{9}{11},\\ b = \\frac{19}{11}$",
+                  "explanation": "Multiply numerator and denominator by $(3 - 2\\sqrt{5})$: $$\\frac{(3 - \\sqrt{5})(3 - 2\\sqrt{5})}{(3 + 2\\sqrt{5})(3 - 2\\sqrt{5})} = \\frac{9 - 6\\sqrt{5} - 3\\sqrt{5} + 2(5)}{3^2 - (2\\sqrt{5})^2} = \\frac{9 - 9\\sqrt{5} + 10}{9 - 20} = \\frac{19 - 9\\sqrt{5}}{-11} = -\\frac{19}{11} + \\frac{9}{11}\\sqrt{5}$$ Writing this in the form $a\\sqrt{5} - b$: $$\\frac{9}{11}\\sqrt{5} - \\frac{19}{11}$$ Thus, $a = \\frac{9}{11}$ and $b = \\frac{19}{11}$.",
+                  "hint": "Expand $(3 - \\sqrt{5})(3 - 2\\sqrt{5})$ and divide by $9 - 20 = -11$.",
                   "difficulty": "hard",
-                  "topicTag": "Algebraic Evaluation of Surds"
+                  "topicTag": "Rationalising denominators"
+                },
+                {
+                  "id": "icse-9-math-ch1-l3-q10",
+                  "type": "mcq",
+                  "prompt": "If $x = \\frac{\\sqrt{5} - \\sqrt{3}}{\\sqrt{5} + \\sqrt{3}}$ and $y = \\frac{\\sqrt{5} + \\sqrt{3}}{\\sqrt{5} - \\sqrt{3}}$, find the value of $x + y$.",
+                  "options": [
+                    "$8$",
+                    "$4$",
+                    "$2\\sqrt{15}$",
+                    "$16$"
+                  ],
+                  "correctAnswer": "$8$",
+                  "explanation": "Combine the two terms over a common denominator: $$x + y = \\frac{(\\sqrt{5} - \\sqrt{3})^2 + (\\sqrt{5} + \\sqrt{3})^2}{(\\sqrt{5} + \\sqrt{3})(\\sqrt{5} - \\sqrt{3})}$$ Using $(a-b)^2 + (a+b)^2 = 2(a^2 + b^2)$: $$x + y = \\frac{2((\\sqrt{5})^2 + (\\sqrt{3})^2)}{5 - 3} = \\frac{2(5 + 3)}{2} = 8$$",
+                  "hint": "Use the algebraic identity $(a-b)^2 + (a+b)^2 = 2(a^2 + b^2)$.",
+                  "difficulty": "medium",
+                  "topicTag": "Evaluation of algebraic surd expressions"
+                },
+                {
+                  "id": "icse-9-math-ch1-l3-q11",
+                  "type": "mcq",
+                  "prompt": "If $x = 3 - 2\\sqrt{2}$, find the value of $x^3 + \\frac{1}{x^3}$.",
+                  "options": [
+                    "$198$",
+                    "$216$",
+                    "$180$",
+                    "$234$"
+                  ],
+                  "correctAnswer": "$198$",
+                  "explanation": "Since $x = 3 - 2\\sqrt{2}$, we have: $$\\frac{1}{x} = \\frac{1}{3 - 2\\sqrt{2}} = 3 + 2\\sqrt{2}$$ So, $x + \\frac{1}{x} = (3 - 2\\sqrt{2}) + (3 + 2\\sqrt{2}) = 6$. Using the identity $x^3 + \\frac{1}{x^3} = \\left(x + \\frac{1}{x}\\right)^3 - 3\\left(x + \\frac{1}{x}\\right)$: $$x^3 + \\frac{1}{x^3} = 6^3 - 3(6) = 216 - 18 = 198$$",
+                  "hint": "Use the identity $x^3 + \\frac{1}{x^3} = (x + \\frac{1}{x})^3 - 3(x + \\frac{1}{x})$.",
+                  "difficulty": "hard",
+                  "topicTag": "Evaluation of algebraic surd expressions"
+                },
+                {
+                  "id": "icse-9-math-ch1-l3-q12",
+                  "type": "mcq",
+                  "prompt": "Evaluate the sum: $$\\frac{1}{\\sqrt{2} + 1} + \\frac{1}{\\sqrt{3} + \\sqrt{2}} + \\frac{1}{\\sqrt{4} + \\sqrt{3}}$$",
+                  "options": [
+                    "$1$",
+                    "$\\sqrt{2} - 1$",
+                    "$2$",
+                    "$\\sqrt{3}$"
+                  ],
+                  "correctAnswer": "$1$",
+                  "explanation": "Rationalise each term: $$\\frac{1}{\\sqrt{2} + 1} = \\frac{\\sqrt{2} - 1}{2 - 1} = \\sqrt{2} - 1$$ $$\\frac{1}{\\sqrt{3} + \\sqrt{2}} = \\frac{\\sqrt{3} - \\sqrt{2}}{3 - 2} = \\sqrt{3} - \\sqrt{2}$$ $$\\frac{1}{\\sqrt{4} + \\sqrt{3}} = \\frac{\\sqrt{4} - \\sqrt{3}}{4 - 3} = \\sqrt{4} - \\sqrt{3} = 2 - \\sqrt{3}$$ Summing all terms (telescoping series): $$(\\sqrt{2} - 1) + (\\sqrt{3} - \\sqrt{2}) + (2 - \\sqrt{3}) = -1 + 2 = 1$$",
+                  "hint": "Rationalise each term individually and observe the telescoping cancellation.",
+                  "difficulty": "hard",
+                  "topicTag": "Rationalising denominators"
                 }
               ]
             },
@@ -389,7 +693,236 @@
                 "ICSE past year question patterns"
               ],
               "isReviewLevel": true,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Chapter 1 Review & Challenge: Real Numbers and Surds",
+                "intro": "In this review and challenge module, we consolidate core competencies from Chapter 1: Rational and Irrational Numbers. Students will revisit decimal representations, methods for rationalising complex surdic denominators, evaluating symmetric algebraic surd expressions, and solving typical high-weightage ICSE examination problems.",
+                "keyConcepts": [
+                  {
+                    "title": "Classification and Decimal Representations",
+                    "explanation": "A real number is rational if and only if its decimal representation is either terminating or non-terminating repeating (recurring). It can be expressed in the form $\\frac{p}{q}$, where $p, q \\in \\mathbb{Z}$ and $q \\neq 0$. Any real number whose decimal expansion is non-terminating and non-recurring is irrational (such as $\\sqrt{2}$, $\\sqrt{3}$, or $\\pi$)."
+                  },
+                  {
+                    "title": "Surds and Conjugate Rationalisation",
+                    "explanation": "A surd is an irrational root of a positive rational number. To rationalise a binomial surd denominator of the form $a\\sqrt{x} \\pm b\\sqrt{y}$, we multiply both numerator and denominator by its conjugate $a\\sqrt{x} \\mp b\\sqrt{y}$, utilizing the identity $$(a\\sqrt{x} + b\\sqrt{y})(a\\sqrt{x} - b\\sqrt{y}) = a^2 x - b^2 y$$ which eliminates the radical."
+                  },
+                  {
+                    "title": "Algebraic Evaluation of Surdic Reciprocals",
+                    "explanation": "For an expression where $x = a + \\sqrt{b}$ (with $a^2 - b = 1$), the reciprocal is $\\frac{1}{x} = a - \\sqrt{b}$. Consequently, $x + \\frac{1}{x} = 2a$ and $x - \\frac{1}{x} = 2\\sqrt{b}$. Powers like $x^2 + \\frac{1}{x^2}$ can be directly evaluated via $(x + \\frac{1}{x})^2 - 2$."
+                  }
+                ],
+                "tips": [
+                  "Always check if the denominator becomes $1$ or a simple integer when multiplying by a conjugate, as $(a+b)(a-b) = a^2 - b^2$.",
+                  "When expanding $(x - \\frac{1}{x})^2$, remember that $(x - \\frac{1}{x})^2 = x^2 + \\frac{1}{x^2} - 2$, so $x^2 + \\frac{1}{x^2} = (x - \\frac{1}{x})^2 + 2$.",
+                  "Do not approximate surds to decimals unless explicitly asked to give an answer to a certain number of decimal places."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "If $x = 3 + 2\\sqrt{2}$, find the value of $x^2 + \\frac{1}{x^2}$.",
+                  "solution": "1. Find the reciprocal $\\frac{1}{x}$ by rationalising the denominator:\n$$\\frac{1}{x} = \\frac{1}{3 + 2\\sqrt{2}} = \\frac{3 - 2\\sqrt{2}}{(3 + 2\\sqrt{2})(3 - 2\\sqrt{2})} = \\frac{3 - 2\\sqrt{2}}{3^2 - (2\\sqrt{2})^2} = \\frac{3 - 2\\sqrt{2}}{9 - 8} = 3 - 2\\sqrt{2}$$\n\n2. Compute $x + \\frac{1}{x}$:\n$$x + \\frac{1}{x} = (3 + 2\\sqrt{2}) + (3 - 2\\sqrt{2}) = 6$$\n\n3. Use the algebraic identity $(x + \\frac{1}{x})^2 = x^2 + \\frac{1}{x^2} + 2$:\n$$x^2 + \\frac{1}{x^2} = \\left(x + \\frac{1}{x}\\right)^2 - 2 = 6^2 - 2 = 36 - 2 = 34$$",
+                  "explanation": "Evaluating $x + \\frac{1}{x}$ first avoids the labor of squaring large surds individually and eliminates terms through cancellation."
+                },
+                {
+                  "problem": "Find the rational values of $a$ and $b$ such that $\\frac{\\sqrt{5} + \\sqrt{3}}{\\sqrt{5} - \\sqrt{3}} = a + b\\sqrt{15}$.",
+                  "solution": "1. Multiply the numerator and denominator by the conjugate of the denominator, $(\\sqrt{5} + \\sqrt{3})$:\n$$\\frac{\\sqrt{5} + \\sqrt{3}}{\\sqrt{5} - \\sqrt{3}} = \\frac{(\\sqrt{5} + \\sqrt{3})^2}{(\\sqrt{5} - \\sqrt{3})(\\sqrt{5} + \\sqrt{3})}$$\n\n2. Expand both numerator and denominator:\n$$\\text{Numerator} = (\\sqrt{5})^2 + 2(\\sqrt{5})(\\sqrt{3}) + (\\sqrt{3})^2 = 5 + 2\\sqrt{15} + 3 = 8 + 2\\sqrt{15}$$\n$$\\text{Denominator} = (\\sqrt{5})^2 - (\\sqrt{3})^2 = 5 - 3 = 2$$\n\n3. Divide by the denominator:\n$$\\frac{8 + 2\\sqrt{15}}{2} = 4 + \\sqrt{15}$$\n\n4. Equate to $a + b\\sqrt{15}$:\n$$a = 4,\\quad b = 1$$",
+                  "explanation": "Equating rational parts to rational parts and irrational coefficients to irrational coefficients allows us to solve for $a$ and $b$ uniquely."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-math-ch1-l4-q1",
+                  "type": "mcq",
+                  "prompt": "Rationalise the denominator of $\\frac{1}{\\sqrt{7} - \\sqrt{6}}$ and simplify.",
+                  "options": [
+                    "$\\sqrt{7} + \\sqrt{6}$",
+                    "$\\sqrt{7} - \\sqrt{6}$",
+                    "$\\frac{\\sqrt{7} + \\sqrt{6}}{13}$",
+                    "$1$"
+                  ],
+                  "correctAnswer": "$\\sqrt{7} + \\sqrt{6}$",
+                  "explanation": "Multiply numerator and denominator by the conjugate $(\\sqrt{7} + \\sqrt{6})$:\n$$\\frac{1}{\\sqrt{7} - \\sqrt{6}} \\times \\frac{\\sqrt{7} + \\sqrt{6}}{\\sqrt{7} + \\sqrt{6}} = \\frac{\\sqrt{7} + \\sqrt{6}}{(\\sqrt{7})^2 - (\\sqrt{6})^2} = \\frac{\\sqrt{7} + \\sqrt{6}}{7 - 6} = \\sqrt{7} + \\sqrt{6}$$",
+                  "hint": "Multiply numerator and denominator by the conjugate $(\\sqrt{7} + \\sqrt{6})$.",
+                  "difficulty": "easy",
+                  "topicTag": "Mixed problem solving"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q2",
+                  "type": "mcq",
+                  "prompt": "If $x = 2 + \\sqrt{3}$, what is the value of $x - \\frac{1}{x}$?",
+                  "options": [
+                    "$2\\sqrt{3}$",
+                    "$4$",
+                    "$-2\\sqrt{3}$",
+                    "$0$"
+                  ],
+                  "correctAnswer": "$2\\sqrt{3}$",
+                  "explanation": "Rationalising $\\frac{1}{x}$:\n$$\\frac{1}{x} = \\frac{1}{2 + \\sqrt{3}} = \\frac{2 - \\sqrt{3}}{2^2 - (\\sqrt{3})^2} = \\frac{2 - \\sqrt{3}}{4 - 3} = 2 - \\sqrt{3}$$\nThen:\n$$x - \\frac{1}{x} = (2 + \\sqrt{3}) - (2 - \\sqrt{3}) = 2 + \\sqrt{3} - 2 + \\sqrt{3} = 2\\sqrt{3}$$",
+                  "hint": "Find $\\frac{1}{x}$ by rationalising with $2 - \\sqrt{3}$, then subtract.",
+                  "difficulty": "easy",
+                  "topicTag": "ICSE past year question patterns"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q3",
+                  "type": "mcq",
+                  "prompt": "Find the values of rational numbers $a$ and $b$ if $\\frac{3 + \\sqrt{2}}{3 - \\sqrt{2}} = a + b\\sqrt{2}$.",
+                  "options": [
+                    "$a = \\frac{11}{7},\\ b = \\frac{6}{7}$",
+                    "$a = \\frac{7}{11},\\ b = \\frac{6}{11}$",
+                    "$a = \\frac{11}{7},\\ b = -\\frac{6}{7}$",
+                    "$a = 11,\\ b = 6$"
+                  ],
+                  "correctAnswer": "$a = \\frac{11}{7},\\ b = \\frac{6}{7}$",
+                  "explanation": "Rationalise the denominator:\n$$\\frac{3 + \\sqrt{2}}{3 - \\sqrt{2}} = \\frac{(3 + \\sqrt{2})^2}{3^2 - (\\sqrt{2})^2} = \\frac{9 + 2 + 6\\sqrt{2}}{9 - 2} = \\frac{11 + 6\\sqrt{2}}{7} = \\frac{11}{7} + \\frac{6}{7}\\sqrt{2}$$\nComparing with $a + b\\sqrt{2}$, we get $a = \\frac{11}{7}$ and $b = \\frac{6}{7}$.",
+                  "hint": "Multiply numerator and denominator by $(3 + \\sqrt{2})$ and expand using $(x+y)^2$.",
+                  "difficulty": "medium",
+                  "topicTag": "ICSE past year question patterns"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q4",
+                  "type": "mcq",
+                  "prompt": "Which of the following numbers is an irrational number?",
+                  "options": [
+                    "$\\sqrt{23}$",
+                    "$\\sqrt{225}$",
+                    "$0.3796$",
+                    "$7.\\overline{478}$"
+                  ],
+                  "correctAnswer": "$\\sqrt{23}$",
+                  "explanation": "$\\sqrt{225} = 15$ is a rational number. $0.3796$ is a terminating decimal (rational). $7.\\overline{478}$ is a non-terminating repeating decimal (rational). $\\sqrt{23}$ is the square root of a non-perfect square, hence it is irrational.",
+                  "hint": "A non-perfect square under a radical sign produces an irrational number.",
+                  "difficulty": "easy",
+                  "topicTag": "Mixed problem solving"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q5",
+                  "type": "mcq",
+                  "prompt": "Simplify the surd expression: $\\sqrt{50} - \\sqrt{18} + \\sqrt{8}$.",
+                  "options": [
+                    "$4\\sqrt{2}$",
+                    "$6\\sqrt{2}$",
+                    "$2\\sqrt{2}$",
+                    "$8\\sqrt{2}$"
+                  ],
+                  "correctAnswer": "$4\\sqrt{2}$",
+                  "explanation": "Express each surd in simplest radical form:\n$$\\sqrt{50} = \\sqrt{25 \\times 2} = 5\\sqrt{2}$$\n$$\\sqrt{18} = \\sqrt{9 \\times 2} = 3\\sqrt{2}$$\n$$\\sqrt{8} = \\sqrt{4 \\times 2} = 2\\sqrt{2}$$\nNow, combine like surds:\n$$5\\sqrt{2} - 3\\sqrt{2} + 2\\sqrt{2} = (5 - 3 + 2)\\sqrt{2} = 4\\sqrt{2}$$",
+                  "hint": "Factor out perfect squares from each radical.",
+                  "difficulty": "easy",
+                  "topicTag": "Mixed problem solving"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q6",
+                  "type": "mcq",
+                  "prompt": "If $x = \\sqrt{3} + \\sqrt{2}$, find the value of $x^2 + \\frac{1}{x^2}$.",
+                  "options": [
+                    "$10$",
+                    "$8$",
+                    "$12$",
+                    "$14$"
+                  ],
+                  "correctAnswer": "$10$",
+                  "explanation": "First find $\\frac{1}{x}$:\n$$\\frac{1}{x} = \\frac{1}{\\sqrt{3} + \\sqrt{2}} = \\frac{\\sqrt{3} - \\sqrt{2}}{(\\sqrt{3})^2 - (\\sqrt{2})^2} = \\sqrt{3} - \\sqrt{2}$$\nThen:\n$$x + \\frac{1}{x} = (\\sqrt{3} + \\sqrt{2}) + (\\sqrt{3} - \\sqrt{2}) = 2\\sqrt{3}$$\nSquaring both sides:\n$$\\left(x + \\frac{1}{x}\\right)^2 = (2\\sqrt{3})^2 = 12$$\n$$x^2 + \\frac{1}{x^2} = 12 - 2 = 10$$",
+                  "hint": "Find $x + \\frac{1}{x}$ first, then calculate $(x + \\frac{1}{x})^2 - 2$.",
+                  "difficulty": "medium",
+                  "topicTag": "ICSE past year question patterns"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q7",
+                  "type": "mcq",
+                  "prompt": "The simplest rationalising factor of $\\sqrt[3]{16}$ is:",
+                  "options": [
+                    "$\\sqrt[3]{4}$",
+                    "$\\sqrt[3]{2}$",
+                    "$\\sqrt{2}$",
+                    "$4$"
+                  ],
+                  "correctAnswer": "$\\sqrt[3]{4}$",
+                  "explanation": "First, simplify $\\sqrt[3]{16}$:\n$$\\sqrt[3]{16} = \\sqrt[3]{2^4} = 2\\sqrt[3]{2}$$\nTo make $\\sqrt[3]{2}$ rational, we need $2^3$ under the cube root, so we multiply by $\\sqrt[3]{2^2} = \\sqrt[3]{4}$.\nCheck: $\\sqrt[3]{16} \\times \\sqrt[3]{4} = \\sqrt[3]{64} = 4$, which is rational.",
+                  "hint": "Write $16 = 2^4$. What power of $2$ is needed under the cube root to make the exponent a multiple of $3$?",
+                  "difficulty": "medium",
+                  "topicTag": "Mixed problem solving"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q8",
+                  "type": "mcq",
+                  "prompt": "Express the recurring decimal $0.2\\overline{35}$ as a vulgar fraction in simplest form $\\frac{p}{q}$.",
+                  "options": [
+                    "$\\frac{233}{990}$",
+                    "$\\frac{235}{999}$",
+                    "$\\frac{235}{990}$",
+                    "$\\frac{233}{999}$"
+                  ],
+                  "correctAnswer": "$\\frac{233}{990}$",
+                  "explanation": "Let $x = 0.2353535...$\nMultiplying by $10$:\n$$10x = 2.353535...$$\nMultiplying by $1000$:\n$$1000x = 235.353535...$$\nSubtracting the two equations:\n$$1000x - 10x = 235.353535... - 2.353535...$$\n$$990x = 233 \\implies x = \\frac{233}{990}$$\nSince $\\gcd(233, 990) = 1$, this is the simplest form.",
+                  "hint": "Multiply by $10$ and $1000$ to align the repeating decimal parts, then subtract.",
+                  "difficulty": "medium",
+                  "topicTag": "Mixed problem solving"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q9",
+                  "type": "mcq",
+                  "prompt": "Evaluate the expression: $$\\frac{2}{\\sqrt{5} + \\sqrt{3}} + \\frac{1}{\\sqrt{3} + \\sqrt{2}} - \\frac{3}{\\sqrt{5} + \\sqrt{2}}$$",
+                  "options": [
+                    "$0$",
+                    "$2\\sqrt{5}$",
+                    "$2\\sqrt{3}$",
+                    "$1$"
+                  ],
+                  "correctAnswer": "$0$",
+                  "explanation": "Rationalise each fraction separately:\n1. $\\frac{2(\\sqrt{5} - \\sqrt{3})}{5 - 3} = \\frac{2(\\sqrt{5} - \\sqrt{3})}{2} = \\sqrt{5} - \\sqrt{3}$\n2. $\\frac{1(\\sqrt{3} - \\sqrt{2})}{3 - 2} = \\sqrt{3} - \\sqrt{2}$\n3. $\\frac{3(\\sqrt{5} - \\sqrt{2})}{5 - 2} = \\frac{3(\\sqrt{5} - \\sqrt{2})}{3} = \\sqrt{5} - \\sqrt{2}$\n\nCombining the terms:\n$$(\\sqrt{5} - \\sqrt{3}) + (\\sqrt{3} - \\sqrt{2}) - (\\sqrt{5} - \\sqrt{2}) = \\sqrt{5} - \\sqrt{3} + \\sqrt{3} - \\sqrt{2} - \\sqrt{5} + \\sqrt{2} = 0$$",
+                  "hint": "Rationalise the denominator of each of the three terms independently.",
+                  "difficulty": "hard",
+                  "topicTag": "ICSE past year question patterns"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q10",
+                  "type": "mcq",
+                  "prompt": "If $a$ and $b$ are rational numbers such that $\\frac{5 + 2\\sqrt{3}}{7 + 4\\sqrt{3}} = a + b\\sqrt{3}$, find the value of $a + b$.",
+                  "options": [
+                    "$5$",
+                    "$17$",
+                    "$-5$",
+                    "$-17$"
+                  ],
+                  "correctAnswer": "$5$",
+                  "explanation": "Rationalise the denominator by multiplying by $(7 - 4\\sqrt{3})$:\n$$\\frac{(5 + 2\\sqrt{3})(7 - 4\\sqrt{3})}{7^2 - (4\\sqrt{3})^2} = \\frac{35 - 20\\sqrt{3} + 14\\sqrt{3} - 8(3)}{49 - 48} = \\frac{35 - 24 - 6\\sqrt{3}}{1} = 11 - 6\\sqrt{3}$$\nComparing with $a + b\\sqrt{3}$ gives $a = 11$ and $b = -6$.\nTherefore, $a + b = 11 + (-6) = 5$.",
+                  "hint": "Multiply numerator and denominator by $(7 - 4\\sqrt{3})$, then add the resulting values of $a$ and $b$.",
+                  "difficulty": "hard",
+                  "topicTag": "ICSE past year question patterns"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q11",
+                  "type": "mcq",
+                  "prompt": "Which of the following statements is mathematically FALSE?",
+                  "options": [
+                    "The product of any two irrational numbers is always irrational.",
+                    "The sum of a non-zero rational number and an irrational number is always irrational.",
+                    "The square of an irrational number can be a rational number.",
+                    "The quotient of two non-zero rational numbers is always rational."
+                  ],
+                  "correctAnswer": "The product of any two irrational numbers is always irrational.",
+                  "explanation": "The product of two irrational numbers is not necessarily irrational. For example, $\\sqrt{2} \\times \\sqrt{2} = 2$, or $\\sqrt{8} \\times \\sqrt{2} = 4$, both of which are rational numbers.",
+                  "hint": "Consider multiplying $\\sqrt{2}$ by itself.",
+                  "difficulty": "easy",
+                  "topicTag": "Mixed problem solving"
+                },
+                {
+                  "id": "icse-9-math-ch1-l4-q12",
+                  "type": "mcq",
+                  "prompt": "If $x = 7 + 4\\sqrt{3}$, find the value of $\\sqrt{x} + \\frac{1}{\\sqrt{x}}$.",
+                  "options": [
+                    "$4$",
+                    "$2\\sqrt{3}$",
+                    "$6$",
+                    "$2$"
+                  ],
+                  "correctAnswer": "$4$",
+                  "explanation": "Observe that $x = 7 + 4\\sqrt{3} = 4 + 3 + 2(2)(\\sqrt{3}) = (2 + \\sqrt{3})^2$.\nTherefore, $\\sqrt{x} = 2 + \\sqrt{3}$.\nIts reciprocal is:\n$$\\frac{1}{\\sqrt{x}} = \\frac{1}{2 + \\sqrt{3}} = 2 - \\sqrt{3}$$\nAdding the two values:\n$$\\sqrt{x} + \\frac{1}{\\sqrt{x}} = (2 + \\sqrt{3}) + (2 - \\sqrt{3}) = 4$$",
+                  "hint": "Notice that $7 + 4\\sqrt{3} = (2 + \\sqrt{3})^2$.",
+                  "difficulty": "hard",
+                  "topicTag": "ICSE past year question patterns"
+                }
+              ]
             }
           ]
         }
@@ -555,7 +1088,108 @@
                 "Evaluation without multiplication"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Basic Algebraic Expansions: Identities and Applications",
+                "intro": "This lesson introduces the fundamental algebraic identities used for expanding binomials and trinomials. Mastering these identities allows students to simplify complex expressions and evaluate numerical problems efficiently without performing tedious multiplications. We will focus on the square of a binomial $(a \\pm b)^2$, the square of a trinomial $(a + b + c)^2$, and the product of two binomials with a common variable $(x + a)(x + b)$. These tools are essential for higher-level algebra and problem-solving in ICSE Class 9 Mathematics.",
+                "keyConcepts": [
+                  {
+                    "title": "Square of a Binomial",
+                    "explanation": "The identity $(a \\pm b)^2 = a^2 \\pm 2ab + b^2$ is used to expand expressions where a sum or difference of two terms is squared. The middle term is twice the product of the two terms."
+                  },
+                  {
+                    "title": "Square of a Trinomial",
+                    "explanation": "The identity $(a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2bc + 2ca$ expands the square of a sum of three terms. It involves the squares of each term plus twice the product of each pair of terms."
+                  },
+                  {
+                    "title": "Product of Binomials with Common Term",
+                    "explanation": "The identity $(x + a)(x + b) = x^2 + (a + b)x + ab$ simplifies the multiplication of two binomials that share a common variable $x$. The coefficient of $x$ is the sum of the constants, and the constant term is their product."
+                  }
+                ],
+                "tips": [
+                  "Emphasize the importance of identifying the correct identity before expanding. Students often confuse $(a+b)^2$ with $a^2+b^2$; use counter-examples to highlight the missing $2ab$ term.",
+                  "For trinomial expansions, encourage students to list the squares first ($a^2, b^2, c^2$) and then systematically calculate the cross-terms ($2ab, 2bc, 2ca$) to avoid missing any components.",
+                  "When evaluating numerical expressions like $(98)^2$, guide students to rewrite the number as a difference or sum close to a round number (e.g., $(100-2)^2$) to apply the identity efficiently."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "Expand $(x + 3y)^2$ using algebraic identities.",
+                  "solution": "Using the identity $(a + b)^2 = a^2 + 2ab + b^2$, let $a = x$ and $b = 3y$. \n\n1. Square the first term: $a^2 = x^2$.\n2. Calculate twice the product: $2ab = 2(x)(3y) = 6xy$.\n3. Square the second term: $b^2 = (3y)^2 = 9y^2$.\n\nCombining these, we get $x^2 + 6xy + 9y^2$.",
+                  "explanation": "This example demonstrates the direct application of the binomial square identity. It is crucial to square the entire second term, including its coefficient, to get $9y^2$ rather than $3y^2$."
+                },
+                {
+                  "problem": "Evaluate $103^2$ without using direct multiplication.",
+                  "solution": "Rewrite $103$ as $(100 + 3)$. \n\nUsing the identity $(a + b)^2 = a^2 + 2ab + b^2$:\nLet $a = 100$ and $b = 3$.\n\n1. $a^2 = 100^2 = 10000$.\n2. $2ab = 2(100)(3) = 600$.\n3. $b^2 = 3^2 = 9$.\n\nSumming these values: $10000 + 600 + 9 = 10609$.",
+                  "explanation": "This problem illustrates the utility of identities in simplifying arithmetic. By choosing a base number close to a power of 10, the calculation becomes a simple addition of squares and products."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-math-ch3-l1-q1",
+                  "type": "mcq",
+                  "prompt": "Expand $(x + 5)^2$.",
+                  "options": [
+                    "$x^2 + 25$",
+                    "$x^2 + 10x + 25$",
+                    "$x^2 - 10x + 25$",
+                    "$x^2 + 5x + 25$"
+                  ],
+                  "correctAnswer": "$x^2 + 10x + 25$",
+                  "explanation": "Using $(a+b)^2 = a^2 + 2ab + b^2$, with $a=x$ and $b=5$: $x^2 + 2(x)(5) + 5^2 = x^2 + 10x + 25$.",
+                  "hint": "Remember the middle term is twice the product of the two terms.",
+                  "difficulty": "easy",
+                  "topicTag": "Quadratic identities"
+                },
+                {
+                  "id": "icse-9-math-ch3-l1-q2",
+                  "type": "mcq",
+                  "prompt": "Which identity is used to expand $(a - b)^2$?",
+                  "options": [
+                    "$a^2 + 2ab + b^2$",
+                    "$a^2 - 2ab + b^2$",
+                    "$a^2 - b^2$",
+                    "$a^2 + b^2$"
+                  ],
+                  "correctAnswer": "$a^2 - 2ab + b^2$",
+                  "explanation": "The square of a difference is given by $(a-b)^2 = a^2 - 2ab + b^2$. The cross term is negative.",
+                  "hint": "Check the sign of the middle term.",
+                  "difficulty": "easy",
+                  "topicTag": "Quadratic identities"
+                },
+                {
+                  "id": "icse-9-math-ch3-l1-q3",
+                  "type": "mcq",
+                  "prompt": "Expand $(2x + 3y)^2$.",
+                  "options": [
+                    "$4x^2 + 12xy + 9y^2$",
+                    "$4x^2 + 6xy + 9y^2$",
+                    "$2x^2 + 12xy + 3y^2$",
+                    "$4x^2 - 12xy + 9y^2$"
+                  ],
+                  "correctAnswer": "$4x^2 + 12xy + 9y^2$",
+                  "explanation": "Using $(a+b)^2 = a^2 + 2ab + b^2$ with $a=2x$ and $b=3y$: $(2x)^2 + 2(2x)(3y) + (3y)^2 = 4x^2 + 12xy + 9y^2$.",
+                  "hint": "Square the coefficients as well as the variables.",
+                  "difficulty": "medium",
+                  "topicTag": "Quadratic identities"
+                },
+                {
+                  "id": "icse-9-math-ch3-l1-q4",
+                  "type": "mcq",
+                  "prompt": "Evaluate $98^2$ using identities.",
+                  "options": [
+                    "$9604$",
+                    "$9800$",
+                    "$9600$",
+                    "$9704$"
+                  ],
+                  "correctAnswer": "$9604$",
+                  "explanation": "Write $98$ as $(100 - 2)$. Using $(a-b)^2 = a^2 - 2ab + b^2$: $100^2 - 2(100)(2) + 2^2 = 10000 - 400 + 4 = 9604$.",
+                  "hint": "Express 98 as a difference from 100.",
+                  "difficulty": "medium",
+                  "topicTag": "Evaluation without multiplication"
+                }
+              ]
             },
             {
               "id": "icse-9-math-ch3-l2",
@@ -568,7 +1202,76 @@
                 "Simplification problems"
               ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Cubic Expansions and Conditional Identities",
+                "intro": "This lesson delves into the algebraic expansions of cubic binomials and the powerful conditional identities that simplify complex expressions. Students will learn to expand $(a \\pm b)^3$ and $a^3 \\pm b^3$, and crucially, how to apply the identity $a^3 + b^3 + c^3 - 3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)$ when $a+b+c=0$. These tools are essential for simplifying high-degree polynomial expressions and solving algebraic problems efficiently in ICSE Class 9 Mathematics.",
+                "keyConcepts": [
+                  {
+                    "title": "Expansion of Cubic Binomials",
+                    "explanation": "The expansion of $(a+b)^3$ is $a^3 + 3a^2b + 3ab^2 + b^3$, and $(a-b)^3$ is $a^3 - 3a^2b + 3ab^2 - b^3$. These are derived by multiplying $(a+b)(a+b)(a+b)$ or using the binomial theorem. Similarly, $a^3 + b^3 = (a+b)(a^2 - ab + b^2)$ and $a^3 - b^3 = (a-b)(a^2 + ab + b^2)$."
+                  },
+                  {
+                    "title": "Conditional Identity for $a+b+c=0$",
+                    "explanation": "A key identity is $a^3 + b^3 + c^3 - 3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)$. If $a+b+c=0$, the right-hand side becomes zero, leading to the simplified conditional identity: $a^3 + b^3 + c^3 = 3abc$. This is a frequent topic in ICSE examinations."
+                  },
+                  {
+                    "title": "Simplification Using Identities",
+                    "explanation": "Complex expressions can be simplified by recognizing patterns that match standard identities. For example, expressions like $\\frac{x^3+y^3}{x+y}$ can be simplified to $x^2-xy+y^2$ using the sum of cubes factorization. This reduces computational complexity and minimizes errors."
+                  }
+                ],
+                "tips": [
+                  "Always verify the signs in cubic expansions. A common error is forgetting the alternating signs in $(a-b)^3$ or mixing up the signs in the factorization of $a^3 \\pm b^3$.",
+                  "When given an expression like $a^3+b^3+c^3$ and told that $a+b+c=0$, immediately apply the identity $a^3+b^3+c^3=3abc$. This saves significant time in exams.",
+                  "Practice identifying the 'hidden' $a, b, c$ in complex expressions. For instance, in $\\frac{1}{x^3} + \\frac{1}{y^3} + \\frac{1}{z^3}$, let $a=\\frac{1}{x}, b=\\frac{1}{y}, c=\\frac{1}{z}$ to apply standard identities."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "Expand $(2x - 3y)^3$.",
+                  "solution": "Using the identity $(a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3$, let $a = 2x$ and $b = 3y$.\n\nStep 1: Calculate $a^3 = (2x)^3 = 8x^3$.\nStep 2: Calculate $3a^2b = 3(2x)^2(3y) = 3(4x^2)(3y) = 36x^2y$.\nStep 3: Calculate $3ab^2 = 3(2x)(3y)^2 = 3(2x)(9y^2) = 54xy^2$.\nStep 4: Calculate $b^3 = (3y)^3 = 27y^3$.\n\nSubstituting these into the identity:\n$(2x - 3y)^3 = 8x^3 - 36x^2y + 54xy^2 - 27y^3$.",
+                  "explanation": "This example demonstrates the direct application of the cubic binomial expansion formula. It is crucial to carefully compute the powers and coefficients at each step to avoid arithmetic errors."
+                },
+                {
+                  "problem": "If $x + y + z = 0$, find the value of $\\frac{x^3 + y^3 + z^3}{xyz}$.",
+                  "solution": "We are given the condition $x + y + z = 0$.\n\nRecall the identity:\n$$x^3 + y^3 + z^3 - 3xyz = (x+y+z)(x^2+y^2+z^2-xy-yz-zx)$$\n\nSince $x+y+z=0$, the right-hand side becomes $0$.\nTherefore:\n$$x^3 + y^3 + z^3 - 3xyz = 0$$\n$$x^3 + y^3 + z^3 = 3xyz$$\n\nNow, substitute this into the given expression:\n$$\\frac{x^3 + y^3 + z^3}{xyz} = \\frac{3xyz}{xyz}$$\n\nAssuming $xyz \\neq 0$, we can cancel $xyz$:\n$$\\frac{3xyz}{xyz} = 3$$",
+                  "explanation": "This problem tests the understanding of the conditional identity. Recognizing that $x+y+z=0$ allows for immediate simplification of the cubic sum, making the division straightforward."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-math-ch3-l2-q1",
+                  "type": "mcq",
+                  "prompt": "What is the expansion of $(a+b)^3$?",
+                  "options": [
+                    "$a^3 + b^3$",
+                    "$a^3 + 3a^2b + 3ab^2 + b^3$",
+                    "$a^3 - 3a^2b + 3ab^2 - b^3$",
+                    "$a^3 + 3ab + b^3$"
+                  ],
+                  "correctAnswer": "$a^3 + 3a^2b + 3ab^2 + b^3$",
+                  "explanation": "The standard binomial expansion for $(a+b)^3$ is $a^3 + 3a^2b + 3ab^2 + b^3$. This is derived from the binomial theorem or by multiplying $(a+b)(a+b)(a+b)$.",
+                  "hint": "Remember the coefficients 1, 3, 3, 1 from Pascal's triangle for the third power.",
+                  "difficulty": "easy",
+                  "topicTag": "Cubic binomials"
+                },
+                {
+                  "id": "icse-9-math-ch3-l2-q2",
+                  "type": "mcq",
+                  "prompt": "If $a+b+c=0$, what is the value of $a^3+b^3+c^3$?",
+                  "options": [
+                    "$0$",
+                    "$3abc$",
+                    "$abc$",
+                    "$a^2+b^2+c^2$"
+                  ],
+                  "correctAnswer": "$3abc$",
+                  "explanation": "Using the identity $a^3+b^3+c^3-3abc = (a+b+c)(a^2+b^2+c^2-ab-bc-ca)$, if $a+b+c=0$, then $a^3+b^3+c^3-3abc=0$, which implies $a^3+b^3+c^3=3abc$.",
+                  "hint": "Apply the conditional identity for the sum of three cubes.",
+                  "difficulty": "medium",
+                  "topicTag": "Conditional identity when a+b+c=0"
+                }
+              ]
             },
             {
               "id": "icse-9-math-ch3-l3",

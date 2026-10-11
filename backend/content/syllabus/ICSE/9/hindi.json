@@ -26,25 +26,462 @@
               "levelNumber": 1,
               "title": "Vilom & Paryayvachi Shabd",
               "description": "Standard ICSE opposite words and synonyms.",
-              "subtopics": ["Shuddh Vilom Shabd", "Paryayvachi Shabd pehchan"],
+              "subtopics": [
+                "Shuddh Vilom Shabd",
+                "Paryayvachi Shabd pehchan"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Vilom & Paryayvachi Shabd",
+                "intro": "इस अध्याय में, हम विलोम शब्दों (Vilom Shabd) और पर्यायवाची शब्दों (Paryayvachi Shabd) का अध्ययन करेंगे। विलोम शब्द वे शब्द होते हैं जो एक दूसरे के विपरीत अर्थ रखते हैं, जबकि पर्यायवाची शब्द वे शब्द होते हैं जो एक दूसरे के समान अर्थ रखते हैं। इनका अध्ययन हमें भाषा की समृद्धि और व्यवहार को सुधारने में मदद करता है।",
+                "keyConcepts": [
+                  {
+                    "title": "Shuddh Vilom Shabd",
+                    "explanation": "शुद्ध विलोम शब्द वे होते हैं जिनका अर्थ एक दूसरे के पूरी तरह से विपरीत होता है। उदाहरण के लिए, 'सच' का विलोम 'झूठ' है।"
+                  },
+                  {
+                    "title": "Paryayvachi Shabd Pehchan",
+                    "explanation": "पर्यायवाची शब्द वे होते हैं जिनका अर्थ एक दूसरे के समान होता है। उदाहरण के लिए, 'सुंदर' के पर्यायवाची शब्द 'सुन्दर', 'सुशोभित', 'सुन्दरिमान' हैं।"
+                  },
+                  {
+                    "title": "Importance of Context",
+                    "explanation": "विलोम और पर्यायवाची शब्दों का उपयोग भाषा के संदर्भ में बहुत महत्वपूर्ण होता है। उदाहरण के लिए, 'सुंदर' का एक अर्थ 'सुंदरिमान' हो सकता है, लेकिन कभी-कभी यह 'सुशोभित' के रूप में भी उपयोग किया जा सकता है।"
+                  }
+                ],
+                "tips": [
+                  "विलोम और पर्यायवाची शब्दों को याद रखने के लिए, उन्हें अपने दैनिक वाक्यों में उपयोग करें।",
+                  "शब्दों के अर्थ को समझने के लिए, उन्हें विभिन्न संदर्भों में पढ़ें और लिखें।",
+                  "शब्दों के अर्थ को याद रखने के लिए, उन्हें चित्रों या वाक्यों के माध्यम से जोड़ें।"
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "निम्नलिखित शब्द का विलोम लिखिए: सच",
+                  "solution": "सच का विलोम शब्द 'झूठ' है।",
+                  "explanation": "सच का अर्थ 'सत्य' है, जिसका विपरीत अर्थ 'झूठ' होता है।"
+                },
+                {
+                  "problem": "निम्नलिखित शब्द के पर्यायवाची शब्द लिखिए: सुंदर",
+                  "solution": "सुंदर के पर्यायवाची शब्द 'सुन्दर', 'सुशोभित', 'सुन्दरिमान' हैं।",
+                  "explanation": "सुंदर का अर्थ 'सुंदर' है, जिसके समान अर्थ वाले शब्द 'सुन्दर', 'सुशोभित', 'सुन्दरिमान' होते हैं।"
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-hin-ch1-l1-q0",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का विलोम चुनिए: सच",
+                  "options": [
+                    "$झूठ$",
+                    "$सत्य$",
+                    "$सच्चा$",
+                    "$सच्चाई$"
+                  ],
+                  "correctAnswer": "$झूठ$",
+                  "explanation": "सच का विलोम शब्द 'झूठ' है।",
+                  "hint": "सच का विपरीत अर्थ झूठ है।",
+                  "difficulty": "easy",
+                  "topicTag": "Shuddh Vilom Shabd"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l1-q1",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का विलोम चुनिए: छोटा",
+                  "options": [
+                    "$बड़ा$",
+                    "$छोटा$",
+                    "$लंबा$",
+                    "$चौड़ा$"
+                  ],
+                  "correctAnswer": "$बड़ा$",
+                  "explanation": "छोटा का विलोम शब्द 'बड़ा' है।",
+                  "hint": "छोटा का विपरीत अर्थ बड़ा है।",
+                  "difficulty": "easy",
+                  "topicTag": "Shuddh Vilom Shabd"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l1-q2",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का विलोम चुनिए: ठंडा",
+                  "options": [
+                    "$गर्म$",
+                    "$ठंडा$",
+                    "$सींच$",
+                    "$सूखा$"
+                  ],
+                  "correctAnswer": "$गर्म$",
+                  "explanation": "ठंडा का विलोम शब्द 'गर्म' है।",
+                  "hint": "ठंडा का विपरीत अर्थ गर्म है।",
+                  "difficulty": "easy",
+                  "topicTag": "Shuddh Vilom Shabd"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l1-q3",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का विलोम चुनिए: ऊपर",
+                  "options": [
+                    "$नीचे$",
+                    "$ऊपर$",
+                    "$सामने$",
+                    "$पीछे$"
+                  ],
+                  "correctAnswer": "$नीचे$",
+                  "explanation": "ऊपर का विलोम शब्द 'नीचे' है।",
+                  "hint": "ऊपर का विपरीत अर्थ नीचे है।",
+                  "difficulty": "easy",
+                  "topicTag": "Shuddh Vilom Shabd"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l1-q4",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का पर्यायवाची शब्द चुनिए: सुंदर",
+                  "options": [
+                    "$सुन्दर$",
+                    "$सुशोभित$",
+                    "$सुन्दरिमान$",
+                    "$सादा$"
+                  ],
+                  "correctAnswer": "$सुशोभित$",
+                  "explanation": "सुंदर का पर्यायवाची शब्द 'सुशोभित' है।",
+                  "hint": "सुंदर का समान अर्थ वाला शब्द सुशोभित है।",
+                  "difficulty": "easy",
+                  "topicTag": "Paryayvachi Shabd Pehchan"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l1-q5",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का पर्यायवाची शब्द चुनिए: बुरा",
+                  "options": [
+                    "$बुरा$",
+                    "$बेहतर$",
+                    "$खराब$",
+                    "$सुंदर$"
+                  ],
+                  "correctAnswer": "$खराब$",
+                  "explanation": "बुरा का पर्यायवाची शब्द 'खराब' है।",
+                  "hint": "बुरा का समान अर्थ वाला शब्द खराब है।",
+                  "difficulty": "easy",
+                  "topicTag": "Paryayvachi Shabd Pehchan"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l1-q6",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का पर्यायवाची शब्द चुनिए: खुश",
+                  "options": [
+                    "$खुश$",
+                    "$नाराज$",
+                    "$प्रसन्न$",
+                    "$दुखी$"
+                  ],
+                  "correctAnswer": "$प्रसन्न$",
+                  "explanation": "खुश का पर्यायवाची शब्द 'प्रसन्न' है।",
+                  "hint": "खुश का समान अर्थ वाला शब्द प्रसन्न है।",
+                  "difficulty": "easy",
+                  "topicTag": "Paryayvachi Shabd Pehchan"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l1-q8",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का विलोम चुनिए: अच्छा",
+                  "options": [
+                    "$बुरा$",
+                    "$अच्छा$",
+                    "$सुंदर$",
+                    "$सादा$"
+                  ],
+                  "correctAnswer": "$बुरा$",
+                  "explanation": "अच्छा का विलोम शब्द 'बुरा' है।",
+                  "hint": "अच्छा का विपरीत अर्थ बुरा है।",
+                  "difficulty": "easy",
+                  "topicTag": "Shuddh Vilom Shabd"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l1-q9",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का विलोम चुनिए: खुश",
+                  "options": [
+                    "$नाराज$",
+                    "$खुश$",
+                    "$प्रसन्न$",
+                    "$दुखी$"
+                  ],
+                  "correctAnswer": "$नाराज$",
+                  "explanation": "खुश का विलोम शब्द 'नाराज' है।",
+                  "hint": "खुश का विपरीत अर्थ नाराज है।",
+                  "difficulty": "easy",
+                  "topicTag": "Shuddh Vilom Shabd"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l1-q10",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित शब्द का विलोम चुनिए: बुरा",
+                  "options": [
+                    "$बेहतर$",
+                    "$बुरा$",
+                    "$खराब$",
+                    "$सुंदर$"
+                  ],
+                  "correctAnswer": "$बेहतर$",
+                  "explanation": "बुरा का विलोम शब्द 'बेहतर' है।",
+                  "hint": "बुरा का विपरीत अर्थ बेहतर है।",
+                  "difficulty": "easy",
+                  "topicTag": "Shuddh Vilom Shabd"
+                }
+              ]
             },
             {
               "id": "icse-9-hin-ch1-l2",
               "levelNumber": 2,
               "title": "Muhavare aur Vakya Prayog",
               "description": "Idioms with their figurative meanings and sentence framing.",
-              "subtopics": ["Muhavare ka sahi arth", "Vakyon mein prayog", "Lokoktiyan"],
+              "subtopics": [
+                "Muhavare ka sahi arth",
+                "Vakyon mein prayog",
+                "Lokoktiyan"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "मुहावरे और वाक्य प्रयोग",
+                "intro": "इस स्तर में छात्र हिन्दी के मुहावरों के वास्तविक अर्थ, उनके वाक्य में सही प्रयोग और संबंधित लोकोक्तियों को समझेंगे। शिक्षक विद्यार्थियों को मुहावरे के शब्दशः अर्थ से परे उसके रूपकात्मक अर्थ पर ध्यान देने के लिए प्रेरित करेंगे, जिससे भाषा की गहराई और अभिव्यक्ति शक्ति बढ़ेगी। प्रत्येक मुहावरे को उदाहरण वाक्यों के साथ प्रस्तुत किया जाएगा, जिससे छात्र उसका प्रयोग स्वाभाविक रूप से कर सकें।",
+                "keyConcepts": [
+                  {
+                    "title": "मुहावरे का सही अर्थ",
+                    "explanation": "मुहावरे का \\\\text{रूपकात्मक अर्थ} शब्दशः अर्थ से अलग होता है; इसे समझने के लिए संदर्भ और सांस्कृतिक पृष्ठभूमि को देखना आवश्यक है।"
+                  },
+                  {
+                    "title": "वाक्यों में प्रयोग",
+                    "explanation": "सही \\\\text{वाक्य संरचना} में मुहावरे को रखने से वाक्य का भाव स्पष्ट और प्रभावी बनता है।"
+                  },
+                  {
+                    "title": "लोकोक्‍तियों का महत्व",
+                    "explanation": "लोकोक्‍तियां \\\\text{सामान्य ज्ञान} को संक्षिप्त रूप में प्रस्तुत करती हैं और वार्तालाप को जीवंत बनाती हैं।"
+                  }
+                ],
+                "tips": [
+                  "छात्रों को मुहावरे को चित्र या कहानी के माध्यम से समझाएँ।",
+                  "प्रत्येक मुहावरे के बाद दो-तीन उदाहरण वाक्य लिखवाएँ।",
+                  "लोकोक्‍तियों को स्थानीय भाषा के साथ जोड़कर याद रखने में मदद करें।"
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "वाक्य में मुहावरा \\(\\text{हाथी के दांत दिखाना}\\) का प्रयोग करें।",
+                  "solution": "1. मुहावरे का अर्थ समझें: \\(\\text{बड़े दिखावा करना, पर असल में शक्ति न होना}\\).\\n2. उपयुक्त संदर्भ चुनें: किसी व्यक्ति के बड़े वादे पर।\\n3. वाक्य बनायें: \\(\\text{वह नेता चुनाव में हाथी के दांत दिखा रहा था, पर वास्तविक शक्ति उसके पास नहीं थी।}\\)",
+                  "explanation": "यह वाक्य दर्शाता है कि नेता बड़े वादे कर रहा है लेकिन उसकी वास्तविक शक्ति सीमित है, जिससे मुहावरे का अर्थ स्पष्ट होता है।"
+                },
+                {
+                  "problem": "मुहावरा \\(\\text{नाक में दम करना}\\) का प्रयोग करके एक नकारात्मक भावना व्यक्त करने वाला वाक्य लिखें।",
+                  "solution": "1. मुहावरे का अर्थ: \\(\\text{किसी को बहुत परेशान या कष्ट देना}\\).\\n2. स्थिति चुनें: लगातार शिकायतें।\\n3. वाक्य: \\(\\text{उसकी लगातार शिकायतें मेरे लिए नाक में दम कर रही थीं।}\\)",
+                  "explanation": "यह वाक्य स्पष्ट रूप से बताता है कि लगातार शिकायतें व्यक्ति को कष्ट दे रही हैं, जिससे मुहावरे का सही प्रयोग दिखता है।"
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-hin-ch1-l2-q1",
+                  "type": "mcq",
+                  "prompt": "मुहावरा \\(\\text{नाक में दम करना}\\) का सही अर्थ क्या है?",
+                  "options": [
+                    "$\\text{बहुत परेशान करना}$",
+                    "$\\text{बिना कारण हँसना}$",
+                    "$\\text{सफलता प्राप्त करना}$",
+                    "$\\text{भोजन का स्वाद बढ़ाना}$"
+                  ],
+                  "correctAnswer": "$\\text{बहुत परेशान करना}$",
+                  "explanation": "यह मुहावरा तब प्रयोग होता है जब कोई व्यक्ति लगातार किसी को कष्ट या परेशानी देता है, अर्थात् \\(\\text{बहुत परेशान करना}\\).",
+                  "hint": "विचार करें कि यह मुहावरा किस प्रकार की नकारात्मक भावना दर्शाता है।",
+                  "difficulty": "easy",
+                  "topicTag": "मुहावरे का अर्थ"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q2",
+                  "type": "mcq",
+                  "prompt": "वाक्य में सही विकल्प चुनें: \"वह हमेशा \\(\\underline{\\quad}\\) करता है, पर काम नहीं करता।\"",
+                  "options": [
+                    "$\\text{हाथी के दांत दिखाना}$",
+                    "$\\text{आँख मारना}$",
+                    "$\\text{सिर पर धूप डालना}$",
+                    "$\\text{पानी में तेल डालना}$"
+                  ],
+                  "correctAnswer": "$\\text{हाथी के दांत दिखाना}$",
+                  "explanation": "वाक्य का अर्थ है कि वह बड़े दिखावे करता है पर काम नहीं करता, जो \\(\\text{हाथी के दांत दिखाना}\\) के अर्थ से मेल खाता है।",
+                  "hint": "विकल्प देखें जो दिखावे पर जोर देता हो।",
+                  "difficulty": "medium",
+                  "topicTag": "वाक्य में प्रयोग"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q3",
+                  "type": "mcq",
+                  "prompt": "लोकोक्‍ति \"\\(\\text{ऊँट के मुँह में जीरा}\\)\" का अर्थ क्या है?",
+                  "options": [
+                    "$\\text{बहुत कम मात्रा में कुछ देना}$",
+                    "$\\text{बहुत अधिक मात्रा में देना}$",
+                    "$\\text{सही समय पर कार्य करना}$",
+                    "$\\text{बिना कारण हँसना}$"
+                  ],
+                  "correctAnswer": "$\\text{बहुत कम मात्रा में कुछ देना}$",
+                  "explanation": "ऊँट के मुँह में जीरा का अर्थ है बहुत छोटी मात्रा में देना, क्योंकि ऊँट का मुँह बहुत बड़ा होता है।",
+                  "hint": "सोचें कि ऊँट के मुँह में छोटा सा बीज कितना फिट होगा।",
+                  "difficulty": "easy",
+                  "topicTag": "लोकोक्‍ति अर्थ"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q4",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित में से कौन सा वाक्य \"\\(\\text{आँख मारना}\\)\" मुहावरे को सही रूप में प्रयोग करता है?",
+                  "options": [
+                    "$\\text{उसने परीक्षा में आँख मार ली।}$",
+                    "$\\text{वह हमेशा आँख मार कर बात करता है।}$",
+                    "$\\text{मैंने उसे आँख मार कर देखा।}$",
+                    "$\\text{बच्चे ने आँख मार कर खेला।}$"
+                  ],
+                  "correctAnswer": "$\\text{वह हमेशा आँख मार कर बात करता है।}$",
+                  "explanation": "\"आँख मारना\" का अर्थ है छल या धोखा देना; वाक्य \"वह हमेशा आँख मार कर बात करता है\" इस अर्थ को दर्शाता है।",
+                  "hint": "मुहावरे का अर्थ विचार करें।",
+                  "difficulty": "medium",
+                  "topicTag": "मुहावरे का प्रयोग"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q5",
+                  "type": "mcq",
+                  "prompt": "मुहावरा \"\\(\\text{हाथी के दांत दिखाना}\\)\" किस स्थिति में उपयोग किया जाता है?",
+                  "options": [
+                    "$\\text{जब कोई बहुत विनम्र हो}$",
+                    "$\\text{जब कोई बड़ा दिखावा करे पर शक्ति न हो}$",
+                    "$\\text{जब कोई बहुत तेज़ दौड़े}$",
+                    "$\\text{जब कोई बहुत धीरज रखे}$"
+                  ],
+                  "correctAnswer": "$\\text{जब कोई बड़ा दिखावा करे पर शक्ति न हो}$",
+                  "explanation": "यह मुहावरा उन लोगों के लिए प्रयोग होता है जो बड़े दिखावे करते हैं पर वास्तविक शक्ति नहीं रखते।",
+                  "hint": "विचार करें कि \"दांत दिखाना\" का प्रतीकात्मक अर्थ क्या हो सकता है।",
+                  "difficulty": "easy",
+                  "topicTag": "मुहावरे का अर्थ"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q6",
+                  "type": "mcq",
+                  "prompt": "वाक्य में सही विकल्प चुनें: \"उसके शब्दों ने सबको \\(\\underline{\\quad}\\) कर दिया।\"",
+                  "options": [
+                    "$\\text{हाथी के दांत दिखाना}$",
+                    "$\\text{नाक में दम करना}$",
+                    "$\\text{आँख मारना}$",
+                    "$\\text{ऊँट के मुँह में जीरा}$"
+                  ],
+                  "correctAnswer": "$\\text{नाक में दम करना}$",
+                  "explanation": "वाक्य का अर्थ है कि उसके शब्दों ने सबको बहुत परेशान कर दिया, जो \"नाक में दम करना\" के अर्थ से मेल खाता है।",
+                  "hint": "विचार करें कि कौन सा मुहावरा कष्ट या परेशानी दर्शाता है।",
+                  "difficulty": "medium",
+                  "topicTag": "वाक्य में प्रयोग"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q7",
+                  "type": "mcq",
+                  "prompt": "लोकोक्‍ति \"\\(\\text{बंदर क्या जाने अदरक का स्वाद}\\)\" का अर्थ क्या है?",
+                  "options": [
+                    "$\\text{अज्ञानी व्यक्ति को चीज़ों की समझ नहीं होती}$",
+                    "$\\text{हर कोई समान रूप से समझदार है}$",
+                    "$\\text{बिल्ली के बच्चे को दूध पसंद है}$",
+                    "$\\text{सभी को मिठाई पसंद है}$"
+                  ],
+                  "correctAnswer": "$\\text{अज्ञानी व्यक्ति को चीज़ों की समझ नहीं होती}$",
+                  "explanation": "यह लोकोक्ति बताती है कि जो व्यक्ति समझ नहीं रखता, वह किसी चीज़ की महत्ता नहीं समझ पाता।",
+                  "hint": "सोचें कि \"बंदर\" और \"अदरक\" का संबंध क्या दर्शाता है।",
+                  "difficulty": "easy",
+                  "topicTag": "लोकोक्‍ति अर्थ"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q8",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित में से कौन सा वाक्य \"\\(\\text{ऊँट के मुँह में जीरा}\\)\" को सही रूप में उपयोग करता है?",
+                  "options": [
+                    "$\\text{उसने मुझे ऊँट के मुँह में जीरा दिया।}$",
+                    "$\\text{हमारी मदद बहुत बड़ी थी।}$",
+                    "$\\text{वह बहुत उदार है।}$",
+                    "$\\text{मैंने बहुत सारा भोजन खाया।}$"
+                  ],
+                  "correctAnswer": "$\\text{उसने मुझे ऊँट के मुँह में जीरा दिया।}$",
+                  "explanation": "यह वाक्य दर्शाता है कि दिया गया कुछ बहुत कम है, जो लोकोक्ति के अर्थ से मेल खाता है।",
+                  "hint": "विचार करें कि कौन सा वाक्य कम मात्रा को दर्शाता है।",
+                  "difficulty": "medium",
+                  "topicTag": "वाक्य में प्रयोग"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q9",
+                  "type": "mcq",
+                  "prompt": "मुहावरा \"\\(\\text{आँख मारना}\\)\" का प्रयोग किस प्रकार के व्यवहार के लिए किया जाता है?",
+                  "options": [
+                    "$\\text{ईमानदारी दिखाना}$",
+                    "$\\text{धोखा देना या छल करना}$",
+                    "$\\text{बहुत तेज़ दौड़ना}$",
+                    "$\\text{संतोष व्यक्त करना}$"
+                  ],
+                  "correctAnswer": "$\\text{धोखा देना या छल करना}$",
+                  "explanation": "\"आँख मारना\" का अर्थ है छल या धोखा देना, इसलिए सही विकल्प धोखा देना है।",
+                  "hint": "मुहावरे के शब्दों को अलग-अलग अर्थ में देखें।",
+                  "difficulty": "easy",
+                  "topicTag": "मुहावरे का अर्थ"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q10",
+                  "type": "mcq",
+                  "prompt": "वाक्य में सही विकल्प चुनें: \"उसके शब्दों ने सबको \\(\\underline{\\quad}\\) कर दिया।\"",
+                  "options": [
+                    "$\\text{हाथी के दांत दिखाना}$",
+                    "$\\text{आँख मारना}$",
+                    "$\\text{बंदर क्या जाने अदरक का स्वाद}$",
+                    "$\\text{नाक में दम करना}$"
+                  ],
+                  "correctAnswer": "$\\text{आँख मारना}$",
+                  "explanation": "यह वाक्य दर्शाता है कि उसके शब्दों ने सबको धोखा या छल में फँसा दिया, जो \"आँख मारना\" के अर्थ से मेल खाता है।",
+                  "hint": "विचार करें कि कौन सा मुहावरा धोखा देने से जुड़ा है।",
+                  "difficulty": "hard",
+                  "topicTag": "वाक्य में प्रयोग"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q11",
+                  "type": "mcq",
+                  "prompt": "लोकोक्‍ति \"\\(\\text{बंदर क्या जाने अदरक का स्वाद}\\)\" का प्रयोग किस स्थिति में किया जाता है?",
+                  "options": [
+                    "$\\text{जब कोई चीज़ समझ नहीं पाता}$",
+                    "$\\text{जब कोई बहुत समझदार हो}$",
+                    "$\\text{जब सभी को मिठाई पसंद हो}$",
+                    "$\\text{जब कोई बहुत उदार हो}$"
+                  ],
+                  "correctAnswer": "$\\text{जब कोई चीज़ समझ नहीं पाता}$",
+                  "explanation": "यह लोकोक्ति बताती है कि अज्ञानी व्यक्ति को चीज़ की महत्ता नहीं समझ आती, इसलिए पहला विकल्प सही है।",
+                  "hint": "सोचें कि \"बंदर\" किस प्रकार की समझ को दर्शाता है।",
+                  "difficulty": "medium",
+                  "topicTag": "लोकोक्‍ति उपयोग"
+                },
+                {
+                  "id": "icse-9-hin-ch1-l2-q12",
+                  "type": "mcq",
+                  "prompt": "निम्नलिखित में से कौन सा मुहावरा \"\\(\\text{हाथी के दांत दिखाना}\\)\" के समान अर्थ रखता है?",
+                  "options": [
+                    "$\\text{नाक में दम करना}$",
+                    "$\\text{आँख मारना}$",
+                    "$\\text{ऊँट के मुँह में जीरा}$",
+                    "$\\text{बंदर क्या जाने अदरक का स्वाद}$"
+                  ],
+                  "correctAnswer": "$\\text{नाक में दम करना}$",
+                  "explanation": "दोनों मुहावरे बड़े दिखावे या कष्ट देने की स्थिति को दर्शाते हैं, इसलिए \"नाक में दम करना\" सबसे निकट है।",
+                  "hint": "दोनों में से कौन सा कष्ट या दिखावे को दर्शाता है, देखें।",
+                  "difficulty": "hard",
+                  "topicTag": "मुहावरे तुलना"
+                }
+              ]
             },
             {
               "id": "icse-9-hin-ch1-l3",
               "levelNumber": 3,
               "title": "Bhavvachak Sangya & Visheshan",
               "description": "Forming abstract nouns and adjectives from root words.",
-              "subtopics": ["Bhavvachak Sangya banana", "Visheshan banana", "Shuddh Vartani"],
+              "subtopics": [
+                "Bhavvachak Sangya banana",
+                "Visheshan banana",
+                "Shuddh Vartani"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -53,7 +490,10 @@
               "levelNumber": 4,
               "title": "Chapter 1 Vyakaran Abhyas",
               "description": "Mixed grammar drill for ICSE Board paper Section A.",
-              "subtopics": ["Ashuddhi Shodhan", "Vakya Parivartan"],
+              "subtopics": [
+                "Ashuddhi Shodhan",
+                "Vakya Parivartan"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -70,7 +510,11 @@
               "levelNumber": 1,
               "title": "Katha-Vastu aur Charitra Chitran",
               "description": "Plot understanding, characters of Rasila, Babu Jagat Singh, and Sheikh Salimbuddin.",
-              "subtopics": ["Rasila ki vivashata", "Babu Jagat Singh ki rishwatkhori", "Samajik bhedbhav"],
+              "subtopics": [
+                "Rasila ki vivashata",
+                "Babu Jagat Singh ki rishwatkhori",
+                "Samajik bhedbhav"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -79,7 +523,10 @@
               "levelNumber": 2,
               "title": "Sandarbh Sahit Prashnottar",
               "description": "Contextual reference questions and thematic analysis.",
-              "subtopics": ["Vyangya aur uddeshya", "Pramukh kathan aur unka arth"],
+              "subtopics": [
+                "Vyangya aur uddeshya",
+                "Pramukh kathan aur unka arth"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -88,7 +535,10 @@
               "levelNumber": 3,
               "title": "Chapter 2 Mulyankan & Review",
               "description": "Review of the story with ICSE board pattern questions.",
-              "subtopics": ["Vichar-pradhan prashna", "Sandarbh kathan"],
+              "subtopics": [
+                "Vichar-pradhan prashna",
+                "Sandarbh kathan"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -105,7 +555,11 @@
               "levelNumber": 1,
               "title": "Dohon Ka Bhaavarth (Part 1)",
               "description": "Analysis of sweet speech, Kasturi deer metaphor, and dispelling inner darkness.",
-              "subtopics": ["Aisi vani boliye doha", "Kasturi kundali basey doha", "Jab main tha tab hari nahi doha"],
+              "subtopics": [
+                "Aisi vani boliye doha",
+                "Kasturi kundali basey doha",
+                "Jab main tha tab hari nahi doha"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -114,7 +568,11 @@
               "levelNumber": 2,
               "title": "Dohon Ka Bhaavarth (Part 2)",
               "description": "Analysis of worldly attachment, intense longing for the divine, and true detachment.",
-              "subtopics": ["Sukhia sab sansar hai doha", "Virah bhuvangam doha", "Kavya-Saundarya aur bhasha"],
+              "subtopics": [
+                "Sukhia sab sansar hai doha",
+                "Virah bhuvangam doha",
+                "Kavya-Saundarya aur bhasha"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -123,7 +581,10 @@
               "levelNumber": 3,
               "title": "Chapter 3 Sakhi Review & Kavyabodh",
               "description": "Evaluation of dohas with context-based ICSE questions.",
-              "subtopics": ["Pratikarth aur sandesh", "Kavita sandarbh prashna"],
+              "subtopics": [
+                "Pratikarth aur sandesh",
+                "Kavita sandarbh prashna"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }

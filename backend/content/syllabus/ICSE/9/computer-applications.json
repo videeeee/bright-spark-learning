@@ -26,25 +26,496 @@
               "levelNumber": 1,
               "title": "Core Principles of OOP",
               "description": "Understanding real-world objects, state and behavior, Encapsulation, Abstraction, Inheritance, and Polymorphism.",
-              "subtopics": ["Objects as software bundles of state and behavior", "Encapsulation and data hiding", "Abstraction vs details", "Inheritance and code reusability", "Polymorphism"],
+              "subtopics": [
+                "Objects as software bundles of state and behavior",
+                "Encapsulation and data hiding",
+                "Abstraction vs details",
+                "Inheritance and code reusability",
+                "Polymorphism"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Core Principles of Object-Oriented Programming (OOP)",
+                "intro": "Object-Oriented Programming (OOP) is a software design paradigm that models real-world entities as software objects. In the ICSE Class 9 Computer Applications curriculum, understanding OOP principles is foundational for mastering Java. An object represents an identifiable entity possessing a defined state (attributes or characteristics) and behavior (actions or methods). OOP rests on four fundamental pillars: Encapsulation, Abstraction, Inheritance, and Polymorphism. These principles provide modularity, software reusability, enhanced security, and maintainability in software engineering.",
+                "keyConcepts": [
+                  {
+                    "title": "Objects, State, and Behavior",
+                    "explanation": "A real-world object has characteristics and functions. In software, characteristics correspond to variables or attributes (representing the 'state'), while functions or operations correspond to methods (representing the 'behavior'). A class serves as a blueprint or template, denoted mathematically as a mapping $C: S \\to B$, where a set of state variables $S = \\{s_1, s_2, \\dots, s_n\\}$ determines the attributes, and a set of methods $B = \\{b_1, b_2, \\dots, b_m\\}$ defines the valid operations executable on an instance $O_k \\in C$."
+                  },
+                  {
+                    "title": "Encapsulation and Data Hiding",
+                    "explanation": "Encapsulation is the mechanism of wrapping code (methods) and data (variables) together into a single unit called a class. It implements data hiding by restricting direct access to the internal components of an object using access specifiers like `private`. If an object's internal variable is $x$, external access is strictly mediated via accessor (getter) and mutator (setter) functions: $x_{\\text{val}} = \\text{get}X()$ and $\\text{set}X(x_{\\text{new}})$, shielding data from unauthorized corruption."
+                  },
+                  {
+                    "title": "Abstraction, Inheritance, and Polymorphism",
+                    "explanation": "Abstraction represents the essential features of an entity without including background implementation details. Inheritance is the mechanism by which a subclass acquires properties and behaviors from a superclass, enabling reuse of code: $\\text{Subclass} \\subseteq \\text{Superclass}$. Polymorphism, meaning 'many forms' (poly = many, morph = form), allows an entity to take different forms at runtime or compile-time (e.g., method overloading: $\\text{area}(r)$ vs. $\\text{area}(l, w)$)."
+                  }
+                ],
+                "tips": [
+                  "Remember: 'A class is an object factory or blueprint, whereas an object is an instance of a class.'",
+                  "Differentiate Encapsulation from Abstraction: Encapsulation is about binding and containment (data hiding), while Abstraction is about representation and hiding complexity.",
+                  "In examinations, always specify examples using real-world analogies first, followed by technical Java keywords."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "Identify the state and behavior of an entity `BankAccount` in an OOP system. Write down how encapsulation is preserved if the balance is updated via a deposit of amount $d$.",
+                  "solution": "1. Identify Attributes (State): Let account number be $A_{\\text{num}}$, holder name be $H$, and balance be $B$.\n2. Identify Methods (Behavior): Methods include $\\text{deposit}(d)$, $\\text{withdraw}(w)$, and $\\text{checkBalance}()$.\n3. Preserving Encapsulation:\n   - Set balance $B$ to `private` access so that $B$ cannot be modified directly from outside the class.\n   - Define the deposit method: $$B_{\\text{new}} = B_{\\text{old}} + d \\quad (\\text{where } d > 0)$$\n   - Direct assignment like `account.balance = 5000` is rejected; modification is strictly controlled through the method `deposit(d)`.",
+                  "explanation": "Encapsulation groups the state ($B$) and behavior ($\text{deposit}$) together while enforcing validation rules ($d > 0$) through access modifiers."
+                },
+                {
+                  "problem": "A geometric shape class hierarchy defines a base class `Shape` with a method $\\text{area}()$. Describe how inheritance and polymorphism are applied when calculating areas of a circle with radius $r$ and a rectangle with dimensions $l \\times w$.",
+                  "solution": "1. Inheritance:\n   - Define base class `Shape`.\n   - Subclass `Circle` extends `Shape`.\n   - Subclass `Rectangle` extends `Shape`.\n2. Polymorphism (Dynamic Method Dispatch):\n   - Both subclasses override the method $\\text{area}()$.\n   - For `Circle`: $$\\text{area} = \\pi r^2$$\n   - For `Rectangle`: $$\\text{area} = l \\times w$$\n   - A reference variable of type `Shape` can refer to either instance: $S_1 = \\text{new Circle}(r)$ or $S_2 = \\text{new Rectangle}(l, w)$, invoking the specific $\\text{area}()$ implementation.",
+                  "explanation": "Inheritance allows both subclasses to share the generic interface of `Shape`, while polymorphism enables each shape to define its own mathematical computation for area."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-comp-ch1-l1-q1",
+                  "type": "mcq",
+                  "prompt": "What are the two core constituents of a real-world object modeled in Java?",
+                  "options": [
+                    "State and Behavior",
+                    "Compiler and Interpreter",
+                    "Keywords and Literals",
+                    "Bytes and Bits"
+                  ],
+                  "correctAnswer": "State and Behavior",
+                  "explanation": "Every object in Object-Oriented Programming is characterized by its state (attributes/variables) and its behavior (methods/actions).",
+                  "hint": "Think about what an object 'has' and what an object 'does'.",
+                  "difficulty": "easy",
+                  "topicTag": "Objects as software bundles of state and behavior"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q2",
+                  "type": "mcq",
+                  "prompt": "The mechanism of wrapping data and methods into a single protective unit is known as:",
+                  "options": [
+                    "Encapsulation",
+                    "Polymorphism",
+                    "Inheritance",
+                    "Compilation"
+                  ],
+                  "correctAnswer": "Encapsulation",
+                  "explanation": "Encapsulation is the fundamental OOP principle that binds together data and the functions that manipulate them, safeguarding against unauthorized external access.",
+                  "hint": "Consider the term 'capsule' which encloses medicines.",
+                  "difficulty": "easy",
+                  "topicTag": "Encapsulation and data hiding"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q3",
+                  "type": "mcq",
+                  "prompt": "Which principle of OOP focuses on presenting only essential features while hiding the complex background details?",
+                  "options": [
+                    "Abstraction",
+                    "Inheritance",
+                    "Dynamic Binding",
+                    "Garbage Collection"
+                  ],
+                  "correctAnswer": "Abstraction",
+                  "explanation": "Abstraction is the act of representing essential features without including the background implementation details.",
+                  "hint": "Think about driving a car: you step on the accelerator without knowing the exact chemical mechanics inside the engine.",
+                  "difficulty": "easy",
+                  "topicTag": "Abstraction vs details"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q4",
+                  "type": "mcq",
+                  "prompt": "Which feature of OOP promotes code reusability by allowing a new class to acquire properties of an existing class?",
+                  "options": [
+                    "Inheritance",
+                    "Abstraction",
+                    "Data Hiding",
+                    "Bytecode Generation"
+                  ],
+                  "correctAnswer": "Inheritance",
+                  "explanation": "Inheritance is the mechanism by which one class derives the fields and methods of another class, directly enabling code reusability.",
+                  "hint": "It mirrors genetic inheritance from parent to child.",
+                  "difficulty": "easy",
+                  "topicTag": "Inheritance and code reusability"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q5",
+                  "type": "mcq",
+                  "prompt": "The term 'Polymorphism' is derived from Greek words meaning:",
+                  "options": [
+                    "Many forms",
+                    "Single identity",
+                    "Hidden structure",
+                    "Reusable code"
+                  ],
+                  "correctAnswer": "Many forms",
+                  "explanation": "Polymorphism comes from 'poly' (meaning many) and 'morph' (meaning form or shape), describing the ability of an entity to take multiple forms.",
+                  "hint": "'Poly' signifies multiple or many.",
+                  "difficulty": "easy",
+                  "topicTag": "Polymorphism"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q6",
+                  "type": "mcq",
+                  "prompt": "If a class `Circle` has attribute $r$ (radius) and calculates area using $A = \\pi r^2$, what does the variable $r$ represent?",
+                  "options": [
+                    "The state of the object",
+                    "The behavior of the object",
+                    "The polymorphism of the object",
+                    "The abstraction level of the method"
+                  ],
+                  "correctAnswer": "The state of the object",
+                  "explanation": "Variables hold the properties or attributes of an object, which constitute its internal state. Here, $r$ defines the current dimensions/state of `Circle`.",
+                  "hint": "Variables denote attributes or properties.",
+                  "difficulty": "medium",
+                  "topicTag": "Objects as software bundles of state and behavior"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q7",
+                  "type": "mcq",
+                  "prompt": "In Java, data hiding within an encapsulated class is typically implemented by declaring variables as:",
+                  "options": [
+                    "`private`",
+                    "`public`",
+                    "`abstract`",
+                    "`void`"
+                  ],
+                  "correctAnswer": "`private`",
+                  "explanation": "Declaring member variables with the `private` access specifier prevents direct manipulation from outside the class, achieving effective data hiding.",
+                  "hint": "This access modifier restricts visibility strictly to within the same class.",
+                  "difficulty": "medium",
+                  "topicTag": "Encapsulation and data hiding"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q8",
+                  "type": "mcq",
+                  "prompt": "Consider two methods in the same class: $\\text{compute}(int\\; x)$ and $\\text{compute}(double\\; x)$. This is an example of:",
+                  "options": [
+                    "Compile-time Polymorphism (Method Overloading)",
+                    "Data Encapsulation only",
+                    "Multiple Inheritance",
+                    "Dynamic Class Abstraction"
+                  ],
+                  "correctAnswer": "Compile-time Polymorphism (Method Overloading)",
+                  "explanation": "Method overloading occurs when multiple methods share the same name but differ in their parameter signatures, which is a form of compile-time polymorphism.",
+                  "hint": "Two methods share the same name with different arguments.",
+                  "difficulty": "medium",
+                  "topicTag": "Polymorphism"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q9",
+                  "type": "mcq",
+                  "prompt": "How does Abstraction differ fundamentally from Encapsulation?",
+                  "options": [
+                    "Abstraction hides internal complexity; Encapsulation binds data and methods together to hide data",
+                    "Abstraction binds methods and variables; Encapsulation hides all code logic entirely",
+                    "Abstraction allows code inheritance; Encapsulation creates new objects at runtime",
+                    "Abstraction is only used in procedural programming; Encapsulation belongs to OOP"
+                  ],
+                  "correctAnswer": "Abstraction hides internal complexity; Encapsulation binds data and methods together to hide data",
+                  "explanation": "Abstraction deals with 'what' an object does by presenting essential functionality while hiding internal workings. Encapsulation deals with 'how' the internal state is bundled and protected from direct external tampering.",
+                  "hint": "Think about interface design versus data shielding.",
+                  "difficulty": "medium",
+                  "topicTag": "Abstraction vs details"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q10",
+                  "type": "mcq",
+                  "prompt": "Let class $B$ inherit from class $A$. In ICSE terminology, class $A$ is termed the _______ and class $B$ is termed the _______.",
+                  "options": [
+                    "Superclass (Base class); Subclass (Derived class)",
+                    "Subclass; Superclass",
+                    "Encapsulated class; Abstract class",
+                    "Polymorphic class; Monomorphic class"
+                  ],
+                  "correctAnswer": "Superclass (Base class); Subclass (Derived class)",
+                  "explanation": "The class being inherited from is the superclass (or parent/base class), and the class that inherits is the subclass (or child/derived class).",
+                  "hint": "The parent is 'super' to the child.",
+                  "difficulty": "easy",
+                  "topicTag": "Inheritance and code reusability"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q11",
+                  "type": "mcq",
+                  "prompt": "An abstract mathematical model defines class $C$ with $k$ private state variables. Which method pattern should be provided to maintain encapsulation while allowing external components to read variable $x_i$?",
+                  "options": [
+                    "Getter / Accessor method: `getX()`",
+                    "Direct assignment: `obj.x = value`",
+                    "Destructor method: `finalize()`",
+                    "Static initializer block: `static { }`"
+                  ],
+                  "correctAnswer": "Getter / Accessor method: `getX()`",
+                  "explanation": "Accessor methods (getters) return the value of a private variable without exposing the variable for direct unauthorized modification, thereby preserving encapsulation.",
+                  "hint": "These methods typically start with 'get'.",
+                  "difficulty": "hard",
+                  "topicTag": "Encapsulation and data hiding"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l1-q12",
+                  "type": "mcq",
+                  "prompt": "Consider a base class `Vehicle` with derived classes `Car`, `Boat`, and `Aeroplane`. Each implements `move()`. When `v.move()` behaves differently depending on the specific object reference assigned to `v`, this demonstrates:",
+                  "options": [
+                    "Runtime Polymorphism (Dynamic Method Dispatch)",
+                    "Strict Encapsulation",
+                    "Pure Abstraction without Implementation",
+                    "Procedural Decomposition"
+                  ],
+                  "correctAnswer": "Runtime Polymorphism (Dynamic Method Dispatch)",
+                  "explanation": "When an overridden method is resolved at runtime based on the actual object referenced by a superclass variable $v$, it is known as dynamic method dispatch or runtime polymorphism.",
+                  "hint": "The exact version of `move()` is selected dynamically at execution time.",
+                  "difficulty": "hard",
+                  "topicTag": "Polymorphism"
+                }
+              ]
             },
             {
               "id": "icse-9-comp-ch1-l2",
               "levelNumber": 2,
               "title": "Java Architecture & Features",
               "description": "Bytecode, Java Virtual Machine (JVM), Java Runtime Environment (JRE), Java Development Kit (JDK), and Platform Independence.",
-              "subtopics": ["Source code (.java) to Bytecode (.class)", "Role of JVM and Just-In-Time (JIT) compiler", "Write Once Run Anywhere (WORA)"],
+              "subtopics": [
+                "Source code (.java) to Bytecode (.class)",
+                "Role of JVM and Just-In-Time (JIT) compiler",
+                "Write Once Run Anywhere (WORA)"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Java Architecture & Features: From Source to Execution",
+                "intro": "This lesson explores the internal architecture of the Java programming language, focusing on how code is translated into a platform-independent format and executed on various operating systems. We will examine the lifecycle of a Java program, starting from the human-readable source code (`.java`) and moving through compilation to bytecode (`.class`). The core of this unit is understanding the Java Virtual Machine (JVM), the Java Runtime Environment (JRE), and the Java Development Kit (JDK). We will analyze the concept of 'Write Once, Run Anywhere' (WORA) and how the Just-In-Time (JIT) compiler optimizes performance by converting bytecode into native machine code at runtime. This architectural design distinguishes Java from compiled languages like C++ and interpreted languages like Python, offering a balance of portability and performance.",
+                "keyConcepts": [
+                  {
+                    "title": "The Compilation Pipeline: Source to Bytecode",
+                    "explanation": "The Java compiler (`javac`) translates source code files with the extension `.java` into bytecode files with the extension `.class`. This bytecode is not machine-specific; it is a set of instructions understood by the JVM. The relationship can be visualized as: $\\text{Source Code} \\xrightarrow{\\text{javac}} \\text{Bytecode} \\xrightarrow{\\text{JVM}} \\text{Native Code}$. The bytecode is platform-independent, meaning the same `.class` file can run on Windows, Linux, or macOS provided a compatible JVM is installed."
+                  },
+                  {
+                    "title": "JVM and Just-In-Time (JIT) Compilation",
+                    "explanation": "The Java Virtual Machine (JVM) is a virtual computer that executes Java bytecode. It consists of a class loader, memory areas (Heap, Stack, Method Area), and the execution engine. The JIT compiler is a component of the JVM that compiles bytecode into native machine code at runtime. It identifies 'hot spots' (frequently executed code) and compiles them for faster execution. The performance gain can be modeled as $T_{\\text{JIT}} < T_{\\text{Interpreted}}$ for long-running applications, where $T$ represents execution time."
+                  },
+                  {
+                    "title": "WORA and Platform Independence",
+                    "explanation": "Write Once, Run Anywhere (WORA) is the primary feature of Java. It relies on the abstraction layer provided by the JVM. If a system has a JVM, it can run any Java bytecode. The independence is defined by the consistency of the JVM implementation across platforms. Mathematically, if $P$ is the platform and $J$ is the JVM, then for all $P \\in \\{Windows, Linux, Mac\\}$, $f(\\text{Bytecode}, J_P) = \\text{Same Output}$."
+                  }
+                ],
+                "tips": [
+                  "Use a visual flowchart on the board to show the path: Developer writes .java -> Compiler creates .class -> JVM loads .class -> JIT compiles to native -> CPU executes. Emphasize that the .class file is the 'universal' artifact.",
+                  "Clarify the difference between JDK and JRE. Use the analogy: JRE is the 'engine' (runtime libraries + JVM) needed to run the car, while JDK is the 'workshop' (JRE + compiler + tools) needed to build the car. Students often confuse these two.",
+                  "Discuss the trade-off of WORA. While it offers portability, it can introduce a slight performance overhead compared to native C++ due to the abstraction layer. Mention that JIT compilation mitigates this significantly in modern JVMs."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "A Java program is compiled on a Windows machine. The resulting `.class` file is transferred to a Linux machine. Will the program run on the Linux machine? Explain the architectural components required for this to happen.",
+                  "solution": "Yes, the program will run on the Linux machine. \n1. The `.class` file contains platform-independent bytecode.\n2. The Linux machine must have a Java Virtual Machine (JVM) installed, which is part of the Java Runtime Environment (JRE).\n3. When the `java` command is executed, the JVM loads the bytecode.\n4. The JVM's Just-In-Time (JIT) compiler translates the bytecode into Linux-specific native machine code.\n5. The CPU executes the native code.\nSince the bytecode is the same regardless of the source platform, and the JVM handles the translation to the specific OS architecture, the program runs successfully.",
+                  "explanation": "This example illustrates the core principle of WORA. The key is that the compilation step (source to bytecode) is done once, and the interpretation/execution step (bytecode to native) is done by the JVM on the target platform. The JVM acts as an abstraction layer that shields the bytecode from the underlying hardware and OS differences."
+                },
+                {
+                  "problem": "Explain the difference between the Java Development Kit (JDK) and the Java Runtime Environment (JRE) in terms of their components and use cases. If a developer wants to write and test a new Java application, which one is mandatory?",
+                  "solution": "The JRE contains the JVM, core libraries, and other components needed to run Java applications. It does not include development tools like the compiler. The JDK includes the JRE plus development tools such as the Java compiler (`javac`), debugger, and documentation. \n\nTo write and test a new Java application, the JDK is mandatory because:\n1. The developer needs `javac` to compile `.java` files into `.class` files.\n2. The developer needs the JVM (included in JDK) to run the compiled code.\n3. The developer needs libraries (included in JDK) for standard functionality.\n\nA user who only wants to run existing Java applications (like a game or enterprise app) only needs the JRE.",
+                  "explanation": "This example clarifies the hierarchical relationship: $\\text{JDK} \\supset \\text{JRE} \\supset \\text{JVM}$. The JDK is a superset of the JRE. The JRE is a superset of the JVM. Understanding this inclusion is crucial for understanding what tools are available in each environment."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-comp-ch1-l2-q1",
+                  "type": "mcq",
+                  "prompt": "What is the file extension of the bytecode generated by the Java compiler?",
+                  "options": [
+                    ".java",
+                    ".class",
+                    ".exe",
+                    ".bin"
+                  ],
+                  "correctAnswer": ".class",
+                  "explanation": "The Java compiler (`javac`) takes source code files with the extension `.java` and produces bytecode files with the extension `.class`. These `.class` files contain the platform-independent bytecode instructions.",
+                  "hint": "Think about the output of the `javac` command.",
+                  "difficulty": "easy",
+                  "topicTag": "Source to Bytecode"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q2",
+                  "type": "mcq",
+                  "prompt": "Which component of the Java architecture is responsible for executing the bytecode?",
+                  "options": [
+                    "Java Compiler",
+                    "Java Virtual Machine (JVM)",
+                    "Java Development Kit (JDK)",
+                    "Operating System"
+                  ],
+                  "correctAnswer": "Java Virtual Machine (JVM)",
+                  "explanation": "The JVM is the runtime environment that loads, verifies, and executes Java bytecode. It acts as a virtual computer that translates bytecode into native machine code for the specific hardware.",
+                  "hint": "This component is often referred to as the 'engine' of Java.",
+                  "difficulty": "easy",
+                  "topicTag": "JVM Role"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q3",
+                  "type": "mcq",
+                  "prompt": "What does the acronym WORA stand for in the context of Java?",
+                  "options": [
+                    "Write Once, Run Anywhere",
+                    "Write On, Run Always",
+                    "Web Oriented Runtime Architecture",
+                    "Windows Only Runtime Application"
+                  ],
+                  "correctAnswer": "Write Once, Run Anywhere",
+                  "explanation": "WORA is a key feature of Java that allows a program compiled on one platform to run on any other platform that has a compatible JVM, without needing to recompile the source code.",
+                  "hint": "It highlights the portability of Java.",
+                  "difficulty": "easy",
+                  "topicTag": "WORA"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q4",
+                  "type": "mcq",
+                  "prompt": "Which of the following is NOT a component of the Java Runtime Environment (JRE)?",
+                  "options": [
+                    "Java Virtual Machine",
+                    "Core Libraries",
+                    "Java Compiler (javac)",
+                    "Class Loader"
+                  ],
+                  "correctAnswer": "Java Compiler (javac)",
+                  "explanation": "The JRE contains the JVM, core libraries, and other components needed to run Java applications. The Java Compiler (`javac`) is a development tool and is part of the JDK, not the JRE.",
+                  "hint": "The JRE is for running, not for developing.",
+                  "difficulty": "medium",
+                  "topicTag": "JRE Components"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q5",
+                  "type": "mcq",
+                  "prompt": "What is the primary function of the Just-In-Time (JIT) compiler in the JVM?",
+                  "options": [
+                    "To compile source code into bytecode",
+                    "To translate bytecode into native machine code at runtime",
+                    "To debug the Java application",
+                    "To manage the file system"
+                  ],
+                  "correctAnswer": "To translate bytecode into native machine code at runtime",
+                  "explanation": "The JIT compiler improves performance by compiling frequently executed bytecode (hot spots) into native machine code. This allows the CPU to execute the code directly, bypassing the slower interpretation process for those parts.",
+                  "hint": "It works at runtime, not at compile time.",
+                  "difficulty": "medium",
+                  "topicTag": "JIT Compiler"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q6",
+                  "type": "mcq",
+                  "prompt": "Which of the following statements about Java bytecode is true?",
+                  "options": [
+                    "It is specific to the operating system",
+                    "It is specific to the CPU architecture",
+                    "It is platform-independent",
+                    "It is human-readable source code"
+                  ],
+                  "correctAnswer": "It is platform-independent",
+                  "explanation": "Java bytecode is designed to be platform-independent. The same `.class` file can be executed on any system that has a compatible JVM, regardless of the underlying OS or hardware.",
+                  "hint": "This is the basis of the WORA feature.",
+                  "difficulty": "easy",
+                  "topicTag": "Bytecode Properties"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q7",
+                  "type": "mcq",
+                  "prompt": "If a Java program is compiled on a Windows machine, what is required to run it on a Linux machine?",
+                  "options": [
+                    "Recompilation of the source code",
+                    "A compatible Java Virtual Machine (JVM)",
+                    "A Windows emulator",
+                    "A C++ compiler"
+                  ],
+                  "correctAnswer": "A compatible Java Virtual Machine (JVM)",
+                  "explanation": "Since Java bytecode is platform-independent, the only requirement to run it on a different OS is the presence of a JVM that can interpret and execute that bytecode on the Linux architecture.",
+                  "hint": "You do not need to change the code or recompile it.",
+                  "difficulty": "medium",
+                  "topicTag": "Platform Independence"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q8",
+                  "type": "mcq",
+                  "prompt": "Which tool is used to compile Java source code files (.java) into bytecode files (.class)?",
+                  "options": [
+                    "java",
+                    "javac",
+                    "jdb",
+                    "javadoc"
+                  ],
+                  "correctAnswer": "javac",
+                  "explanation": "`javac` is the Java compiler. It reads `.java` files and produces `.class` files containing bytecode. The `java` command is used to run the compiled bytecode.",
+                  "hint": "The name contains 'c' for compiler.",
+                  "difficulty": "easy",
+                  "topicTag": "Java Tools"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q9",
+                  "type": "mcq",
+                  "prompt": "What is the relationship between the JDK and the JRE?",
+                  "options": [
+                    "JDK is a subset of JRE",
+                    "JRE is a subset of JDK",
+                    "They are identical",
+                    "JDK and JRE are unrelated"
+                  ],
+                  "correctAnswer": "JRE is a subset of JDK",
+                  "explanation": "The JDK (Java Development Kit) includes the JRE (Java Runtime Environment) plus development tools like the compiler and debugger. Therefore, the JRE is a component of the JDK.",
+                  "hint": "Think about which one is larger in scope.",
+                  "difficulty": "medium",
+                  "topicTag": "JDK vs JRE"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q10",
+                  "type": "mcq",
+                  "prompt": "Why is Java considered a 'compiled' and 'interpreted' language?",
+                  "options": [
+                    "Because it is compiled to bytecode and interpreted by the JVM",
+                    "Because it is compiled to machine code and interpreted by the OS",
+                    "Because it is interpreted by the browser and compiled by the server",
+                    "Because it is compiled to HTML and interpreted by the client"
+                  ],
+                  "correctAnswer": "Because it is compiled to bytecode and interpreted by the JVM",
+                  "explanation": "Java source code is compiled into bytecode (compiled step). The JVM then interprets this bytecode (interpreted step). Additionally, the JIT compiler compiles bytecode to native code at runtime, adding another layer of compilation.",
+                  "hint": "Consider the two stages of processing a Java program.",
+                  "difficulty": "hard",
+                  "topicTag": "Compilation Model"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q11",
+                  "type": "mcq",
+                  "prompt": "Which of the following is a benefit of using the JIT compiler?",
+                  "options": [
+                    "It reduces the size of the .class file",
+                    "It improves the execution speed of frequently used code",
+                    "It makes the code more readable",
+                    "It eliminates the need for a JVM"
+                  ],
+                  "correctAnswer": "It improves the execution speed of frequently used code",
+                  "explanation": "The JIT compiler identifies 'hot spots' in the code and compiles them into optimized native machine code. This results in faster execution compared to pure interpretation.",
+                  "hint": "Think about performance optimization.",
+                  "difficulty": "medium",
+                  "topicTag": "JIT Benefits"
+                },
+                {
+                  "id": "icse-9-comp-ch1-l2-q12",
+                  "type": "mcq",
+                  "prompt": "What happens if you try to run a .class file on a system that does not have a JVM installed?",
+                  "options": [
+                    "The program will run slowly",
+                    "The program will not run",
+                    "The program will be automatically compiled",
+                    "The program will run in compatibility mode"
+                  ],
+                  "correctAnswer": "The program will not run",
+                  "explanation": "The JVM is essential for executing Java bytecode. Without it, the operating system does not know how to interpret the instructions in the `.class` file, so the program cannot be executed.",
+                  "hint": "The JVM is the runtime environment.",
+                  "difficulty": "easy",
+                  "topicTag": "JVM Necessity"
+                }
+              ]
             },
             {
               "id": "icse-9-comp-ch1-l3",
               "levelNumber": 3,
               "title": "Chapter 1 Review & OOP Foundations",
               "description": "Review of OOP concepts, Java features, and ICSE definitions.",
-              "subtopics": ["Definitions and distinctions", "Real-world object mapping"],
+              "subtopics": [
+                "Definitions and distinctions",
+                "Real-world object mapping"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -61,7 +532,11 @@
               "levelNumber": 1,
               "title": "Tokens & Primitive Data Types",
               "description": "Keywords, Identifiers, 8 primitive data types (byte, short, int, long, float, double, char, boolean), sizes in bytes, and default values.",
-              "subtopics": ["Rules for naming identifiers", "Data types and storage sizes in bits/bytes", "Literals (integer, floating-point, character, string, boolean)"],
+              "subtopics": [
+                "Rules for naming identifiers",
+                "Data types and storage sizes in bits/bytes",
+                "Literals (integer, floating-point, character, string, boolean)"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -70,7 +545,12 @@
               "levelNumber": 2,
               "title": "Operators & Precedence",
               "description": "Arithmetic (+, -, *, /, %), Relational (==, !=, <, >, <=, >=), Logical (&&, ||, !), Increment/Decrement (++a, a++), and Ternary (?:) operators.",
-              "subtopics": ["Prefix vs Postfix increment/decrement", "Modulus operator vs Division operator", "Short-circuit logical evaluation", "Ternary operator syntax"],
+              "subtopics": [
+                "Prefix vs Postfix increment/decrement",
+                "Modulus operator vs Division operator",
+                "Short-circuit logical evaluation",
+                "Ternary operator syntax"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -79,7 +559,11 @@
               "levelNumber": 3,
               "title": "Type Conversion & Math Functions",
               "description": "Implicit (widening) and Explicit (narrowing / casting) type conversion, and standard Math class functions.",
-              "subtopics": ["Type promotion rules in expressions", "Explicit typecasting (int)x", "Math.sqrt(), Math.pow(), Math.abs(), Math.round(), Math.floor(), Math.ceil()"],
+              "subtopics": [
+                "Type promotion rules in expressions",
+                "Explicit typecasting (int)x",
+                "Math.sqrt(), Math.pow(), Math.abs(), Math.round(), Math.floor(), Math.ceil()"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -88,7 +572,10 @@
               "levelNumber": 4,
               "title": "Chapter 2 Review & Expression Evaluation",
               "description": "Evaluating complex Java expressions with operator precedence and type conversions.",
-              "subtopics": ["Predicting output of expressions", "Increment/decrement step-by-step tracing"],
+              "subtopics": [
+                "Predicting output of expressions",
+                "Increment/decrement step-by-step tracing"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -105,7 +592,11 @@
               "levelNumber": 1,
               "title": "Conditional Constructs (if-else & switch)",
               "description": "Flow of control using if, if-else-if ladder, nested if, and switch-case with fall-through and break.",
-              "subtopics": ["if-else construct syntax", "switch-case structure and restrictions", "Fall-through and default statement"],
+              "subtopics": [
+                "if-else construct syntax",
+                "switch-case structure and restrictions",
+                "Fall-through and default statement"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -114,7 +605,11 @@
               "levelNumber": 2,
               "title": "Iterative Constructs (Loops)",
               "description": "Entry-controlled (for, while) vs Exit-controlled (do-while) loops, loop initialization, test condition, and update expressions.",
-              "subtopics": ["for loop syntax and execution steps", "while loop vs do-while loop", "Infinite loops and loop count calculations"],
+              "subtopics": [
+                "for loop syntax and execution steps",
+                "while loop vs do-while loop",
+                "Infinite loops and loop count calculations"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -123,7 +618,11 @@
               "levelNumber": 3,
               "title": "Jump Statements & Number Programs",
               "description": "break and continue statements, and standard ICSE number checking (Prime, Palindrome, Armstrong numbers).",
-              "subtopics": ["break vs continue", "Digit extraction with % 10 and / 10", "Palindrome and Armstrong number logic"],
+              "subtopics": [
+                "break vs continue",
+                "Digit extraction with % 10 and / 10",
+                "Palindrome and Armstrong number logic"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -132,7 +631,10 @@
               "levelNumber": 4,
               "title": "Chapter 3 Review & Code Tracing",
               "description": "Output prediction of nested loops and conditional algorithms.",
-              "subtopics": ["Output prediction dry runs", "Common ICSE algorithmic patterns"],
+              "subtopics": [
+                "Output prediction dry runs",
+                "Common ICSE algorithmic patterns"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }

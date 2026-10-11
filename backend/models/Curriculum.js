@@ -36,7 +36,7 @@ const LessonSchema = new mongoose.Schema({
       explanation: String,
     },
   ],
-  tips: [String],
+  tips: [{ type: mongoose.Schema.Types.Mixed }],
 });
 
 const LevelSchema = new mongoose.Schema({

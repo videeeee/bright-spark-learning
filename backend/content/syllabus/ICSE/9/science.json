@@ -26,25 +26,495 @@
               "levelNumber": 1,
               "title": "Units & Vernier Callipers",
               "description": "Fundamental and derived SI units, least count concept, and measuring with Vernier Callipers.",
-              "subtopics": ["SI units and symbols", "Least count formula (L.C. = 1 MSD - 1 VSD)", "Zero errors (positive and negative)"],
+              "subtopics": [
+                "SI units and symbols",
+                "Least count formula (L.C. = 1 MSD - 1 VSD)",
+                "Zero errors (positive and negative)"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Measurements: Units, Least Count, and Vernier Callipers",
+                "intro": "Measurement is the process of comparison of a given physical quantity with a known standard quantity of the same nature. In Physics, accurate measurement forms the bedrock of experimentation. This level covers the foundation of measurement systems, emphasizing the International System of Units (SI), the principle of the least count, and the operation and error corrections associated with Vernier Callipers.",
+                "keyConcepts": [
+                  {
+                    "title": "Fundamental and Derived SI Units",
+                    "explanation": "A unit is a standard measure of each kind of physical quantity. Fundamental units are those that are independent of any other unit (e.g., metre for length $[\\text{m}]$, kilogram for mass $[\\text{kg}]$, and second for time $[\\text{s}]$). Derived units are expressed in terms of fundamental units, such as density ($[\\text{kg}\\cdot\\text{m}^{-3}]$) and speed ($[\\text{m}\\cdot\\text{s}^{-1}]$)."
+                  },
+                  {
+                    "title": "Principle of Vernier and Least Count",
+                    "explanation": "The least count (L.C.) of an instrument is the smallest measurement that can be taken accurately with it. For a standard Vernier Calliper, $n$ vernier scale divisions (VSD) coincide with $(n - 1)$ main scale divisions (MSD). Thus, $1\\text{ VSD} = \\frac{n-1}{n}\\text{ MSD}$. The least count is given by:\n$$\\text{L.C.} = 1\\text{ MSD} - 1\\text{ VSD} = \\frac{1\\text{ MSD}}{n}$$\nIf $1\\text{ MSD} = 1\\text{ mm}$ and $n = 10$, then $\\text{L.C.} = \\frac{1\\text{ mm}}{10} = 0.1\\text{ mm} = 0.01\\text{ cm}$."
+                  },
+                  {
+                    "title": "Zero Error and True Reading",
+                    "explanation": "When the jaws of a Vernier Calliper are in contact, the zero mark of the Vernier scale should ideally coincide with the zero mark of the Main scale. If they do not coincide, the instrument possesses a zero error.\n1. **Positive Zero Error**: The zero of the Vernier scale lies to the right of the zero of the Main scale. If the $p^{\\text{th}}$ division coincides, $\\text{Zero Error} = +p \\times \\text{L.C.}$\n2. **Negative Zero Error**: The zero of the Vernier scale lies to the left of the zero of the Main scale. If the $p^{\\text{th}}$ division coincides, $\\text{Zero Error} = -(n - p) \\times \\text{L.C.}$\n$$\\text{Correct Reading} = \\text{Observed Reading} - (\\text{Zero Error})$$"
+                  }
+                ],
+                "tips": [
+                  "Always convert all quantities and readings to the same unit (preferably cm or mm) before carrying out calculations.",
+                  "Remember: Correct Reading = Observed Reading - (Zero Error). A positive zero error is subtracted, while a negative zero error is effectively added.",
+                  "Check the total number of divisions on the Vernier scale carefully before computing the least count; not all instruments have 10 divisions."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "A Vernier Calliper has $1\\text{ MSD} = 1\\text{ mm}$, and $10$ divisions of the Vernier scale coincide with $9$ divisions of the Main scale. When measuring the diameter of a sphere, the main scale reads $2.4\\text{ cm}$ and the $6^{\\text{th}}$ vernier division coincides with a main scale mark. If the instrument has a positive zero error of $+0.02\\text{ cm}$, calculate the true diameter.",
+                  "solution": "Step 1: Calculate the Least Count (L.C.):\n$$\\text{L.C.} = \\frac{1\\text{ MSD}}{n} = \\frac{1\\text{ mm}}{10} = 0.1\\text{ mm} = 0.01\\text{ cm}$$\n\nStep 2: Calculate the Observed Reading:\n$$\\text{Observed Reading} = \\text{M.S.R.} + (\\text{V.S.R.} \\times \\text{L.C.})$$\n$$\\text{Observed Reading} = 2.4\\text{ cm} + (6 \\times 0.01\\text{ cm}) = 2.4\\text{ cm} + 0.06\\text{ cm} = 2.46\\text{ cm}$$\n\nStep 3: Correct for Zero Error:\n$$\\text{True Reading} = \\text{Observed Reading} - (\\text{Zero Error})$$\n$$\\text{True Reading} = 2.46\\text{ cm} - (+0.02\\text{ cm}) = 2.44\\text{ cm}$$",
+                  "explanation": "Because the zero error is positive ($+0.02\\text{ cm}$), the instrument over-reads by $0.02\\text{ cm}$. Hence, this value must be subtracted from the observed reading to obtain the true diameter."
+                },
+                {
+                  "problem": "The main scale of a Vernier Calliper is calibrated in millimetres ($1\\text{ MSD} = 1\\text{ mm}$), and its Vernier scale has $20$ divisions. When the two jaws are brought together, the zero of the Vernier scale lies to the left of the main scale zero, and the $16^{\\text{th}}$ Vernier mark coincides with a main scale mark. Find the zero error of the instrument.",
+                  "solution": "Step 1: Determine the Least Count (L.C.):\n$$\\text{L.C.} = \\frac{1\\text{ MSD}}{n} = \\frac{1\\text{ mm}}{20} = 0.05\\text{ mm} = 0.005\\text{ cm}$$\n\nStep 2: Identify the type of error:\nSince the Vernier zero lies to the left of the main scale zero, the zero error is negative.\n\nStep 3: Calculate the Negative Zero Error:\nFor $n = 20$ divisions with the $16^{\\text{th}}$ division coinciding:\n$$\\text{Zero Error} = -(n - p) \\times \\text{L.C.}$$\n$$\\text{Zero Error} = -(20 - 16) \\times 0.05\\text{ mm} = -4 \\times 0.05\\text{ mm} = -0.20\\text{ mm} = -0.020\\text{ cm}$$",
+                  "explanation": "For negative zero error, we count backwards from the total number of vernier divisions: $(n - p) \\times \\text{L.C.}$, preceded by a negative sign."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-sci-ch1-l1-q1",
+                  "type": "mcq",
+                  "prompt": "Which of the following represents the correct derived SI unit of density?",
+                  "options": [
+                    "$\\text{kg}\\cdot\\text{m}^{-3}$",
+                    "$\\text{g}\\cdot\\text{cm}^{-3}$",
+                    "$\\text{kg}\\cdot\\text{m}^{3}$",
+                    "$\\text{kg}\\cdot\\text{m}^{-2}$"
+                  ],
+                  "correctAnswer": "$\\text{kg}\\cdot\\text{m}^{-3}$",
+                  "explanation": "Density is defined as mass per unit volume: $\\rho = \\frac{\\text{Mass}}{\\text{Volume}}$. The SI unit of mass is $\\text{kg}$ and volume is $\\text{m}^3$. Hence, the derived SI unit is $\\frac{\\text{kg}}{\\text{m}^3} = \\text{kg}\\cdot\\text{m}^{-3}$. While $\\text{g}\\cdot\\text{cm}^{-3}$ is a unit of density, it is in the C.G.S. system, not SI.",
+                  "hint": "Recall the standard SI units for mass and length.",
+                  "difficulty": "easy",
+                  "topicTag": "SI units and symbols"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q2",
+                  "type": "mcq",
+                  "prompt": "A Vernier Calliper has $1\\text{ MSD} = 1\\text{ mm}$. If $10$ divisions of the vernier scale coincide with $9$ divisions of the main scale, what is the least count of the instrument?",
+                  "options": [
+                    "$0.01\\text{ mm}$",
+                    "$0.1\\text{ mm}$",
+                    "$1.0\\text{ mm}$",
+                    "$0.05\\text{ mm}$"
+                  ],
+                  "correctAnswer": "$0.1\\text{ mm}$",
+                  "explanation": "The least count is calculated as $\\text{L.C.} = \\frac{1\\text{ MSD}}{n} = \\frac{1\\text{ mm}}{10} = 0.1\\text{ mm}$.",
+                  "hint": "Divide the value of one main scale division by the total number of vernier divisions.",
+                  "difficulty": "easy",
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q3",
+                  "type": "mcq",
+                  "prompt": "If the zero mark of the Vernier scale lies to the right of the zero mark of the Main scale when the jaws are in contact, the zero error is:",
+                  "options": [
+                    "Positive, and it must be added to the observed reading",
+                    "Positive, and it must be subtracted from the observed reading",
+                    "Negative, and it must be subtracted from the observed reading",
+                    "Negative, and it must be added to the observed reading"
+                  ],
+                  "correctAnswer": "Positive, and it must be subtracted from the observed reading",
+                  "explanation": "When the vernier zero lies to the right of the main scale zero, the instrument reads a value greater than zero initially; hence, the error is positive. The true reading is obtained by subtracting the zero error: $\\text{True Reading} = \\text{Observed Reading} - (+\\text{Zero Error})$.",
+                  "hint": "A reading that already shows a positive value before measurement must be corrected by taking that extra value away.",
+                  "difficulty": "easy",
+                  "topicTag": "Zero errors (positive and negative)"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q4",
+                  "type": "mcq",
+                  "prompt": "In a Vernier Calliper, $1\\text{ MSD} = 0.5\\text{ mm}$, and there are $50$ divisions on the Vernier scale which coincide with $49$ divisions of the main scale. What is the least count of the instrument in centimetres?",
+                  "options": [
+                    "$0.01\\text{ cm}$",
+                    "$0.001\\text{ cm}$",
+                    "$0.005\\text{ cm}$",
+                    "$0.02\\text{ cm}$"
+                  ],
+                  "correctAnswer": "$0.001\\text{ cm}$",
+                  "explanation": "$$\\text{L.C.} = \\frac{1\\text{ MSD}}{n} = \\frac{0.5\\text{ mm}}{50} = 0.01\\text{ mm}$$\nConverting to centimetres:\n$$0.01\\text{ mm} = \\frac{0.01}{10}\\text{ cm} = 0.001\\text{ cm}$$",
+                  "hint": "Calculate the least count in millimetres first, then divide by 10 to convert to centimetres.",
+                  "difficulty": "medium",
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q5",
+                  "type": "mcq",
+                  "prompt": "Which of the following is a fundamental physical quantity in the SI system?",
+                  "options": [
+                    "Luminous intensity",
+                    "Electric charge",
+                    "Force",
+                    "Pressure"
+                  ],
+                  "correctAnswer": "Luminous intensity",
+                  "explanation": "The seven fundamental SI quantities are length, mass, time, electric current, thermodynamic temperature, amount of substance, and luminous intensity (measured in candela, $\\text{cd}$). Electric charge (coulomb), force (newton), and pressure (pascal) are derived quantities.",
+                  "hint": "Identify the base quantity whose unit is the candela (cd).",
+                  "difficulty": "easy",
+                  "topicTag": "SI units and symbols"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q6",
+                  "type": "mcq",
+                  "prompt": "When the jaws of a Vernier Calliper are closed, the zero of the Vernier scale lies to the left of the main scale zero. If the total number of divisions is $10$, the least count is $0.01\\text{ cm}$, and the $7^{\\text{th}}$ division coincides with a main scale mark, the zero error is:",
+                  "options": [
+                    "$-0.03\\text{ cm}$",
+                    "$+0.07\\text{ cm}$",
+                    "$-0.07\\text{ cm}$",
+                    "$+0.03\\text{ cm}$"
+                  ],
+                  "correctAnswer": "$-0.03\\text{ cm}$",
+                  "explanation": "Since the vernier zero lies to the left of the main scale zero, the error is negative. For a negative zero error, when the $p^{\\text{th}}$ division coincides, the formula is:\n$$\\text{Zero Error} = -(n - p) \\times \\text{L.C.} = -(10 - 7) \\times 0.01\\text{ cm} = -3 \\times 0.01\\text{ cm} = -0.03\\text{ cm}$$",
+                  "hint": "For negative zero error, subtract the coinciding division index from the total number of divisions.",
+                  "difficulty": "medium",
+                  "topicTag": "Zero errors (positive and negative)"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q7",
+                  "type": "mcq",
+                  "prompt": "A student measures the length of a rod using a Vernier Calliper with $\\text{L.C.} = 0.01\\text{ cm}$. The main scale reading is $3.2\\text{ cm}$ and the $4^{\\text{th}}$ vernier division coincides with a main scale division. If the instrument has a negative zero error of $-0.03\\text{ cm}$, what is the correct length of the rod?",
+                  "options": [
+                    "$3.21\\text{ cm}$",
+                    "$3.24\\text{ cm}$",
+                    "$3.27\\text{ cm}$",
+                    "$3.31\\text{ cm}$"
+                  ],
+                  "correctAnswer": "$3.27\\text{ cm}$",
+                  "explanation": "$$\\text{Observed Reading} = 3.2\\text{ cm} + (4 \\times 0.01\\text{ cm}) = 3.24\\text{ cm}$$\n$$\\text{Correct Reading} = \\text{Observed Reading} - (\\text{Zero Error})$$\n$$\\text{Correct Reading} = 3.24\\text{ cm} - (-0.03\\text{ cm}) = 3.24\\text{ cm} + 0.03\\text{ cm} = 3.27\\text{ cm}$$",
+                  "hint": "Subtracting a negative zero error is equivalent to adding its magnitude.",
+                  "difficulty": "medium",
+                  "topicTag": "Zero errors (positive and negative)"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q8",
+                  "type": "mcq",
+                  "prompt": "If $1\\text{ MSD} = a$ units and $n$ divisions of the Vernier scale coincide with $(n - 1)$ divisions of the Main scale, what is the length of $1$ Vernier scale division?",
+                  "options": [
+                    "$\\frac{n-1}{n}a$",
+                    "$\\frac{n}{n-1}a$",
+                    "$\\frac{a}{n}$",
+                    "$\\frac{n+1}{n}a$"
+                  ],
+                  "correctAnswer": "$\\frac{n-1}{n}a$",
+                  "explanation": "We are given $n\\text{ VSD} = (n - 1)\\text{ MSD}$. Substituting $1\\text{ MSD} = a$ gives $n\\text{ VSD} = (n - 1)a$, which simplifies to $1\\text{ VSD} = \\frac{n-1}{n}a$.",
+                  "hint": "Equate $n\\text{ VSD}$ to $(n-1)\\text{ MSD}$ and solve for $1\\text{ VSD}$.",
+                  "difficulty": "medium",
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q9",
+                  "type": "mcq",
+                  "prompt": "A Vernier Calliper has $1\\text{ MSD} = 1\\text{ mm}$ and $20$ divisions on its vernier scale. While measuring the thickness of a glass slab, the main scale shows $1.5\\text{ cm}$ and the $8^{\\text{th}}$ vernier division coincides with a main scale mark. The instrument has a zero error of $+0.015\\text{ cm}$. What is the true thickness?",
+                  "options": [
+                    "$1.525\\text{ cm}$",
+                    "$1.540\\text{ cm}$",
+                    "$1.555\\text{ cm}$",
+                    "$1.505\\text{ cm}$"
+                  ],
+                  "correctAnswer": "$1.525\\text{ cm}$",
+                  "explanation": "$$\\text{L.C.} = \\frac{1\\text{ mm}}{20} = 0.05\\text{ mm} = 0.005\\text{ cm}$$\n$$\\text{Observed Reading} = 1.5\\text{ cm} + (8 \\times 0.005\\text{ cm}) = 1.5\\text{ cm} + 0.040\\text{ cm} = 1.540\\text{ cm}$$\n$$\\text{True Reading} = 1.540\\text{ cm} - (+0.015\\text{ cm}) = 1.525\\text{ cm}$$",
+                  "hint": "First compute the least count for 20 divisions: $\\frac{1\\text{ mm}}{20} = 0.005\\text{ cm}$.",
+                  "difficulty": "hard",
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q10",
+                  "type": "mcq",
+                  "prompt": "The internal diameter of a test tube is measured using which specific part of a Vernier Calliper?",
+                  "options": [
+                    "Inside jaws",
+                    "Outside jaws",
+                    "Metallic strip (depth probe)",
+                    "Main scale edge"
+                  ],
+                  "correctAnswer": "Inside jaws",
+                  "explanation": "The inside jaws (upper jaws) of a Vernier Calliper are designed specifically to measure the internal diameters of hollow cylinders, pipes, or test tubes.",
+                  "hint": "Consider which pair of jaws projects upwards to fit inside an opening.",
+                  "difficulty": "easy",
+                  "topicTag": "Least count formula (L.C. = 1 MSD - 1 VSD)"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q11",
+                  "type": "mcq",
+                  "prompt": "Which of the following prefixes represents a factor of $10^{-9}$?",
+                  "options": [
+                    "$\\text{nano}$",
+                    "$\\text{micro}$",
+                    "$\\text{pico}$",
+                    "$\\text{femto}$"
+                  ],
+                  "correctAnswer": "$\\text{nano}$",
+                  "explanation": "In standard SI prefixes: $\\text{micro} = 10^{-6}$, $\\text{nano} = 10^{-9}$, $\\text{pico} = 10^{-12}$, and $\\text{femto} = 10^{-15}$.",
+                  "hint": "One nanometre is $10^{-9}\\text{ m}$.",
+                  "difficulty": "easy",
+                  "topicTag": "SI units and symbols"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l1-q12",
+                  "type": "mcq",
+                  "prompt": "A Vernier Calliper has $1\\text{ MSD} = 1\\text{ mm}$. When the jaws are closed, the zero of the Vernier scale lies to the right of the main scale zero, and the $3^{\\text{rd}}$ vernier division coincides with a main scale mark. The zero error is:",
+                  "options": [
+                    "$+0.03\\text{ cm}$",
+                    "$-0.03\\text{ cm}$",
+                    "$+0.07\\text{ cm}$",
+                    "$-0.07\\text{ cm}$"
+                  ],
+                  "correctAnswer": "$+0.03\\text{ cm}$",
+                  "explanation": "For a standard 10-division vernier, $\\text{L.C.} = \\frac{1\\text{ mm}}{10} = 0.1\\text{ mm} = 0.01\\text{ cm}$. Since the vernier zero is to the right of the main scale zero, the error is positive:\n$$\\text{Zero Error} = +p \\times \\text{L.C.} = +3 \\times 0.01\\text{ cm} = +0.03\\text{ cm}$$",
+                  "hint": "Zero to the right indicates positive error: $+p \\times \\text{L.C.}$.",
+                  "difficulty": "medium",
+                  "topicTag": "Zero errors (positive and negative)"
+                }
+              ]
             },
             {
               "id": "icse-9-sci-ch1-l2",
               "levelNumber": 2,
               "title": "Micrometer Screw Gauge",
               "description": "Pitch, least count of screw gauge, zero errors and measuring thin wires or sheets.",
-              "subtopics": ["Pitch and head scale divisions", "Least count calculation", "Measurement with zero error correction"],
+              "subtopics": [
+                "Pitch and head scale divisions",
+                "Least count calculation",
+                "Measurement with zero error correction"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Micrometer Screw Gauge: Principles, Least Count, and Accurate Measurements",
+                "intro": "The micrometer screw gauge is an instrument used for accurately measuring very small dimensions such as the diameter of a thin wire or the thickness of a sheet of paper. Built upon the principle of a screw rotating inside a nut, it translates rotational movement into linear motion. While a standard Vernier caliper typically measures up to $0.01\\text{ cm}$ ($0.1\\text{ mm}$), a standard screw gauge has a least count of $0.001\\text{ cm}$ ($0.01\\text{ mm}$), providing ten times greater precision. Mastering the screw gauge requires understanding pitch, head scale divisions, calculating least count, and correcting for positive and negative zero errors.",
+                "keyConcepts": [
+                  {
+                    "title": "Pitch and the Principle of a Micrometer Screw Gauge",
+                    "explanation": "A screw gauge operates on the principle that when an accurately threaded screw is rotated in a fixed nut, the linear distance advanced by the screw is directly proportional to the rotation given to it. The **pitch** of the screw is the linear distance moved by the screw along the main scale in one complete rotation of its circular (head) scale.\n$$\\text{Pitch} = \\frac{\\text{Distance moved on linear scale}}{\\text{Number of complete rotations}}$$"
+                  },
+                  {
+                    "title": "Least Count of a Screw Gauge",
+                    "explanation": "The least count ($\\text{L.C.}$) is the minimum length that can be measured accurately using the screw gauge. It equals the linear distance moved by the screw when the circular scale is rotated through just one division.\n$$\\text{Least Count (L.C.)} = \\frac{\\text{Pitch}}{\\text{Total number of circular scale divisions (}n\\text{)}}$$\nFor example, if the pitch is $1\\text{ mm}$ and the circular scale has $100$ divisions, the least count is $\\frac{1\\text{ mm}}{100} = 0.01\\text{ mm} = 0.001\\text{ cm}$."
+                  },
+                  {
+                    "title": "Zero Error and True Reading Determination",
+                    "explanation": "When the stud and the spindle face are brought into contact, the zero mark of the circular scale should coincide with the base (reference) line of the main scale. If they do not coincide, the instrument has a **zero error**.\n1. **Positive Zero Error:** Occurs when the zero mark of the circular scale lies *below* the base line. If the $p^{\\text{th}}$ division coincides, $\\text{Zero Error} = +(p \\times \\text{L.C.})$.\n2. **Negative Zero Error:** Occurs when the zero mark of the circular scale lies *above* the base line. If the $q^{\\text{th}}$ division coincides (where total divisions are $n$), $\\text{Zero Error} = -[(n - q) \\times \\text{L.C.}]$.\n\nThe actual reading is given by:\n$$\\text{Observed Reading} = \\text{Main Scale Reading (MSR)} + [\\text{Circular Scale Reading (CSR)} \\times \\text{L.C.}]$$\n$$\\text{True (Corrected) Reading} = \\text{Observed Reading} - (\\text{Zero Error with sign})$$"
+                  }
+                ],
+                "tips": [
+                  "Always rotate the screw using the ratchet rather than the thimble when tightening against an object to prevent deformation and overtightening.",
+                  "To avoid backlash error caused by mechanical wear in the screw threads, always advance the screw in only one direction when taking a measurement.",
+                  "Remember that zero correction is always the negative of zero error: a positive error must be subtracted, and a negative error must be added."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "A micrometer screw gauge has a pitch of $0.5\\text{ mm}$ and its circular scale has $50$ divisions. When measuring the diameter of a thin copper wire, the main scale shows $2.5\\text{ mm}$ and the $38^{\\text{th}}$ division of the circular scale aligns with the baseline. If the instrument has a positive zero error of $+0.03\\text{ mm}$, calculate the true diameter of the wire.",
+                  "solution": "1. **Determine the Least Count ($\\text{L.C.}$):**\n$$\\text{L.C.} = \\frac{\\text{Pitch}}{\\text{Number of divisions}} = \\frac{0.5\\text{ mm}}{50} = 0.01\\text{ mm}$$\n\n2. **Calculate the Observed Reading:**\n$$\\text{Observed Reading} = \\text{MSR} + (\\text{CSR} \\times \\text{L.C.})$$\n$$\\text{Observed Reading} = 2.5\\text{ mm} + (38 \\times 0.01\\text{ mm}) = 2.5\\text{ mm} + 0.38\\text{ mm} = 2.88\\text{ mm}$$\n\n3. **Apply Zero Error Correction:**\n$$\\text{True Reading} = \\text{Observed Reading} - (\\text{Zero Error})$$\n$$\\text{True Reading} = 2.88\\text{ mm} - (+0.03\\text{ mm}) = 2.85\\text{ mm}$$",
+                  "explanation": "The least count is first found by dividing the pitch by the circular scale divisions. The total observed reading is the sum of linear and circular contributions. Finally, the positive zero error is subtracted to obtain the true diameter of $2.85\\text{ mm}$."
+                },
+                {
+                  "problem": "The pitch of a screw gauge is $1\\text{ mm}$ and it has $100$ circular scale divisions. When the studs are brought in contact without any object, the zero mark of the circular scale lies above the reference line, and the $96^{\\text{th}}$ division coincides with the reference line. While measuring the thickness of a metal plate, the main scale reads $3\\text{ mm}$ and the $44^{\\text{th}}$ circular scale division coincides with the reference line. Find the true thickness of the plate.",
+                  "solution": "1. **Determine Least Count ($\\text{L.C.}$):**\n$$\\text{L.C.} = \\frac{1\\text{ mm}}{100} = 0.01\\text{ mm}$$\n\n2. **Calculate Zero Error:**\nSince the zero mark lies above the reference line, the error is negative:\n$$\\text{Zero Error} = -(100 - 96) \\times 0.01\\text{ mm} = -4 \\times 0.01\\text{ mm} = -0.04\\text{ mm}$$\n\n3. **Calculate Observed Reading:**\n$$\\text{Observed Reading} = 3\\text{ mm} + (44 \\times 0.01\\text{ mm}) = 3.44\\text{ mm}$$\n\n4. **Apply Zero Error Correction:**\n$$\\text{True Reading} = \\text{Observed Reading} - (\\text{Zero Error})$$\n$$\\text{True Reading} = 3.44\\text{ mm} - (-0.04\\text{ mm}) = 3.44\\text{ mm} + 0.04\\text{ mm} = 3.48\\text{ mm}$$",
+                  "explanation": "Because the zero of the circular scale was above the baseline, the initial reading was behind by $4$ divisions (negative error). Correcting for this involves subtracting a negative value, which adds $0.04\\text{ mm}$ to the observed measurement."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-sci-ch1-l2-q1",
+                  "type": "mcq",
+                  "prompt": "If a screw advances by $2\\text{ mm}$ on the linear scale in $4$ complete rotations, what is the pitch of the screw?",
+                  "options": [
+                    "$0.25\\text{ mm}$",
+                    "$0.50\\text{ mm}$",
+                    "$1.00\\text{ mm}$",
+                    "$2.00\\text{ mm}$"
+                  ],
+                  "correctAnswer": "$0.50\\text{ mm}$",
+                  "explanation": "$$\\text{Pitch} = \\frac{\\text{Distance moved}}{\\text{Number of rotations}} = \\frac{2\\text{ mm}}{4} = 0.50\\text{ mm}$$",
+                  "hint": "Divide the total linear distance moved by the total number of rotations.",
+                  "difficulty": "easy",
+                  "topicTag": "Pitch and head scale divisions"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q2",
+                  "type": "mcq",
+                  "prompt": "A screw gauge has a pitch of $1\\text{ mm}$ and $100$ divisions on its circular scale. What is its least count in centimeters?",
+                  "options": [
+                    "$0.01\\text{ cm}$",
+                    "$0.001\\text{ cm}$",
+                    "$0.0001\\text{ cm}$",
+                    "$0.1\\text{ cm}$"
+                  ],
+                  "correctAnswer": "$0.001\\text{ cm}$",
+                  "explanation": "$$\\text{L.C.} = \\frac{\\text{Pitch}}{n} = \\frac{1\\text{ mm}}{100} = 0.01\\text{ mm} = 0.001\\text{ cm}$$",
+                  "hint": "First calculate the least count in millimeters, then divide by 10 to convert to centimeters.",
+                  "difficulty": "easy",
+                  "topicTag": "Least count calculation"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q3",
+                  "type": "mcq",
+                  "prompt": "What is the primary function of the ratchet attached to the screw gauge?",
+                  "options": [
+                    "To rotate the screw rapidly across large distances",
+                    "To measure fractions of a millimeter directly",
+                    "To prevent undue pressure on the object by slipping when uniform tension is reached",
+                    "To reduce zero error of the circular scale to zero"
+                  ],
+                  "correctAnswer": "To prevent undue pressure on the object by slipping when uniform tension is reached",
+                  "explanation": "The ratchet provides a mechanism that slips with a clicking sound once a preset gentle torque is reached. This prevents overtightening, protecting the screw threads and avoiding deformation of the specimen.",
+                  "hint": "Consider what happens if an experimenter tightens the screw with excessive force on a soft wire.",
+                  "difficulty": "easy",
+                  "topicTag": "Measurement with zero error correction"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q4",
+                  "type": "mcq",
+                  "prompt": "A screw gauge has a pitch of $0.5\\text{ mm}$ and a least count of $0.005\\text{ mm}$. What is the total number of divisions on its circular scale?",
+                  "options": [
+                    "$50$",
+                    "$100$",
+                    "$200$",
+                    "$250$"
+                  ],
+                  "correctAnswer": "$100$",
+                  "explanation": "$$\\text{L.C.} = \\frac{\\text{Pitch}}{n} \\implies n = \\frac{\\text{Pitch}}{\\text{L.C.}} = \\frac{0.5\\text{ mm}}{0.005\\text{ mm}} = 100$$",
+                  "hint": "Rearrange the formula: Number of divisions = Pitch / Least Count.",
+                  "difficulty": "medium",
+                  "topicTag": "Least count calculation"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q5",
+                  "type": "mcq",
+                  "prompt": "Backlash error in a micrometer screw gauge is caused by which of the following reasons?",
+                  "options": [
+                    "Thermal expansion of the metal frame",
+                    "Wear and tear or looseness of the screw threads in the nut",
+                    "Incorrect zero mark alignment on the circular scale",
+                    "Non-uniform graduation lines on the main scale"
+                  ],
+                  "correctAnswer": "Wear and tear or looseness of the screw threads in the nut",
+                  "explanation": "Backlash error occurs due to play or looseness between the threads of the screw and nut caused by regular wear and tear, leading to rotation without immediate translational motion when reversing direction.",
+                  "hint": "Think about what happens to mechanical threads over prolonged usage.",
+                  "difficulty": "easy",
+                  "topicTag": "Measurement with zero error correction"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q6",
+                  "type": "mcq",
+                  "prompt": "When the studs of a screw gauge are in contact, the circular scale zero is $3$ divisions below the baseline. If $\\text{L.C.} = 0.01\\text{ mm}$, what is the zero error and the zero correction?",
+                  "options": [
+                    "$\\text{Zero Error} = +0.03\\text{ mm}, \\; \\text{Correction} = -0.03\\text{ mm}$",
+                    "$\\text{Zero Error} = -0.03\\text{ mm}, \\; \\text{Correction} = +0.03\\text{ mm}$",
+                    "$\\text{Zero Error} = +0.03\\text{ mm}, \\; \\text{Correction} = +0.03\\text{ mm}$",
+                    "$\\text{Zero Error} = -0.97\\text{ mm}, \\; \\text{Correction} = +0.97\\text{ mm}$"
+                  ],
+                  "correctAnswer": "$\\text{Zero Error} = +0.03\\text{ mm}, \\; \\text{Correction} = -0.03\\text{ mm}$",
+                  "explanation": "When the circular scale zero lies below the baseline, the zero error is positive: $\\text{Error} = +3 \\times 0.01\\text{ mm} = +0.03\\text{ mm}$. The zero correction is always equal and opposite: $\\text{Correction} = -0.03\\text{ mm}$.",
+                  "hint": "A zero lying below the reference line indicates positive error.",
+                  "difficulty": "medium",
+                  "topicTag": "Measurement with zero error correction"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q7",
+                  "type": "mcq",
+                  "prompt": "A screw gauge with $100$ circular divisions and $\\text{L.C.} = 0.01\\text{ mm}$ is fully closed. The $97^{\\text{th}}$ division aligns with the baseline, and the zero mark lies above the baseline. What is the zero error?",
+                  "options": [
+                    "$+0.97\\text{ mm}$",
+                    "$+0.03\\text{ mm}$",
+                    "$-0.03\\text{ mm}$",
+                    "$-0.97\\text{ mm}$"
+                  ],
+                  "correctAnswer": "$-0.03\\text{ mm}$",
+                  "explanation": "Since the zero lies above the baseline, the error is negative. With total divisions $n = 100$ and coincident division $97$:\n$$\\text{Zero Error} = -(100 - 97) \\times 0.01\\text{ mm} = -3 \\times 0.01\\text{ mm} = -0.03\\text{ mm}$$",
+                  "hint": "For negative zero error, subtract the coinciding division from the total number of circular divisions.",
+                  "difficulty": "medium",
+                  "topicTag": "Measurement with zero error correction"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q8",
+                  "type": "mcq",
+                  "prompt": "While measuring the diameter of a wire, the main scale reading is $1.5\\text{ mm}$ and the circular scale division is $42$. If the pitch is $0.5\\text{ mm}$ and there are $50$ divisions on the circular scale, what is the observed diameter?",
+                  "options": [
+                    "$1.92\\text{ mm}$",
+                    "$1.71\\text{ mm}$",
+                    "$2.34\\text{ mm}$",
+                    "$1.542\\text{ mm}$"
+                  ],
+                  "correctAnswer": "$1.92\\text{ mm}$",
+                  "explanation": "$$\\text{L.C.} = \\frac{0.5\\text{ mm}}{50} = 0.01\\text{ mm}$$\n$$\\text{Observed Diameter} = \\text{MSR} + (\\text{CSR} \\times \\text{L.C.}) = 1.5\\text{ mm} + (42 \\times 0.01\\text{ mm}) = 1.5 + 0.42 = 1.92\\text{ mm}$$",
+                  "hint": "Calculate the least count first, multiply by the circular reading, and add to the main scale reading.",
+                  "difficulty": "medium",
+                  "topicTag": "Pitch and head scale divisions"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q9",
+                  "type": "mcq",
+                  "prompt": "The observed thickness of a glass slab using a screw gauge is $4.68\\text{ mm}$. The instrument has a negative zero error of $-0.05\\text{ mm}$. What is the corrected thickness?",
+                  "options": [
+                    "$4.63\\text{ mm}$",
+                    "$4.73\\text{ mm}$",
+                    "$4.685\\text{ mm}$",
+                    "$4.18\\text{ mm}$"
+                  ],
+                  "correctAnswer": "$4.73\\text{ mm}$",
+                  "explanation": "$$\\text{Corrected Reading} = \\text{Observed Reading} - (\\text{Zero Error})$$\n$$\\text{Corrected Reading} = 4.68\\text{ mm} - (-0.05\\text{ mm}) = 4.68\\text{ mm} + 0.05\\text{ mm} = 4.73\\text{ mm}$$",
+                  "hint": "Subtracting a negative quantity increases the measured value.",
+                  "difficulty": "medium",
+                  "topicTag": "Measurement with zero error correction"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q10",
+                  "type": "mcq",
+                  "prompt": "A screw gauge moves $5\\text{ mm}$ forward along the linear scale for $10$ full turns. The circular scale has $50$ divisions. What is the least count of this instrument?",
+                  "options": [
+                    "$0.05\\text{ mm}$",
+                    "$0.02\\text{ mm}$",
+                    "$0.01\\text{ mm}$",
+                    "$0.001\\text{ mm}$"
+                  ],
+                  "correctAnswer": "$0.01\\text{ mm}$",
+                  "explanation": "$$\\text{Pitch} = \\frac{5\\text{ mm}}{10} = 0.5\\text{ mm}$$\n$$\\text{L.C.} = \\frac{\\text{Pitch}}{n} = \\frac{0.5\\text{ mm}}{50} = 0.01\\text{ mm}$$",
+                  "hint": "Find the pitch per single rotation before dividing by circular divisions.",
+                  "difficulty": "easy",
+                  "topicTag": "Least count calculation"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q11",
+                  "type": "mcq",
+                  "prompt": "How can the least count of a micrometer screw gauge be decreased to make it more precise?",
+                  "options": [
+                    "By increasing the pitch and decreasing the number of circular scale divisions",
+                    "By decreasing the pitch and increasing the number of circular scale divisions",
+                    "By increasing both the pitch and the number of circular scale divisions equally",
+                    "By decreasing both the pitch and the number of circular scale divisions equally"
+                  ],
+                  "correctAnswer": "By decreasing the pitch and increasing the number of circular scale divisions",
+                  "explanation": "Since $\\text{L.C.} = \\frac{\\text{Pitch}}{n}$, decreasing the numerator (Pitch) and increasing the denominator ($n$, the number of head scale divisions) minimizes $\\text{L.C.}$, thereby increasing precision.",
+                  "hint": "Analyze how numerator and denominator in the least count formula affect the quotient.",
+                  "difficulty": "hard",
+                  "topicTag": "Least count calculation"
+                },
+                {
+                  "id": "icse-9-sci-ch1-l2-q12",
+                  "type": "mcq",
+                  "prompt": "A student measures the diameter of a thin wire using a screw gauge with pitch $1\\text{ mm}$ and $100$ circular divisions. The main scale reads $0\\text{ mm}$ and the circular scale reads $65$. When the studs were closed with no object, the $5^{\\text{th}}$ circular division lay on the reference line (zero was below the line). What is the true diameter?",
+                  "options": [
+                    "$0.60\\text{ mm}$",
+                    "$0.70\\text{ mm}$",
+                    "$0.65\\text{ mm}$",
+                    "$0.55\\text{ mm}$"
+                  ],
+                  "correctAnswer": "$0.60\\text{ mm}$",
+                  "explanation": "1. $\\text{L.C.} = \\frac{1\\text{ mm}}{100} = 0.01\\text{ mm}$.\n2. $\\text{Zero Error} = +5 \\times 0.01\\text{ mm} = +0.05\\text{ mm}$ (positive since zero is below the baseline).\n3. $\\text{Observed Reading} = 0\\text{ mm} + (65 \\times 0.01\\text{ mm}) = 0.65\\text{ mm}$.\n4. $\\text{True Diameter} = 0.65\\text{ mm} - (+0.05\\text{ mm}) = 0.60\\text{ mm}$.",
+                  "hint": "The zero was below the reference line, so the error is positive and must be subtracted.",
+                  "difficulty": "hard",
+                  "topicTag": "Measurement with zero error correction"
+                }
+              ]
             },
             {
               "id": "icse-9-sci-ch1-l3",
               "levelNumber": 3,
               "title": "The Simple Pendulum",
               "description": "Time period, effective length, acceleration due to gravity, and factors affecting time period.",
-              "subtopics": ["Definition of oscillation, amplitude, frequency, time period", "T = 2*pi*sqrt(L/g)", "T^2 vs L graph slope"],
+              "subtopics": [
+                "Definition of oscillation, amplitude, frequency, time period",
+                "T = 2*pi*sqrt(L/g)",
+                "T^2 vs L graph slope"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -53,7 +523,10 @@
               "levelNumber": 4,
               "title": "Chapter 1 Review & Experimental Physics",
               "description": "Review of experimental measurements, instruments, and simple pendulum calculations.",
-              "subtopics": ["Mixed measurement problems", "Graph interpretation"],
+              "subtopics": [
+                "Mixed measurement problems",
+                "Graph interpretation"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -70,7 +543,11 @@
               "levelNumber": 1,
               "title": "Distance, Displacement & Velocity",
               "description": "Distinguishing scalar from vector quantities, average speed and instantaneous velocity.",
-              "subtopics": ["Scalars vs vectors", "Distance vs displacement", "Speed vs velocity"],
+              "subtopics": [
+                "Scalars vs vectors",
+                "Distance vs displacement",
+                "Speed vs velocity"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -79,7 +556,11 @@
               "levelNumber": 2,
               "title": "Acceleration & Graphs of Motion",
               "description": "Uniform and non-uniform acceleration, displacement-time and velocity-time graphs.",
-              "subtopics": ["Acceleration definition (a = (v-u)/t)", "Slope of s-t and v-t graphs", "Area under v-t graph equals displacement"],
+              "subtopics": [
+                "Acceleration definition (a = (v-u)/t)",
+                "Slope of s-t and v-t graphs",
+                "Area under v-t graph equals displacement"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -88,7 +569,11 @@
               "levelNumber": 3,
               "title": "Equations of Uniformly Accelerated Motion",
               "description": "Derivation and numerical application of v = u + at, s = ut + 0.5at^2, and v^2 = u^2 + 2as.",
-              "subtopics": ["Three kinematic equations", "Free fall under gravity (g = 9.8 m/s^2)", "Stopping distance problems"],
+              "subtopics": [
+                "Three kinematic equations",
+                "Free fall under gravity (g = 9.8 m/s^2)",
+                "Stopping distance problems"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -97,7 +582,10 @@
               "levelNumber": 4,
               "title": "Chapter 2 Review & Kinematics Mastery",
               "description": "Comprehensive motion problem solving and graphical analysis.",
-              "subtopics": ["Complex multi-stage motion numericals", "Board exam questions"],
+              "subtopics": [
+                "Complex multi-stage motion numericals",
+                "Board exam questions"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -114,7 +602,11 @@
               "levelNumber": 1,
               "title": "Newton's First Law & Inertia",
               "description": "Force definition, qualitative concept of inertia of rest, motion, and direction.",
-              "subtopics": ["Newton's first law statement", "Inertia and mass relationship", "Daily life examples of inertia"],
+              "subtopics": [
+                "Newton's first law statement",
+                "Inertia and mass relationship",
+                "Daily life examples of inertia"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -123,7 +615,11 @@
               "levelNumber": 2,
               "title": "Newton's Second Law & Momentum",
               "description": "Linear momentum p = mv, rate of change of momentum, and F = ma derivation.",
-              "subtopics": ["Momentum definition and SI unit", "Derivation of F = ma", "Impulse and safety cushions"],
+              "subtopics": [
+                "Momentum definition and SI unit",
+                "Derivation of F = ma",
+                "Impulse and safety cushions"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -132,7 +628,11 @@
               "levelNumber": 3,
               "title": "Newton's Third Law & Universal Gravitation",
               "description": "Action and reaction forces, Universal law of gravitation F = G*m1*m2/r^2, and g vs G.",
-              "subtopics": ["Action-reaction pairs", "Newton's law of gravitation", "Acceleration due to gravity and weight"],
+              "subtopics": [
+                "Action-reaction pairs",
+                "Newton's law of gravitation",
+                "Acceleration due to gravity and weight"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -141,7 +641,10 @@
               "levelNumber": 4,
               "title": "Chapter 3 Review & Dynamics Challenge",
               "description": "Review of forces, momentum conservation, and gravitational calculations.",
-              "subtopics": ["Forces numericals", "Gravitational force calculations"],
+              "subtopics": [
+                "Forces numericals",
+                "Gravitational force calculations"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -164,7 +667,11 @@
               "levelNumber": 1,
               "title": "States of Matter & Kinetic Theory",
               "description": "Solids, liquids, gases, intermolecular space, intermolecular attraction, and brownian motion.",
-              "subtopics": ["Postulates of kinetic theory", "Comparison of solids, liquids, and gases", "Changes of state"],
+              "subtopics": [
+                "Postulates of kinetic theory",
+                "Comparison of solids, liquids, and gases",
+                "Changes of state"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -173,7 +680,11 @@
               "levelNumber": 2,
               "title": "Elements, Compounds & Separation",
               "description": "Classification of pure substances, characteristics of compounds vs mixtures, and separation techniques.",
-              "subtopics": ["Elements and symbols", "Compounds vs mixtures", "Fractional distillation, sublimation, chromatography"],
+              "subtopics": [
+                "Elements and symbols",
+                "Compounds vs mixtures",
+                "Fractional distillation, sublimation, chromatography"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -182,7 +693,10 @@
               "levelNumber": 3,
               "title": "Chapter 4 Review & Composition of Matter",
               "description": "Comprehensive review of matter, kinetic postulates, and purification.",
-              "subtopics": ["Distinction tables", "Reasoning questions"],
+              "subtopics": [
+                "Distinction tables",
+                "Reasoning questions"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -199,7 +713,11 @@
               "levelNumber": 1,
               "title": "Subatomic Particles & Atomic Models",
               "description": "Protons, neutrons, electrons, Thomson and Rutherford atomic models, and Bohr-Bury electronic scheme.",
-              "subtopics": ["Discovery and properties of particles", "Rutherford alpha scattering experiment", "Bohr-Bury rules (2n^2)"],
+              "subtopics": [
+                "Discovery and properties of particles",
+                "Rutherford alpha scattering experiment",
+                "Bohr-Bury rules (2n^2)"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -208,7 +726,11 @@
               "levelNumber": 2,
               "title": "Atomic Number, Mass Number & Isotopes",
               "description": "Calculation of protons, neutrons, and electrons, isotopes and isobars.",
-              "subtopics": ["Z and A notation", "Isotopes of Hydrogen, Carbon, Chlorine", "Isobars and isotones"],
+              "subtopics": [
+                "Z and A notation",
+                "Isotopes of Hydrogen, Carbon, Chlorine",
+                "Isobars and isotones"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -217,7 +739,11 @@
               "levelNumber": 3,
               "title": "Electrovalent & Covalent Bonding",
               "description": "Octet rule, transfer of electrons (ionic bond in NaCl, MgCl2, CaO) and sharing of electrons (covalent in H2, Cl2, O2, N2, H2O, CH4).",
-              "subtopics": ["Electrovalent / ionic bond formation", "Single, double, triple covalent bonds", "Electron dot (Lewis) diagrams"],
+              "subtopics": [
+                "Electrovalent / ionic bond formation",
+                "Single, double, triple covalent bonds",
+                "Electron dot (Lewis) diagrams"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -226,7 +752,10 @@
               "levelNumber": 4,
               "title": "Chapter 5 Review & Bonding Mastery",
               "description": "Review of atomic structure, electron configurations, and chemical bond representations.",
-              "subtopics": ["Drawing Lewis structures", "Comparing ionic vs covalent compounds"],
+              "subtopics": [
+                "Drawing Lewis structures",
+                "Comparing ionic vs covalent compounds"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -249,7 +778,11 @@
               "levelNumber": 1,
               "title": "Cell Theory & Structure",
               "description": "Robert Hooke, Schleiden & Schwann cell theory, prokaryotic vs eukaryotic cells.",
-              "subtopics": ["History and cell theory postulates", "Prokaryotes vs Eukaryotes", "Plant cell vs Animal cell differences"],
+              "subtopics": [
+                "History and cell theory postulates",
+                "Prokaryotes vs Eukaryotes",
+                "Plant cell vs Animal cell differences"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -258,7 +791,11 @@
               "levelNumber": 2,
               "title": "Cell Organelles & Functions",
               "description": "Nucleus, mitochondria, endoplasmic reticulum, golgi apparatus, ribosomes, lysosomes, plastids, and vacuoles.",
-              "subtopics": ["Mitochondria power house", "Endoplasmic reticulum & ribosomes", "Chloroplasts, chromoplasts, leucoplasts"],
+              "subtopics": [
+                "Mitochondria power house",
+                "Endoplasmic reticulum & ribosomes",
+                "Chloroplasts, chromoplasts, leucoplasts"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -267,7 +804,10 @@
               "levelNumber": 3,
               "title": "Chapter 6 Review & Cytology Mastery",
               "description": "Review of cell biology, diagrams, and organelle functions.",
-              "subtopics": ["Diagram-based questions", "Organelle matching and functions"],
+              "subtopics": [
+                "Diagram-based questions",
+                "Organelle matching and functions"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -284,7 +824,11 @@
               "levelNumber": 1,
               "title": "Plant Tissues (Meristematic & Permanent)",
               "description": "Apical, lateral, intercalary meristems, parenchyma, collenchyma, sclerenchyma, and vascular tissues (xylem and phloem).",
-              "subtopics": ["Types of meristems", "Simple permanent tissues", "Complex permanent tissues (Xylem & Phloem)"],
+              "subtopics": [
+                "Types of meristems",
+                "Simple permanent tissues",
+                "Complex permanent tissues (Xylem & Phloem)"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -293,7 +837,11 @@
               "levelNumber": 2,
               "title": "Animal Tissues (Epithelial to Nervous)",
               "description": "Squamous, cuboidal, columnar epithelial tissues, bone, cartilage, blood, striated, unstriated, cardiac muscles, and neurons.",
-              "subtopics": ["Epithelial tissue types and locations", "Connective tissue (Blood, Bone, Cartilage, Ligament, Tendon)", "Muscular and Nervous tissues"],
+              "subtopics": [
+                "Epithelial tissue types and locations",
+                "Connective tissue (Blood, Bone, Cartilage, Ligament, Tendon)",
+                "Muscular and Nervous tissues"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -302,7 +850,10 @@
               "levelNumber": 3,
               "title": "Chapter 7 Review & Histology Challenge",
               "description": "Comprehensive review of tissue classification, functions, and identification.",
-              "subtopics": ["Tissue comparison tables", "Function and location identification"],
+              "subtopics": [
+                "Tissue comparison tables",
+                "Function and location identification"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }

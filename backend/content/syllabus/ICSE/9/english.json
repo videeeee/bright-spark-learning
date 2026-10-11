@@ -26,25 +26,503 @@
               "levelNumber": 1,
               "title": "Tenses in Context",
               "description": "Identifying and applying appropriate tense forms in continuous passages.",
-              "subtopics": ["Present vs Past Perfect", "Future time reference", "Fill in blanks with correct verb tense forms"],
+              "subtopics": [
+                "Present vs Past Perfect",
+                "Future time reference",
+                "Fill in blanks with correct verb tense forms"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Tenses and Verb Agreement - Level 1: Tenses in Context",
+                "intro": "In this chapter, we will explore the concept of tenses in the English language. Tenses are used to express when an action takes place, whether it is in the past, present, or future. We will learn how to identify and use the correct tense forms in continuous passages.",
+                "keyConcepts": [
+                  {
+                    "title": "Present vs Past Perfect",
+                    "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment. For example, 'I have studied English for three years.' The past perfect tense is used to express an action that happened before another action in the past. For example, 'I had studied English for three years when I moved to another country.'"
+                  },
+                  {
+                    "title": "Future time reference",
+                    "explanation": "The future tense is used to express an action that will happen in the future. For example, 'I will study English for three years.' The future perfect tense is used to express an action that will be completed before another action in the future. For example, 'I will have studied English for three years when I graduate.'"
+                  },
+                  {
+                    "title": "Fill in blanks with correct verb tense forms",
+                    "explanation": "We will learn how to fill in the blanks with the correct verb tense forms in a given passage. This will help us to understand how to use the correct tense forms in different contexts."
+                  }
+                ],
+                "tips": [
+                  {
+                    "tip": "Read the passage carefully to understand the context and the tense used.",
+                    "explanation": "This will help you to identify the correct tense form to use in the blank."
+                  },
+                  {
+                    "tip": "Use the present perfect tense when describing an action that started in the past and continues up to the present moment.",
+                    "explanation": "For example, 'I have studied English for three years.'"
+                  },
+                  {
+                    "tip": "Use the past perfect tense when describing an action that happened before another action in the past.",
+                    "explanation": "For example, 'I had studied English for three years when I moved to another country.'"
+                  }
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
+                  "solution": "The correct answer is 'have studied.' The reason is that the sentence is describing an action that started in the past and continues up to the present moment.",
+                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment."
+                },
+                {
+                  "problem": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
+                  "solution": "The correct answer is 'had studied.' The reason is that the sentence is describing an action that happened before another action in the past.",
+                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-eng-ch1-l1-q1",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
+                  "options": [
+                    "$\frac{1}{2}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{3}{4}$",
+                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment.",
+                  "hint": "Read the passage carefully to understand the context and the tense used.",
+                  "difficulty": "easy",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q2",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
+                  "options": [
+                    "$\frac{1}{2}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{5}{6}$",
+                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past.",
+                  "hint": "Use the past perfect tense when describing an action that happened before another action in the past.",
+                  "difficulty": "medium",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q3",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I graduate.'",
+                  "options": [
+                    "$\frac{1}{2}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{3}{4}$",
+                  "explanation": "The future perfect tense is used to express an action that will be completed before another action in the future.",
+                  "hint": "Use the future perfect tense when describing an action that will be completed before another action in the future.",
+                  "difficulty": "hard",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q4",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
+                  "options": [
+                    "$\frac{2}{3}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{2}{3}$",
+                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment.",
+                  "hint": "Read the passage carefully to understand the context and the tense used.",
+                  "difficulty": "easy",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q5",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
+                  "options": [
+                    "$\frac{1}{2}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{5}{6}$",
+                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past.",
+                  "hint": "Use the past perfect tense when describing an action that happened before another action in the past.",
+                  "difficulty": "medium",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q6",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I graduate.'",
+                  "options": [
+                    "$\frac{1}{2}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{3}{4}$",
+                  "explanation": "The future perfect tense is used to express an action that will be completed before another action in the future.",
+                  "hint": "Use the future perfect tense when describing an action that will be completed before another action in the future.",
+                  "difficulty": "hard",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q7",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
+                  "options": [
+                    "$\frac{2}{3}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{2}{3}$",
+                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment.",
+                  "hint": "Read the passage carefully to understand the context and the tense used.",
+                  "difficulty": "easy",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q8",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
+                  "options": [
+                    "$\frac{1}{2}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{5}{6}$",
+                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past.",
+                  "hint": "Use the past perfect tense when describing an action that happened before another action in the past.",
+                  "difficulty": "medium",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q9",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I graduate.'",
+                  "options": [
+                    "$\frac{1}{2}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{3}{4}$",
+                  "explanation": "The future perfect tense is used to express an action that will be completed before another action in the future.",
+                  "hint": "Use the future perfect tense when describing an action that will be completed before another action in the future.",
+                  "difficulty": "hard",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q10",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years.'",
+                  "options": [
+                    "$\frac{2}{3}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{2}{3}$",
+                  "explanation": "The present perfect tense is used to express an action that started in the past and continues up to the present moment.",
+                  "hint": "Read the passage carefully to understand the context and the tense used.",
+                  "difficulty": "easy",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q11",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I moved to another country.'",
+                  "options": [
+                    "$\frac{1}{2}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{5}{6}$",
+                  "explanation": "The past perfect tense is used to express an action that happened before another action in the past.",
+                  "hint": "Use the past perfect tense when describing an action that happened before another action in the past.",
+                  "difficulty": "medium",
+                  "topicTag": "tenses"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l1-q12",
+                  "type": "mcq",
+                  "prompt": "Fill in the blank with the correct verb tense form: 'I ____________________ (study) English for three years when I graduate.'",
+                  "options": [
+                    "$\frac{1}{2}$",
+                    "$\frac{3}{4}$",
+                    "$\frac{5}{6}$",
+                    "$\frac{7}{8}$"
+                  ],
+                  "correctAnswer": "$\frac{3}{4}$",
+                  "explanation": "The future perfect tense is used to express an action that will be completed before another action in the future.",
+                  "hint": "Use the future perfect tense when describing an action that will be completed before another action in the future.",
+                  "difficulty": "hard",
+                  "topicTag": "tenses"
+                }
+              ]
             },
             {
               "id": "icse-9-eng-ch1-l2",
               "levelNumber": 2,
               "title": "Subject-Verb Agreement",
               "description": "Singular and plural verbs with collective nouns, either...or, neither...nor, as well as, along with.",
-              "subtopics": ["Proximity rule with either/or", "Indefinite pronouns (each, everyone, neither)", "Plural nouns with singular meanings"],
+              "subtopics": [
+                "Proximity rule with either/or",
+                "Indefinite pronouns (each, everyone, neither)",
+                "Plural nouns with singular meanings"
+              ],
               "isReviewLevel": false,
-              "status": "published"
+              "status": "published",
+              "lesson": {
+                "title": "Mastering Subject-Verb Agreement: Collective Nouns and Conjunctions",
+                "intro": "Subject-verb agreement is a cornerstone of English grammar, ensuring that the verb form matches the subject in number. This lesson focuses on complex scenarios where the subject is not a simple singular or plural noun. We will explore how collective nouns (like 'team' or 'family') can take singular or plural verbs depending on context. Furthermore, we will analyze the impact of conjunctions such as 'either...or', 'neither...nor', 'as well as', and 'along with' on verb agreement. Understanding the proximity rule and the treatment of indefinite pronouns is essential for constructing grammatically precise sentences in ICSE Class 9 English.",
+                "keyConcepts": [
+                  {
+                    "title": "The Proximity Rule with Correlative Conjunctions",
+                    "explanation": "When subjects are joined by 'either...or', 'neither...nor', or 'not only...but also', the verb agrees with the subject closest to it. For example, in the sentence $S_1 + \\text{either...or} + S_2 + V$, the verb $V$ must match the number of $S_2$. If $S_2$ is singular, $V$ is singular; if $S_2$ is plural, $V$ is plural."
+                  },
+                  {
+                    "title": "Indefinite Pronouns and Singular Verbs",
+                    "explanation": "Indefinite pronouns such as 'each', 'everyone', 'everybody', 'neither', 'either', and 'no one' are grammatically singular, even if they refer to multiple people. Therefore, they always take a singular verb. For instance, 'Each of the students $\\text{is}$ responsible.' The prepositional phrase 'of the students' does not affect the verb's number."
+                  },
+                  {
+                    "title": "Prepositional Phrases and Collective Nouns",
+                    "explanation": "Phrases introduced by 'as well as', 'along with', 'together with', or 'in addition to' do not change the number of the subject. The verb agrees with the main subject preceding the phrase. For example, 'The teacher, along with the students, $\\text{is}$ happy.' Additionally, collective nouns like 'committee' or 'audience' take a singular verb when acting as a unit and a plural verb when members act individually."
+                  }
+                ],
+                "tips": [
+                  "Identify the true subject first by ignoring prepositional phrases. The verb must agree with the head noun of the subject, not the object of the preposition.",
+                  "For 'either...or' and 'neither...nor', look at the second subject. If the subjects are different in number, the verb follows the one closer to it. If they are the same, the verb matches that number.",
+                  "Remember that 'everyone', 'each', and 'neither' are always singular. A common error is using a plural verb because the context implies multiple people, but grammatically, they remain singular."
+                ]
+              },
+              "examples": [
+                {
+                  "problem": "Choose the correct verb form: 'Neither the manager nor the employees (was/were) present at the meeting.'",
+                  "solution": "1. Identify the conjunction: 'neither...nor'.\n2. Apply the proximity rule: The verb must agree with the subject closest to it.\n3. The closest subject is 'the employees', which is plural.\n4. Therefore, the verb must be plural: 'were'.\nFinal Sentence: 'Neither the manager nor the employees were present at the meeting.'",
+                  "explanation": "The rule for correlative conjunctions like 'neither...nor' dictates that the verb agrees with the nearer subject. Since 'employees' is plural and closer to the verb than 'manager', the plural verb 'were' is correct."
+                },
+                {
+                  "problem": "Choose the correct verb form: 'Each of the boys (has/have) completed his assignment.'",
+                  "solution": "1. Identify the subject: 'Each'.\n2. Analyze the prepositional phrase: 'of the boys'. This phrase modifies 'Each' but does not change its number.\n3. 'Each' is an indefinite pronoun that is always singular.\n4. Therefore, the verb must be singular: 'has'.\nFinal Sentence: 'Each of the boys has completed his assignment.'",
+                  "explanation": "Indefinite pronouns like 'each' are grammatically singular. The phrase 'of the boys' is a prepositional phrase that does not affect the subject's number. Thus, the singular verb 'has' is required."
+                }
+              ],
+              "questions": [
+                {
+                  "id": "icse-9-eng-ch1-l2-q1",
+                  "type": "mcq",
+                  "prompt": "Neither the teacher nor the students (was/were) satisfied with the result.",
+                  "options": [
+                    "was",
+                    "were",
+                    "is",
+                    "are"
+                  ],
+                  "correctAnswer": "were",
+                  "explanation": "The conjunction 'neither...nor' follows the proximity rule. The subject closest to the verb is 'students' (plural). Therefore, the plural verb 'were' is correct.",
+                  "hint": "Look at the subject nearest to the verb.",
+                  "difficulty": "easy",
+                  "topicTag": "Proximity rule with either/or"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q2",
+                  "type": "mcq",
+                  "prompt": "Everyone in the class (has/have) submitted the homework.",
+                  "options": [
+                    "has",
+                    "have",
+                    "is",
+                    "are"
+                  ],
+                  "correctAnswer": "has",
+                  "explanation": "'Everyone' is an indefinite pronoun that is grammatically singular. The prepositional phrase 'in the class' does not change the number. Hence, the singular verb 'has' is used.",
+                  "hint": "Remember that 'everyone' is always singular.",
+                  "difficulty": "easy",
+                  "topicTag": "Indefinite pronouns (each, everyone, neither)"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q3",
+                  "type": "mcq",
+                  "prompt": "The committee (was/were) divided in its opinion.",
+                  "options": [
+                    "was",
+                    "were",
+                    "is",
+                    "are"
+                  ],
+                  "correctAnswer": "was",
+                  "explanation": "The collective noun 'committee' is acting as a single unit here (having one opinion). Therefore, it takes a singular verb 'was'. If the members were acting individually, 'were' might be used, but 'divided in its opinion' implies a collective state.",
+                  "hint": "Does the group act as one unit or as individuals?",
+                  "difficulty": "medium",
+                  "topicTag": "Plural nouns with singular meanings"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q4",
+                  "type": "mcq",
+                  "prompt": "The teacher, along with the students, (is/are) going on a trip.",
+                  "options": [
+                    "is",
+                    "are",
+                    "was",
+                    "were"
+                  ],
+                  "correctAnswer": "is",
+                  "explanation": "The phrase 'along with the students' is a prepositional phrase and does not affect the subject. The main subject is 'The teacher' (singular). Therefore, the singular verb 'is' is correct.",
+                  "hint": "Ignore the phrase starting with 'along with'.",
+                  "difficulty": "medium",
+                  "topicTag": "Proximity rule with either/or"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q5",
+                  "type": "mcq",
+                  "prompt": "Either the cats or the dog (barks/bark) loudly at night.",
+                  "options": [
+                    "barks",
+                    "bark",
+                    "barking",
+                    "barked"
+                  ],
+                  "correctAnswer": "barks",
+                  "explanation": "Using the proximity rule with 'either...or', the verb agrees with the closer subject. 'The dog' is singular and closer to the verb. Thus, the singular verb 'barks' is correct.",
+                  "hint": "Which subject is closer to the verb?",
+                  "difficulty": "medium",
+                  "topicTag": "Proximity rule with either/or"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q6",
+                  "type": "mcq",
+                  "prompt": "Each of the girls (has/have) her own room.",
+                  "options": [
+                    "has",
+                    "have",
+                    "is",
+                    "are"
+                  ],
+                  "correctAnswer": "has",
+                  "explanation": "'Each' is a singular indefinite pronoun. The prepositional phrase 'of the girls' does not make the subject plural. Therefore, the singular verb 'has' is required.",
+                  "hint": "'Each' is always singular.",
+                  "difficulty": "easy",
+                  "topicTag": "Indefinite pronouns (each, everyone, neither)"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q7",
+                  "type": "mcq",
+                  "prompt": "The news (is/are) very exciting.",
+                  "options": [
+                    "is",
+                    "are",
+                    "was",
+                    "were"
+                  ],
+                  "correctAnswer": "is",
+                  "explanation": "'News' is a plural noun in form but singular in meaning. It refers to information as a single entity. Therefore, it takes the singular verb 'is'.",
+                  "hint": "Some nouns look plural but are singular.",
+                  "difficulty": "medium",
+                  "topicTag": "Plural nouns with singular meanings"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q8",
+                  "type": "mcq",
+                  "prompt": "Neither the books nor the pen (was/were) on the table.",
+                  "options": [
+                    "was",
+                    "were",
+                    "is",
+                    "are"
+                  ],
+                  "correctAnswer": "was",
+                  "explanation": "With 'neither...nor', the verb agrees with the closer subject. 'The pen' is singular and closer to the verb. Therefore, the singular verb 'was' is correct.",
+                  "hint": "Check the subject nearest to the verb.",
+                  "difficulty": "medium",
+                  "topicTag": "Proximity rule with either/or"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q9",
+                  "type": "mcq",
+                  "prompt": "The audience (was/were) clapping enthusiastically.",
+                  "options": [
+                    "was",
+                    "were",
+                    "is",
+                    "are"
+                  ],
+                  "correctAnswer": "were",
+                  "explanation": "The collective noun 'audience' is acting as individuals here because they are performing the action 'clapping' individually. When members of a collective noun act separately, a plural verb is used. Thus, 'were' is correct.",
+                  "hint": "Are the members acting as a unit or individually?",
+                  "difficulty": "hard",
+                  "topicTag": "Plural nouns with singular meanings"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q10",
+                  "type": "mcq",
+                  "prompt": "The captain, as well as the players, (is/are) responsible for the loss.",
+                  "options": [
+                    "is",
+                    "are",
+                    "was",
+                    "were"
+                  ],
+                  "correctAnswer": "is",
+                  "explanation": "The phrase 'as well as the players' is a prepositional phrase and does not change the subject. The main subject is 'The captain' (singular). Therefore, the singular verb 'is' is correct.",
+                  "hint": "'As well as' does not make the subject plural.",
+                  "difficulty": "medium",
+                  "topicTag": "Proximity rule with either/or"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q11",
+                  "type": "mcq",
+                  "prompt": "No one (knows/know) the answer to this question.",
+                  "options": [
+                    "knows",
+                    "know",
+                    "is knowing",
+                    "are knowing"
+                  ],
+                  "correctAnswer": "knows",
+                  "explanation": "'No one' is an indefinite pronoun that is grammatically singular. Therefore, it requires the singular verb form 'knows'.",
+                  "hint": "Treat 'no one' as a single person.",
+                  "difficulty": "easy",
+                  "topicTag": "Indefinite pronouns (each, everyone, neither)"
+                },
+                {
+                  "id": "icse-9-eng-ch1-l2-q12",
+                  "type": "mcq",
+                  "prompt": "The scissors (is/are) sharp.",
+                  "options": [
+                    "is",
+                    "are",
+                    "was",
+                    "were"
+                  ],
+                  "correctAnswer": "are",
+                  "explanation": "'Scissors' is a plural noun in both form and meaning. It refers to a pair of blades. Therefore, it takes the plural verb 'are'.",
+                  "hint": "Some nouns are always plural.",
+                  "difficulty": "medium",
+                  "topicTag": "Plural nouns with singular meanings"
+                }
+              ]
             },
             {
               "id": "icse-9-eng-ch1-l3",
               "levelNumber": 3,
               "title": "Chapter 1 Review & Verb Mastery",
               "description": "Grammar review of tenses and verb agreement in passage format.",
-              "subtopics": ["Passage cloze tests", "Error spotting and corrections"],
+              "subtopics": [
+                "Passage cloze tests",
+                "Error spotting and corrections"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -61,7 +539,11 @@
               "levelNumber": 1,
               "title": "Prepositions of Time and Place",
               "description": "Distinctions between in/at/on, since/for, between/among, beside/besides.",
-              "subtopics": ["Time prepositions (since, for, by)", "Spatial prepositions (above, over, through)", "Prepositional collocations"],
+              "subtopics": [
+                "Time prepositions (since, for, by)",
+                "Spatial prepositions (above, over, through)",
+                "Prepositional collocations"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -70,7 +552,10 @@
               "levelNumber": 2,
               "title": "Phrasal Verbs & Fixed Prepositions",
               "description": "Common phrasal verbs (look after, call off, give in, put up with) and verbs taking fixed prepositions.",
-              "subtopics": ["Fixed prepositions with adjectives and verbs", "Idiomatic phrasal verbs in sentences"],
+              "subtopics": [
+                "Fixed prepositions with adjectives and verbs",
+                "Idiomatic phrasal verbs in sentences"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -79,7 +564,10 @@
               "levelNumber": 3,
               "title": "Chapter 2 Review & Preposition Drill",
               "description": "Review of standard ICSE Question 4(b) preposition sets.",
-              "subtopics": ["Eight-blank sentence completion", "Contextual phrasal verb usage"],
+              "subtopics": [
+                "Eight-blank sentence completion",
+                "Contextual phrasal verb usage"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -96,7 +584,11 @@
               "levelNumber": 1,
               "title": "Active and Passive Voice",
               "description": "Conversion between active and passive forms across assertive, imperative, and interrogative sentences.",
-              "subtopics": ["Tense shifts in passive voice", "Imperative passives with 'Let'", "Sentences with two objects"],
+              "subtopics": [
+                "Tense shifts in passive voice",
+                "Imperative passives with 'Let'",
+                "Sentences with two objects"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -105,7 +597,11 @@
               "levelNumber": 2,
               "title": "Direct and Indirect Speech",
               "description": "Reporting statements, questions, commands, and exclamations with reporting verb and tense shifts.",
-              "subtopics": ["Tense backshifting rules", "Pronoun and adverbial time shifts", "Reporting wh- and yes/no questions"],
+              "subtopics": [
+                "Tense backshifting rules",
+                "Pronoun and adverbial time shifts",
+                "Reporting wh- and yes/no questions"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -114,7 +610,11 @@
               "levelNumber": 3,
               "title": "Sentence Synthesis & Conditional Structures",
               "description": "Joining sentences without using 'and', 'but', or 'so'; 'Unless', 'Though', 'Too...to', 'So...that'.",
-              "subtopics": ["Participle and infinitive synthesis", "No sooner...than and Hardly...when inversions", "Unless vs If not"],
+              "subtopics": [
+                "Participle and infinitive synthesis",
+                "No sooner...than and Hardly...when inversions",
+                "Unless vs If not"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -123,7 +623,10 @@
               "levelNumber": 4,
               "title": "Chapter 3 Review & Transformation Mastery",
               "description": "ICSE Question 4(d) rewrite style practice.",
-              "subtopics": ["Rewrite according to instruction without changing meaning", "Advanced synthesis"],
+              "subtopics": [
+                "Rewrite according to instruction without changing meaning",
+                "Advanced synthesis"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -146,7 +649,11 @@
               "levelNumber": 1,
               "title": "Act 1 Scene 1: Tribunes and the Roman Mob",
               "description": "Opening conflict between supporters of Pompey and the rising power of Caesar.",
-              "subtopics": ["Marullus's monologue 'You blocks, you stones'", "Significance of the Feast of Lupercal", "Symbolism of stripping the statues"],
+              "subtopics": [
+                "Marullus's monologue 'You blocks, you stones'",
+                "Significance of the Feast of Lupercal",
+                "Symbolism of stripping the statues"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -155,7 +662,11 @@
               "levelNumber": 2,
               "title": "Act 1 Scene 2: The Temptation of Brutus",
               "description": "Cassius's psychological manipulation of Brutus, recounting Caesar's physical weaknesses in the Tiber river.",
-              "subtopics": ["Cassius's philosophy 'The fault, dear Brutus, is not in our stars'", "Caesar offering the crown thrice by Antony", "Brutus's inner conflict between honor and friendship"],
+              "subtopics": [
+                "Cassius's philosophy 'The fault, dear Brutus, is not in our stars'",
+                "Caesar offering the crown thrice by Antony",
+                "Brutus's inner conflict between honor and friendship"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -164,7 +675,10 @@
               "levelNumber": 3,
               "title": "Act 1 Contextual Extract Practice",
               "description": "ICSE board pattern contextual questions on Act 1.",
-              "subtopics": ["Character motivations", "Literary devices and dramatic irony"],
+              "subtopics": [
+                "Character motivations",
+                "Literary devices and dramatic irony"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }
@@ -187,7 +701,11 @@
               "levelNumber": 1,
               "title": "Bonku Babu's Friend (Satyajit Ray)",
               "description": "Themes of timidness, bullying, and self-confidence gained through the alien Ang.",
-              "subtopics": ["Bonku Babu's meek nature at Sripati Majumdar's gathering", "Ang's superior spaceship and wisdom", "Transformation and newfound dignity of Bonku Babu"],
+              "subtopics": [
+                "Bonku Babu's meek nature at Sripati Majumdar's gathering",
+                "Ang's superior spaceship and wisdom",
+                "Transformation and newfound dignity of Bonku Babu"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -196,7 +714,11 @@
               "levelNumber": 2,
               "title": "Oliver Asks for More (Charles Dickens)",
               "description": "Victorian workhouse conditions, hunger, and societal cruelty toward pauper orphans.",
-              "subtopics": ["The board's hypocritical decisions", "The casting of lots among starving boys", "Mr. Bumble's outrage at Oliver's request"],
+              "subtopics": [
+                "The board's hypocritical decisions",
+                "The casting of lots among starving boys",
+                "Mr. Bumble's outrage at Oliver's request"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -205,7 +727,11 @@
               "levelNumber": 3,
               "title": "The Model Millionaire (Oscar Wilde)",
               "description": "Romantic generosity vs practical materialism, featuring Hughie Erskine and Baron Hausberg.",
-              "subtopics": ["Hughie's charm versus lack of wealth", "The sovereign given to the beggar model", "Baron Hausberg's rewarding generosity"],
+              "subtopics": [
+                "Hughie's charm versus lack of wealth",
+                "The sovereign given to the beggar model",
+                "Baron Hausberg's rewarding generosity"
+              ],
               "isReviewLevel": false,
               "status": "published"
             }
@@ -222,7 +748,11 @@
               "levelNumber": 1,
               "title": "The Night Mail (W. H. Auden)",
               "description": "Rhythm of the postal train travelling through Scotland, carrying letters for all social classes.",
-              "subtopics": ["Rhythm reflecting train acceleration", "Equality of correspondence", "Imagery of Scottish landscapes and sleeping cities"],
+              "subtopics": [
+                "Rhythm reflecting train acceleration",
+                "Equality of correspondence",
+                "Imagery of Scottish landscapes and sleeping cities"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -231,7 +761,11 @@
               "levelNumber": 2,
               "title": "Skimbleshanks: The Railway Cat (T. S. Eliot)",
               "description": "The indispensable railway cat maintaining order and peace on the Night Mail train.",
-              "subtopics": ["Whimsical characterisation of Skimbleshanks", "Duties and supervision on the train", "Poetic rhythm and rhyme scheme"],
+              "subtopics": [
+                "Whimsical characterisation of Skimbleshanks",
+                "Duties and supervision on the train",
+                "Poetic rhythm and rhyme scheme"
+              ],
               "isReviewLevel": false,
               "status": "published"
             },
@@ -240,7 +774,11 @@
               "levelNumber": 3,
               "title": "I Remember, I Remember (Thomas Hood)",
               "description": "Contrast between childhood innocence, wonder, and the disillusionment and heavy heart of adulthood.",
-              "subtopics": ["Nostalgia for the sun peeping at the window", "The fir trees and innocence closer to heaven", "Tone and melancholy contrast"],
+              "subtopics": [
+                "Nostalgia for the sun peeping at the window",
+                "The fir trees and innocence closer to heaven",
+                "Tone and melancholy contrast"
+              ],
               "isReviewLevel": true,
               "status": "published"
             }

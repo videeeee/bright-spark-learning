@@ -472,7 +472,7 @@ export function LevelRoadmap() {
                                         : 'bg-amber-100 text-amber-800'
                                     }`}
                                   >
-                                    {lvl.hasPublishedContent ? 'Playable' : 'Coming Soon'}
+                                    {lvl.hasPublishedContent ? 'Beta' : 'Coming Soon'}
                                   </span>
                                 </div>
                               </button>
